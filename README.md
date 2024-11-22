@@ -57,7 +57,7 @@ Also note that the automation that updates tokens will ALWAYS try to update the 
 
 ## What does this Postman collection contain?
 
-At last count, there were some 130 different REST API calls; many with examples!
+At last count, there were over 220 different REST API calls; many with examples!
 Aside from documented endpoints, there are several that BMC support uses as workarounds, many enable actions that officially can only be done via the UI at this moment - aka. subject to change by product teams but works and enables us to do stuff via code!
 
 Below is the summary of what's available:
