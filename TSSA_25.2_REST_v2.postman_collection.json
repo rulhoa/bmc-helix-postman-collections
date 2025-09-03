@@ -1,0 +1,1677 @@
+{
+  "info": {
+    "name": "TSSA",
+    "_postman_id": "78cf9d26-9751-4315-b3ae-c2dea956e3d4",
+    "description": "TrueSight Server Automation 25.2 REST collection. Use '01 - Sessions' first.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "01 - Sessions",
+      "item": [
+        {
+          "name": "Create session (SRP/PKI)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v1}}/sessions",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"authentication_type\": \"{{tssa_auth_type}}\",\n  \"user_name\": \"{{tssa_username}}\",\n  \"password\": \"{{tssa_password}}\",\n  \"role_name\": \"{{tssa_role}}\"\n}"
+            }
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status is 200', () => pm.response.to.have.status(200));",
+                  "let j = {};",
+                  "try { j = pm.response.json(); } catch (e) {}",
+                  "if (j.session_id) pm.environment.set('session_id', j.session_id);",
+                  "if (!pm.environment.get('tssa_role')) {",
+                  "  if (j.default_role) pm.environment.set('tssa_role', j.default_role);",
+                  "  if (Array.isArray(j.roles) && j.roles.length) pm.environment.set('tssa_role', j.roles[0]);",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Create session (PKI endpoint)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v1}}/sessions/pki",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"user_name\": \"{{tssa_username}}\",\n  \"role_name\": \"{{tssa_role}}\",\n  \"client_cert\": \"{{tssa_client_cert}}\"\n}"
+            }
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status is 200', () => pm.response.to.have.status(200));",
+                  "let j = {};",
+                  "try { j = pm.response.json(); } catch (e) {}",
+                  "if (j.session_id) pm.environment.set('session_id', j.session_id);",
+                  "if (!pm.environment.get('tssa_role')) {",
+                  "  if (j.default_role) pm.environment.set('tssa_role', j.default_role);",
+                  "  if (Array.isArray(j.roles) && j.roles.length) pm.environment.set('tssa_role', j.roles[0]);",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Get session details",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/sessions"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete session",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{v1}}/sessions"
+          },
+          "response": [],
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.environment.unset('session_id');"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "02 - Batch Jobs",
+      "item": [
+        {
+          "name": "List batch jobs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/batch-jobs"
+          },
+          "response": []
+        },
+        {
+          "name": "Create batch job",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v1}}/batch-jobs",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"My Batch Job\",\n  \"members\": [\n    {\n      \"type\": \"NSH_SCRIPT_JOB\",\n      \"id\": 0\n    }\n  ]\n}"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get batch job",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/batch-jobs/{{id}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete batch job",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{v1}}/batch-jobs/{{id}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Run batch job",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v1}}/batch-jobs/{{id}}",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"targets\": {\n    \"servers\": [\n      1\n    ]\n  }\n}"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "List job runs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/batch-jobs/{{id}}/jobruns"
+          },
+          "response": []
+        },
+        {
+          "name": "Get job run",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/batch-jobs/{{id}}/jobruns/{{run_id}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Job run events",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/batch-jobs/{{id}}/jobruns/{{run_id}}/events"
+          },
+          "response": []
+        },
+        {
+          "name": "Schedules (PUT)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v1}}/batch-jobs/{{id}}/schedules",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"schedules\": []\n}"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Re-run (failed/same)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": "{{v1}}/batch-jobs/{{id}}/jobruns/{{run_id}}/"
+          },
+          "response": []
+        },
+        {
+          "name": "Abort run",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": "{{v1}}/batch-jobs/{{id}}/jobruns/{{run_id}}/abort"
+          },
+          "response": []
+        },
+        {
+          "name": "Cancel run",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": "{{v1}}/batch-jobs/{{id}}/jobruns/{{run_id}}/cancel"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "03 - BL Packages",
+      "item": [
+        {
+          "name": "List BLPackages",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/blpackages"
+          },
+          "response": []
+        },
+        {
+          "name": "Create BLPackage",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v1}}/blpackages",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"type\": \"DEPOT_FILE\",\n  \"name\": \"ExamplePackage\",\n  \"group_id\": 0,\n  \"payload\": {\n    \"source_server_id\": 0,\n    \"source_path\": \"/tmp/file.txt\"\n  }\n}"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get BLPackage by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/blpackages/{{id}}"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "04 - Catalogs (Patching)",
+      "item": [
+        {
+          "name": "List catalogs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/catalogs"
+          },
+          "response": []
+        },
+        {
+          "name": "Update catalog (PATCH)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v1}}/catalogs/{{id}}",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"action\": \"update\"\n}"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "List catalog containers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/catalogs/{{id}}/containers"
+          },
+          "response": []
+        },
+        {
+          "name": "List catalog job runs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/catalogs/{{id}}/jobruns"
+          },
+          "response": []
+        },
+        {
+          "name": "Get catalog job run",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/catalogs/{{id}}/jobruns/{{run_id}}"
+          },
+          "response": []
+        },
+        {
+          "name": "List catalog job run events",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/catalogs/{{id}}/jobruns/{{run_id}}/events"
+          },
+          "response": []
+        },
+        {
+          "name": "List catalog patches (v2)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v2}}/catalogs/{{id}}/patches"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "05 - Compliance Jobs",
+      "item": [
+        {
+          "name": "List compliance jobs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/compliance-jobs"
+          },
+          "response": []
+        },
+        {
+          "name": "Create compliance job",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v1}}/compliance-jobs",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"My Compliance Job\",\n  \"template_id\": 0\n}"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get compliance job",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/compliance-jobs/{{id}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Update compliance job",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v1}}/compliance-jobs/{{id}}",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Updated Name\"\n}"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete compliance job",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{v1}}/compliance-jobs/{{id}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Run compliance job (targets)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v1}}/compliance-jobs/{{id}}",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"targets\": {\n    \"servers\": [\n      1\n    ],\n    \"server_groups\": [\n      3\n    ]\n  }\n}"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Re-run (failed/same)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": "{{v1}}/compliance-jobs/{{id}}/jobruns/{{run_id}}/"
+          },
+          "response": []
+        },
+        {
+          "name": "List job runs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/compliance-jobs/{{id}}/jobruns"
+          },
+          "response": []
+        },
+        {
+          "name": "Get job run",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/compliance-jobs/{{id}}/jobruns/{{run_id}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Job run events",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/compliance-jobs/{{id}}/jobruns/{{run_id}}/events"
+          },
+          "response": []
+        },
+        {
+          "name": "Rule results",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/compliance-jobs/{{id}}/jobruns/{{run_id}}/results/rules"
+          },
+          "response": []
+        },
+        {
+          "name": "Server results",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/compliance-jobs/{{id}}/jobruns/{{run_id}}/results/servers"
+          },
+          "response": []
+        },
+        {
+          "name": "Remediate (sync)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v1}}/compliance-jobs/remediate",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"job_id\": \"{{id}}\",\n  \"scope\": \"all_noncompliant\"\n}"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Remediate (async)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v1}}/compliance-jobs/remediate-async",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"job_id\": \"{{id}}\",\n  \"scope\": \"all_noncompliant\"\n}"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Remediation async status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/compliance-jobs/remediate-async/{{cacheKey}}"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "06 - Configs",
+      "item": [
+        {
+          "name": "List timezones",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/configs/timezones"
+          },
+          "response": []
+        },
+        {
+          "name": "Get Automation Console login settings",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/configs/automation_console"
+          },
+          "response": []
+        },
+        {
+          "name": "Encrypt session-id for Automation Console",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/configs/automation_console/encrypt"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "07 - Deploy Jobs",
+      "item": [
+        {
+          "name": "List deploy jobs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/deploy-jobs"
+          },
+          "response": []
+        },
+        {
+          "name": "Create deploy job",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v1}}/deploy-jobs",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Deploy BLPackage\",\n  \"package_id\": 0,\n  \"targets\": {\n    \"servers\": [\n      1\n    ]\n  }\n}"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete deploy job",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{v1}}/deploy-jobs/{{id}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Run deploy job (v1)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v1}}/deploy-jobs/{{id}}",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"targets\": {\n    \"servers\": [\n      1\n    ],\n    \"server_groups\": [\n      3\n    ]\n  }\n}"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Run deploy job (v2)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v2}}/deploy-jobs/{{id}}",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"targets\": {\n    \"servers\": [\n      1\n    ]\n  }\n}"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "List job runs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/deploy-jobs/{{id}}/jobruns"
+          },
+          "response": []
+        },
+        {
+          "name": "Get job run",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/deploy-jobs/{{id}}/jobruns/{{run_id}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Job run events",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/deploy-jobs/{{id}}/jobruns/{{run_id}}/events"
+          },
+          "response": []
+        },
+        {
+          "name": "Job run results",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/deploy-jobs/{{id}}/jobruns/{{run_id}}/results"
+          },
+          "response": []
+        },
+        {
+          "name": "Schedules (PUT)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v1}}/deploy-jobs/{{id}}/schedules",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"schedules\": []\n}"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Re-run (failed/same)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": "{{v1}}/deploy-jobs/{{id}}/jobruns/{{run_id}}/"
+          },
+          "response": []
+        },
+        {
+          "name": "Abort run",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": "{{v1}}/deploy-jobs/{{id}}/jobruns/{{run_id}}/abort"
+          },
+          "response": []
+        },
+        {
+          "name": "Cancel run",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": "{{v1}}/deploy-jobs/{{id}}/jobruns/{{run_id}}/cancel"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "08 - File Deploy Jobs",
+      "item": [
+        {
+          "name": "Run file deploy job",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v1}}/file-deploy-jobs/{{id}}",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"targets\": {\n    \"servers\": [\n      1\n    ]\n  }\n}"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "List job runs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/file-deploy-jobs/{{id}}/jobruns"
+          },
+          "response": []
+        },
+        {
+          "name": "Re-run (failed/same)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": "{{v1}}/file-deploy-jobs/{{id}}/jobruns/{{run_id}}/"
+          },
+          "response": []
+        },
+        {
+          "name": "Job run results",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/file-deploy-jobs/{{id}}/jobruns/{{run_id}}/results"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "09 - Execution Tasks",
+      "item": [
+        {
+          "name": "List execution tasks",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/execution-tasks"
+          },
+          "response": []
+        },
+        {
+          "name": "Create execution task",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v1}}/execution-tasks",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"My Task\",\n  \"command\": \"echo hello\"\n}"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get execution task",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/execution-tasks/{{id}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Update execution task",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v1}}/execution-tasks/{{id}}",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Updated Task\"\n}"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Execute task",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": "{{v1}}/execution-tasks/{{id}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete execution task",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{v1}}/execution-tasks/{{id}}"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "10 - Groups",
+      "item": [
+        {
+          "name": "List groups by type",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/groups/{{type}}",
+            "description": "Replace {{type}} with server, job, depot, etc."
+          },
+          "response": []
+        },
+        {
+          "name": "Create group",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v1}}/groups/{{type}}",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"My Group\",\n  \"parent_group_id\": 0\n}"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update group",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v1}}/groups/{{id}}",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"New Name\"\n}"
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "11 - Metrics (Maintenance Server)",
+      "item": [
+        {
+          "name": "Metrics by parameter (all deployments)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/metrics/{{param}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Metrics by parameter and deployment",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/metrics/{{param}}/{{deploymentId}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Metrics 24 hours",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/metrics/24hours/{{param}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Metrics - all",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/metrics/all"
+          },
+          "response": []
+        },
+        {
+          "name": "Metrics - by deployment",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/metrics/deployment/{{deploymentId}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Metrics - last 1000 records",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/metrics/last1krecs"
+          },
+          "response": []
+        },
+        {
+          "name": "List all deployments",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/metrics/listalldeployments"
+          },
+          "response": []
+        },
+        {
+          "name": "List all jobs waiting",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/metrics/listAllJobsWaiting"
+          },
+          "response": []
+        },
+        {
+          "name": "List all parameters",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/metrics/listAllParameters"
+          },
+          "response": []
+        },
+        {
+          "name": "DB service details",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/metrics/listDBServiceDetails"
+          },
+          "response": []
+        },
+        {
+          "name": "Infrastructure details",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/metrics/listInfraDetails"
+          },
+          "response": []
+        },
+        {
+          "name": "Job Manager service details",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/metrics/listJobManagerServiceDetails"
+          },
+          "response": []
+        },
+        {
+          "name": "DB statistics",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/metrics/db/statistics"
+          },
+          "response": []
+        },
+        {
+          "name": "DB cleanup - configs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/metrics/dbcleanup/configs"
+          },
+          "response": []
+        },
+        {
+          "name": "DB cleanup - daily cleanup info",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/metrics/dbcleanup/dailycleanupinfo"
+          },
+          "response": []
+        },
+        {
+          "name": "DB cleanup - history",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/metrics/dbcleanup/history"
+          },
+          "response": []
+        },
+        {
+          "name": "DB cleanup - weekly cleanup info",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/metrics/dbcleanup/weeklycleanupinfo"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "12 - Jobs (Schedule)",
+      "item": [
+        {
+          "name": "Get job by schedule id (NSH Script)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/jobs/schedule/{{id}}"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "13 - NSH Script Jobs",
+      "item": [
+        {
+          "name": "List NSH Script Jobs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/nshscript-jobs"
+          },
+          "response": []
+        },
+        {
+          "name": "Create NSH Script Job",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v1}}/nshscript-jobs",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"My NSH Job\",\n  \"script_id\": 0,\n  \"targets\": {\n    \"servers\": [\n      1\n    ]\n  }\n}"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete NSH Script Job",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{v1}}/nshscript-jobs/{{id}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Run NSH Script Job",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v1}}/nshscript-jobs/{{id}}",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"targets\": {\n    \"servers\": [\n      1\n    ]\n  }\n}"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "List job runs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/nshscript-jobs/{{id}}/jobruns"
+          },
+          "response": []
+        },
+        {
+          "name": "Get job run",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/nshscript-jobs/{{id}}/jobruns/{{run_id}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Job run events",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/nshscript-jobs/{{id}}/jobruns/{{run_id}}/events"
+          },
+          "response": []
+        },
+        {
+          "name": "Job run results",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/nshscript-jobs/{{id}}/jobruns/{{run_id}}/results"
+          },
+          "response": []
+        },
+        {
+          "name": "Schedules (PUT)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v1}}/nshscript-jobs/{{id}}/schedules",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"schedules\": []\n}"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Re-run (failed/same)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": "{{v1}}/nshscript-jobs/{{id}}/jobruns/{{run_id}}/"
+          },
+          "response": []
+        },
+        {
+          "name": "Abort run",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": "{{v1}}/nshscript-jobs/{{id}}/jobruns/{{run_id}}/abort"
+          },
+          "response": []
+        },
+        {
+          "name": "Cancel run",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": "{{v1}}/nshscript-jobs/{{id}}/jobruns/{{run_id}}/cancel"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "14 - NSH Scripts (Depot)",
+      "item": [
+        {
+          "name": "List NSH Scripts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/nshscripts"
+          },
+          "response": []
+        },
+        {
+          "name": "Get NSH Script by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/nshscripts/{{id}}"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "15 - Patching Jobs",
+      "item": [
+        {
+          "name": "List patching jobs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/patching-jobs"
+          },
+          "response": []
+        },
+        {
+          "name": "Create patching job",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v1}}/patching-jobs",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"My Patch Job\",\n  \"catalog_id\": 0,\n  \"targets\": {\n    \"servers\": [\n      1\n    ]\n  }\n}"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get patching job",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/patching-jobs/{{id}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Update patching job",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v1}}/patching-jobs/{{id}}",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Updated Patch Job\"\n}"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete patching job",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{v1}}/patching-jobs/{{id}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Run patching job (v2)",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v2}}/patching-jobs/{{id}}",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"targets\": {\n    \"servers\": [\n      1\n    ]\n  }\n}"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Run patching job (v1 - deprecated)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": "{{v1}}/patching-jobs/{{id}}"
+          },
+          "response": []
+        },
+        {
+          "name": "List job runs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/patching-jobs/{{id}}/jobruns"
+          },
+          "response": []
+        },
+        {
+          "name": "Get job run",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/patching-jobs/{{id}}/jobruns/{{run_id}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Job run events",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/patching-jobs/{{id}}/jobruns/{{run_id}}/events"
+          },
+          "response": []
+        },
+        {
+          "name": "Job run results",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/patching-jobs/{{id}}/jobruns/{{run_id}}/results"
+          },
+          "response": []
+        },
+        {
+          "name": "Analysis results",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/patching-jobs/{{id}}/jobruns/{{run_id}}/results/analysis"
+          },
+          "response": []
+        },
+        {
+          "name": "Analysis results - servers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/patching-jobs/{{id}}/jobruns/{{run_id}}/results/analysis/servers"
+          },
+          "response": []
+        },
+        {
+          "name": "Remediation results",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/patching-jobs/{{id}}/jobruns/{{run_id}}/results/remediation"
+          },
+          "response": []
+        },
+        {
+          "name": "Schedules (PUT)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v1}}/patching-jobs/{{id}}/schedules",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"schedules\": []\n}"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Abort run",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": "{{v1}}/patching-jobs/{{id}}/jobruns/{{run_id}}/abort"
+          },
+          "response": []
+        },
+        {
+          "name": "Cancel run",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": "{{v1}}/patching-jobs/{{id}}/jobruns/{{run_id}}/cancel"
+          },
+          "response": []
+        },
+        {
+          "name": "Re-run (failed/same)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": "{{v1}}/patching-jobs/{{id}}/jobruns/{{run_id}}/"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "16 - Roles",
+      "item": [
+        {
+          "name": "List roles",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/roles"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "17 - Servers",
+      "item": [
+        {
+          "name": "List servers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/servers?page=0&size=50&additional_details=false"
+          },
+          "response": []
+        },
+        {
+          "name": "Get server by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/servers/{{id}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Add server",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": "{{v1}}/servers",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"server1\",\n  \"ip_address\": \"10.0.0.1\",\n  \"description\": \"example\"\n}"
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Decommission server",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{v1}}/servers/{{id}}"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "18 - Smart Groups",
+      "item": [
+        {
+          "name": "List smart groups by type",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/smart-groups/{{type}}",
+            "description": "Replace {{type}} with server, job, depot, etc."
+          },
+          "response": []
+        },
+        {
+          "name": "Get smart group members",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/smart-groups/{{type}}/{{id}}/members"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "19 - Snapshot Jobs (results in Batch)",
+      "item": [
+        {
+          "name": "Snapshot job results (servers)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/snapshot-jobs/{{id}}/jobruns/{{run_id}}/results/servers"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "20 - Templates",
+      "item": [
+        {
+          "name": "List compliance templates",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/templates"
+          },
+          "response": []
+        },
+        {
+          "name": "Get compliance template",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{v1}}/templates/{{id}}"
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "const url = pm.request.url.toString();",
+          "const isSessionCall = url.includes('/api/v1/sessions');",
+          "if (!isSessionCall) {",
+          "  if (!pm.request.headers.has('Accept')) {",
+          "    pm.request.headers.add({ key: 'Accept', value: 'application/json' });",
+          "  }",
+          "  const sid = pm.environment.get('session_id');",
+          "  if (sid && !pm.request.headers.has('session-id')) {",
+          "    pm.request.headers.add({ key: 'session-id', value: sid });",
+          "  }",
+          "  const role = pm.environment.get('tssa_role');",
+          "  if (role && !pm.request.headers.has('role')) {",
+          "    pm.request.headers.add({ key: 'role', value: role });",
+          "  }",
+          "}"
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "tssa_protocol",
+      "value": "https",
+      "type": "default"
+    },
+    {
+      "key": "tssa_host",
+      "value": "your-appserver-or-maint.example.com",
+      "type": "default"
+    },
+    {
+      "key": "tssa_port",
+      "value": "9843",
+      "type": "default"
+    },
+    {
+      "key": "base",
+      "value": "{{tssa_protocol}}://{{tssa_host}}:{{tssa_port}}/rest",
+      "type": "default"
+    },
+    {
+      "key": "v1",
+      "value": "{{base}}/api/v1",
+      "type": "default"
+    },
+    {
+      "key": "v2",
+      "value": "{{base}}/api/v2",
+      "type": "default"
+    },
+    {
+      "key": "session_id",
+      "value": "",
+      "type": "default"
+    },
+    {
+      "key": "tssa_role",
+      "value": "BLAdmins",
+      "type": "default"
+    },
+    {
+      "key": "tssa_username",
+      "value": "BLAdmin",
+      "type": "default"
+    },
+    {
+      "key": "tssa_password",
+      "value": "",
+      "type": "secret"
+    },
+    {
+      "key": "tssa_auth_type",
+      "value": "SRP",
+      "type": "default"
+    },
+    {
+      "key": "tssa_client_cert",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}

@@ -88,6 +88,8 @@ Below is the summary of what's available:
 - 10.0 - Developer tools
 - 20.0 - HCO (Capacity)
 
+There is a separate collection for Truesight Server Automation and all of its REST calls as well. It contains all REST calls as of version 25.2
+- TSSA
 
 *ITSM mentioned above was merged from another project and has a lot of examples but needs some love to fix variables to get it fully ready for use.
 If anyone uses it or has something better, please share!
@@ -95,10 +97,12 @@ If anyone uses it or has something better, please share!
 
 ## How do I use it?
 
-You just download the two files below and import them into Postman
+You just download the four files below and import them into Postman
 
 - Generic - Helix API Operations.postman_collection.json
 - Helix.postman_environment.json
+- TSSA_25.2_REST_v2.postman_collection.json
+- TSSA_Env.postman_environment.json
 
 And then update the Environment variables with the values of your current tenant. Note that the ones with "token" in the name will be dynamically updated by the automation when you run any of the API calls.
 
