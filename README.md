@@ -1,4 +1,4 @@
-# bmc-helix-postman-collections
+# BMC Helix Postman Collections
 
 ## What is this project about?
 
