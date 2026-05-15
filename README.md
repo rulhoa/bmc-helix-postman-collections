@@ -99,24 +99,29 @@ If anyone uses it or has something better, please share!
 
 You just download the four files below and import them into Postman
 
-- Generic - Helix API Operations.postman_collection.json
-- Helix.postman_environment.json
-- TSSA_25.2_REST_v2.postman_collection.json
-- TSSA_Env.postman_environment.json
+- [Generic - Helix API Operations.postman_collection.json](<Generic - Helix API Operations.postman_collection.json>)
+- [Helix.postman_environment.json](<Helix.postman_environment.json>)
+- [TSSA_25.2_REST_v2.postman_collection.json](<TSSA_25.2_REST_v2.postman_collection.json>)
+- [TSSA_Env.postman_environment.json](<TSSA_Env.postman_environment.json>)
 
 And then update the Environment variables with the values of your current tenant. Note that the ones with "token" in the name will be dynamically updated by the automation when you run any of the API calls.
 
 That's it!
+
+## Want to use the Postman native git structure?
+
+The Postman native git structure uses individual yaml files for each API request, making it much easier to track and submit repo updates!
+
+To use it, create a new workspace in Postman with the option to use a folder with a clone of this repository, and it'll use the files from the folders [.postman](<.postman>) and [postman](<postman>) to load all the collections and environments from this project!
 
 
 ## Is what you're doing here the best way to collaborate on this?
 
 I don't know but we must start somewhere and I'm completely open to suggestions!
 
-
 ## Who made this possible?
 
-I've been curating this collection since joining BMC in early 2022 and it's been made possible through the help of a lot of people inside and outside BMC.
+I've been curating this collection since joining BMC (Now BMC Helix) in early 2022 and it's been made possible through the help of a lot of people inside and outside the company.
 
 
 ## DISCLAIMER
