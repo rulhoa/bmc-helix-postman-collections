@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{is_base_url}}/api/rx/authentication/loginrequest"
+method: POST
+headers:
+  X-Requested-By: XMLHttpRequest
+body:
+  type: json
+  content: "{\r
+
+    \    \"userName\": \"{{helix_username}}\",\r
+
+    \    \"password\": \"{{helix_password}}\"\r
+
+    }"
+auth:
+  type: noauth
+order: 1000

@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{itsm_base_url}}/api/arsys/v1/entry/CHG:WorkLog/CWL000000604505"
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+    	"values": {
+    		"Detailed Description": "dfsfds"
+    	}
+    }
+order: 1000

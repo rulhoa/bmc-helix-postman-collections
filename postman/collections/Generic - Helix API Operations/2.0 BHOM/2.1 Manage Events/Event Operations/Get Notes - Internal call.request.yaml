@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{bhom_base_url}}/tsws/monitoring/api/v1.0/events/eps.2085794782.13386326120252492.38daa74d-51a2-4bbe-be92-2083f0ded1dd/lognotes"
+method: GET
+order: 5000

@@ -1,0 +1,37 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/metrics-query-service/api/v1.0/label/isKpi/values"
+  method: GET
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Authorization
+      value: apiKey {{bhom_apiKey}}
+    - key: ""
+      value: ""
+      disabled: true
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Tue, 03 Jan 2023 17:59:05 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    X-Server-Hostname: victoria-metrics-victoria-metrics-cluster-vmselect-797bbf5pjmrl
+    Access-Control-Allow-Origin: "*"
+    Content-Encoding: gzip
+    TraceId: f2d8c4ae-a82b-438e-b0c9-f2df51b06bd2 null
+    Pragma: no-cache
+    Cache-control: no-store
+  body:
+    type: json
+    content: |-
+      {
+          "status": "success",
+          "isPartial": false,
+          "data": [
+              "true"
+          ]
+      }
+order: 7000

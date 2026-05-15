@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{bhom_base_url}}/ims/api/v1/users/{{helix_userid}}/access_keys"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\": \"HCO_ETL_API_KEY_USERBASED\",\r
+
+    \    \"expiry_enum\": \"Never expires (not recommended)\",\r
+
+    \    \"non_deletable\": false\r
+
+    }"
+order: 3000

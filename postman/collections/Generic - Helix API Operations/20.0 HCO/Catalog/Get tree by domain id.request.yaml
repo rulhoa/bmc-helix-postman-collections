@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{bhom_base_url}}/opt/api/v1/catalog/explore/domains/386/tree?group=Administrators&depth=3"
+method: GET
+queryParams:
+  group: Administrators
+  depth: "3"
+order: 6000

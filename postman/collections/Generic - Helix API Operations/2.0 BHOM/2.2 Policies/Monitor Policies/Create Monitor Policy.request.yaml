@@ -1,0 +1,56 @@
+$kind: http-request
+url: "{{bhom_base_url}}/tsws/monitoring/api/v1.0/unifiedadmin/MonitoringPolicy/create"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"monitoringPolicy\": {\r
+
+    \        \"agentSelectionCriteria\": \"agentTag EQUALS \\\"A\\\"\",\r
+
+    \        \"tenant\": {\r
+
+    \            \"name\": \"613873398\"\r
+
+    \        },\r
+
+    \        \"owner\": \"Liam\",\r
+
+    \        \"type\": \"monitoring\",\r
+
+    \        \"precedence\": 907,\r
+
+    \        \"enabled\": false,\r
+
+    \        \"shared\": false,\r
+
+    \        \"associatedUserGroup\": \"731951610575781\",\r
+
+    \        \"name\": \"My Monitor Policy\",\r
+
+    \        \"monitorConfiguration\": {\r
+
+    \            \"configurations\": [\r
+
+    \                {\r
+
+    \                    \"solutionName\": \"nuk\",\r
+
+    \                    \"solutionVersion\": \"22.4.12\",\r
+
+    \                    \"monitoringProfile\": \"NUK_Basic\",\r
+
+    \                    \"defaultMonitoring\": true\r
+
+    \                }\r
+
+    \            ]\r
+
+    \        }\r
+
+    \    }\r
+
+    }"
+examples: ./.resources/Create Monitor Policy.resources/examples
+order: 3000

@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{v2}}/catalogs/{{id}}/patches"
+method: GET
+order: 7000

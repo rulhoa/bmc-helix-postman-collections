@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{applicationserver}}/api/arsys/v1/entry/User?q='Login Name'=\"berod\""
+method: GET
+headers:
+  Authorization: "{{tokensignature}}{{token}}"
+  Content-Type: application/json
+queryParams:
+  q: "'Login Name'=\"berod\""
+order: 2000

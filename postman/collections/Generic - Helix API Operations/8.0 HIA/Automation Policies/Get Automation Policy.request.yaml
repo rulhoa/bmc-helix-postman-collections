@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{bhom_base_url}}/intelligent-automation/api/v1/workflows/7f880287-93e9-c887-d8cf-f86ab49f213a"
+method: GET
+examples: ./.resources/Get Automation Policy.resources/examples
+order: 2000

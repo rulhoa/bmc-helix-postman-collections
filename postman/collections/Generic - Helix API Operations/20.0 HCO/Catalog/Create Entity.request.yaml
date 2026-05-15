@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{bhom_base_url}}/opt/api/v1/catalog/entities"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\": \"Services & Applications\",\r
+
+    \  \"status_id\": 1,\r
+
+    \  \"description\": \"Service and application models from Helix Discovery\",\r
+
+    \  \"type\": \"app:sm\"\r
+
+    }"
+order: 10000

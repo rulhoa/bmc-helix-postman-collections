@@ -1,0 +1,59 @@
+$kind: http-request
+description: "Source: [https://github.com/controlm/automation-api-community-solutions/blob/master/helix-control-m/2-external-monitoring-tools-examples/alerts-to-bhom/bhom_ctm_event_class.json](https://github.com/controlm/automation-api-community-solutions/blob/master/helix-control-m/2-external-monitoring-tools-examples/alerts-to-bhom/bhom_ctm_event_class.json)"
+url: "{{bhom_base_url}}/events-service/api/v1.0/events/classes/"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \   \"name\": \"ControlMAlert\",\r
+
+    \   \"parentClassName\": \"MonitorEvent\",\r
+
+    \   \"attributes\": [\r
+
+    \      { \"name\": \"eventType\",        \"dataType\": \"STRING\"  },\r
+
+    \      { \"name\": \"alertId\",          \"dataType\": \"INTEGER\" },\r
+
+    \      { \"name\": \"ctmServer\",        \"dataType\": \"STRING\"  },\r
+
+    \      { \"name\": \"fileName\",         \"dataType\": \"STRING\"  },\r
+
+    \      { \"name\": \"runId\",            \"dataType\": \"STRING\"  },\r
+
+    \      { \"name\": \"alertStatus\",      \"dataType\": \"STRING\"  },\r
+
+    \      { \"name\": \"ctmUser\",          \"dataType\": \"STRING\"  },\r
+
+    \      { \"name\": \"updateTime\",       \"dataType\": \"DATE\"    },\r
+
+    \      { \"name\": \"runAs\",            \"dataType\": \"STRING\"  },\r
+
+    \      { \"name\": \"subApplication\",   \"dataType\": \"STRING\"  },\r
+
+    \      { \"name\": \"application\",      \"dataType\": \"STRING\"  },\r
+
+    \      { \"name\": \"jobName\",          \"dataType\": \"STRING\"  },\r
+
+    \      { \"name\": \"alertType\",        \"dataType\": \"STRING\"  },\r
+
+    \      { \"name\": \"closedByControlM\", \"dataType\": \"STRING\"  },\r
+
+    \      { \"name\": \"ticketNumber\",     \"dataType\": \"STRING\"  },\r
+
+    \      { \"name\": \"runNo\",            \"dataType\": \"INTEGER\" },\r
+
+    \      { \"name\": \"alertNotes\",       \"dataType\": \"STRING\"  },\r
+
+    \      { \"name\": \"jobLink\",          \"dataType\": \"STRING\"  }\r
+
+    \   ]\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{bhom_json_web_token}}"
+examples: ./.resources/2.1 Create class - ControlMAlert.resources/examples
+order: 2000

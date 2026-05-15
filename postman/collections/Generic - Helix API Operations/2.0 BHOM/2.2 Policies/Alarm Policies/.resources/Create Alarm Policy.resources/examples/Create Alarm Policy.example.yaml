@@ -1,0 +1,109 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/tsws/monitoring/api/v1.0/alarm/policies"
+  method: POST
+  body:
+    type: json
+    content: "{\r
+
+      \    \"entityThresholds\": [\r
+
+      \        {\r
+
+      \            \"metricDetails\": {\r
+
+      \                \"entityTypeId\": \"AppDynamics_Overall_Application_Performance\",\r
+
+      \                \"metricId\": \"Average_Response_Time__ms_\",\r
+
+      \                \"label\": \"Average_Response_Time__ms_\",\r
+
+      \                \"unit\": \"Millisecond\",\r
+
+      \                \"path\": \"AppDynamics/1.0.0/AppDynamics_Overall_Application_Performance/Average_Response_Time__ms_\"\r
+
+      \            },\r
+
+      \            \"entityDetails\": {},\r
+
+      \            \"order\": 0,\r
+
+      \            \"isEvaluationCriteriaValid\": false,\r
+
+      \            \"alarmConfigurations\": [\r
+
+      \                {\r
+
+      \                    \"condition\": {\r
+
+      \                        \"baseline\": true,\r
+
+      \                        \"duration\": 0\r
+
+      \                    },\r
+
+      \                    \"action\": {\r
+
+      \                        \"severity\": \"CRITICAL\",\r
+
+      \                        \"autoClose\": true,\r
+
+      \                        \"closeDuration\": -1\r
+
+      \                    },\r
+
+      \                    \"configOrder\": 0\r
+
+      \                }\r
+
+      \            ],\r
+
+      \            \"type\": \"ALL\",\r
+
+      \            \"evaluationCriteria\": \"\"\r
+
+      \        }\r
+
+      \    ],\r
+
+      \    \"enabled\": false,\r
+
+      \    \"policyName\": \"AppDynamics Alarms - Overall_Application_Performance\",\r
+
+      \    \"description\": \"\",\r
+
+      \    \"executionOrder\": 9999\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Server: nginx
+    Date: Sat, 27 Jan 2024 18:09:30 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    Vary: Accept-Encoding
+    Content-Security-Policy: frame-ancestors 'self'
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    X-Frame-Options: SAMEORIGIN
+    X-Content-Type-Options: nosniff
+    Cache-Control: no-store
+    Referrer-Policy: same-origin
+    Permissions-Policy: idle-detection=self
+    TraceId: 8af278fd-e10a-46ce-856f-c8fca3b46d19 678311683
+    X-Request-ID: ccce1a174bd67692ef8df637f238095c
+    Content-Encoding: gzip
+  body:
+    type: json
+    content: |-
+      {
+          "responseTimeStamp": 1706378970867,
+          "statusCode": "OK",
+          "statusMsg": "[Created policy AppDynamics Alarms - Overall_Application_Performance]",
+          "resourceId": [
+              "85450763-a0c8-4534-9ad9-b2656ea2824e"
+          ]
+      }
+order: 1000

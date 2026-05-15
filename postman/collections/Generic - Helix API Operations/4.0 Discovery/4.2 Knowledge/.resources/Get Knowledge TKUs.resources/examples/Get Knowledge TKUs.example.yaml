@@ -1,0 +1,295 @@
+$kind: http-example
+request:
+  url: "{{disco_base_url}}/api/v1.8/knowledge"
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Wed, 06 Sep 2023 17:51:03 GMT
+    Content-Type: application/json
+    Content-Length: "11801"
+    Connection: keep-alive
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+  body:
+    type: json
+    content: |-
+      {
+          "devices": null,
+          "latest_edp": {
+              "active_count": 17,
+              "inactive_count": 0,
+              "modified": false,
+              "name": "EDP-2023-08-1-Discovery-23.1+",
+              "origin": "TKU",
+              "package": "Extended Data Pack",
+              "submission_date": "2023-08-07T06:21:48.607212+00:00",
+              "superseded_count": 0,
+              "upload_id": "a6e7ac64010005f7100ae38d6e4b6e6f776c6564676555706c6f6164"
+          },
+          "latest_servicenow_sync": {
+              "active_count": 61,
+              "inactive_count": 0,
+              "modified": false,
+              "name": "TKU-ServiceNowSync-2022-04-2-ADDM-22.2+",
+              "origin": "TKU",
+              "package": "Technology Knowledge Update - ServiceNowSync",
+              "submission_date": "2022-05-19T01:28:21.453630+00:00",
+              "superseded_count": 0,
+              "upload_id": "496b8562af050a340b41709f6e4b6e6f776c6564676555706c6f6164"
+          },
+          "latest_storage": {
+              "active_count": 92,
+              "inactive_count": 0,
+              "modified": false,
+              "name": "TKU-Storage-2023-08-1-Discovery-23.1+",
+              "origin": "TKU",
+              "package": "Technology Knowledge Update - Storage",
+              "submission_date": "2023-08-07T06:21:46.421984+00:00",
+              "superseded_count": 0,
+              "upload_id": "a6e7ac64010005f7100ae1cc6e4b6e6f776c6564676555706c6f6164"
+          },
+          "latest_tku": {
+              "active_count": 1662,
+              "inactive_count": 0,
+              "modified": false,
+              "name": "TKU-2023-08-1-Discovery-23.1+",
+              "origin": "TKU",
+              "package": "Technology Knowledge Update",
+              "submission_date": "2023-08-07T06:21:31.723129+00:00",
+              "superseded_count": 0,
+              "upload_id": "a6e7ac64010005f7100ad5d76e4b6e6f776c6564676555706c6f6164"
+          },
+          "product_content": "12.8",
+          "tpl_version": [
+              1,
+              22
+          ],
+          "upload_list": {
+              "34e3a062bb0550d16cf57fd26e4b6e6f776c6564676555706c6f6164": {
+                  "active_count": 923,
+                  "inactive_count": 9,
+                  "modified": true,
+                  "name": "TKU-2022-06-1-ADDM-22.2+",
+                  "origin": "TKU",
+                  "package": "Technology Knowledge Update",
+                  "submission_date": "2022-06-10T08:34:01.616560+00:00",
+                  "upload_id": "34e3a062bb0550d16cf57fd26e4b6e6f776c6564676555706c6f6164"
+              },
+              "34e3a062bb0550d16cf5c0786e4b6e6f776c6564676555706c6f6164": {
+                  "active_count": 40,
+                  "inactive_count": 1,
+                  "modified": true,
+                  "name": "TKU-Storage-2022-06-1-ADDM-22.2+",
+                  "origin": "TKU",
+                  "package": "Technology Knowledge Update - Storage",
+                  "submission_date": "2022-06-10T09:38:08.667721+00:00",
+                  "upload_id": "34e3a062bb0550d16cf5c0786e4b6e6f776c6564676555706c6f6164"
+              },
+              "3f376764010032c31dcfd72b6e4b6e6f776c6564676555706c6f6164": {
+                  "active_count": 1,
+                  "inactive_count": 0,
+                  "modified": false,
+                  "name": "mq_cics_linkage_mq",
+                  "origin": null,
+                  "package": null,
+                  "submission_date": "2023-05-19T15:13:02.693806+00:00",
+                  "upload_id": "3f376764010032c31dcfd72b6e4b6e6f776c6564676555706c6f6164"
+              },
+              "3f376764010032c31dcfd8756e4b6e6f776c6564676555706c6f6164": {
+                  "active_count": 1,
+                  "inactive_count": 0,
+                  "modified": false,
+                  "name": "db2_maga_linkage_mq",
+                  "origin": null,
+                  "package": null,
+                  "submission_date": "2023-05-19T15:15:04.182976+00:00",
+                  "upload_id": "3f376764010032c31dcfd8756e4b6e6f776c6564676555706c6f6164"
+              },
+              "3f376764010032c31dcfd9bf6e4b6e6f776c6564676555706c6f6164": {
+                  "active_count": 1,
+                  "inactive_count": 0,
+                  "modified": false,
+                  "name": "weblogic_mq_linkage_mq",
+                  "origin": null,
+                  "package": null,
+                  "submission_date": "2023-05-19T15:16:39.925905+00:00",
+                  "upload_id": "3f376764010032c31dcfd9bf6e4b6e6f776c6564676555706c6f6164"
+              },
+              "496b8562af050a340b41709f6e4b6e6f776c6564676555706c6f6164": {
+                  "active_count": 61,
+                  "inactive_count": 0,
+                  "modified": false,
+                  "name": "TKU-ServiceNowSync-2022-04-2-ADDM-22.2+",
+                  "origin": "TKU",
+                  "package": "Technology Knowledge Update - ServiceNowSync",
+                  "submission_date": "2022-05-19T01:28:21.453630+00:00",
+                  "superseded_count": 0,
+                  "upload_id": "496b8562af050a340b41709f6e4b6e6f776c6564676555706c6f6164"
+              },
+              "496b8562af050a340b4172556e4b6e6f776c6564676555706c6f6164": {
+                  "active_count": 12,
+                  "inactive_count": 0,
+                  "modified": false,
+                  "name": "DemoPatterns",
+                  "origin": null,
+                  "package": null,
+                  "submission_date": "2022-05-19T01:42:53.368778+00:00",
+                  "upload_id": "496b8562af050a340b4172556e4b6e6f776c6564676555706c6f6164"
+              },
+              "4c8cd06401008e7c7015a84c6e4b6e6f776c6564676555706c6f6164": {
+                  "active_count": 1,
+                  "inactive_count": 0,
+                  "modified": false,
+                  "name": "Import.VSE.ControlM",
+                  "origin": null,
+                  "package": null,
+                  "submission_date": "2023-09-06T17:42:59.456989+00:00",
+                  "upload_id": "4c8cd06401008e7c7015a84c6e4b6e6f776c6564676555706c6f6164"
+              },
+              "606636640100d3821b63d10c6e4b6e6f776c6564676555706c6f6164": {
+                  "active_count": 1458,
+                  "inactive_count": 6,
+                  "modified": true,
+                  "name": "TKU-2023-04-1-Discovery-23.1+",
+                  "origin": "TKU",
+                  "package": "Technology Knowledge Update",
+                  "submission_date": "2023-04-12T10:49:52.074282+00:00",
+                  "upload_id": "606636640100d3821b63d10c6e4b6e6f776c6564676555706c6f6164"
+              },
+              "614391640100561d684a71b66e4b6e6f776c6564676555706c6f6164": {
+                  "active_count": 1535,
+                  "inactive_count": 2,
+                  "modified": true,
+                  "name": "TKU-2023-06-1-Discovery-23.1+",
+                  "origin": "TKU",
+                  "package": "Technology Knowledge Update",
+                  "submission_date": "2023-06-20T07:08:16.490532+00:00",
+                  "upload_id": "614391640100561d684a71b66e4b6e6f776c6564676555706c6f6164"
+              },
+              "77638762c1053fc953fc68646e4b6e6f776c6564676555706c6f6164": {
+                  "active_count": 1,
+                  "inactive_count": 0,
+                  "modified": false,
+                  "name": "software_instance_model.Office_Unitality",
+                  "origin": null,
+                  "package": null,
+                  "submission_date": "2022-05-24T08:02:32.843084+00:00",
+                  "upload_id": "77638762c1053fc953fc68646e4b6e6f776c6564676555706c6f6164"
+              },
+              "7de6ac64010088bb177f2a2a6e4b6e6f776c6564676555706c6f6164": {
+                  "active_count": 0,
+                  "inactive_count": 1,
+                  "modified": false,
+                  "name": "Import.VSE upload 44",
+                  "origin": null,
+                  "package": null,
+                  "submission_date": "2023-07-13T17:01:48.053423+00:00",
+                  "upload_id": "7de6ac64010088bb177f2a2a6e4b6e6f776c6564676555706c6f6164"
+              },
+              "7de6ac64010088bb177f2a396e4b6e6f776c6564676555706c6f6164": {
+                  "active_count": 0,
+                  "inactive_count": 1,
+                  "modified": false,
+                  "name": "Import.VSE upload 45",
+                  "origin": null,
+                  "package": null,
+                  "submission_date": "2023-07-13T17:13:03.865534+00:00",
+                  "upload_id": "7de6ac64010088bb177f2a396e4b6e6f776c6564676555706c6f6164"
+              },
+              "7de6ac64010088bb177f2a496e4b6e6f776c6564676555706c6f6164": {
+                  "active_count": 0,
+                  "inactive_count": 1,
+                  "modified": false,
+                  "name": "Import.VSE upload 46",
+                  "origin": null,
+                  "package": null,
+                  "submission_date": "2023-07-21T16:31:02.927082+00:00",
+                  "upload_id": "7de6ac64010088bb177f2a496e4b6e6f776c6564676555706c6f6164"
+              },
+              "85815c640100a9ce7a9f87506e4b6e6f776c6564676555706c6f6164": {
+                  "active_count": 1478,
+                  "inactive_count": 5,
+                  "modified": true,
+                  "name": "TKU-2023-05-1-Discovery-23.1+",
+                  "origin": "TKU",
+                  "package": "Technology Knowledge Update",
+                  "submission_date": "2023-05-11T06:11:07.368353+00:00",
+                  "upload_id": "85815c640100a9ce7a9f87506e4b6e6f776c6564676555706c6f6164"
+              },
+              "a6e7ac64010005f7100ad5d76e4b6e6f776c6564676555706c6f6164": {
+                  "active_count": 1662,
+                  "inactive_count": 0,
+                  "modified": false,
+                  "name": "TKU-2023-08-1-Discovery-23.1+",
+                  "origin": "TKU",
+                  "package": "Technology Knowledge Update",
+                  "submission_date": "2023-08-07T06:21:31.723129+00:00",
+                  "superseded_count": 0,
+                  "upload_id": "a6e7ac64010005f7100ad5d76e4b6e6f776c6564676555706c6f6164"
+              },
+              "a6e7ac64010005f7100ae1cc6e4b6e6f776c6564676555706c6f6164": {
+                  "active_count": 92,
+                  "inactive_count": 0,
+                  "modified": false,
+                  "name": "TKU-Storage-2023-08-1-Discovery-23.1+",
+                  "origin": "TKU",
+                  "package": "Technology Knowledge Update - Storage",
+                  "submission_date": "2023-08-07T06:21:46.421984+00:00",
+                  "superseded_count": 0,
+                  "upload_id": "a6e7ac64010005f7100ae1cc6e4b6e6f776c6564676555706c6f6164"
+              },
+              "a6e7ac64010005f7100ae38d6e4b6e6f776c6564676555706c6f6164": {
+                  "active_count": 17,
+                  "inactive_count": 0,
+                  "modified": false,
+                  "name": "EDP-2023-08-1-Discovery-23.1+",
+                  "origin": "TKU",
+                  "package": "Extended Data Pack",
+                  "submission_date": "2023-08-07T06:21:48.607212+00:00",
+                  "superseded_count": 0,
+                  "upload_id": "a6e7ac64010005f7100ae38d6e4b6e6f776c6564676555706c6f6164"
+              },
+              "a742916401002f6b535f11b06e4b6e6f776c6564676555706c6f6164": {
+                  "active_count": 0,
+                  "inactive_count": 1,
+                  "modified": false,
+                  "name": "Import.HCO_Generic",
+                  "origin": null,
+                  "package": null,
+                  "submission_date": "2023-07-07T18:05:57.060127+00:00",
+                  "upload_id": "a742916401002f6b535f11b06e4b6e6f776c6564676555706c6f6164"
+              },
+              "a742916401002f6b535f174e6e4b6e6f776c6564676555706c6f6164": {
+                  "active_count": 0,
+                  "inactive_count": 1,
+                  "modified": false,
+                  "name": "Import.HCO_Mainframe_VSE upload 24",
+                  "origin": null,
+                  "package": null,
+                  "submission_date": "2023-07-07T20:41:18.465075+00:00",
+                  "upload_id": "a742916401002f6b535f174e6e4b6e6f776c6564676555706c6f6164"
+              },
+              "a742916401002f6b535f17516e4b6e6f776c6564676555706c6f6164": {
+                  "active_count": 0,
+                  "inactive_count": 1,
+                  "modified": false,
+                  "name": "Import.HCO_Mainframe_VSE upload 25",
+                  "origin": null,
+                  "package": null,
+                  "submission_date": "2023-07-07T20:43:54.139757+00:00",
+                  "upload_id": "a742916401002f6b535f17516e4b6e6f776c6564676555706c6f6164"
+              },
+              "a742916401002f6b535f17546e4b6e6f776c6564676555706c6f6164": {
+                  "active_count": 1,
+                  "inactive_count": 0,
+                  "modified": false,
+                  "name": "Import.HCO_Mainframe_VSE upload 26",
+                  "origin": null,
+                  "package": null,
+                  "submission_date": "2023-07-07T20:44:39.428415+00:00",
+                  "upload_id": "a742916401002f6b535f17546e4b6e6f776c6564676555706c6f6164"
+              }
+          }
+      }
+order: 1000

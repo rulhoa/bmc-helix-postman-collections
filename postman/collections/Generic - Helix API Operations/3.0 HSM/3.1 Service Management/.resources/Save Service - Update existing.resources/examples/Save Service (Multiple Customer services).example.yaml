@@ -1,0 +1,367 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/service-management/api/v1.0/service/save"
+  method: POST
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Authorization
+      value: apiKey {{bhom_apiKey}}
+    - key: Authorization
+      value: ""
+      disabled: true
+  body:
+    type: text
+    content: "{\r
+
+      \    \"nodes\": [\r
+
+      \        {\r
+
+      \            \"compatibleOnly\": \"false\",\r
+
+      \            \"name\": \"BMC Mexico\",\r
+
+      \            \"id\": \"F9yNhNsGwS4mbJIglja_1YXWRy6P4PpN\",\r
+
+      \            \"publishedId\": \"6d438463eb6b897c5eff51a86e427573696e65737353657276696365\",\r
+
+      \            \"kind\": \"BusinessService\",\r
+
+      \            \"criticality\": 0,\r
+
+      \            \"labels\": {\r
+
+      \                \"Aplicacion\": \"BMC\",\r
+
+      \                \"Pais\": \"Mexico\",\r
+
+      \                \"Prioridad\": \"Alta\"\r
+
+      \            },\r
+
+      \            \"associatedElements\": [],\r
+
+      \            \"blueprintConfigurations\": [],\r
+
+      \            \"staticNodeIds\": [],\r
+
+      \            \"serviceModelSource\": \"aiops\"\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"compatibleOnly\": \"false\",\r
+
+      \            \"name\": \"BMC Colombia\",\r
+
+      \            \"id\": \"LE6ZENdiPqfx8GmombmmSctFyg4Wo8Qf\",\r
+
+      \            \"publishedId\": \"6d438463eb6b897c5eff51b26e427573696e65737353657276696365\",\r
+
+      \            \"kind\": \"BusinessService\",\r
+
+      \            \"criticality\": 0,\r
+
+      \            \"labels\": {\r
+
+      \                \"Aplicacion\": \"BMC\",\r
+
+      \                \"Pais\": \"Colombia\"\r
+
+      \            },\r
+
+      \            \"associatedElements\": [],\r
+
+      \            \"blueprintConfigurations\": [],\r
+
+      \            \"staticNodeIds\": [],\r
+
+      \            \"serviceModelSource\": \"aiops\"\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"compatibleOnly\": \"false\",\r
+
+      \            \"name\": \"BMC Peru\",\r
+
+      \            \"id\": \"8FXa_n38H3HCT87EkrwGZasNn9aVtgOJ\",\r
+
+      \            \"publishedId\": \"6d438463eb6b897c5eff51bc6e427573696e65737353657276696365\",\r
+
+      \            \"kind\": \"BusinessService\",\r
+
+      \            \"criticality\": 0,\r
+
+      \            \"labels\": {\r
+
+      \                \"Aplicacion\": \"BMC\",\r
+
+      \                \"Pais\": \"Peru\",\r
+
+      \                \"Prioridad\": \"Alta\"\r
+
+      \            },\r
+
+      \            \"associatedElements\": [],\r
+
+      \            \"blueprintConfigurations\": [],\r
+
+      \            \"staticNodeIds\": [],\r
+
+      \            \"serviceModelSource\": \"aiops\"\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"compatibleOnly\": \"false\",\r
+
+      \            \"name\": \"Sistema Despachos\",\r
+
+      \            \"id\": \"r694Eo71bXHVBlY7Z28xNcTReTz9sp3Q\",\r
+
+      \            \"publishedId\": \"6d438463eb6b897c5eff76346e427573696e65737353657276696365\",\r
+
+      \            \"kind\": \"BusinessService\",\r
+
+      \            \"criticality\": 0,\r
+
+      \            \"labels\": {\r
+
+      \                \"Aplicacion\": \"BMC\",\r
+
+      \                \"Pais\": \"Chile\",\r
+
+      \                \"Prioridad\": \"Alta\"\r
+
+      \            },\r
+
+      \            \"associatedElements\": [],\r
+
+      \            \"blueprintConfigurations\": [\r
+
+      \                {\r
+
+      \                    \"blueprintId\": {\r
+
+      \                        \"id\": \"GQAq2UHXrbcMbHVWPHY5N1XZav28hAOQ\",\r
+
+      \                        \"version\": \"1.0.0\"\r
+
+      \                    },\r
+
+      \                    \"configurationItems\": [\r
+
+      \                        {\r
+
+      \                            \"path\": \"\",\r
+
+      \                            \"values\": [\r
+
+      \                                \"TOT_CL_SD\"\r
+
+      \                            ],\r
+
+      \                            \"regex\": false\r
+
+      \                        }\r
+
+      \                    ]\r
+
+      \                },\r
+
+      \                {\r
+
+      \                    \"blueprintId\": {\r
+
+      \                        \"id\": \"J7xkeO7wH9V8Lz3f73J8YEjc5lH849OO\",\r
+
+      \                        \"version\": \"1.0.0\"\r
+
+      \                    },\r
+
+      \                    \"configurationItems\": [\r
+
+      \                        {\r
+
+      \                            \"path\": \"\",\r
+
+      \                            \"values\": [\r
+
+      \                                \"Sistema de Despachos\"\r
+
+      \                            ],\r
+
+      \                            \"regex\": false\r
+
+      \                        }\r
+
+      \                    ]\r
+
+      \                },\r
+
+      \                {\r
+
+      \                    \"blueprintId\": {\r
+
+      \                        \"id\": \"zikfvAUBVIgEWKo35iTduv4qju9wi5IJ\",\r
+
+      \                        \"version\": \"1.0.0\"\r
+
+      \                    },\r
+
+      \                    \"configurationItems\": [\r
+
+      \                        {\r
+
+      \                            \"path\": \"\",\r
+
+      \                            \"values\": [\r
+
+      \                                \"CDLV-vLB-F5-BMC-LTM-01.bmc.cl\",\r
+
+      \                                \"CDLV-vLB-F5-BMC-LTM-02.bmc.cl\",\r
+
+      \                                \"DCC-vLB-F5-BMC-LTM-01.bmc.cl\",\r
+
+      \                                \"DCC-vLB-F5-BMC-LTM-02.bmc.cl\"\r
+
+      \                            ],\r
+
+      \                            \"regex\": false\r
+
+      \                        }\r
+
+      \                    ]\r
+
+      \                }\r
+
+      \            ],\r
+
+      \            \"staticNodeIds\": [],\r
+
+      \            \"serviceModelSource\": \"aiops\"\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"compatibleOnly\": \"false\",\r
+
+      \            \"name\": \"BMC\",\r
+
+      \            \"id\": \"3J8ZE3uYJJ3tFpkyIUI3pl_MIJmqcZeg\",\r
+
+      \            \"publishedId\": \"6d438463eb6b897c5eff763e6e427573696e65737353657276696365\",\r
+
+      \            \"kind\": \"BusinessService\",\r
+
+      \            \"criticality\": 0,\r
+
+      \            \"labels\": {\r
+
+      \                \"Aplicacion\": \"BMC\"\r
+
+      \            },\r
+
+      \            \"associatedElements\": [],\r
+
+      \            \"blueprintConfigurations\": [],\r
+
+      \            \"staticNodeIds\": [],\r
+
+      \            \"serviceModelSource\": \"aiops\"\r
+
+      \        }\r
+
+      \    ],\r
+
+      \    \"links\": [\r
+
+      \        {\r
+
+      \            \"sourceId\": \"3J8ZE3uYJJ3tFpkyIUI3pl_MIJmqcZeg\",\r
+
+      \            \"targetId\": \"F9yNhNsGwS4mbJIglja_1YXWRy6P4PpN\",\r
+
+      \            \"deleted\": false\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"sourceId\": \"3J8ZE3uYJJ3tFpkyIUI3pl_MIJmqcZeg\",\r
+
+      \            \"targetId\": \"LE6ZENdiPqfx8GmombmmSctFyg4Wo8Qf\",\r
+
+      \            \"deleted\": false\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"sourceId\": \"3J8ZE3uYJJ3tFpkyIUI3pl_MIJmqcZeg\",\r
+
+      \            \"targetId\": \"8FXa_n38H3HCT87EkrwGZasNn9aVtgOJ\",\r
+
+      \            \"deleted\": false\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"sourceId\": \"3J8ZE3uYJJ3tFpkyIUI3pl_MIJmqcZeg\",\r
+
+      \            \"targetId\": \"r694Eo71bXHVBlY7Z28xNcTReTz9sp3Q\",\r
+
+      \            \"deleted\": false\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    - key: Date
+      value: Thu, 02 Feb 2023 17:01:10 GMT
+    - key: Content-Type
+      value: application/json
+    - key: Transfer-Encoding
+      value: chunked
+    - key: Connection
+      value: keep-alive
+    - key: Vary
+      value: Origin
+    - key: Vary
+      value: Access-Control-Request-Method
+    - key: Vary
+      value: Access-Control-Request-Headers
+    - key: X-Content-Type-Options
+      value: nosniff
+    - key: X-XSS-Protection
+      value: 1; mode=block
+    - key: Cache-Control
+      value: no-cache, no-store, max-age=0, must-revalidate
+    - key: Pragma
+      value: no-cache
+    - key: Expires
+      value: "0"
+    - key: Strict-Transport-Security
+      value: max-age=31536000 ; includeSubDomains
+    - key: X-Frame-Options
+      value: DENY
+  body:
+    type: json
+    content: |-
+      {
+          "resultMessage": "OK",
+          "ids": {}
+      }
+order: 2000

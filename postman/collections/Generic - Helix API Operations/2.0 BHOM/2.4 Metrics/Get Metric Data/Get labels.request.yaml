@@ -1,0 +1,20 @@
+$kind: http-request
+url: "{{bhom_base_url}}/metrics-query-service/api/v1.0/labels"
+method: GET
+headers:
+  - key: Content-Type
+    value: application/json
+  - key: Authorization
+    value: apiKey {{bhom_apiKey}}
+  - key: ""
+    value: ""
+    disabled: true
+body:
+  type: text
+  content: ""
+auth:
+  type: bearer
+  credentials:
+    token: "{{bhom_json_web_token}}"
+examples: ./.resources/Get labels.resources/examples
+order: 1000

@@ -1,0 +1,10 @@
+$kind: http-request
+name: Get AP:Detail
+description: Para consultar a mudança o ID a ser passado deve ser o Request ID, e não o Infrastrucutre Change ID, apesar dos ID's serem parecidos, são identificadores diferentes.
+url: "{{itsm_base_url}}/api/arsys/v1/entry/AP:Detail?q='Approval ID'=\"\""
+method: GET
+headers:
+  Content-Type: application/json
+queryParams:
+  q: "'Approval ID'=\"\""
+order: 2000

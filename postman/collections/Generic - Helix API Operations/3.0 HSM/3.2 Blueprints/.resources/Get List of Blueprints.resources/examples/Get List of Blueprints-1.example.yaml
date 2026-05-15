@@ -1,0 +1,280 @@
+$kind: http-example
+name: Get List of Blueprints
+request:
+  url: "{{bhom_base_url}}/service-management/api/v1.0/blueprint/list"
+  method: POST
+  headers:
+    - key: Content-Type
+      value: application/json
+      disabled: true
+    - key: Authorization
+      value: apiKey {{bhom_apiKey}}
+      disabled: true
+    - key: Authorization
+      value: ""
+      disabled: true
+  body:
+    type: json
+    content: "{\r
+
+      \  \"outputAttributes\": [\r
+
+      \    \"key\",\r
+
+      \    \"name\",\r
+
+      \    \"namespace\",\r
+
+      \    \"description\",\r
+
+      \    \"defaultBpId\",\r
+
+      \    \"read_only\",\r
+
+      \    \"state\",\r
+
+      \    \"instances_count\"\r
+
+      \  ],\r
+
+      \  \"multiSortMeta\": [\r
+
+      \    {\r
+
+      \      \"attribute\": \"name\",\r
+
+      \      \"order\": 1\r
+
+      \    }\r
+
+      \  ],\r
+
+      \  \"globalStats\": true\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    - key: Date
+      value: Wed, 15 Feb 2023 17:54:20 GMT
+    - key: Content-Type
+      value: application/json
+    - key: Transfer-Encoding
+      value: chunked
+    - key: Connection
+      value: keep-alive
+    - key: Vary
+      value: Origin
+    - key: Vary
+      value: Access-Control-Request-Method
+    - key: Vary
+      value: Access-Control-Request-Headers
+    - key: X-Content-Type-Options
+      value: nosniff
+    - key: X-XSS-Protection
+      value: 1; mode=block
+    - key: Cache-Control
+      value: no-cache, no-store, max-age=0, must-revalidate
+    - key: Pragma
+      value: no-cache
+    - key: Expires
+      value: "0"
+    - key: Strict-Transport-Security
+      value: max-age=31536000 ; includeSubDomains
+    - key: X-Frame-Options
+      value: DENY
+  body:
+    type: json
+    content: |-
+      {
+          "resultMessage": "OK",
+          "count": 13,
+          "totalEnabledBlueprints": 11,
+          "totalDisabledBlueprints": 2,
+          "blueprints": [
+              {
+                  "defaultBpId": null,
+                  "description": "Using AppDynamics Application",
+                  "instances_count": 0,
+                  "key": "MKR66-IJ7efDjPtD4e6iAAffZnSN8pkX",
+                  "blueprintId": {
+                      "id": "MKR66-IJ7efDjPtD4e6iAAffZnSN8pkX",
+                      "version": "1.0.0"
+                  },
+                  "name": "Blueprint for AppDynamics Application",
+                  "namespace": "com",
+                  "read_only": null,
+                  "state": "ENABLED"
+              },
+              {
+                  "defaultBpId": null,
+                  "description": "Using Network Devices ",
+                  "instances_count": 0,
+                  "key": "iaxsgDsCOLaBOK_lTX1C5uWBQaxAwdEo",
+                  "blueprintId": {
+                      "id": "iaxsgDsCOLaBOK_lTX1C5uWBQaxAwdEo",
+                      "version": "1.0.0"
+                  },
+                  "name": "Blueprint for Network Devices",
+                  "namespace": "com",
+                  "read_only": null,
+                  "state": "ENABLED"
+              },
+              {
+                  "defaultBpId": null,
+                  "description": "Select VCenter Cluster",
+                  "instances_count": 0,
+                  "key": "pIObalcYSBVPindg5wMUHfmx5YvjeoIp",
+                  "blueprintId": {
+                      "id": "pIObalcYSBVPindg5wMUHfmx5YvjeoIp",
+                      "version": "1.0.0"
+                  },
+                  "name": "Blueprint VCenter Cluster",
+                  "namespace": "com",
+                  "read_only": null,
+                  "state": "ENABLED"
+              },
+              {
+                  "defaultBpId": null,
+                  "description": "Software cluster with components and instances, and instances running on hosts",
+                  "instances_count": 0,
+                  "key": "Z_dg7jlbFWrTRjfM0gjO2ryuSjPFiXwl",
+                  "blueprintId": {
+                      "id": "Z_dg7jlbFWrTRjfM0gjO2ryuSjPFiXwl",
+                      "version": "1.0.0"
+                  },
+                  "name": "Child Service",
+                  "namespace": "com",
+                  "read_only": null,
+                  "state": "ENABLED"
+              },
+              {
+                  "defaultBpId": "k8s-using-namespace-1.0.0",
+                  "description": "Using K8S Namespace",
+                  "instances_count": 0,
+                  "key": "Ax24BbHCUgZd3h5OLckdO_W6s7p_et2u",
+                  "blueprintId": {
+                      "id": "Ax24BbHCUgZd3h5OLckdO_W6s7p_et2u",
+                      "version": "1.0.0"
+                  },
+                  "name": "Default Blueprint for Kubernetes (K8S)",
+                  "namespace": "com.bmc",
+                  "read_only": null,
+                  "state": "DISABLED"
+              },
+              {
+                  "defaultBpId": "kinds-using-tags-2.0.0",
+                  "description": "Using 'tags' data, v2",
+                  "instances_count": 0,
+                  "key": "Z7cMdc8731ww5F8hiniBlVwhlGZ3C5Mq",
+                  "blueprintId": {
+                      "id": "Z7cMdc8731ww5F8hiniBlVwhlGZ3C5Mq",
+                      "version": "1.0.0"
+                  },
+                  "name": "Default Blueprint using Tags",
+                  "namespace": "com.bmc",
+                  "read_only": null,
+                  "state": "DISABLED"
+              },
+              {
+                  "defaultBpId": null,
+                  "description": "Select parent software cluster",
+                  "instances_count": 0,
+                  "key": "zfgmzQ_dXUk2V9gKF3EUIjTdGNI_gxuX",
+                  "blueprintId": {
+                      "id": "zfgmzQ_dXUk2V9gKF3EUIjTdGNI_gxuX",
+                      "version": "1.0.0"
+                  },
+                  "name": "Full Service Blueprint",
+                  "namespace": "com",
+                  "read_only": null,
+                  "state": "ENABLED"
+              },
+              {
+                  "defaultBpId": null,
+                  "description": "Selects host  using CMDB info - SISTEMA",
+                  "instances_count": 2,
+                  "key": "J7xkeO7wH9V8Lz3f73J8YEjc5lH849OO",
+                  "blueprintId": {
+                      "id": "J7xkeO7wH9V8Lz3f73J8YEjc5lH849OO",
+                      "version": "1.0.0"
+                  },
+                  "name": "Host - CMDB",
+                  "namespace": "com",
+                  "read_only": null,
+                  "state": "ENABLED"
+              },
+              {
+                  "defaultBpId": null,
+                  "description": "Create a service based on Sistema field of the CIs. Limited to only hosts that have the same field value.",
+                  "instances_count": 0,
+                  "key": "38_LvhFEmgy9FsJOI37Uj_swI4CPUNFj",
+                  "blueprintId": {
+                      "id": "38_LvhFEmgy9FsJOI37Uj_swI4CPUNFj",
+                      "version": "1.0.0"
+                  },
+                  "name": "Host Only Services",
+                  "namespace": "com",
+                  "read_only": null,
+                  "state": "ENABLED"
+              },
+              {
+                  "defaultBpId": null,
+                  "description": "Creates a service consisting of a network device and all its network interfaces",
+                  "instances_count": 0,
+                  "key": "zA-L92-ke-VfMxFPZW07UPLMUGsGG_Yr",
+                  "blueprintId": {
+                      "id": "zA-L92-ke-VfMxFPZW07UPLMUGsGG_Yr",
+                      "version": "1.0.0"
+                  },
+                  "name": "Network Device",
+                  "namespace": "com",
+                  "read_only": null,
+                  "state": "ENABLED"
+              },
+              {
+                  "defaultBpId": null,
+                  "description": "Select Network Devices. Filter by Type",
+                  "instances_count": 1,
+                  "key": "0jIxWqN--Y5wtRXR9lpcWs9u0y82jzpq",
+                  "blueprintId": {
+                      "id": "0jIxWqN--Y5wtRXR9lpcWs9u0y82jzpq",
+                      "version": "1.0.0"
+                  },
+                  "name": "Network Device by Model/Type",
+                  "namespace": "com",
+                  "read_only": null,
+                  "state": "ENABLED"
+              },
+              {
+                  "defaultBpId": null,
+                  "description": "Select Network Devices. Filter by Name",
+                  "instances_count": 1,
+                  "key": "zikfvAUBVIgEWKo35iTduv4qju9wi5IJ",
+                  "blueprintId": {
+                      "id": "zikfvAUBVIgEWKo35iTduv4qju9wi5IJ",
+                      "version": "1.0.0"
+                  },
+                  "name": "Network Device by Name",
+                  "namespace": "com",
+                  "read_only": null,
+                  "state": "ENABLED"
+              },
+              {
+                  "defaultBpId": null,
+                  "description": "start Software Cluster",
+                  "instances_count": 4,
+                  "key": "GQAq2UHXrbcMbHVWPHY5N1XZav28hAOQ",
+                  "blueprintId": {
+                      "id": "GQAq2UHXrbcMbHVWPHY5N1XZav28hAOQ",
+                      "version": "1.0.0"
+                  },
+                  "name": "Software Cluster-Appd",
+                  "namespace": "com",
+                  "read_only": null,
+                  "state": "ENABLED"
+              }
+          ]
+      }
+order: 2000

@@ -1,0 +1,856 @@
+$kind: http-request
+description: "Source: [https://github.com/controlm/automation-api-community-solutions/blob/master/helix-control-m/2-external-monitoring-tools-examples/alerts-to-bhom/bhom_ctm_event_policy.json](https://github.com/controlm/automation-api-community-solutions/blob/master/helix-control-m/2-external-monitoring-tools-examples/alerts-to-bhom/bhom_ctm_event_policy.json)"
+url: "{{bhom_base_url}}/events-service/api/v1.0/event_policies/"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\": \"Update Control-M Events\",\r
+
+    \    \"types\": [\r
+
+    \        \"ADVANCED_ENRICHMENT\"\r
+
+    \    ],\r
+
+    \    \"description\": \"Policy to update existing Control-M events\",\r
+
+    \    \"executionOrder\": 9999,\r
+
+    \    \"selectorCriteriaList\": [\r
+
+    \        \"class equals 'ControlMAlert' AND eventType equals 'U'\"\r
+
+    \    ],\r
+
+    \    \"enabled\": false,\r
+
+    \    \"configurations\": [\r
+
+    \        {\r
+
+    \            \"type\": \"ADVANCED_ENRICHMENT\",\r
+
+    \            \"configOrder\": 1,\r
+
+    \            \"definition\": {\r
+
+    \                \"children\": [\r
+
+    \                    {\r
+
+    \                        \"all\": true,\r
+
+    \                        \"children\": [\r
+
+    \                            {\r
+
+    \                                \"children\": [\r
+
+    \                                    {\r
+
+    \                                        \"children\": [\r
+
+    \                                            {\r
+
+    \                                                \"showDescription\": false,\r
+
+    \                                                \"children\": [],\r
+
+    \                                                \"valueType\": null,\r
+
+    \                                                \"placeholderText\": null,\r
+
+    \                                                \"label\": null,\r
+
+    \                                                \"id\": null,\r
+
+    \                                                \"type\": \"data\",\r
+
+    \                                                \"value\": \"$NEW.eventType\"\r
+
+    \                                            }\r
+
+    \                                        ],\r
+
+    \                                        \"label\": \"Update eventType\",\r
+
+    \                                        \"id\": null,\r
+
+    \                                        \"type\": \"enrich\",\r
+
+    \                                        \"value\": null,\r
+
+    \                                        \"key\": \"$OLD.eventType\"\r
+
+    \                                    },\r
+
+    \                                    {\r
+
+    \                                        \"children\": [],\r
+
+    \                                        \"label\": \"Update severity\",\r
+
+    \                                        \"id\": null,\r
+
+    \                                        \"type\": \"enrich\",\r
+
+    \                                        \"value\": \"$NEW.severity\",\r
+
+    \                                        \"key\": \"$OLD.severity\"\r
+
+    \                                    },\r
+
+    \                                    {\r
+
+    \                                        \"children\": [\r
+
+    \                                            {\r
+
+    \                                                \"showDescription\": false,\r
+
+    \                                                \"children\": [],\r
+
+    \                                                \"valueType\": null,\r
+
+    \                                                \"placeholderText\": null,\r
+
+    \                                                \"label\": null,\r
+
+    \                                                \"id\": null,\r
+
+    \                                                \"type\": \"data\",\r
+
+    \                                                \"value\": \"$NEW.alertStatus\"\r
+
+    \                                            }\r
+
+    \                                        ],\r
+
+    \                                        \"label\": \"Update alertStatus\",\r
+
+    \                                        \"id\": null,\r
+
+    \                                        \"type\": \"enrich\",\r
+
+    \                                        \"value\": null,\r
+
+    \                                        \"key\": \"$OLD.alertStatus\"\r
+
+    \                                    },\r
+
+    \                                    {\r
+
+    \                                        \"children\": [\r
+
+    \                                            {\r
+
+    \                                                \"showDescription\": false,\r
+
+    \                                                \"children\": [],\r
+
+    \                                                \"valueType\": null,\r
+
+    \                                                \"placeholderText\": null,\r
+
+    \                                                \"label\": null,\r
+
+    \                                                \"id\": null,\r
+
+    \                                                \"type\": \"data\",\r
+
+    \                                                \"value\": \"$NEW.ctmUser\"\r
+
+    \                                            }\r
+
+    \                                        ],\r
+
+    \                                        \"label\": \"Update ctmUser\",\r
+
+    \                                        \"id\": null,\r
+
+    \                                        \"type\": \"enrich\",\r
+
+    \                                        \"value\": null,\r
+
+    \                                        \"key\": \"$OLD.ctmUser\"\r
+
+    \                                    },\r
+
+    \                                    {\r
+
+    \                                        \"children\": [\r
+
+    \                                            {\r
+
+    \                                                \"showDescription\": false,\r
+
+    \                                                \"children\": [],\r
+
+    \                                                \"valueType\": null,\r
+
+    \                                                \"placeholderText\": null,\r
+
+    \                                                \"label\": null,\r
+
+    \                                                \"id\": null,\r
+
+    \                                                \"type\": \"data\",\r
+
+    \                                                \"value\": \"$NEW.updateTime\"\r
+
+    \                                            }\r
+
+    \                                        ],\r
+
+    \                                        \"label\": \"Update updateTime\",\r
+
+    \                                        \"id\": null,\r
+
+    \                                        \"type\": \"enrich\",\r
+
+    \                                        \"value\": null,\r
+
+    \                                        \"key\": \"$OLD.updateTime\"\r
+
+    \                                    },\r
+
+    \                                    {\r
+
+    \                                        \"children\": [\r
+
+    \                                            {\r
+
+    \                                                \"showDescription\": false,\r
+
+    \                                                \"children\": [],\r
+
+    \                                                \"valueType\": null,\r
+
+    \                                                \"placeholderText\": null,\r
+
+    \                                                \"label\": null,\r
+
+    \                                                \"id\": null,\r
+
+    \                                                \"type\": \"data\",\r
+
+    \                                                \"value\": \"$NEW.closedByControlM\"\r
+
+    \                                            }\r
+
+    \                                        ],\r
+
+    \                                        \"label\": \"Update closedByControlM\",\r
+
+    \                                        \"id\": null,\r
+
+    \                                        \"type\": \"enrich\",\r
+
+    \                                        \"value\": null,\r
+
+    \                                        \"key\": \"$OLD.closedByControlM\"\r
+
+    \                                    },\r
+
+    \                                    {\r
+
+    \                                        \"children\": [\r
+
+    \                                            {\r
+
+    \                                                \"showDescription\": false,\r
+
+    \                                                \"children\": [],\r
+
+    \                                                \"valueType\": null,\r
+
+    \                                                \"placeholderText\": null,\r
+
+    \                                                \"label\": null,\r
+
+    \                                                \"id\": null,\r
+
+    \                                                \"type\": \"data\",\r
+
+    \                                                \"value\": \"$NEW.ticketNumber\"\r
+
+    \                                            }\r
+
+    \                                        ],\r
+
+    \                                        \"label\": \"Update ticketNumber\",\r
+
+    \                                        \"id\": null,\r
+
+    \                                        \"type\": \"enrich\",\r
+
+    \                                        \"value\": null,\r
+
+    \                                        \"key\": \"$OLD.ticketNumber\"\r
+
+    \                                    },\r
+
+    \                                    {\r
+
+    \                                        \"children\": [\r
+
+    \                                            {\r
+
+    \                                                \"children\": [\r
+
+    \                                                    {\r
+
+    \                                                        \"showDescription\": false,\r
+
+    \                                                        \"children\": [],\r
+
+    \                                                        \"valueType\": null,\r
+
+    \                                                        \"placeholderText\": null,\r
+
+    \                                                        \"label\": null,\r
+
+    \                                                        \"id\": null,\r
+
+    \                                                        \"type\": \"data\",\r
+
+    \                                                        \"value\": \"$NEW.alertNotes\"\r
+
+    \                                                    }\r
+
+    \                                                ],\r
+
+    \                                                \"label\": \"Update alertNotes\",\r
+
+    \                                                \"id\": null,\r
+
+    \                                                \"type\": \"enrich\",\r
+
+    \                                                \"value\": null,\r
+
+    \                                                \"key\": \"$OLD.alertNotes\"\r
+
+    \                                            },\r
+
+    \                                            {\r
+
+    \                                                \"children\": [\r
+
+    \                                                    {\r
+
+    \                                                        \"showDescription\": false,\r
+
+    \                                                        \"children\": [],\r
+
+    \                                                        \"valueType\": null,\r
+
+    \                                                        \"placeholderText\": null,\r
+
+    \                                                        \"label\": null,\r
+
+    \                                                        \"id\": null,\r
+
+    \                                                        \"type\": \"data\",\r
+
+    \                                                        \"value\": \"$NEW.alertNotes\"\r
+
+    \                                                    }\r
+
+    \                                                ],\r
+
+    \                                                \"label\": \"Save alertNotes\",\r
+
+    \                                                \"id\": null,\r
+
+    \                                                \"type\": \"assignVar\",\r
+
+    \                                                \"value\": null,\r
+
+    \                                                \"key\": \"$ctm_alert_notes\"\r
+
+    \                                            },\r
+
+    \                                            {\r
+
+    \                                                \"children\": [\r
+
+    \                                                    {\r
+
+    \                                                        \"children\": null,\r
+
+    \                                                        \"label\": null,\r
+
+    \                                                        \"id\": null,\r
+
+    \                                                        \"type\": \"objectData\",\r
+
+    \                                                        \"value\": {\r
+
+    \                                                            \"note\": \"$ctm_alert_notes\",\r
+
+    \                                                            \"on\": \"OLD\"\r
+
+    \                                                        }\r
+
+    \                                                    }\r
+
+    \                                                ],\r
+
+    \                                                \"name\": \"AddNote\",\r
+
+    \                                                \"label\": \"Add Note\",\r
+
+    \                                                \"id\": null,\r
+
+    \                                                \"type\": \"function\"\r
+
+    \                                            }\r
+
+    \                                        ],\r
+
+    \                                        \"label\": \"alertNotes have changed\",\r
+
+    \                                        \"id\": null,\r
+
+    \                                        \"type\": \"if\",\r
+
+    \                                        \"conditions\": [\r
+
+    \                                            {\r
+
+    \                                                \"slotName\": \"$OLD.alertNotes\",\r
+
+    \                                                \"slotOperator\": \"not_equals\",\r
+
+    \                                                \"conditionOperator\": \"\",\r
+
+    \                                                \"conditionBracket\": \"\",\r
+
+    \                                                \"conditionOrder\": 0,\r
+
+    \                                                \"endBracket\": \"\",\r
+
+    \                                                \"slotValue\": \"$NEW.alertNotes\"\r
+
+    \                                            }\r
+
+    \                                        ]\r
+
+    \                                    },\r
+
+    \                                    {\r
+
+    \                                        \"children\": [],\r
+
+    \                                        \"label\": \"\",\r
+
+    \                                        \"id\": null,\r
+
+    \                                        \"type\": \"else\"\r
+
+    \                                    },\r
+
+    \                                    {\r
+
+    \                                        \"children\": [\r
+
+    \                                            {\r
+
+    \                                                \"children\": [],\r
+
+    \                                                \"label\": \"Event = Open\",\r
+
+    \                                                \"id\": null,\r
+
+    \                                                \"type\": \"enrich\",\r
+
+    \                                                \"value\": \"OPEN\",\r
+
+    \                                                \"key\": \"$OLD.status\"\r
+
+    \                                            }\r
+
+    \                                        ],\r
+
+    \                                        \"label\": \"alertStatus = Not_Noticed\",\r
+
+    \                                        \"id\": null,\r
+
+    \                                        \"type\": \"if\",\r
+
+    \                                        \"conditions\": [\r
+
+    \                                            {\r
+
+    \                                                \"slotName\": \"$NEW.alertStatus\",\r
+
+    \                                                \"slotOperator\": \"equals\",\r
+
+    \                                                \"conditionOperator\": \"\",\r
+
+    \                                                \"conditionBracket\": \"\",\r
+
+    \                                                \"conditionOrder\": 0,\r
+
+    \                                                \"endBracket\": \"\",\r
+
+    \                                                \"slotValue\": \"0\"\r
+
+    \                                            },\r
+
+    \                                            {\r
+
+    \                                                \"slotName\": \"$NEW.alertStatus\",\r
+
+    \                                                \"slotOperator\": \"equals\",\r
+
+    \                                                \"conditionOperator\": \"OR\",\r
+
+    \                                                \"conditionBracket\": \"\",\r
+
+    \                                                \"conditionOrder\": 1,\r
+
+    \                                                \"endBracket\": \"\",\r
+
+    \                                                \"slotValue\": \"Not_Noticed\"\r
+
+    \                                            }\r
+
+    \                                        ]\r
+
+    \                                    },\r
+
+    \                                    {\r
+
+    \                                        \"children\": [],\r
+
+    \                                        \"label\": \"\",\r
+
+    \                                        \"id\": null,\r
+
+    \                                        \"type\": \"else\"\r
+
+    \                                    },\r
+
+    \                                    {\r
+
+    \                                        \"children\": [\r
+
+    \                                            {\r
+
+    \                                                \"children\": [],\r
+
+    \                                                \"label\": \"Event = Acknowledged\",\r
+
+    \                                                \"id\": null,\r
+
+    \                                                \"type\": \"enrich\",\r
+
+    \                                                \"value\": \"ACK\",\r
+
+    \                                                \"key\": \"$OLD.status\"\r
+
+    \                                            }\r
+
+    \                                        ],\r
+
+    \                                        \"label\": \"alertStatus = Noticed\",\r
+
+    \                                        \"id\": null,\r
+
+    \                                        \"type\": \"if\",\r
+
+    \                                        \"conditions\": [\r
+
+    \                                            {\r
+
+    \                                                \"slotName\": \"$NEW.alertStatus\",\r
+
+    \                                                \"slotOperator\": \"equals\",\r
+
+    \                                                \"conditionOperator\": \"\",\r
+
+    \                                                \"conditionBracket\": \"\",\r
+
+    \                                                \"conditionOrder\": 0,\r
+
+    \                                                \"endBracket\": \"\",\r
+
+    \                                                \"slotValue\": \"1\"\r
+
+    \                                            },\r
+
+    \                                            {\r
+
+    \                                                \"slotName\": \"$NEW.alertStatus\",\r
+
+    \                                                \"slotOperator\": \"equals\",\r
+
+    \                                                \"conditionOperator\": \"OR\",\r
+
+    \                                                \"conditionBracket\": \"\",\r
+
+    \                                                \"conditionOrder\": 1,\r
+
+    \                                                \"endBracket\": \"\",\r
+
+    \                                                \"slotValue\": \"Noticed\"\r
+
+    \                                            }\r
+
+    \                                        ]\r
+
+    \                                    },\r
+
+    \                                    {\r
+
+    \                                        \"children\": [],\r
+
+    \                                        \"label\": \"\",\r
+
+    \                                        \"id\": null,\r
+
+    \                                        \"type\": \"else\"\r
+
+    \                                    },\r
+
+    \                                    {\r
+
+    \                                        \"children\": [\r
+
+    \                                            {\r
+
+    \                                                \"children\": [],\r
+
+    \                                                \"label\": \"Event = Closed\",\r
+
+    \                                                \"id\": null,\r
+
+    \                                                \"type\": \"enrich\",\r
+
+    \                                                \"value\": \"CLOSED\",\r
+
+    \                                                \"key\": \"$OLD.status\"\r
+
+    \                                            }\r
+
+    \                                        ],\r
+
+    \                                        \"label\": \"alertStatus = Handled\",\r
+
+    \                                        \"id\": null,\r
+
+    \                                        \"type\": \"if\",\r
+
+    \                                        \"conditions\": [\r
+
+    \                                            {\r
+
+    \                                                \"slotName\": \"$NEW.alertStatus\",\r
+
+    \                                                \"slotOperator\": \"equals\",\r
+
+    \                                                \"conditionOperator\": \"\",\r
+
+    \                                                \"conditionBracket\": \"\",\r
+
+    \                                                \"conditionOrder\": 0,\r
+
+    \                                                \"endBracket\": \"\",\r
+
+    \                                                \"slotValue\": \"2\"\r
+
+    \                                            },\r
+
+    \                                            {\r
+
+    \                                                \"slotName\": \"$NEW.alertStatus\",\r
+
+    \                                                \"slotOperator\": \"equals\",\r
+
+    \                                                \"conditionOperator\": \"OR\",\r
+
+    \                                                \"conditionBracket\": \"\",\r
+
+    \                                                \"conditionOrder\": 1,\r
+
+    \                                                \"endBracket\": \"\",\r
+
+    \                                                \"slotValue\": \"Handled\"\r
+
+    \                                            }\r
+
+    \                                        ]\r
+
+    \                                    },\r
+
+    \                                    {\r
+
+    \                                        \"children\": [],\r
+
+    \                                        \"label\": \"\",\r
+
+    \                                        \"id\": null,\r
+
+    \                                        \"type\": \"else\"\r
+
+    \                                    }\r
+
+    \                                ],\r
+
+    \                                \"label\": \"\",\r
+
+    \                                \"id\": null,\r
+
+    \                                \"type\": \"updateOld\"\r
+
+    \                            },\r
+
+    \                            {\r
+
+    \                                \"children\": [\r
+
+    \                                    {\r
+
+    \                                        \"children\": [],\r
+
+    \                                        \"name\": \"DropNewEvent\",\r
+
+    \                                        \"label\": \"Delete New Event\",\r
+
+    \                                        \"id\": null,\r
+
+    \                                        \"type\": \"function\"\r
+
+    \                                    }\r
+
+    \                                ],\r
+
+    \                                \"label\": \"\",\r
+
+    \                                \"id\": null,\r
+
+    \                                \"type\": \"updateNew\"\r
+
+    \                            }\r
+
+    \                        ],\r
+
+    \                        \"withinInSeconds\": 0,\r
+
+    \                        \"label\": \"Look for events with same \\\"alertId\\\" and \\\"Source Identifier\\\"\",\r
+
+    \                        \"id\": null,\r
+
+    \                        \"duplicate\": false,\r
+
+    \                        \"type\": \"lookup\",\r
+
+    \                        \"conditions\": [\r
+
+    \                            {\r
+
+    \                                \"slotName\": \"$OLD.status\",\r
+
+    \                                \"slotOperator\": \"not_equals\",\r
+
+    \                                \"conditionOperator\": \"\",\r
+
+    \                                \"conditionBracket\": \"\",\r
+
+    \                                \"conditionOrder\": 0,\r
+
+    \                                \"endBracket\": \"\",\r
+
+    \                                \"slotValue\": \"BLACKOUT\"\r
+
+    \                            },\r
+
+    \                            {\r
+
+    \                                \"slotName\": \"$OLD.status\",\r
+
+    \                                \"slotOperator\": \"not_equals\",\r
+
+    \                                \"conditionOperator\": \"AND\",\r
+
+    \                                \"conditionBracket\": \"\",\r
+
+    \                                \"conditionOrder\": 1,\r
+
+    \                                \"endBracket\": \"\",\r
+
+    \                                \"slotValue\": \"CLOSED\"\r
+
+    \                            },\r
+
+    \                            {\r
+
+    \                                \"slotName\": \"$OLD.alertId\",\r
+
+    \                                \"slotOperator\": \"equals\",\r
+
+    \                                \"conditionOperator\": \"AND\",\r
+
+    \                                \"conditionBracket\": \"\",\r
+
+    \                                \"conditionOrder\": 2,\r
+
+    \                                \"endBracket\": \"\",\r
+
+    \                                \"slotValue\": \"$NEW.alertId\"\r
+
+    \                            },\r
+
+    \                            {\r
+
+    \                                \"slotName\": \"$OLD.source_identifier\",\r
+
+    \                                \"slotOperator\": \"equals\",\r
+
+    \                                \"conditionOperator\": \"AND\",\r
+
+    \                                \"conditionBracket\": \"\",\r
+
+    \                                \"conditionOrder\": 3,\r
+
+    \                                \"endBracket\": \"\",\r
+
+    \                                \"slotValue\": \"$NEW.source_identifier\"\r
+
+    \                            }\r
+
+    \                        ],\r
+
+    \                        \"fetchEventForClass\": \"ControlMAlert\"\r
+
+    \                    }\r
+
+    \                ],\r
+
+    \                \"id\": null,\r
+
+    \                \"label\": \"Policy to update existing Control-M events\",\r
+
+    \                \"type\": \"root\"\r
+
+    \            },\r
+
+    \            \"timeframeStatus\": \"\",\r
+
+    \            \"subType\": \"\"\r
+
+    \        }\r
+
+    \    ],\r
+
+    \    \"timeframes\": [\r
+
+    \        \"-1\"\r
+
+    \    ]\r
+
+    }"
+order: 1000

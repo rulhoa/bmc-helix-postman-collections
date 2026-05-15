@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{bhom_base_url}}/tsws/monitoring/api/v1.0/unifiedadmin/Policy/delete?idType=id"
+method: POST
+queryParams:
+  idType: id
+body:
+  type: json
+  content: "{\r
+
+    \    \"policyIds\": \"64e82ce6-4285-4d39-bdb8-b5d587445dcf\"\r
+
+    }"
+examples: ./.resources/Delete Monitor Policy.resources/examples
+order: 4000

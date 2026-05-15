@@ -1,0 +1,18 @@
+$kind: http-request
+url: "{{v1}}/batch-jobs"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "name": "My Batch Job",
+      "members": [
+        {
+          "type": "NSH_SCRIPT_JOB",
+          "id": 0
+        }
+      ]
+    }
+order: 2000

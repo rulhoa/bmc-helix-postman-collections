@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{bhom_base_url}}/featureflag/api/v1/features"
+method: GET
+examples: ./.resources/Get Features.resources/examples
+order: 5000

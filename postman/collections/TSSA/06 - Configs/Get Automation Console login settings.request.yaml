@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{v1}}/configs/automation_console"
+method: GET
+order: 2000

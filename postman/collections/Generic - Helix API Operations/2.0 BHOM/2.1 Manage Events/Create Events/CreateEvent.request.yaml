@@ -1,0 +1,47 @@
+$kind: http-request
+url: "{{bhom_base_url}}/events-service/api/v1.0/events"
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+  - key: Authorization
+    value: apiKey {{bhom_apiKey}}
+    disabled: true
+  - key: ""
+    value: ""
+    disabled: true
+body:
+  type: text
+  content: "[\r
+
+    \    {\r
+
+    \        \"class\": \"MonitorEvent\",\r
+
+    \        \"severity\": \"CRITICAL\",\r
+
+    \        \"msg\": \"Memory Usage at 99%\",\r
+
+    \        \"source_identifier\": \"dsom-k8s-node3\",\r
+
+    \        \"source_hostname\": \"dsom-k8s-node3\"\r
+
+    \    },\r
+
+    \    {\r
+
+    \        \"class\": \"MonitorEvent\",\r
+
+    \        \"severity\": \"CRITICAL\",\r
+
+    \        \"msg\": \"OOMKilled\",\r
+
+    \        \"source_identifier\": \"ts-travel-service-68d4c578b-wdhct\",\r
+
+    \        \"source_hostname\": \"ts-travel-service-68d4c578b-wdhct\"\r
+
+    \    }\r
+
+    ]"
+examples: ./.resources/CreateEvent.resources/examples
+order: 3000

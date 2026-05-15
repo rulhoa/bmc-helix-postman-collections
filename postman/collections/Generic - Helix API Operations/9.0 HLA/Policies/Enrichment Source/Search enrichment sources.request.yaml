@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{bhom_base_url}}/logs-service/api/v1.0/logs/enrichment_sources/search"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"page_index\": 1,\r
+
+    \    \"page_size\": 100,\r
+
+    \    \"search_string\": \"enabled = true\",\r
+
+    \    \"sort_criteria\": \"name DESC, enabled ASC\"\r
+
+    }"
+order: 1000

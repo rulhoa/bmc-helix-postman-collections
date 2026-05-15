@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{bhom_base_url}}/alarm-service/api/v1.0/alarm_policies/:alarm_policy_id?idType=id"
+method: GET
+queryParams:
+  idType: id
+pathVariables:
+  alarm_policy_id: 3805aee0-c0c9-4f3b-bed0-6b485550cfcc
+examples: ./.resources/Get Alarm Policy.resources/examples
+order: 2000

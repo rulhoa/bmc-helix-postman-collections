@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{bhom_base_url}}/ims/api/v1/custom_ui_applications/:id"
+method: DELETE
+pathVariables:
+  id: custom-is-hgm
+order: 2000

@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{applicationserver}}/api/arsys/v1/entry/WOI:WorkOrder/WO0000003083559"
+method: PUT
+headers:
+  Authorization: "{{tokensignature}}{{token}}"
+  Content-Type: application/json
+body:
+  type: text
+  content: |
+    {
+    	"values": {
+            "Status":"Assigned"
+    	}
+    }
+order: 2000

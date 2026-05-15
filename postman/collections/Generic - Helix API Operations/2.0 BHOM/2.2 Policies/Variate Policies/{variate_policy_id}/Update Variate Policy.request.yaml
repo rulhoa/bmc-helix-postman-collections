@@ -1,0 +1,106 @@
+$kind: http-request
+url: "{{bhom_base_url}}/aif/api/v1.0/algorithm/:variate_policy_id"
+method: PUT
+pathVariables:
+  variate_policy_id: 2ede81ae-80fc-47c5-9321-8bdc41539538
+body:
+  type: json
+  content: "{\r
+
+    \  \"templateId\": \"b558d267-c958-4c4d-8734-b40b0961fdd8\",\r
+
+    \  \"name\": \"WebAPI Service Monitoring\",\r
+
+    \  \"description\": \"Overall_Application_Performance and Application_Infrastructure_Performance_Hardware_Resources\",\r
+
+    \  \"definition\": {\r
+
+    \    \"algorithmAnalysisMode\": \"Multivariate\",\r
+
+    \    \"name\": \"Multivariate\",\r
+
+    \    \"algorithmConfig\": {\r
+
+    \      \"params\": {\r
+
+    \        \"numTrees\": 100,\r
+
+    \        \"evalMetrics\": \"accuracy\",\r
+
+    \        \"numSamplesPerTree\": 256,\r
+
+    \        \"shingleSize\": 1\r
+
+    \      }\r
+
+    \    },\r
+
+    \    \"dataConfig\": [\r
+
+    \      {\r
+
+    \        \"duration\": 5,\r
+
+    \        \"identifier\": [\r
+
+    \          \"entityId=AppDynamics:WebAPI:Application_Infrastructure_Performance_Hardware_Resources_CPU:Hardware_Resources_CPU,hostname=WebAPI,__name__=_pct_Busy\",\r
+
+    \          \"entityId=AppDynamics:WebAPI:Overall_Application_Performance:Overall_Application_Performance,hostname=WebAPI,__name__=Average_Response_Time__ms_\",\r
+
+    \          \"entityId=AppDynamics:WebAPI:Overall_Application_Performance:Overall_Application_Performance,hostname=WebAPI,__name__=Calls_per_Minute\",\r
+
+    \          \"entityId=AppDynamics:WebAPI:Overall_Application_Performance:Overall_Application_Performance,hostname=WebAPI,__name__=Errors_per_Minute\",\r
+
+    \          \"entityId=AppDynamics:WebAPI:Overall_Application_Performance:Overall_Application_Performance,hostname=WebAPI,__name__=Exceptions_per_Minute\",\r
+
+    \          \"entityId=AppDynamics:WebAPI:Application_Infrastructure_Performance_Hardware_Resources_Memory:Hardware_Resources_Memory,hostname=WebAPI,__name__=Free__pct_\",\r
+
+    \          \"entityId=AppDynamics:WebAPI:Application_Infrastructure_Performance_Hardware_Resources_Network:Hardware_Resources_Network,hostname=WebAPI,__name__=Incoming_packets/sec\",\r
+
+    \          \"entityId=AppDynamics:WebAPI:Application_Infrastructure_Performance_Hardware_Resources_Disks:Hardware_Resources_Disks,hostname=WebAPI,__name__=KB_read/sec\",\r
+
+    \          \"entityId=AppDynamics:WebAPI:Application_Infrastructure_Performance_Hardware_Resources_Disks:Hardware_Resources_Disks,hostname=WebAPI,__name__=KB_written/sec\",\r
+
+    \          \"entityId=AppDynamics:WebAPI:Application_Infrastructure_Performance_Hardware_Resources_Disks:Hardware_Resources_Disks,hostname=WebAPI,__name__=MB_Free\",\r
+
+    \          \"entityId=AppDynamics:WebAPI:Overall_Application_Performance:Overall_Application_Performance,hostname=WebAPI,__name__=Number_of_Slow_Calls\",\r
+
+    \          \"entityId=AppDynamics:WebAPI:Overall_Application_Performance:Overall_Application_Performance,hostname=WebAPI,__name__=Number_of_Very_Slow_Calls\",\r
+
+    \          \"entityId=AppDynamics:WebAPI:Application_Infrastructure_Performance_Hardware_Resources_Network:Hardware_Resources_Network,hostname=WebAPI,__name__=Outgoing_KB/sec\",\r
+
+    \          \"entityId=AppDynamics:WebAPI:Application_Infrastructure_Performance_Hardware_Resources_Network:Hardware_Resources_Network,hostname=WebAPI,__name__=Outgoing_packets/sec\",\r
+
+    \          \"entityId=AppDynamics:WebAPI:Application_Infrastructure_Performance_Hardware_Resources_Disks:Hardware_Resources_Disks,hostname=WebAPI,__name__=Reads/sec\",\r
+
+    \          \"entityId=AppDynamics:WebAPI:Overall_Application_Performance:Overall_Application_Performance,hostname=WebAPI,__name__=Stall_Count\",\r
+
+    \          \"entityId=AppDynamics:WebAPI:Application_Infrastructure_Performance_Hardware_Resources_Memory:Hardware_Resources_Memory,hostname=WebAPI,__name__=Used__pct_\",\r
+
+    \          \"entityId=AppDynamics:WebAPI:Application_Infrastructure_Performance_Hardware_Resources_Disks:Hardware_Resources_Disks,hostname=WebAPI,__name__=Writes/sec\"\r
+
+    \        ],\r
+
+    \        \"sensitivity\": {\r
+
+    \          \"minor\": 1,\r
+
+    \          \"major\": 2,\r
+
+    \          \"critical\": 3.5\r
+
+    \        },\r
+
+    \        \"message\": \"\",\r
+
+    \        \"autoClose\": true\r
+
+    \      }\r
+
+    \    ]\r
+
+    \  }\r
+
+    }"
+examples: ./.resources/Update Variate Policy.resources/examples
+order: 1000

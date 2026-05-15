@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{v1}}/deploy-jobs/{{id}}/jobruns"
+method: GET
+order: 6000

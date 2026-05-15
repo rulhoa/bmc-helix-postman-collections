@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{bhom_base_url}}/events-service/api/v1.0/events/classes/:event_class_id?idType=id"
+method: DELETE
+queryParams:
+  idType: id
+pathVariables:
+  event_class_id: d1beadff-4870-4fe0-8d10-d04c67649375
+examples: ./.resources/Delete event class.resources/examples
+order: 2000

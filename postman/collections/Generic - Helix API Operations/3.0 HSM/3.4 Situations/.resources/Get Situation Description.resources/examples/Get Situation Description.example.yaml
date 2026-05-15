@@ -1,0 +1,57 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/situation-detector/api/v1.1/situation/description/3c366764010053a93454b8766e427573696e65737353657276696365_b1d8ccbbbc974151814736f60014b471"
+  method: GET
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Authorization
+      value: apiKey {{bhom_apiKey}}
+    - key: Authorization
+      value: ""
+      disabled: true
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    - key: Date
+      value: Wed, 28 Jun 2023 14:53:29 GMT
+    - key: Content-Type
+      value: application/json
+    - key: Transfer-Encoding
+      value: chunked
+    - key: Connection
+      value: keep-alive
+    - key: Vary
+      value: Origin
+    - key: Vary
+      value: Access-Control-Request-Method
+    - key: Vary
+      value: Access-Control-Request-Headers
+    - key: X-Content-Type-Options
+      value: nosniff
+    - key: X-XSS-Protection
+      value: 1; mode=block
+    - key: Cache-Control
+      value: no-cache, no-store, max-age=0, must-revalidate
+    - key: Pragma
+      value: no-cache
+    - key: Expires
+      value: "0"
+    - key: Strict-Transport-Security
+      value: max-age=31536000; includeSubDomains
+    - key: X-Frame-Options
+      value: DENY
+    - key: Referrer-Policy
+      value: same-origin
+    - key: Permissions-Policy
+      value: idle-detection=self
+  body:
+    type: json
+    content: |-
+      {
+          "root_cause_classification": "Disk Issue.",
+          "root_cause_summary": "Disk Issue on Host \"HG-SIST-SVI\" is the root cause of this situation.",
+          "situation_summary": "Disk Issue."
+      }
+order: 1000

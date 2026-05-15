@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{disco_base_url}}/api/v1.10/knowledge"
+method: GET
+examples: ./.resources/Get Knowledge TKUs.resources/examples
+order: 1000

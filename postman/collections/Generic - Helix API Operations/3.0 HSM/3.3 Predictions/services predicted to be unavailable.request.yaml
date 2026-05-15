@@ -1,0 +1,23 @@
+$kind: http-request
+url: "{{bhom_base_url}}/aiops/api/v1.0/predictions/service_kpi"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"start_time\": \"1634318524000\",\r
+
+    \    \"end_time\": \"1634318524000\",\r
+
+    \    \"name\": \"my_n*\",\r
+
+    \    \"tags\": [\"t1\",\"t2\",\"t3\",\"t4\"]\r
+
+    \    \"severity\": \"critical\"\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{bhom_json_web_token}}"
+order: 1000

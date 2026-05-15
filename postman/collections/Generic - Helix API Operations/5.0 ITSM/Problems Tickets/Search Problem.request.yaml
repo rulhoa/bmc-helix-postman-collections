@@ -1,0 +1,8 @@
+$kind: http-request
+url: "{{itsm_base_url}}/api/arsys/v1/entry/PBM:Problem Investigation?q='Problem Investigation ID'=\"\""
+method: GET
+headers:
+  Content-Type: application/json
+queryParams:
+  q: "'Problem Investigation ID'=\"\""
+order: 1000

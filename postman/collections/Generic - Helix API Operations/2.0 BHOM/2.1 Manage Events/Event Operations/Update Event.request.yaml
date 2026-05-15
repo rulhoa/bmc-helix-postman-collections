@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{bhom_base_url}}/events-service/api/v1.0/events/eps.1853439059.22457093107760645.9732bbf1-05f4-4f4a-9fd9-3550776821e0"
+method: PATCH
+body:
+  type: json
+  content: "{\r
+
+    \  \"incident_id\": \"11111\",\r
+
+    \  \"Incident\": \"incident url\"\r
+
+    }"
+order: 3000

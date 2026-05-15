@@ -1,0 +1,50 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/intelligent-automation/api/v1/connectors/search"
+  method: POST
+  headers:
+    - key: helix_jwt_token
+      value: "{{bhom_json_web_token}}"
+      disabled: true
+    - key: Origin
+      value: https://helixtrialsjc497-or1-dev.onbmc.com
+      disabled: true
+    - key: Referer
+      value: https://helixtrialsjc497-or1-dev.onbmc.com/intelligent-automation/
+      disabled: true
+    - key: Authorization
+      value: Bearer {{bhom_token}}
+      disabled: true
+  body:
+    type: json
+    content: "{\r
+
+      \    \"filter\":\"target_id='https://se-preprod-aapi.us1.controlm.com:443/automation-api' AND code='generic_rest' AND is_remote=true\"\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Fri, 10 Feb 2023 20:32:33 GMT
+    Content-Type: application/json; charset=utf-8
+    Content-Length: "265"
+    Connection: keep-alive
+    X-Powered-By: Express
+    ETag: W/"109-SeQUrkDCf25Tsd8Ag2Km5kuX1b4"
+  body:
+    type: json
+    content: |-
+      [
+          {
+              "id": "b5757460-29f6-11ed-9641-0613ed995521",
+              "code": "generic_rest",
+              "name": "Control-M Connector",
+              "target_id": "https://se-preprod-aapi.us1.controlm.com:443/automation-api",
+              "is_remote": true,
+              "status": true,
+              "last_sync_at": null,
+              "updated_time": "2022-09-01T13:05:28.012Z"
+          }
+      ]
+order: 1000

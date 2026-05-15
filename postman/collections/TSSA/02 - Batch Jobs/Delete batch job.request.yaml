@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{v1}}/batch-jobs/{{id}}"
+method: DELETE
+order: 4000

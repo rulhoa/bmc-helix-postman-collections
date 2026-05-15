@@ -1,0 +1,862 @@
+$kind: http-request
+url: "{{bhom_base_url}}/intelligent-automation/api/v1/workflows/c5293b57-6c7c-ce72-908c-9c7cda3b4495"
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \    \"id\": \"19d0c987-0152-870c-e063-b1cbbaf2cf2a\",\r
+
+    \    \"name\": \"Innovation Studio Control-M Job Automation Process\",\r
+
+    \    \"type\": \"user_defined\",\r
+
+    \    \"description\": \"\",\r
+
+    \    \"metadata\": {\r
+
+    \        \"event\": {\r
+
+    \            \"msg\": \"Your PATROL Simulator\",\r
+
+    \            \"tags\": [\r
+
+    \                \"http://mobility165-nodered.trybmc.com/ui\"\r
+
+    \            ],\r
+
+    \            \"alias\": [\r
+
+    \                \"BMC_ComputerSystem:pat_sim1\"\r
+
+    \            ],\r
+
+    \            \"class\": \"EVENT\",\r
+
+    \            \"_ci_id\": \"\",\r
+
+    \            \"_model\": \"\",\r
+
+    \            \"_notes\": \"[]\",\r
+
+    \            \"status\": \"OPEN\",\r
+
+    \            \"_errors\": \"[]\",\r
+
+    \            \"details\": \"\",\r
+
+    \            \"_entropy\": \"\",\r
+
+    \            \"_node_id\": \"[]\",\r
+
+    \            \"category\": \"AVAILABILITY_MANAGEMENT\",\r
+
+    \            \"cdmclass\": \"\",\r
+
+    \            \"location\": \"California\",\r
+
+    \            \"priority\": \"PRIORITY_5\",\r
+
+    \            \"severity\": \"INFO\",\r
+
+    \            \"modelname\": \"\",\r
+
+    \            \"_signature\": \"-2073814224\",\r
+
+    \            \"_tenant_id\": \"1738801444\",\r
+
+    \            \"_identifier\": \"eps.1738801444.3831759756832602.5d618047-df4a-4f8c-8b56-785322d2266a\",\r
+
+    \            \"_operations\": \"[]\",\r
+
+    \            \"_service_id\": \"[]\",\r
+
+    \            \"incident_id\": \"\",\r
+
+    \            \"source_port\": 80,\r
+
+    \            \"_tenant_name\": \"\",\r
+
+    \            \"instancename\": \"\",\r
+
+    \            \"significance\": \"0\",\r
+
+    \            \"sub_category\": \"OTHER\",\r
+
+    \            \"_arrival_time\": 1662052007696,\r
+
+    \            \"_repeat_count\": \"0\",\r
+
+    \            \"_service_name\": \"[]\",\r
+
+    \            \"creation_time\": 1662052007696,\r
+
+    \            \"user_assigned\": \"\",\r
+
+    \            \"_modified_time\": 1662052007696,\r
+
+    \            \"_relationships\": {\r
+
+    \                \"rstat\": \"norelation\"\r
+
+    \            },\r
+
+    \            \"_unmapped_data\": {\r
+
+    \                \"object\": \"CPU\"\r
+
+    \            },\r
+
+    \            \"componentalias\": \"\",\r
+
+    \            \"source_address\": \"172.17.0.132\",\r
+
+    \            \"_lifecycle_time\": \"0\",\r
+
+    \            \"source_hostname\": \"pat_sim1\",\r
+
+    \            \"incident_company\": \"\",\r
+
+    \            \"source_identifier\": \"pat_sim1:3181\",\r
+
+    \            \"_node_service_mapping\": \"[]\",\r
+
+    \            \"_node_service_key_mapping\": \"[]\"\r
+
+    \        },\r
+
+    \        \"effort\": 45,\r
+
+    \        \"event_type\": \"EVENT: Puma Trading System\",\r
+
+    \        \"json_paths\": {\r
+
+    \            \"$.msg\": [\r
+
+    \                \"[AWS] EC2 instance is not responding on HTTP 8080.\",\r
+
+    \                \"[Splunk] File size exceeding the threshold - /etc/helix.log\",\r
+
+    \                \"[Splunk] File size exceeding the threshold - /etc/asd.log\",\r
+
+    \                \"[Splunk] File size exceeding the threshold - /etc/dyna.log\",\r
+
+    \                \"[Nagios] Memory utilization above 85% for last 15 minutes\",\r
+
+    \                \"Load balancer node unable to reach web-fe-01\",\r
+
+    \                \"[Dynatrace] Media Service Application impacted\",\r
+
+    \                \"Media Service Application impacted. Error 503 in LB pool detected.\",\r
+
+    \                \"Abnormality detected in LB pool web-fe-01\",\r
+
+    \                \"Your PATROL Simulator\"\r
+
+    \            ],\r
+
+    \            \"$.tags\": [\r
+
+    \                \"[]\"\r
+
+    \            ],\r
+
+    \            \"$.class\": [\r
+
+    \                \"EVENT\"\r
+
+    \            ],\r
+
+    \            \"$._ci_id\": [\r
+
+    \                \"\"\r
+
+    \            ],\r
+
+    \            \"$._model\": [\r
+
+    \                \"\"\r
+
+    \            ],\r
+
+    \            \"$._notes\": [\r
+
+    \                \"[]\"\r
+
+    \            ],\r
+
+    \            \"$.status\": [\r
+
+    \                \"OPEN\"\r
+
+    \            ],\r
+
+    \            \"$._errors\": [\r
+
+    \                \"[]\"\r
+
+    \            ],\r
+
+    \            \"$.details\": [\r
+
+    \                \"\"\r
+
+    \            ],\r
+
+    \            \"$.tags[*]\": [\r
+
+    \                \"http://mobility165-nodered.trybmc.com/ui\"\r
+
+    \            ],\r
+
+    \            \"$._entropy\": [\r
+
+    \                \"\"\r
+
+    \            ],\r
+
+    \            \"$._node_id\": [\r
+
+    \                \"[]\"\r
+
+    \            ],\r
+
+    \            \"$.alias[*]\": [\r
+
+    \                \"BMC_ComputerSystem:web-fe-03\",\r
+
+    \                \"BMC_ComputerSystem:web-fe-02\",\r
+
+    \                \"BMC_ComputerSystem:lb-01\",\r
+
+    \                \"BMC_ComputerSystem:web-fe-01\",\r
+
+    \                \"BMC_ComputerSystem:i-0282bfd01619bba18\",\r
+
+    \                \"BMC_ComputerSystem:pat_sim1\"\r
+
+    \            ],\r
+
+    \            \"$.category\": [\r
+
+    \                \"OPERATIONS_MANAGEMENT\",\r
+
+    \                \"AVAILABILITY_MANAGEMENT\"\r
+
+    \            ],\r
+
+    \            \"$.cdmclass\": [\r
+
+    \                \"\"\r
+
+    \            ],\r
+
+    \            \"$.location\": [\r
+
+    \                \"\",\r
+
+    \                \"California\"\r
+
+    \            ],\r
+
+    \            \"$.priority\": [\r
+
+    \                \"PRIORITY_1\",\r
+
+    \                \"PRIORITY_3\",\r
+
+    \                \"PRIORITY_5\"\r
+
+    \            ],\r
+
+    \            \"$.severity\": [\r
+
+    \                \"CRITICAL\",\r
+
+    \                \"MINOR\",\r
+
+    \                \"MAJOR\",\r
+
+    \                \"INFO\"\r
+
+    \            ],\r
+
+    \            \"$.modelname\": [\r
+
+    \                \"\"\r
+
+    \            ],\r
+
+    \            \"$._signature\": [\r
+
+    \                \"356138322\",\r
+
+    \                \"996824922\",\r
+
+    \                \"828521194\",\r
+
+    \                \"999406996\",\r
+
+    \                \"-1517530525\",\r
+
+    \                \"44761357\",\r
+
+    \                \"802990738\",\r
+
+    \                \"1646917283\",\r
+
+    \                \"1691981612\",\r
+
+    \                \"-2073814224\"\r
+
+    \            ],\r
+
+    \            \"$._tenant_id\": [\r
+
+    \                \"1738801444\"\r
+
+    \            ],\r
+
+    \            \"$.is_updated\": [\r
+
+    \                false\r
+
+    \            ],\r
+
+    \            \"$._identifier\": [\r
+
+    \                \"eps.1738801444.3825161325680193.225a9c9b-d8df-46e2-b7b7-21f203c11d13\",\r
+
+    \                \"eps.1738801444.638492583625397.90ea7019-8497-4b38-8af8-2bba133f8f9d\",\r
+
+    \                \"eps.1738801444.3825181811723304.7f437811-e775-4169-9e68-931178b9108a\",\r
+
+    \                \"eps.1738801444.3825192065489170.e55e6229-835a-4039-a134-85b1e633006c\",\r
+
+    \                \"eps.1738801444.3825192633129592.525ed4eb-baed-4af4-8dcf-15ec8966fd77\",\r
+
+    \                \"eps.1738801444.3831891248679356.910c5238-c55e-4224-819d-408237123c29\",\r
+
+    \                \"eps.1738801444.3834219684582808.c97cd8cc-3476-4d83-93a2-77b78ec9e496\",\r
+
+    \                \"eps.1738801444.3828740888578932.4f7d0906-d349-4bd4-ae16-342b26e83d28\",\r
+
+    \                \"eps.1738801444.3831136823764449.6d8f3b0f-2b4c-40c8-a986-acf5bbbf92c7\",\r
+
+    \                \"eps.1738801444.3831759756832602.5d618047-df4a-4f8c-8b56-785322d2266a\"\r
+
+    \            ],\r
+
+    \            \"$._node_id[*]\": [\r
+
+    \                \"c956c862bd2e716c4ace65596e486f7374\",\r
+
+    \                \"c956c862bd2e716c4ace655e6e5669727475616c4d616368696e65\",\r
+
+    \                \"c956c862bd2e716c4ace65636e486f7374\",\r
+
+    \                \"c956c862bd2e716c4ace65606e5669727475616c4d616368696e65\",\r
+
+    \                \"c956c862bd2e716c4ace65686e4c6f616442616c616e63657253657276696365\",\r
+
+    \                \"c956c862bd2e716c4ace65646e486f7374\",\r
+
+    \                \"c956c862bd2e716c4ace655f6e5669727475616c4d616368696e65\",\r
+
+    \                \"c956c862bd2e716c4ace65706e4c6f616442616c616e6365724d656d626572\"\r
+
+    \            ],\r
+
+    \            \"$._operations\": [\r
+
+    \                \"[0x182f9841464,,Predefined Policy for Incident,NOTIFICATION,'']\",\r
+
+    \                \"[0x182f9843c8b,,Predefined Policy for Incident,NOTIFICATION,'']\",\r
+
+    \                \"[]\",\r
+
+    \                \"[0x182f984b4fb,,Predefined Policy for Incident,NOTIFICATION,'']\",\r
+
+    \                \"[0x182f98554d4,,Predefined Policy for Incident,NOTIFICATION,'']\",\r
+
+    \                \"[0x182f985a4ae,,Predefined Policy for Incident,NOTIFICATION,'']\"\r
+
+    \            ],\r
+
+    \            \"$._service_id\": [\r
+
+    \                \"[]\"\r
+
+    \            ],\r
+
+    \            \"$.incident_id\": [\r
+
+    \                \"\",\r
+
+    \                \"INC000000020894\",\r
+
+    \                \"INC000000020895\",\r
+
+    \                \"INC000000020896\",\r
+
+    \                \"INC000000020897\",\r
+
+    \                \"INC000000020898\"\r
+
+    \            ],\r
+
+    \            \"$.source_port\": [\r
+
+    \                3181,\r
+
+    \                80\r
+
+    \            ],\r
+
+    \            \"$._tenant_name\": [\r
+
+    \                \"\"\r
+
+    \            ],\r
+
+    \            \"$.instancename\": [\r
+
+    \                \"\"\r
+
+    \            ],\r
+
+    \            \"$.significance\": [\r
+
+    \                \"0\"\r
+
+    \            ],\r
+
+    \            \"$.sub_category\": [\r
+
+    \                \"OTHER\"\r
+
+    \            ],\r
+
+    \            \"$._arrival_time\": [\r
+
+    \                1662043651232,\r
+
+    \                1662043661479,\r
+
+    \                1662043671819,\r
+
+    \                1662043682040,\r
+
+    \                1662046034588,\r
+
+    \                1662046266058,\r
+
+    \                1662048594484,\r
+
+    \                1662049582781,\r
+
+    \                1662051978746,\r
+
+    \                1662052007696\r
+
+    \            ],\r
+
+    \            \"$._repeat_count\": [\r
+
+    \                \"0\"\r
+
+    \            ],\r
+
+    \            \"$._service_name\": [\r
+
+    \                \"[]\"\r
+
+    \            ],\r
+
+    \            \"$.creation_time\": [\r
+
+    \                1662043651232,\r
+
+    \                1662043661479,\r
+
+    \                1662043671819,\r
+
+    \                1662043682040,\r
+
+    \                1662046034588,\r
+
+    \                1662046266058,\r
+
+    \                1662048594484,\r
+
+    \                1662049582781,\r
+
+    \                1662051978746,\r
+
+    \                1662052007696\r
+
+    \            ],\r
+
+    \            \"$.user_assigned\": [\r
+
+    \                \"\"\r
+
+    \            ],\r
+
+    \            \"$._modified_time\": [\r
+
+    \                1662043661486,\r
+
+    \                1662043663362,\r
+
+    \                1662043671819,\r
+
+    \                1662043682040,\r
+
+    \                1662046034588,\r
+
+    \                1662046266058,\r
+
+    \                1662048594484,\r
+
+    \                1662049582781,\r
+
+    \                1662051978746,\r
+
+    \                1662052007696\r
+
+    \            ],\r
+
+    \            \"$._service_id[*]\": [\r
+
+    \                \"b949da62b459fa4e0974bcd26e427573696e65737353657276696365\",\r
+
+    \                \"c956c862bd2e716c4ace65696e427573696e65737353657276696365\"\r
+
+    \            ],\r
+
+    \            \"$.componentalias\": [\r
+
+    \                \"\"\r
+
+    \            ],\r
+
+    \            \"$.source_address\": [\r
+
+    \                \"\",\r
+
+    \                \"172.17.0.132\"\r
+
+    \            ],\r
+
+    \            \"$._lifecycle_time\": [\r
+
+    \                \"0\"\r
+
+    \            ],\r
+
+    \            \"$.source_hostname\": [\r
+
+    \                \"web-fe-03\",\r
+
+    \                \"web-fe-02\",\r
+
+    \                \"lb-01\",\r
+
+    \                \"web-fe-01\",\r
+
+    \                \"i-0282bfd01619bba18\",\r
+
+    \                \"pat_sim1\"\r
+
+    \            ],\r
+
+    \            \"$._service_name[*]\": [\r
+
+    \                \"Puma Trading System\",\r
+
+    \                \"Media Service\"\r
+
+    \            ],\r
+
+    \            \"$.incident_company\": [\r
+
+    \                \"\"\r
+
+    \            ],\r
+
+    \            \"$.source_identifier\": [\r
+
+    \                \"web-fe-03\",\r
+
+    \                \"web-fe-02\",\r
+
+    \                \"lb-01\",\r
+
+    \                \"web-fe-01\",\r
+
+    \                \"i-0282bfd01619bba18\",\r
+
+    \                \"pat_sim1:3181\"\r
+
+    \            ],\r
+
+    \            \"$._relationships.rstat\": [\r
+
+    \                \"norelation\"\r
+
+    \            ],\r
+
+    \            \"$._unmapped_data.delay\": [\r
+
+    \                \"\",\r
+
+    \                \"yes\"\r
+
+    \            ],\r
+
+    \            \"$._node_service_mapping\": [\r
+
+    \                \"[]\"\r
+
+    \            ],\r
+
+    \            \"$._unmapped_data.object\": [\r
+
+    \                \"App\",\r
+
+    \                \"TP\",\r
+
+    \                \"Network\",\r
+
+    \                \"CPU\"\r
+
+    \            ],\r
+
+    \            \"$._node_service_mapping[*]\": [\r
+
+    \                \"c956c862bd2e716c4ace65596e486f7374:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365\",\r
+
+    \                \"c956c862bd2e716c4ace655e6e5669727475616c4d616368696e65:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365\",\r
+
+    \                \"c956c862bd2e716c4ace65636e486f7374:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365\",\r
+
+    \                \"c956c862bd2e716c4ace65606e5669727475616c4d616368696e65:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365\",\r
+
+    \                \"c956c862bd2e716c4ace65686e4c6f616442616c616e63657253657276696365:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365\",\r
+
+    \                \"c956c862bd2e716c4ace65646e486f7374:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365\",\r
+
+    \                \"c956c862bd2e716c4ace655f6e5669727475616c4d616368696e65:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365\",\r
+
+    \                \"c956c862bd2e716c4ace65706e4c6f616442616c616e6365724d656d626572:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365\"\r
+
+    \            ],\r
+
+    \            \"$._node_service_key_mapping\": [\r
+
+    \                \"[]\"\r
+
+    \            ],\r
+
+    \            \"$._node_service_key_mapping[*]\": [\r
+
+    \                \"CFRmgLx1zJs+GPum67rVuA==::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e\",\r
+
+    \                \"aws/us-east-2/ec2/i-0282bfd01619bba18::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e\",\r
+
+    \                \"nbVbha9RVH7gLtpBlv1Ttg==::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e\",\r
+
+    \                \"aws/us-east-2/ec2/i-0d961a0e78261469f::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e\",\r
+
+    \                \"arn:aws:elasticloadbalancing:us-east-2:258997833062:listener/net/lb-01/60ab644f6f9dd345/13829c3fea37eee7::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e\",\r
+
+    \                \"6RVryw4vWCisatvcSuAW+g==::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e\",\r
+
+    \                \"aws/us-east-2/ec2/i-0daede9476e67b825::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e\",\r
+
+    \                \"09ojPUuzQLM9SurGCDDKNg==::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e\"\r
+
+    \            ]\r
+
+    \        },\r
+
+    \        \"trigger_condition_expression_metadata\": [\r
+
+    \            {\r
+
+    \                \"slot_name\": \"$.event.class\",\r
+
+    \                \"slot_value\": \"EVENT\",\r
+
+    \                \"end_bracket\": \")\",\r
+
+    \                \"slot_operator\": \"==\",\r
+
+    \                \"condition_order\": 0,\r
+
+    \                \"condition_bracket\": \"(\",\r
+
+    \                \"condition_operator\": \"\"\r
+
+    \            }\r
+
+    \        ]\r
+
+    \    },\r
+
+    \    \"tag_specs\": {},\r
+
+    \    \"trigger_condition_expression\": \"$?($.\\\"event\\\".\\\"class\\\" == \\\"EVENT\\\")\",\r
+
+    \    \"checksum\": \"f8be5311d327f13fa3a2c6781abd273335186c92768efbf218b0b22a4a4fc8fe\",\r
+
+    \    \"status\": \"DRAFT\",\r
+
+    \    \"is_active\": false,\r
+
+    \    \"auto_enabled\": false,\r
+
+    \    \"actions\": {\r
+
+    \        \"Execute HTTP Request for ControlM\": {\r
+
+    \            \"action_def_uri\": \"/api/rx/application/command#myit-sb:Execute HTTP Request for ControlM\",\r
+
+    \            \"plugin_type\": \"restapi_plugin\",\r
+
+    \            \"credential\": {\r
+
+    \                \"target_id\": \"https://helixsjc839-demo-is.onbmc.com\",\r
+
+    \                \"provider_id\": \"innovation_studio\"\r
+
+    \            },\r
+
+    \            \"continue_on_failure\": false,\r
+
+    \            \"action\": {\r
+
+    \                \"server\": \"https://helixsjc839-demo-is.onbmc.com\",\r
+
+    \                \"/api/rx/application/command\": {\r
+
+    \                    \"post\": {\r
+
+    \                        \"parameters\": [\r
+
+    \                            {\r
+
+    \                                \"in\": \"headers\",\r
+
+    \                                \"x-requested-by\": \"XMLHttpRequest\"\r
+
+    \                            }\r
+
+    \                        ],\r
+
+    \                        \"requestBody\": {\r
+
+    \                            \"content\": {\r
+
+    \                                \"application/json\": {\r
+
+    \                                    \"resourceType\": \"com.bmc.arsys.rx.application.process.command.StartProcessInstanceCommand\",\r
+
+    \                                    \"processInputValues\": {\r
+
+    \                                        \"context\": \"{ }\"\r
+
+    \                                    },\r
+
+    \                                    \"processDefinitionName\": \"myit-sb:Execute HTTP Request for ControlM\"\r
+
+    \                                }\r
+
+    \                            }\r
+
+    \                        }\r
+
+    \                    }\r
+
+    \                }\r
+
+    \            }\r
+
+    \        },\r
+
+    \        \"Execute HTTP Request for ControlM status\": {\r
+
+    \            \"action_def_uri\": \"innovation_studio/api/rx/application/process/processinstance/{processDefinitionName}/{instanceId}//get\",\r
+
+    \            \"plugin_type\": \"restapi_plugin\",\r
+
+    \            \"credential\": {\r
+
+    \                \"target_id\": \"https://helixsjc839-demo-is.onbmc.com\",\r
+
+    \                \"provider_id\": \"innovation_studio\"\r
+
+    \            },\r
+
+    \            \"success_conditions\": {\r
+
+    \                \"$.output.result.status\": \"COMPLETED\"\r
+
+    \            },\r
+
+    \            \"poll_conditions\": {\r
+
+    \                \"$.output.result.status\": \"ACTIVE\"\r
+
+    \            },\r
+
+    \            \"continue_on_failure\": false,\r
+
+    \            \"action\": {\r
+
+    \                \"server\": \"https://helixsjc839-demo-is.onbmc.com\",\r
+
+    \                \"/api/rx/application/process/processinstance/{processDefinitionName}/{instanceId}/\": {\r
+
+    \                    \"get\": {\r
+
+    \                        \"parameters\": [\r
+
+    \                            {\r
+
+    \                                \"in\": \"path\",\r
+
+    \                                \"instanceId\": \"$.\\\"Execute HTTP Request for ControlM\\\".output.headers.\\\"x-bmc-process-instanceId\\\"\"\r
+
+    \                            },\r
+
+    \                            {\r
+
+    \                                \"in\": \"path\",\r
+
+    \                                \"processDefinitionName\": \"myit-sb:Execute HTTP Request for ControlM\"\r
+
+    \                            }\r
+
+    \                        ]\r
+
+    \                    }\r
+
+    \                }\r
+
+    \            },\r
+
+    \            \"predecessor\": [\r
+
+    \                \"Execute HTTP Request for ControlM\"\r
+
+    \            ]\r
+
+    \        }\r
+
+    \    }\r
+
+    }"
+examples: ./.resources/Save Automation Policy.resources/examples
+order: 5000

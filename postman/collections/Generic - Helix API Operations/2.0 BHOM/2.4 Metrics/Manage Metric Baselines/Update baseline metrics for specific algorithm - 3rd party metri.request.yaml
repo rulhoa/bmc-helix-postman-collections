@@ -1,0 +1,26 @@
+$kind: http-request
+name: Update baseline metrics for specific algorithm - 3rd party metrics
+description: "[https://docs.bmc.com/docs/bhom/222/managing-baseline-metrics-in-alarm-policies-with-rest-apis-1077384665.html](https://docs.bmc.com/docs/bhom/222/managing-baseline-metrics-in-alarm-policies-with-rest-apis-1077384665.html)"
+url: "{{bhom_base_url}}/aiops-config/api/v2.0/algorithms/tdigest/metrics"
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \    \"metrics\": [\r
+
+    \        {\r
+
+    \            \"entityTypeId\": \"CashDynamics_Available_Cash\",\r
+
+    \            \"isThirdparty\": \"true\",\r
+
+    \            \"attributes\": [\"Available_Cash\"]\r
+
+    \        }\r
+
+    \    ]\r
+
+    }"
+examples: ./.resources/Update baseline metrics for specific algorithm - 3rd party metri.resources/examples
+order: 4000

@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{bhom_base_url}}/tsws/monitoring/api/v1.0/unifiedadmin/Policy/:event_policy_id/list?idType=id&escNcr=true"
+method: GET
+queryParams:
+  idType: id
+  escNcr: "true"
+pathVariables:
+  event_policy_id: 9a5cc551-cc43-4d48-8998-a1b403db956d
+order: 1000

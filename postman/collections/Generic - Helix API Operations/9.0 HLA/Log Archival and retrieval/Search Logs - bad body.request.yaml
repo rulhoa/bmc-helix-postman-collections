@@ -1,0 +1,39 @@
+$kind: http-request
+url: "{{bhom_base_url}}/logs-service/api/v1.0/logs/msearch"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"size\": 10,\r
+
+    \    \"query\": {\r
+
+    \        \"bool\": {\r
+
+    \            \"filter\": [\r
+
+    \                {\r
+
+    \                    \"range\": {\r
+
+    \                        \"@timestamp\": {\r
+
+    \                            \"gte\": \"2021-07-26T08:00:22Z\",\r
+
+    \                            \"lte\": \"2021-07-26T08:41:22Z\"\r
+
+    \                        }\r
+
+    \                    }\r
+
+    \                }\r
+
+    \            ]\r
+
+    \        }\r
+
+    \    }\r
+
+    }"
+order: 2000

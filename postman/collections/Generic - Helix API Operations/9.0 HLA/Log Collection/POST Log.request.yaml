@@ -1,0 +1,130 @@
+$kind: http-request
+url: "{{bhom_base_url}}/log-service/api/v1.0/logs"
+method: POST
+body:
+  type: json
+  content: "[\r
+
+    \    {\r
+
+    \        \"input\": {\r
+
+    \            \"type\": \"log\"\r
+
+    \        },\r
+
+    \        \"auth\": \"-\",\r
+
+    \        \"@timestamp\": \"2020-08-12T13:36:09.947Z\",\r
+
+    \        \"agent\": {\r
+
+    \            \"type\": \"filebeat\",\r
+
+    \            \"id\": \"e2043b6b-03b4-45a8-8122-a5bf7da71b4e\",\r
+
+    \            \"hostname\": \"host name\",\r
+
+    \            \"ephemeral_id\": \"46c17863-3ae5-4d30-99fb-8d92706a0119\",\r
+
+    \            \"version\": \"7.7.1\"\r
+
+    \        },\r
+
+    \        \"ident\": \"-\",\r
+
+    \        \"httpversion\": \"1.1\",\r
+
+    \        \"@version\": \"1\",\r
+
+    \        \"request\": \"/\",\r
+
+    \        \"bytes\": \"590\",\r
+
+    \        \"response\": \"401\",\r
+
+    \        \"ecs\": {\r
+
+    \            \"version\": \"1.5.0\"\r
+
+    \        },\r
+
+    \        \"tags\": [\r
+
+    \            \"beats_input_codec_plain_applied\"\r
+
+    \        ],\r
+
+    \        \"log\": {\r
+
+    \            \"offset\": 0,\r
+
+    \            \"file\": {\r
+
+    \                \"path\": \"<file path>\"\r
+
+    \            }\r
+
+    \        },\r
+
+    \        \"verb\": \"GET\",\r
+
+    \        \"host\": {\r
+
+    \            \"os\": {\r
+
+    \                \"family\": \"windows\",\r
+
+    \                \"version\": \"10.0\",\r
+
+    \                \"platform\": \"windows\",\r
+
+    \                \"build\": \"14393.3750\",\r
+
+    \                \"kernel\": \"10.0.14393.3750 (rs1_release.200601-1853)\",\r
+
+    \                \"name\": \"Windows Server 2016 Standard\"\r
+
+    \            },\r
+
+    \            \"mac\": [\r
+
+    \                \"00:50:56:8f:32:8c\",\r
+
+    \                \"00:00:00:00:00:00:00:e0\",\r
+
+    \                \"00:00:00:00:00:00:00:e0\"\r
+
+    \            ],\r
+
+    \            \"id\": \"317c191e-b88f-4e58-844d-e0158dce6d6a\",\r
+
+    \            \"name\": \"host name\",\r
+
+    \            \"architecture\": \"x86_64\",\r
+
+    \            \"ip\": [\r
+
+    \                \"fe80::85b5:401b:ae4d:9fcc\",\r
+
+    \                \"<IP address>\",\r
+
+    \                \"fe80::5efe:a85:b236\",\r
+
+    \                \"2001:0:348b:fb58:c57:ec66:3f0a:5ddb\",\r
+
+    \                \"fe80::c57:ec66:3f0a:5ddb\"\r
+
+    \            ],\r
+
+    \            \"hostname\": \"host name\"\r
+
+    \        },\r
+
+    \        \"message\": \"[29/Jul/2020:17:06:03 +0530] \\\"GET / HTTP/1.1\\\" 401 590\"\r
+
+    \    }\r
+
+    ]"
+examples: ./.resources/POST Log.resources/examples
+order: 1000

@@ -1,0 +1,28 @@
+$kind: http-request
+name: Create session (SRP/PKI)
+url: "{{v1}}/sessions"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "authentication_type": "{{tssa_auth_type}}",
+      "user_name": "{{tssa_username}}",
+      "password": "{{tssa_password}}",
+      "role_name": "{{tssa_role}}"
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('Status is 200', () => pm.response.to.have.status(200));
+      let j = {};
+      try { j = pm.response.json(); } catch (e) {}
+      if (j.session_id) pm.environment.set('session_id', j.session_id);
+      if (!pm.environment.get('tssa_role')) {
+        if (j.default_role) pm.environment.set('tssa_role', j.default_role);
+        if (Array.isArray(j.roles) && j.roles.length) pm.environment.set('tssa_role', j.roles[0]);
+      }
+    language: text/javascript
+order: 1000

@@ -1,0 +1,293 @@
+$kind: http-request
+url: "{{bhom_base_url}}/events-service/api/v1.0/events/classes/"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\": \"NetreoIncident\",\r
+
+    \    \"parentClassName\": \"IIMonitorEvent\",\r
+
+    \    \"attributes\": [\r
+
+    \        {\r
+
+    \            \"name\": \"source_incident_id\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"source_entity_uri\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"source_status\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"source_severity\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"user_severity\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"source_incident_type\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"source_site\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"sourceGeoLocation\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"source_category\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"source_strategic_group\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"source_tags\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"source_related_alarms\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"source_uid\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"metric_note\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"Latitude\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"Longitude\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"source_statistical_group\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        }\r
+
+    \    ]\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{bhom_json_web_token}}"
+order: 6000

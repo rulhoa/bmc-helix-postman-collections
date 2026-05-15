@@ -1,0 +1,34 @@
+$kind: http-request
+url: "{{itsm_base_url}}/api/arsys/v1/entry/HPD:IncidentInterface_Create"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+        "values":{
+            "z1D_Action":"",
+            "Assigned Group":"",
+            "Assigned Group ID":"",
+            "Status":"",
+            "Impact":"",
+            "Urgency":"",
+            "Login_ID":"",
+            "Reported Source":"",
+            "Service_Type":"",
+            "Product Categorization Tier 1":"",
+            "Product Categorization Tier 2":"",
+            "Product Categorization Tier 3":"",
+            "Product Name":"",
+            "Categorization Tier 1":"",
+            "Categorization Tier 2":"",
+            "Categorization Tier 3":"",
+            "Assigned Support Company":"",
+            "Assigned Support Organization":"",
+            "Description":"",
+            "Detailed_Decription":"",
+            "ServiceCI":""
+        }
+    }
+order: 2000

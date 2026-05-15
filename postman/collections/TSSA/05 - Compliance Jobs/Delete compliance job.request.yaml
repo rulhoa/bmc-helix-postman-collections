@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{v1}}/compliance-jobs/{{id}}"
+method: DELETE
+order: 5000

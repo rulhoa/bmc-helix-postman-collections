@@ -1,0 +1,23 @@
+$kind: http-request
+description: O campo SRID é o que armazena o ID da requisição.
+url: "{{itsm_base_url}}/api/arsys/v1/entry/CHG:Infrastructure Change/?q='Infrastructure Change ID'=\"\""
+method: GET
+headers:
+  Content-Type: application/json
+queryParams:
+  q: "'Infrastructure Change ID'=\"\""
+body:
+  type: text
+  content: |
+    {
+    	"values": {
+    		"Assignee Group ID":"",
+    		"Assignee Group":"",
+    		"Support Company":"",
+    		"Assignee Organization":"",
+    		"z1D Char01":"",
+    		"Location Company":""
+    	},
+        
+    }
+order: 1000

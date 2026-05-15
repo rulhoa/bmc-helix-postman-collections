@@ -1,0 +1,8 @@
+$kind: http-request
+url: "{{v1}}/servers?page=0&size=50&additional_details=false"
+method: GET
+queryParams:
+  page: "0"
+  size: "50"
+  additional_details: "false"
+order: 1000

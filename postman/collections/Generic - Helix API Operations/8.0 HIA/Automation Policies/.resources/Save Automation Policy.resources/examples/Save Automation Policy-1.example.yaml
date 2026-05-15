@@ -1,0 +1,741 @@
+$kind: http-example
+name: Save Automation Policy
+request:
+  url: "{{bhom_base_url}}/intelligent-automation/api/v1/workflows/c5293b57-6c7c-ce72-908c-9c7cda3b4495"
+  method: PUT
+  body:
+    type: json
+    content: "{\r
+
+      \  \"id\": \"c5293b57-6c7c-ce72-908c-9c7cda3b4495\",\r
+
+      \  \"name\": \"Remediacao via Control-M\",\r
+
+      \  \"type\": \"user_defined\",\r
+
+      \  \"description\": \"\",\r
+
+      \  \"metadata\": {\r
+
+      \    \"event\": {\r
+
+      \      \"msg\": \"[Dynatrace] Abnormal traffic pattern detected on tower220\",\r
+
+      \      \"tags\": \"[]\",\r
+
+      \      \"alias\": [\r
+
+      \        \"BMC_ComputerSystem:web-fe-02\"\r
+
+      \      ],\r
+
+      \      \"class\": \"EVENT\",\r
+
+      \      \"_ci_id\": \"\",\r
+
+      \      \"_model\": \"\",\r
+
+      \      \"_notes\": \"[]\",\r
+
+      \      \"status\": \"OPEN\",\r
+
+      \      \"_errors\": \"[]\",\r
+
+      \      \"details\": \"\",\r
+
+      \      \"_entropy\": \"\",\r
+
+      \      \"_node_id\": [\r
+
+      \        \"c956c862bd2e716c4ace65636e486f7374\",\r
+
+      \        \"c956c862bd2e716c4ace65606e5669727475616c4d616368696e65\"\r
+
+      \      ],\r
+
+      \      \"category\": \"OPERATIONS_MANAGEMENT\",\r
+
+      \      \"cdmclass\": \"\",\r
+
+      \      \"location\": \"\",\r
+
+      \      \"priority\": \"PRIORITY_1\",\r
+
+      \      \"severity\": \"CRITICAL\",\r
+
+      \      \"modelname\": \"\",\r
+
+      \      \"_signature\": \"1428297848\",\r
+
+      \      \"_tenant_id\": \"1738801444\",\r
+
+      \      \"score_info\": \"\",\r
+
+      \      \"start_time\": null,\r
+
+      \      \"_identifier\": \"eps.1738801444.3818702292462257.6ad0841a-58f7-45f3-be9c-fa262cce7382\",\r
+
+      \      \"_operations\": \"[0x182f9843c8b,,Predefined Policy for Incident,NOTIFICATION,'']\",\r
+
+      \      \"_service_id\": [\r
+
+      \        \"b949da62b459fa4e0974bcd26e427573696e65737353657276696365\",\r
+
+      \        \"c956c862bd2e716c4ace65696e427573696e65737353657276696365\"\r
+
+      \      ],\r
+
+      \      \"automations\": [\r
+
+      \        {\r
+
+      \          \"id\": \"30799dc1-3039-3fe2-d895-d3a0daa70269\",\r
+
+      \          \"name\": \"Linux Disk Cleanup\",\r
+
+      \          \"type\": \"user_defined\",\r
+
+      \          \"checksum\": \"2bd8db4dcec26d4abd59e33cbf986e8a5e930e2378128c0aa5ffc1c13d8ed8b3\",\r
+
+      \          \"description\": \"Delete temporary files to free diskspace\",\r
+
+      \          \"auto_enabled\": false\r
+
+      \        }\r
+
+      \      ],\r
+
+      \      \"event_score\": 14,\r
+
+      \      \"incident_id\": \"INC000000020895\",\r
+
+      \      \"showRcaIcon\": true,\r
+
+      \      \"situationID\": \"c956c862bd2e716c4ace65696e427573696e65737353657276696365_d730cace18b040dab045c1b1a316a235\",\r
+
+      \      \"source_port\": 3181,\r
+
+      \      \"_tenant_name\": \"\",\r
+
+      \      \"instancename\": \"\",\r
+
+      \      \"significance\": \"0\",\r
+
+      \      \"sub_category\": \"OTHER\",\r
+
+      \      \"_arrival_time\": 1662043569244,\r
+
+      \      \"_repeat_count\": \"0\",\r
+
+      \      \"_service_name\": [\r
+
+      \        \"Puma Trading System\",\r
+
+      \        \"Media Service\"\r
+
+      \      ],\r
+
+      \      \"creation_time\": 1662043569244,\r
+
+      \      \"situationName\": \"Media Service - [Dynatrace] Abnormal traffic pattern detected on tower220\",\r
+
+      \      \"user_assigned\": \"\",\r
+
+      \      \"_modified_time\": 1662043571385,\r
+
+      \      \"_relationships\": {\r
+
+      \        \"rstat\": \"secondary\",\r
+
+      \        \"mlsituation\": [\r
+
+      \          \"c956c862bd2e716c4ace65696e427573696e65737353657276696365_d730cace18b040dab045c1b1a316a235\",\r
+
+      \          \"b949da62b459fa4e0974bcd26e427573696e65737353657276696365_f20ef3f750374db2a560a6085894a068\"\r
+
+      \        ]\r
+
+      \      },\r
+
+      \      \"_unmapped_data\": {\r
+
+      \        \"delay\": \"yes\",\r
+
+      \        \"object\": \"App\"\r
+
+      \      },\r
+
+      \      \"componentalias\": \"\",\r
+
+      \      \"source_address\": \"\",\r
+
+      \      \"status_ordinal\": 0,\r
+
+      \      \"_lifecycle_time\": \"0\",\r
+
+      \      \"source_hostname\": \"web-fe-02\",\r
+
+      \      \"category_ordinal\": 190,\r
+
+      \      \"incident_company\": \"\",\r
+
+      \      \"priority_ordinal\": 50,\r
+
+      \      \"severity_ordinal\": 70,\r
+
+      \      \"situationEventId\": \"e136cd27-8699-455b-9796-2466b4760ab9\",\r
+
+      \      \"source_identifier\": \"web-fe-02\",\r
+
+      \      \"sub_category_ordinal\": 10,\r
+
+      \      \"_node_service_mapping\": [\r
+
+      \        \"c956c862bd2e716c4ace65636e486f7374:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365\",\r
+
+      \        \"c956c862bd2e716c4ace65606e5669727475616c4d616368696e65:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365\"\r
+
+      \      ],\r
+
+      \      \"_node_service_key_mapping\": [\r
+
+      \        \"nbVbha9RVH7gLtpBlv1Ttg==::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e\",\r
+
+      \        \"aws/us-east-2/ec2/i-0d961a0e78261469f::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e\"\r
+
+      \      ]\r
+
+      \    },\r
+
+      \    \"trigger_condition_expression_metadata\": [\r
+
+      \      {\r
+
+      \        \"condition_order\": 0,\r
+
+      \        \"condition_operator\": \"\",\r
+
+      \        \"slot_name\": \"$.event.class\",\r
+
+      \        \"slot_operator\": \"==\",\r
+
+      \        \"slot_value\": \"EVENT\",\r
+
+      \        \"condition_bracket\": \"(\",\r
+
+      \        \"end_bracket\": \")\"\r
+
+      \      },\r
+
+      \      {\r
+
+      \        \"condition_order\": 1,\r
+
+      \        \"condition_operator\": \"&&\",\r
+
+      \        \"slot_name\": \"$.event.source_hostname\",\r
+
+      \        \"slot_operator\": \"==\",\r
+
+      \        \"slot_value\": \"web-fe-02\",\r
+
+      \        \"condition_bracket\": \"(\",\r
+
+      \        \"end_bracket\": \")\"\r
+
+      \      }\r
+
+      \    ],\r
+
+      \    \"effort\": 120,\r
+
+      \    \"json_paths\": {\r
+
+      \      \"$.msg\": [\r
+
+      \        \"[Dynatrace] Abnormal traffic pattern detected on tower220\"\r
+
+      \      ],\r
+
+      \      \"$.tags\": [\r
+
+      \        \"[]\"\r
+
+      \      ],\r
+
+      \      \"$.class\": [\r
+
+      \        \"EVENT\"\r
+
+      \      ],\r
+
+      \      \"$._ci_id\": [\r
+
+      \        \"\"\r
+
+      \      ],\r
+
+      \      \"$._model\": [\r
+
+      \        \"\"\r
+
+      \      ],\r
+
+      \      \"$._notes\": [\r
+
+      \        \"[]\"\r
+
+      \      ],\r
+
+      \      \"$.status\": [\r
+
+      \        \"OPEN\"\r
+
+      \      ],\r
+
+      \      \"$._errors\": [\r
+
+      \        \"[]\"\r
+
+      \      ],\r
+
+      \      \"$.details\": [\r
+
+      \        \"\"\r
+
+      \      ],\r
+
+      \      \"$._entropy\": [\r
+
+      \        \"\"\r
+
+      \      ],\r
+
+      \      \"$.alias[*]\": [\r
+
+      \        \"BMC_ComputerSystem:web-fe-02\"\r
+
+      \      ],\r
+
+      \      \"$.category\": [\r
+
+      \        \"OPERATIONS_MANAGEMENT\"\r
+
+      \      ],\r
+
+      \      \"$.cdmclass\": [\r
+
+      \        \"\"\r
+
+      \      ],\r
+
+      \      \"$.location\": [\r
+
+      \        \"\"\r
+
+      \      ],\r
+
+      \      \"$.priority\": [\r
+
+      \        \"PRIORITY_1\"\r
+
+      \      ],\r
+
+      \      \"$.severity\": [\r
+
+      \        \"CRITICAL\"\r
+
+      \      ],\r
+
+      \      \"$.modelname\": [\r
+
+      \        \"\"\r
+
+      \      ],\r
+
+      \      \"$._signature\": [\r
+
+      \        \"1428297848\"\r
+
+      \      ],\r
+
+      \      \"$._tenant_id\": [\r
+
+      \        \"1738801444\"\r
+
+      \      ],\r
+
+      \      \"$.score_info\": [\r
+
+      \        \"\"\r
+
+      \      ],\r
+
+      \      \"$._identifier\": [\r
+
+      \        \"eps.1738801444.3818702292462257.6ad0841a-58f7-45f3-be9c-fa262cce7382\"\r
+
+      \      ],\r
+
+      \      \"$._node_id[*]\": [\r
+
+      \        \"c956c862bd2e716c4ace65636e486f7374\",\r
+
+      \        \"c956c862bd2e716c4ace65606e5669727475616c4d616368696e65\"\r
+
+      \      ],\r
+
+      \      \"$._operations\": [\r
+
+      \        \"[0x182f9843c8b,,Predefined Policy for Incident,NOTIFICATION,'']\"\r
+
+      \      ],\r
+
+      \      \"$.event_score\": [\r
+
+      \        14\r
+
+      \      ],\r
+
+      \      \"$.incident_id\": [\r
+
+      \        \"INC000000020895\"\r
+
+      \      ],\r
+
+      \      \"$.showRcaIcon\": [\r
+
+      \        true\r
+
+      \      ],\r
+
+      \      \"$.situationID\": [\r
+
+      \        \"c956c862bd2e716c4ace65696e427573696e65737353657276696365_d730cace18b040dab045c1b1a316a235\"\r
+
+      \      ],\r
+
+      \      \"$.source_port\": [\r
+
+      \        3181\r
+
+      \      ],\r
+
+      \      \"$._tenant_name\": [\r
+
+      \        \"\"\r
+
+      \      ],\r
+
+      \      \"$.instancename\": [\r
+
+      \        \"\"\r
+
+      \      ],\r
+
+      \      \"$.significance\": [\r
+
+      \        \"0\"\r
+
+      \      ],\r
+
+      \      \"$.sub_category\": [\r
+
+      \        \"OTHER\"\r
+
+      \      ],\r
+
+      \      \"$._arrival_time\": [\r
+
+      \        1662043569244\r
+
+      \      ],\r
+
+      \      \"$._repeat_count\": [\r
+
+      \        \"0\"\r
+
+      \      ],\r
+
+      \      \"$.creation_time\": [\r
+
+      \        1662043569244\r
+
+      \      ],\r
+
+      \      \"$.situationName\": [\r
+
+      \        \"Media Service - [Dynatrace] Abnormal traffic pattern detected on tower220\"\r
+
+      \      ],\r
+
+      \      \"$.user_assigned\": [\r
+
+      \        \"\"\r
+
+      \      ],\r
+
+      \      \"$._modified_time\": [\r
+
+      \        1662043571385\r
+
+      \      ],\r
+
+      \      \"$._service_id[*]\": [\r
+
+      \        \"b949da62b459fa4e0974bcd26e427573696e65737353657276696365\",\r
+
+      \        \"c956c862bd2e716c4ace65696e427573696e65737353657276696365\"\r
+
+      \      ],\r
+
+      \      \"$.componentalias\": [\r
+
+      \        \"\"\r
+
+      \      ],\r
+
+      \      \"$.source_address\": [\r
+
+      \        \"\"\r
+
+      \      ],\r
+
+      \      \"$.status_ordinal\": [\r
+
+      \        0\r
+
+      \      ],\r
+
+      \      \"$._lifecycle_time\": [\r
+
+      \        \"0\"\r
+
+      \      ],\r
+
+      \      \"$.source_hostname\": [\r
+
+      \        \"web-fe-02\"\r
+
+      \      ],\r
+
+      \      \"$._service_name[*]\": [\r
+
+      \        \"Puma Trading System\",\r
+
+      \        \"Media Service\"\r
+
+      \      ],\r
+
+      \      \"$.category_ordinal\": [\r
+
+      \        190\r
+
+      \      ],\r
+
+      \      \"$.incident_company\": [\r
+
+      \        \"\"\r
+
+      \      ],\r
+
+      \      \"$.priority_ordinal\": [\r
+
+      \        50\r
+
+      \      ],\r
+
+      \      \"$.severity_ordinal\": [\r
+
+      \        70\r
+
+      \      ],\r
+
+      \      \"$.situationEventId\": [\r
+
+      \        \"e136cd27-8699-455b-9796-2466b4760ab9\"\r
+
+      \      ],\r
+
+      \      \"$.automations[*].id\": [\r
+
+      \        \"30799dc1-3039-3fe2-d895-d3a0daa70269\"\r
+
+      \      ],\r
+
+      \      \"$.source_identifier\": [\r
+
+      \        \"web-fe-02\"\r
+
+      \      ],\r
+
+      \      \"$.automations[*].name\": [\r
+
+      \        \"Linux Disk Cleanup\"\r
+
+      \      ],\r
+
+      \      \"$.automations[*].type\": [\r
+
+      \        \"user_defined\"\r
+
+      \      ],\r
+
+      \      \"$._relationships.rstat\": [\r
+
+      \        \"secondary\"\r
+
+      \      ],\r
+
+      \      \"$._unmapped_data.delay\": [\r
+
+      \        \"yes\"\r
+
+      \      ],\r
+
+      \      \"$.sub_category_ordinal\": [\r
+
+      \        10\r
+
+      \      ],\r
+
+      \      \"$._unmapped_data.object\": [\r
+
+      \        \"App\"\r
+
+      \      ],\r
+
+      \      \"$.automations[*].checksum\": [\r
+
+      \        \"2bd8db4dcec26d4abd59e33cbf986e8a5e930e2378128c0aa5ffc1c13d8ed8b3\"\r
+
+      \      ],\r
+
+      \      \"$._node_service_mapping[*]\": [\r
+
+      \        \"c956c862bd2e716c4ace65636e486f7374:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365\",\r
+
+      \        \"c956c862bd2e716c4ace65606e5669727475616c4d616368696e65:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365\"\r
+
+      \      ],\r
+
+      \      \"$.automations[*].description\": [\r
+
+      \        \"Delete temporary files to free diskspace\"\r
+
+      \      ],\r
+
+      \      \"$.automations[*].auto_enabled\": [\r
+
+      \        false\r
+
+      \      ],\r
+
+      \      \"$._node_service_key_mapping[*]\": [\r
+
+      \        \"nbVbha9RVH7gLtpBlv1Ttg==::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e\",\r
+
+      \        \"aws/us-east-2/ec2/i-0d961a0e78261469f::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e\"\r
+
+      \      ],\r
+
+      \      \"$._relationships.mlsituation[*]\": [\r
+
+      \        \"c956c862bd2e716c4ace65696e427573696e65737353657276696365_d730cace18b040dab045c1b1a316a235\",\r
+
+      \        \"b949da62b459fa4e0974bcd26e427573696e65737353657276696365_f20ef3f750374db2a560a6085894a068\"\r
+
+      \      ]\r
+
+      \    },\r
+
+      \    \"event_type\": \"EVENT: user_defined Puma Trading System\"\r
+
+      \  },\r
+
+      \  \"tag_specs\": {},\r
+
+      \  \"trigger_condition_expression\": \"$ ? (( $.event.class == \\\"EVENT\\\" ) && ( $.event.source_hostname == \\\"web-fe-02\\\" ))\",\r
+
+      \  \"checksum\": \"0bc5335ad00661a9b3bf4beaf6c3f2b718d7e6d5986d4c463989362ab68315bc\",\r
+
+      \  \"status\": \"DRAFT\",\r
+
+      \  \"is_active\": false,\r
+
+      \  \"auto_enabled\": false,\r
+
+      \  \"actions\": {\r
+
+      \    \"Run Control-M Forecast Job\": {\r
+
+      \      \"action_def_uri\": \"generic_rest/generic_rest/x-bmc-ia-any\",\r
+
+      \      \"plugin_type\": \"remote_plugin\",\r
+
+      \      \"credential\": {\r
+
+      \        \"target_id\": \"https://se-preprod-aapi.us1.controlm.com:443/automation-api\",\r
+
+      \        \"provider_id\": \"generic_rest\"\r
+
+      \      },\r
+
+      \      \"continue_on_failure\": false,\r
+
+      \      \"action\": {\r
+
+      \        \"server\": \"https://se-preprod-aapi.us1.controlm.com:443/automation-api\",\r
+
+      \        \"/run/order\": {\r
+
+      \          \"post\": {\r
+
+      \            \"parameters\": [],\r
+
+      \            \"requestBody\": {\r
+
+      \              \"content\": {\r
+
+      \                \"application/json\": {\r
+
+      \                  \"ctm\": \"IN01\",\r
+
+      \                  \"folder\": \"fde-forecast-flow-demo\"\r
+
+      \                }\r
+
+      \              }\r
+
+      \            }\r
+
+      \          }\r
+
+      \        }\r
+
+      \      }\r
+
+      \    }\r
+
+      \  }\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Fri, 10 Feb 2023 20:36:18 GMT
+    Content-Type: application/json; charset=utf-8
+    Content-Length: "137"
+    Connection: keep-alive
+    X-Powered-By: Express
+    ETag: W/"89-hEwa3gdm2Plt8rNgsTMgaZaRSuU"
+  body:
+    type: json
+    content: |-
+      {
+          "id": "c5293b57-6c7c-ce72-908c-9c7cda3b4495",
+          "checksum": "0bc5335ad00661a9b3bf4beaf6c3f2b718d7e6d5986d4c463989362ab68315bc",
+          "warnings": []
+      }
+order: 2000

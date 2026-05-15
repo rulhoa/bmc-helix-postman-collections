@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{bhom_base_url}}/service-management/api/v1.0/service/situation/list"
+method: GET
+headers:
+  - key: Authorization
+    value: apiKey {{bhom_apiKey}}
+  - key: Authorization
+    value: ""
+    disabled: true
+body:
+  type: json
+  content: ""
+order: 1000

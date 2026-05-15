@@ -1,0 +1,539 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/events-service/api/v1.0/event_policies/"
+  method: POST
+  body:
+    type: json
+    content: "{\r
+
+      \    \"name\": \"Enrich CTM_JOB events\",\r
+
+      \    \"types\": [\r
+
+      \        \"REFINE\"\r
+
+      \    ],\r
+
+      \    \"description\": \"\",\r
+
+      \    \"executionOrder\": 10,\r
+
+      \    \"selectorCriteriaList\": [\r
+
+      \        \"class equals 'CTM_JOB'\"\r
+
+      \    ],\r
+
+      \    \"enabled\": true,\r
+
+      \    \"configurations\": [\r
+
+      \        {\r
+
+      \            \"type\": \"REFINE\",\r
+
+      \            \"configOrder\": 1,\r
+
+      \            \"definition\": {\r
+
+      \                \"children\": [\r
+
+      \                    {\r
+
+      \                        \"children\": [\r
+
+      \                            {\r
+
+      \                                \"children\": [\r
+
+      \                                    {\r
+
+      \                                        \"showDescription\": false,\r
+
+      \                                        \"children\": [],\r
+
+      \                                        \"valueType\": null,\r
+
+      \                                        \"placeholderText\": \"Text1\",\r
+
+      \                                        \"label\": null,\r
+
+      \                                        \"id\": null,\r
+
+      \                                        \"type\": \"data\",\r
+
+      \                                        \"value\": \"Control-M/\"\r
+
+      \                                    },\r
+
+      \                                    {\r
+
+      \                                        \"showDescription\": false,\r
+
+      \                                        \"children\": [],\r
+
+      \                                        \"valueType\": null,\r
+
+      \                                        \"placeholderText\": \"Text2\",\r
+
+      \                                        \"label\": null,\r
+
+      \                                        \"id\": null,\r
+
+      \                                        \"type\": \"data\",\r
+
+      \                                        \"value\": \"$NEW.instancename\"\r
+
+      \                                    }\r
+
+      \                                ],\r
+
+      \                                \"name\": \"Concat\",\r
+
+      \                                \"label\": null,\r
+
+      \                                \"id\": null,\r
+
+      \                                \"type\": \"function\"\r
+
+      \                            }\r
+
+      \                        ],\r
+
+      \                        \"label\": \"Key: EM-Server name\",\r
+
+      \                        \"id\": null,\r
+
+      \                        \"type\": \"assignVar\",\r
+
+      \                        \"value\": null,\r
+
+      \                        \"key\": \"$JobKey1\"\r
+
+      \                    },\r
+
+      \                    {\r
+
+      \                        \"children\": [\r
+
+      \                            {\r
+
+      \                                \"children\": [\r
+
+      \                                    {\r
+
+      \                                        \"showDescription\": false,\r
+
+      \                                        \"children\": [],\r
+
+      \                                        \"valueType\": null,\r
+
+      \                                        \"placeholderText\": \"Text1\",\r
+
+      \                                        \"label\": null,\r
+
+      \                                        \"id\": null,\r
+
+      \                                        \"type\": \"data\",\r
+
+      \                                        \"value\": \"$JobKey1\"\r
+
+      \                                    },\r
+
+      \                                    {\r
+
+      \                                        \"showDescription\": false,\r
+
+      \                                        \"children\": [],\r
+
+      \                                        \"valueType\": null,\r
+
+      \                                        \"placeholderText\": \"Text2\",\r
+
+      \                                        \"label\": null,\r
+
+      \                                        \"id\": null,\r
+
+      \                                        \"type\": \"data\",\r
+
+      \                                        \"value\": \"/\"\r
+
+      \                                    }\r
+
+      \                                ],\r
+
+      \                                \"name\": \"Concat\",\r
+
+      \                                \"label\": null,\r
+
+      \                                \"id\": null,\r
+
+      \                                \"type\": \"function\"\r
+
+      \                            }\r
+
+      \                        ],\r
+
+      \                        \"label\": \"Key: add separator\",\r
+
+      \                        \"id\": null,\r
+
+      \                        \"type\": \"assignVar\",\r
+
+      \                        \"value\": null,\r
+
+      \                        \"key\": \"$JobKey2\"\r
+
+      \                    },\r
+
+      \                    {\r
+
+      \                        \"children\": [\r
+
+      \                            {\r
+
+      \                                \"children\": [\r
+
+      \                                    {\r
+
+      \                                        \"showDescription\": false,\r
+
+      \                                        \"children\": [],\r
+
+      \                                        \"valueType\": null,\r
+
+      \                                        \"placeholderText\": \"Text1\",\r
+
+      \                                        \"label\": null,\r
+
+      \                                        \"id\": null,\r
+
+      \                                        \"type\": \"data\",\r
+
+      \                                        \"value\": \"$JobKey2\"\r
+
+      \                                    },\r
+
+      \                                    {\r
+
+      \                                        \"showDescription\": false,\r
+
+      \                                        \"children\": [],\r
+
+      \                                        \"valueType\": null,\r
+
+      \                                        \"placeholderText\": \"Text2\",\r
+
+      \                                        \"label\": null,\r
+
+      \                                        \"id\": null,\r
+
+      \                                        \"type\": \"data\",\r
+
+      \                                        \"value\": \"$NEW.ctmFolder\"\r
+
+      \                                    }\r
+
+      \                                ],\r
+
+      \                                \"name\": \"Concat\",\r
+
+      \                                \"label\": null,\r
+
+      \                                \"id\": null,\r
+
+      \                                \"type\": \"function\"\r
+
+      \                            }\r
+
+      \                        ],\r
+
+      \                        \"label\": \"Key: Add Folder hierarchy\",\r
+
+      \                        \"id\": null,\r
+
+      \                        \"type\": \"assignVar\",\r
+
+      \                        \"value\": null,\r
+
+      \                        \"key\": \"$JobKey3\"\r
+
+      \                    },\r
+
+      \                    {\r
+
+      \                        \"children\": [\r
+
+      \                            {\r
+
+      \                                \"children\": [\r
+
+      \                                    {\r
+
+      \                                        \"showDescription\": false,\r
+
+      \                                        \"children\": [],\r
+
+      \                                        \"valueType\": null,\r
+
+      \                                        \"placeholderText\": \"Text1\",\r
+
+      \                                        \"label\": null,\r
+
+      \                                        \"id\": null,\r
+
+      \                                        \"type\": \"data\",\r
+
+      \                                        \"value\": \"$JobKey3\"\r
+
+      \                                    },\r
+
+      \                                    {\r
+
+      \                                        \"showDescription\": false,\r
+
+      \                                        \"children\": [],\r
+
+      \                                        \"valueType\": null,\r
+
+      \                                        \"placeholderText\": \"Text2\",\r
+
+      \                                        \"label\": null,\r
+
+      \                                        \"id\": null,\r
+
+      \                                        \"type\": \"data\",\r
+
+      \                                        \"value\": \"/\"\r
+
+      \                                    }\r
+
+      \                                ],\r
+
+      \                                \"name\": \"Concat\",\r
+
+      \                                \"label\": null,\r
+
+      \                                \"id\": null,\r
+
+      \                                \"type\": \"function\"\r
+
+      \                            }\r
+
+      \                        ],\r
+
+      \                        \"label\": \"Key: add separator\",\r
+
+      \                        \"id\": null,\r
+
+      \                        \"type\": \"assignVar\",\r
+
+      \                        \"value\": null,\r
+
+      \                        \"key\": \"$JobKey4\"\r
+
+      \                    },\r
+
+      \                    {\r
+
+      \                        \"children\": [\r
+
+      \                            {\r
+
+      \                                \"children\": [\r
+
+      \                                    {\r
+
+      \                                        \"showDescription\": false,\r
+
+      \                                        \"children\": [],\r
+
+      \                                        \"valueType\": null,\r
+
+      \                                        \"placeholderText\": \"Text1\",\r
+
+      \                                        \"label\": null,\r
+
+      \                                        \"id\": null,\r
+
+      \                                        \"type\": \"data\",\r
+
+      \                                        \"value\": \"$JobKey4\"\r
+
+      \                                    },\r
+
+      \                                    {\r
+
+      \                                        \"showDescription\": false,\r
+
+      \                                        \"children\": [],\r
+
+      \                                        \"valueType\": null,\r
+
+      \                                        \"placeholderText\": \"Text2\",\r
+
+      \                                        \"label\": null,\r
+
+      \                                        \"id\": null,\r
+
+      \                                        \"type\": \"data\",\r
+
+      \                                        \"value\": \"$NEW.ctmJobName\"\r
+
+      \                                    }\r
+
+      \                                ],\r
+
+      \                                \"name\": \"Concat\",\r
+
+      \                                \"label\": null,\r
+
+      \                                \"id\": null,\r
+
+      \                                \"type\": \"function\"\r
+
+      \                            }\r
+
+      \                        ],\r
+
+      \                        \"label\": \"Key: add job name\",\r
+
+      \                        \"id\": null,\r
+
+      \                        \"type\": \"assignVar\",\r
+
+      \                        \"value\": null,\r
+
+      \                        \"key\": \"$JobKeyFinal\"\r
+
+      \                    },\r
+
+      \                    {\r
+
+      \                        \"children\": [\r
+
+      \                            {\r
+
+      \                                \"showDescription\": false,\r
+
+      \                                \"children\": [],\r
+
+      \                                \"valueType\": null,\r
+
+      \                                \"placeholderText\": null,\r
+
+      \                                \"label\": null,\r
+
+      \                                \"id\": null,\r
+
+      \                                \"type\": \"data\",\r
+
+      \                                \"value\": \"$JobKeyFinal\"\r
+
+      \                            }\r
+
+      \                        ],\r
+
+      \                        \"label\": \"Update source_hostname with JobKey\",\r
+
+      \                        \"id\": null,\r
+
+      \                        \"type\": \"enrich\",\r
+
+      \                        \"value\": null,\r
+
+      \                        \"key\": \"$NEW.source_hostname\"\r
+
+      \                    },\r
+
+      \                    {\r
+
+      \                        \"children\": [\r
+
+      \                            {\r
+
+      \                                \"showDescription\": false,\r
+
+      \                                \"children\": [],\r
+
+      \                                \"valueType\": null,\r
+
+      \                                \"placeholderText\": null,\r
+
+      \                                \"label\": null,\r
+
+      \                                \"id\": null,\r
+
+      \                                \"type\": \"data\",\r
+
+      \                                \"value\": \"$JobKeyFinal\"\r
+
+      \                            }\r
+
+      \                        ],\r
+
+      \                        \"label\": \"Update jobKey\",\r
+
+      \                        \"id\": null,\r
+
+      \                        \"type\": \"enrich\",\r
+
+      \                        \"value\": null,\r
+
+      \                        \"key\": \"$NEW.jobKey\"\r
+
+      \                    }\r
+
+      \                ],\r
+
+      \                \"id\": null,\r
+
+      \                \"label\": \"Replace source_hostname and jobKey with Job key for topology lookup.\\n\\nExample: Control-M/ctm-em.trybmc.local/test_failing/Folder_1/failing_job2 \",\r
+
+      \                \"type\": \"root\"\r
+
+      \            },\r
+
+      \            \"timeframeStatus\": \"\",\r
+
+      \            \"subType\": \"\"\r
+
+      \        }\r
+
+      \    ],\r
+
+      \    \"timeframes\": [\r
+
+      \        \"-1\"\r
+
+      \    ]\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Fri, 22 Mar 2024 18:25:20 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    Referrer-Policy: same-origin
+    X-Frame-Options: SAMEORIGIN
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    X-Content-Type-Options: nosniff
+    Permissions-Policy: idle-detection=self
+    Content-Encoding: gzip
+    TraceId: 3674d84e-3128-46fa-8762-ed08fbd901fe 158670711
+    Pragma: no-cache
+    X-XSS-Protection: 1; mode=block
+    Cache-control: no-store
+  body:
+    type: json
+    content: |-
+      {
+          "message": "Created event policy",
+          "object": [
+              "8a84cdc5-e879-11ee-999c-01c82e7dca34"
+          ]
+      }
+order: 1000

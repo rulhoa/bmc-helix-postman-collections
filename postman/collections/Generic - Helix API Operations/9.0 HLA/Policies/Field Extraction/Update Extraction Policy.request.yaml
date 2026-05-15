@@ -1,0 +1,71 @@
+$kind: http-request
+url: "{{bhom_base_url}}/logs-service/api/v1.0/logs/policies/3780660e-24f5-4428-9c86-68ba741b82a2"
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \    \"id\": \"3780660e-24f5-4428-9c86-68ba741b82a2\",\r
+
+    \    \"name\": \"Extract Event Information\",\r
+
+    \    \"description\": \"\",\r
+
+    \    \"tenant_id\": \"2085794782\",\r
+
+    \    \"selection_criteria\": \"agent.type EQUALS 'SYS' AND message CONTAINS 'Evento'\",\r
+
+    \    \"enabled\": true,\r
+
+    \    \"created_by\": \"activationuser\",\r
+
+    \    \"created_at\": 1697071253390,\r
+
+    \    \"updated_by\": \"activationuser\",\r
+
+    \    \"updated_at\": 1697071253390,\r
+
+    \    \"execution_order\": 1,\r
+
+    \    \"configurations\": [\r
+
+    \        {\r
+
+    \            \"name\": \"Extract Event Information\",\r
+
+    \            \"type\": \"EXTRACTION\",\r
+
+    \            \"details\": {\r
+
+    \                \"logField\": \"message\",\r
+
+    \                \"regex\": \"Evento:(?<EventID>[0-9]+)\\\\s+Disp:(?<EventDisp>[0-9]+)\\\\s+Erro:(?<EventError>[0-9]+)\\\\s+Tipo:(?<EventCode>[A-Za-z0-9]+)\\\\s+Dt/hora 1a ocorr:(?<EventFirstOccurrence>[0-9\\\\/\\\\-:]+)\",\r
+
+    \                \"sampleInput\": \"Ocorrencia: IMPRESSORA RECIBOS Sem papel - Evento:517 Disp:1 Erro:4 Tipo:CONSUMIVEL  Dt/hora 1a ocorr:10/10/2023-12:44:48\",\r
+
+    \                \"fieldsToExtract\": [\r
+
+    \                    \"EventID\",\r
+
+    \                    \"EventDisp\",\r
+
+    \                    \"EventError\",\r
+
+    \                    \"EventCode\",\r
+
+    \                    \"EventFirstOccurrence\"\r
+
+    \                ]\r
+
+    \            },\r
+
+    \            \"display_order\": 0,\r
+
+    \            \"id\": \"b5f843a9-f157-45d0-94b7-b5036ff082e3\"\r
+
+    \        }\r
+
+    \    ]\r
+
+    }"
+order: 2000

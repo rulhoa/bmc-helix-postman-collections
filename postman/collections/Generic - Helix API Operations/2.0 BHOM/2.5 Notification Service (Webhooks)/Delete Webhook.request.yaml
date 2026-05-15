@@ -1,0 +1,45 @@
+$kind: http-request
+url: "{{bhom_base_url}}/tsws/api/v1.0/integration/incident"
+method: DELETE
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\": \"hom_webhook_name\",\r
+
+    \  \"action\": \"CREATE, UPDATE\",\r
+
+    \  \"callback\": {\r
+
+    \    \"url\": \"https://bmc375972.jitterbit.eu/defaultUrlPrefix/1.0/eventWebhook\",\r
+
+    \    \"authentication\": {\r
+
+    \      \"password\": \"integration\",\r
+
+    \      \"type\": \"basic\",\r
+
+    \      \"username\": \"Wrn417cka9898!\"\r
+
+    \    }\r
+
+    \  },\r
+
+    \  \"payload_fields\": [\"ALL\"],\r
+
+    \  \"type\": \"INCIDENT\",\r
+
+    \  \"config\": {\r
+
+    \    \"retryintervalinmillisecond\": 60000,\r
+
+    \    \"retryCount\": 0,\r
+
+    \    \"concurrentRequest\": 5\r
+
+    \  }\r
+
+    }"
+auth:
+  type: apikey
+order: 3000

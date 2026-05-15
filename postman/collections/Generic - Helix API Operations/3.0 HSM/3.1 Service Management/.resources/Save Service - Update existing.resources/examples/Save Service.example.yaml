@@ -1,0 +1,185 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/service-management/api/v1.0/service/save"
+  method: POST
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Authorization
+      value: apiKey {{bhom_apiKey}}
+    - key: Authorization
+      value: ""
+      disabled: true
+  body:
+    type: text
+    content: "{\r
+
+      \  \"nodes\": [\r
+
+      \    {\r
+
+      \      \"compatibleOnly\": \"false\",\r
+
+      \      \"id\": \"cRAZuGNAr04N9Or4EUgx0kifZe7ks4ns\",\r
+
+      \      \"name\": \"Test Service\",\r
+
+      \      \"criticality\": 0,\r
+
+      \      \"labels\": {},\r
+
+      \      \"blueprintConfigurations\": [\r
+
+      \        {\r
+
+      \          \"configurationsId\": \"VDS5cPbWu_x0aUFTr0No6ajf_ezJELyN\",\r
+
+      \          \"blueprintId\": {\r
+
+      \            \"id\": \"VDS5cPbWu_x0aUFTr0No6ajf_ezJELyN\",\r
+
+      \            \"version\": \"1.0.0\"\r
+
+      \          },\r
+
+      \          \"configurationItems\": [\r
+
+      \            {\r
+
+      \              \"variableId\": \"nCloudProvider$$$name\",\r
+
+      \              \"values\": [\r
+
+      \                \"Microsoft Azure\"\r
+
+      \              ],\r
+
+      \              \"regex\": false\r
+
+      \            }\r
+
+      \          ]\r
+
+      \        }\r
+
+      \      ],\r
+
+      \      \"staticNodeIds\": [\r
+
+      \        \"c656c862330bdc6240f0f5a86e4e616d657370616365\",\r
+
+      \        \"b649da62f3468b173f4156036e4465706c6f796d656e74\",\r
+
+      \        \"c956c862bd2e716c4acfc52b6e486f7374\",\r
+
+      \        \"b649da62f3468b173f4155ff6e536f667477617265436f6e7461696e6572\",\r
+
+      \        \"b649da62f3468b173f4155fc6e536f667477617265506f64\"\r
+
+      \      ],\r
+
+      \      \"associatedElements\": [\r
+
+      \        {\r
+
+      \          \"type\": \"metric_group\",\r
+
+      \          \"label\": \"tempId#1\",\r
+
+      \          \"elements\": [\r
+
+      \            {\r
+
+      \              \"selectors\": [\r
+
+      \                {\r
+
+      \                  \"value\": {\r
+
+      \                    \"entityId\": \"7826b445-d294-4ef0-a4d0-2a5aedd9813c:K8S_NODE_CPU:KubernetesLabCluster@dsom-k8s-node3@cpu\",\r
+
+      \                    \"entityTypeId\": \"K8S_NODE_CPU\",\r
+
+      \                    \"node_kind\": \"Host\",\r
+
+      \                    \"source\": \"\",\r
+
+      \                    \"metric\": \"AverageUsageCores\"\r
+
+      \                  },\r
+
+      \                  \"selector_type\": \"metric_entity_ade\"\r
+
+      \                }\r
+
+      \              ],\r
+
+      \              \"element_type\": \"metrics_kpi\"\r
+
+      \            },\r
+
+      \            {\r
+
+      \              \"selectors\": [],\r
+
+      \              \"element_type\": \"metrics_supporting\"\r
+
+      \            }\r
+
+      \          ],\r
+
+      \          \"configurations\": []\r
+
+      \        }\r
+
+      \      ],\r
+
+      \      \"kind\": \"BusinessService\"\r
+
+      \    }\r
+
+      \  ],\r
+
+      \  \"links\": []\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    - key: Date
+      value: Thu, 02 Feb 2023 15:07:27 GMT
+    - key: Content-Type
+      value: application/json
+    - key: Transfer-Encoding
+      value: chunked
+    - key: Connection
+      value: keep-alive
+    - key: Vary
+      value: Origin
+    - key: Vary
+      value: Access-Control-Request-Method
+    - key: Vary
+      value: Access-Control-Request-Headers
+    - key: X-Content-Type-Options
+      value: nosniff
+    - key: X-XSS-Protection
+      value: 1; mode=block
+    - key: Cache-Control
+      value: no-cache, no-store, max-age=0, must-revalidate
+    - key: Pragma
+      value: no-cache
+    - key: Expires
+      value: "0"
+    - key: Strict-Transport-Security
+      value: max-age=31536000 ; includeSubDomains
+    - key: X-Frame-Options
+      value: DENY
+  body:
+    type: json
+    content: |-
+      {
+          "resultMessage": "OK",
+          "ids": {}
+      }
+order: 1000

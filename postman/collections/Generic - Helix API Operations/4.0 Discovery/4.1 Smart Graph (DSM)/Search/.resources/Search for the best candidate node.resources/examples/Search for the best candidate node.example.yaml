@@ -1,0 +1,49 @@
+$kind: http-example
+request:
+  url: "{{disco_base_url}}/api/v1.9/data/candidate"
+  method: POST
+  body:
+    type: json
+    content: "{\r
+
+      \    \"kind\": \"Host\",\r
+
+      \    \"name\": \"ADDM\"\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Fri, 07 Jul 2023 19:06:44 GMT
+    Content-Type: application/json
+    Content-Length: "553"
+    Connection: keep-alive
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+  body:
+    type: json
+    content: |-
+      {
+          "#id": "3c251c6401008de1246a406e6e486f7374",
+          "__all_dns_names": [
+              "ADDM"
+          ],
+          "count": 1,
+          "external_ids": [
+              "sysid:83",
+              "sysid:306"
+          ],
+          "hostid": null,
+          "hostname": "ADDM",
+          "key": "KzGv7If1nmPBeXiiKQdC4w==",
+          "last_cmdb_sync_ci_count": 1,
+          "last_cmdb_sync_duration": 0.045037269592285156,
+          "last_cmdb_sync_rel_count": 0,
+          "last_cmdb_sync_success": "2023-06-22T12:03:38.554504+00:00",
+          "name": "ADDM",
+          "os": null,
+          "os_version": "",
+          "score": 1200,
+          "source": "HCO"
+      }
+order: 1000

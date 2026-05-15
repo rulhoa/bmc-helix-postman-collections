@@ -1,0 +1,27 @@
+$kind: http-request
+url: "{{ADEURL}}/DSPerformancealarm/api/alarm/v1/alarm"
+method: POST
+headers:
+  - key: Authorization
+    value: apiKey {{bhom_apiKey}}
+  - key: ""
+    value: ""
+    disabled: true
+body:
+  type: json
+  content: "{\r
+
+    \ \"href\": \" http://api/alarm/ROUTER_IF@Cisco-7609-6-4-4-4-14-14-4--Gi9/20@42\",\r
+
+    \  \"alarmDetails\": \"Sending a test TMF Alarm\",\r
+
+    \ \"externalAlarmId\": \"cisco-7609-1937465789\",\r
+
+    \ \"alarmType\": \"QualityOfServiceAlarm\",\r
+
+    \ \"perceivedSeverity\": \"CRITICAL\",\r
+
+    \ \"alarmedObjectType\": \"ROUTER\"\r
+
+    }"
+order: 4000

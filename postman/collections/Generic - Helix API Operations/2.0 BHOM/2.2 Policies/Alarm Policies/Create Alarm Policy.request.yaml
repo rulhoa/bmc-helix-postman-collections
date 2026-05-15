@@ -1,0 +1,76 @@
+$kind: http-request
+url: "{{bhom_base_url}}/alarm-service/api/v1.0/alarm_policies"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"policyName\": \"CPU Anomaly\",\r
+
+    \    \"description\": \"\",\r
+
+    \    \"enabled\": false,\r
+
+    \    \"executionOrder\": 9999,\r
+
+    \    \"entityThresholds\": [\r
+
+    \        {\r
+
+    \            \"metricDetails\": {\r
+
+    \                \"entityTypeId\": \"NT_CPU\",\r
+
+    \                \"metricId\": \"CPUprcrProcessorTimePercent\",\r
+
+    \                \"unit\": \"%\",\r
+
+    \                \"label\": \"Processor time\",\r
+
+    \                \"path\": \"psx_epd/20.05.11/NT_CPU/CPUprcrProcessorTimePercent\"\r
+
+    \            },\r
+
+    \            \"type\": \"ALL\",\r
+
+    \            \"evaluationCriteria\": \"\",\r
+
+    \            \"alarmConfigurations\": [\r
+
+    \                {\r
+
+    \                    \"condition\": {\r
+
+    \                        \"duration\": 5,\r
+
+    \                        \"occurrence\": 0,\r
+
+    \                        \"baseline\": true\r
+
+    \                    },\r
+
+    \                    \"action\": {\r
+
+    \                        \"severity\": \"INFO\",\r
+
+    \                        \"autoClose\": true,\r
+
+    \                        \"closeDuration\": 0\r
+
+    \                    },\r
+
+    \                    \"configOrder\": 0\r
+
+    \                }\r
+
+    \            ],\r
+
+    \            \"order\": 0\r
+
+    \        }\r
+
+    \    ]\r
+
+    }"
+examples: ./.resources/Create Alarm Policy.resources/examples
+order: 4000

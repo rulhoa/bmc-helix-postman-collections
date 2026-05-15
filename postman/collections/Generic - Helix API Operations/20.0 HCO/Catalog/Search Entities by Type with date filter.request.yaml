@@ -1,0 +1,95 @@
+$kind: http-request
+url: "{{bhom_base_url}}/opt/api/v1/catalog/search"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"pagination\": {\r
+
+    \        \"page\": 0,\r
+
+    \        \"size\": 2000\r
+
+    \    },\r
+
+    \    \"has_children\": false,\r
+
+    \    \"compute_entity_last_activity\": true,\r
+
+    \    \"include_administrative_domains\": false,\r
+
+    \    \"include_resources\": false,\r
+
+    \    \"include_relations\": false,\r
+
+    \    \"sorting\": {\r
+
+    \        \"sort\": \"ASC\",\r
+
+    \        \"field\": \"name\"\r
+
+    \    },\r
+
+    \    \"conditions\": [\r
+
+    \        {\r
+
+    \            \"filters\": [\r
+
+    \                {\r
+
+    \                    \"field_name\": \"entity.type\",\r
+
+    \                    \"operator\": \"LIKE\",\r
+
+    \                    \"values\": [\r
+
+    \                        \"sys:gm:gcp\"\r
+
+    \                    ]\r
+
+    \                },\r
+
+    \                {\r
+
+    \                    \"field_name\": \"entity.status\",\r
+
+    \                    \"operator\": \"IN\",\r
+
+    \                    \"values\": [\r
+
+    \                        1,\r
+
+    \                        2,\r
+
+    \                        3,\r
+
+    \                        4\r
+
+    \                    ]\r
+
+    \                },\r
+
+    \                {\r
+
+    \                    \"field_name\": \"entity.lastactivity\",\r
+
+    \                    \"operator\": \"GREATER_THAN\",\r
+
+    \                    \"values\": [\r
+
+    \                        \"2023-03-10T00:00:00Z\"\r
+
+    \                    ]\r
+
+    \                }\r
+
+    \            ]\r
+
+    \        }\r
+
+    \    ]\r
+
+    }"
+order: 3000

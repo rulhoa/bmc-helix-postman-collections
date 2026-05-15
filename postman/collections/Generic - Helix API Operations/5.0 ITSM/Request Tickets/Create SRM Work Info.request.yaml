@@ -1,0 +1,23 @@
+$kind: http-request
+description: Create an entry in SRM:WorkInfo form.
+url: "{{applicationserver}}/api/arsys/v1/entry/SRM:WorkInfo"
+method: POST
+headers:
+  Authorization: "{{tokensignature}}{{token}}"
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+        "values": {
+           
+            "OriginadoDe": "",
+            "Summary": "",
+            "SRInstanceId": "",
+            "Secure Log": "",
+            "View Access": "",
+            "WorkInfoType": "",
+            "Notes": ""
+        }
+    }
+order: 4000

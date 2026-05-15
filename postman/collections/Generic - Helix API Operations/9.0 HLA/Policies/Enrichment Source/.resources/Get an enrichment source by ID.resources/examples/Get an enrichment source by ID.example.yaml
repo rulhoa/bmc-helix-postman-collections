@@ -1,0 +1,59 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/logs-service/api/v1.0/logs/enrichment_sources/14c244b8-80f8-4913-9f3e-e672b92b4f89"
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Server: nginx
+    Date: Tue, 17 Oct 2023 13:47:42 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    Content-Encoding: gzip
+    TraceId: 015fa88b-1e29-46c4-bf52-952bbea7758c 2085794782
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    X-Request-ID: 47c0eef58a115af1fc34eb835ec62e05
+  body:
+    type: json
+    content: |-
+      {
+          "id": "14c244b8-80f8-4913-9f3e-e672b92b4f89",
+          "name": "EventDisp Enrichment",
+          "description": "",
+          "state": "ACTIVE",
+          "enabled": true,
+          "type": "CSV",
+          "source_params": [
+              {
+                  "name": "EventDisp Code",
+                  "label": "EventDisp Code",
+                  "is_mandatory": true
+              }
+          ],
+          "target_fields": {
+              "Device": "Device",
+              "EventDisp Code": "EventDisp Code",
+              "Device Description": "Device Description"
+          },
+          "reference_data": {
+              "Device": "Device",
+              "EventDisp Code": "EventDisp Code",
+              "Device Description": "Device Description"
+          },
+          "created_by": "activationuser",
+          "created_at": 1697549452065,
+          "updated_by": "activationuser",
+          "updated_at": 1697549452065,
+          "tenant_id": "2085794782",
+          "additionalParams": {
+              "file_name": "EventDisp.csv"
+          },
+          "last_sync_timestamp": 1697549452036,
+          "last_sync_status": "SUCCESS",
+          "mapped_policies": [
+              "d6810340-681f-4424-bc6a-af52e43116e9"
+          ]
+      }
+order: 1000

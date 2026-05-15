@@ -1,0 +1,20 @@
+$kind: http-request
+url: "{{bhom_base_url}}/service-management/api/v1.0/metric/tree"
+method: POST
+headers:
+  - key: Authorization
+    value: ""
+    disabled: true
+body:
+  type: json
+  content: "{\r
+
+    \    \"nodeId\": \"01e7ac640100f0ae7dead8796e536f667477617265436f6d706f6e656e74\",\r
+
+    \    \"nodeKind\": \"SoftwareComponent\"\r
+
+    }\r
+
+    \r\n"
+examples: ./.resources/Get Metric Tree.resources/examples
+order: 5000

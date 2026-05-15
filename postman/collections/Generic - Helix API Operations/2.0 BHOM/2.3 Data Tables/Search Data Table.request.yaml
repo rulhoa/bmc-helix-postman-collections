@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{bhom_base_url}}/events-service/api/v1.0/data_tables/search"
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+    disabled: true
+  - key: Authorization
+    value: apiKey {{bhom_apiKey}}
+    disabled: true
+  - key: ""
+    value: ""
+    disabled: true
+body:
+  type: json
+  content: "{\r\n}"
+order: 3000

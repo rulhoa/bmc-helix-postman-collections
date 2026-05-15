@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{bhom_base_url}}/opt/api/v1/catalog/entities/tags/types"
+method: GET
+order: 9000

@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{bhom_base_url}}/opt/api/v1/optimizer/recommendations/search"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"severity\": [\r
+
+    \        \"EFFICIENCY_LOW\"\r
+
+    \    ]\r
+
+    }"
+order: 1000

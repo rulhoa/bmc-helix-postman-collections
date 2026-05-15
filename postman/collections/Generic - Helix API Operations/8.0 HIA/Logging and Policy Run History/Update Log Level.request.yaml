@@ -1,0 +1,39 @@
+$kind: http-request
+url: "{{bhom_base_url}}/intelligent-automation/api/v1/ia-automation/feature/updateloglevel"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"actionlib\": {\r
+
+    \        \"logLevel\": \"info\"\r
+
+    \    },\r
+
+    \    \"remotepluginservice\": {\r
+
+    \        \"logLevel\": \"info\"\r
+
+    \    },\r
+
+    \    \"ia_automation\": {\r
+
+    \        \"logLevel\": \"info\"\r
+
+    \    },\r
+
+    \    \"ia_transformer_plugin\": {\r
+
+    \        \"logLevel\": \"info\"\r
+
+    \    },\r
+
+    \    \"ansible\": {\r
+
+    \        \"logLevel\": \"info\"\r
+
+    \    }\r
+
+    }"
+order: 1000

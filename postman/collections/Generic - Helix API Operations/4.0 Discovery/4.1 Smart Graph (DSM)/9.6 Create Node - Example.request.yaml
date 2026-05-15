@@ -1,0 +1,35 @@
+$kind: http-request
+url: "{{disco_base_url}}/api/v1.4/data/write"
+method: POST
+body:
+  type: json
+  content: "[\r
+
+    \    {\r
+
+    \        \"cmd\": \"create_node\",\r
+
+    \        \"partition\": \"6e4d9461932e20785fa885ee\",\r
+
+    \        \"kind\": \"Host\",\r
+
+    \        \"state\": {\r
+
+    \            \"name\": \"osclass\",\r
+
+    \            \"hostname\": \"osclass\",\r
+
+    \            \"os_vendor\": \"Linux\",\r
+
+    \            \"os_class\": \"Mainframe\",\r
+
+    \            \"host_type\": \"Linux\",\r
+
+    \            \"type\": \"Linux\"\r
+
+    \        }\r
+
+    \    }\r
+
+    ]"
+order: 8000

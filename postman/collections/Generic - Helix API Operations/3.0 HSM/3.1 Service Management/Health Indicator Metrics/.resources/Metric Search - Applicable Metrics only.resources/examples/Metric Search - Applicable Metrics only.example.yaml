@@ -1,0 +1,116 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/service-management/api/v1.0/metric/serviceContent"
+  method: POST
+  body:
+    type: json
+    content: "{\r
+
+      \    \"contentSelectors\": [],\r
+
+      \    \"staticNodeIds\": [\r
+
+      \        \"04a38562c00502d70bb9d18d6e4c6f616442616c616e636572506f6f6c\",\r
+
+      \        \"04a38562c00502d70bb9d19f6e4c6f616442616c616e6365724d656d626572\",\r
+
+      \        \"04a38562c00502d70b9f86176e486f7374\",\r
+
+      \        \"04a38562c00502d70b9f86126e5669727475616c4d616368696e65\",\r
+
+      \        \"04a38562c00502d70b9f861b6e4c6f616442616c616e63657253657276696365\"\r
+
+      \    ],\r
+
+      \    \"serviceIds\": {}\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    - key: Date
+      value: Mon, 24 Jul 2023 16:54:14 GMT
+    - key: Content-Type
+      value: application/json
+    - key: Transfer-Encoding
+      value: chunked
+    - key: Connection
+      value: keep-alive
+    - key: Vary
+      value: Origin
+    - key: Vary
+      value: Access-Control-Request-Method
+    - key: Vary
+      value: Access-Control-Request-Headers
+    - key: X-Content-Type-Options
+      value: nosniff
+    - key: X-XSS-Protection
+      value: 1; mode=block
+    - key: Cache-Control
+      value: no-cache, no-store, max-age=0, must-revalidate
+    - key: Pragma
+      value: no-cache
+    - key: Expires
+      value: "0"
+    - key: Strict-Transport-Security
+      value: max-age=31536000; includeSubDomains
+    - key: X-Frame-Options
+      value: DENY
+    - key: Referrer-Policy
+      value: same-origin
+    - key: Permissions-Policy
+      value: idle-detection=self
+  body:
+    type: json
+    content: |-
+      {
+          "nodeKinds": [
+              {
+                  "nodeKind": "LoadBalancerMember",
+                  "nodeAbstracts": [
+                      {
+                          "ciId": "04a38562c00502d70bb9d19f6e4c6f616442616c616e6365724d656d626572",
+                          "ciName": "i-0daede9476e67b825"
+                      }
+                  ]
+              },
+              {
+                  "nodeKind": "LoadBalancerService",
+                  "nodeAbstracts": [
+                      {
+                          "ciId": "04a38562c00502d70b9f861b6e4c6f616442616c616e63657253657276696365",
+                          "ciName": "lb-01"
+                      }
+                  ]
+              },
+              {
+                  "nodeKind": "Host",
+                  "nodeAbstracts": [
+                      {
+                          "ciId": "04a38562c00502d70b9f86176e486f7374",
+                          "ciName": "web-fe-01"
+                      }
+                  ]
+              },
+              {
+                  "nodeKind": "VirtualMachine",
+                  "nodeAbstracts": [
+                      {
+                          "ciId": "04a38562c00502d70b9f86126e5669727475616c4d616368696e65",
+                          "ciName": "AWS EC2 Instance web-fe-01 in US East (Ohio)"
+                      }
+                  ]
+              },
+              {
+                  "nodeKind": "LoadBalancerPool",
+                  "nodeAbstracts": [
+                      {
+                          "ciId": "04a38562c00502d70bb9d18d6e4c6f616442616c616e636572506f6f6c",
+                          "ciName": "media-serviqa-web"
+                      }
+                  ]
+              }
+          ]
+      }
+order: 1000

@@ -1,0 +1,67 @@
+$kind: http-request
+url: "{{bhom_base_url}}/service-management/api/v1.0/metric/entities"
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+  - key: Authorization
+    value: apiKey {{bhom_apiKey}}
+  - key: Authorization
+    value: ""
+    disabled: true
+body:
+  type: text
+  content: "{\r
+
+    \    \"limit\":10,\r
+
+    \    \"filters\":[\r
+
+    \        {\r
+
+    \            \"attribute\":\"nodeId\",\r
+
+    \            \"value\":\"c956c862bd2e716c4acfc52b6e486f7374\"\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"attribute\":\"nodeKind\",\r
+
+    \            \"value\":\"Host\"\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"attribute\":\"entityType\",\r
+
+    \            \"value\":\"K8S_NODE_CPU\"\r
+
+    \        }\r
+
+    \    ],\r
+
+    \    \"multiSortMeta\":[\r
+
+    \        {\r
+
+    \            \"attribute\":\"entity.deviceHostName\",\r
+
+    \            \"order\":1\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"attribute\":\"entity.entityName\",\r
+
+    \            \"order\":1\r
+
+    \        }\r
+
+    \    ]\r
+
+    }"
+order: 6000

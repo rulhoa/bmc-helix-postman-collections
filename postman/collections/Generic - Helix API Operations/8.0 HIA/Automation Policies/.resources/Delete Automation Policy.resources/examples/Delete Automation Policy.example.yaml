@@ -1,0 +1,22 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/intelligent-automation/api/v1/workflows/3183e76d-cf5f-c84f-c5a5-0eb7612858af"
+  method: DELETE
+response:
+  statusCode: 404
+  statusText: Not Found
+  headers:
+    Date: Fri, 10 Feb 2023 20:40:22 GMT
+    Content-Type: application/json; charset=utf-8
+    Content-Length: "175"
+    Connection: keep-alive
+    X-Powered-By: Express
+    ETag: W/"af-YZek2JPGtR6gWKGAtKfFMXmntMg"
+  body:
+    type: json
+    content: |-
+      {
+          "message": "No policy available to delete with id: 3183e76d-cf5f-c84f-c5a5-0eb7612858af, either the given policy is already deleted or is not present.",
+          "errorCode": "NotFound"
+      }
+order: 1000

@@ -1,0 +1,429 @@
+$kind: http-example
+request:
+  url: "{{Portalendpoint}}events-service/api/v1.0/events/classes"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Authorization: Bearer eyJraWQiOiIyNjFkMDFkYy00ODcwLTQzZTUtYTg4Yi0yYzI3MDEyZGNjNzEiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzUxMiJ9.eyJzdWIiOiI5NzMxNzQ2MDM6OjY1ODg4NjQ3MDY1NzExMyIsImF1ZCI6ImJtY19hZGVfY2xvdWRfc2VydmljZXMiLCJhbXIiOlsiZXlKMWMyVnlYMmxrSWpvaU5qVTRPRGcyTkRjd05qVTNNVEV6SWl3aVlXTmpaWE56WDJ0bGVTSTZJa1pMUlZwUlRWTlNVRXhNVDFGTU1qRk9Va0kwUzFKQ1MwRkZPVmhaTUNJc0luQnlhVzVqYVhCaGJGOXBaQ0k2SWtaTFJWcFJUVk5TVUV4TVQxRk1NakZPVWtJMFMxSkNTMEZGT1ZoWk1DSXNJblZ6WlhKZmMzUmhkSFZ6SWpvaVJVNUJRa3hGSWl3aWRIbHdaU0k2SWtGUVNTSXNJblJsYm1GdWRGOXBaQ0k2SWprM016RTNORFl3TXlJc0luSnZiR1Z6SWpwYklqY3pOVFExTXpjMU1qY3hORE0wTXlKZExDSm5jbTkxY0hNaU9sc2lNemd5TnpVd01EZzNOakE0TmpFMklsMHNJbkJsY20xcGMzTnBiMjV6SWpwYklpb2lYWDA9Il0sImlzcyI6Imh0dHBzOi8vdGVsc3RyYS1wcml2YXRlLXBvYy5hbWFkZXVzLnB1bWEuY29ycC50ZWxzdHJhLmNvbSIsInR5cGUiOiJBQ0NFU1NfVE9LRU4iLCJleHAiOjE2NjU3MjU0NzMsImlhdCI6MTY2NTcyNDU3MywianRpIjoiNmFjZGYwM2MtNThhZi00NGY5LWFjNTEtNGMxNTAxMzExM2M1In0.CezpTH6OteoTRW-zSwWhFcAvMB74lepDGmJ8YsJonznzljgbwWKo3jrPBBr1pC2ThhBxZQZQD8aXsrfaX2S7lk7tBOipPjaO1DCQQ9rTi5Hux39O2JiPGGuGkc0QX_-VTLXmDbE8onJQfw38tE9gQH89cLHarmJ5MI-VfjBzer3Q9b3APgG4DBwjCEXTKu0IuhuHs1VbyDF--qMmDMU75dm2sGRTg7fxK9Z3SmQ_Rz_8rW7MEdxWHqjLp5pk4VQyh0R4Fdcy-ubNRgTK3jIeBUQhBCi2gGqOUk2mbwQpgCNGwEr2H-bKOtbsdItUiTDHZH2ClnZTl68DlImanZlKNQ
+  body:
+    type: json
+    content: "{\r
+
+      \t\"name\": \"CHANGE_EV\",\r
+
+      \t\"parentClassName\": \"EVENT\",\r
+
+      \t\"attributes\": [\t\t\r
+
+      \t\t{\r
+
+      \t\t\t\"name\": \"ch_summary\",\r
+
+      \t\t\t\"dataType\": \"STRING\",\r
+
+      \t\t\t\"default\": \"\",\r
+
+      \t\t\t\"allFacet\": [],\r
+
+      \t\t\t\"enumElements\": [],\r
+
+      \t\t\t\"enum\": false\r
+
+      \t\t},\r
+
+      \t\t{\r
+
+      \t\t\t\"name\": \"ch_changeImpact\",\r
+
+      \t\t\t\"dataType\": \"STRING\",\r
+
+      \t\t\t\"default\": \"\",\r
+
+      \t\t\t\"allFacet\": [],\r
+
+      \t\t\t\"enumElements\": [],\r
+
+      \t\t\t\"enum\": false\r
+
+      \t\t},\r
+
+      \t\t{\r
+
+      \t\t\t\"name\": \"ch_changeModifiedDateEpoch\",\r
+
+      \t\t\t\"dataType\": \"DATE\",\r
+
+      \t\t\t\"default\": \"0\",\r
+
+      \t\t\t\"allFacet\": [],\r
+
+      \t\t\t\"enumElements\": [],\r
+
+      \t\t\t\"enum\": false\r
+
+      \t\t},\r
+
+      \t\t{\r
+
+      \t\t\t\"name\": \"ch_changePriority\",\r
+
+      \t\t\t\"dataType\": \"STRING\",\r
+
+      \t\t\t\"default\": \"\",\r
+
+      \t\t\t\"allFacet\": [],\r
+
+      \t\t\t\"enumElements\": [],\r
+
+      \t\t\t\"enum\": false\r
+
+      \t\t},\r
+
+      \t\t{\r
+
+      \t\t\t\"name\": \"ch_actualStartDateEpoch\",\r
+
+      \t\t\t\"dataType\": \"DATE\",\r
+
+      \t\t\t\"default\": \"0\",\r
+
+      \t\t\t\"allFacet\": [],\r
+
+      \t\t\t\"enumElements\": [],\r
+
+      \t\t\t\"enum\": false\r
+
+      \t\t},\r
+
+      \t\t{\r
+
+      \t\t\t\"name\": \"ch_itsm_Location\",\r
+
+      \t\t\t\"dataType\": \"STRING\",\r
+
+      \t\t\t\"default\": \"\",\r
+
+      \t\t\t\"allFacet\": [],\r
+
+      \t\t\t\"enumElements\": [],\r
+
+      \t\t\t\"enum\": false\r
+
+      \t\t},\r
+
+      \t\t{\r
+
+      \t\t\t\"name\": \"ch_cellName\",\r
+
+      \t\t\t\"dataType\": \"STRING\",\r
+
+      \t\t\t\"default\": \"\",\r
+
+      \t\t\t\"allFacet\": [],\r
+
+      \t\t\t\"enumElements\": [],\r
+
+      \t\t\t\"enum\": false\r
+
+      \t\t},\r
+
+      \t\t{\r
+
+      \t\t\t\"name\": \"ch_changeRiskLevel\",\r
+
+      \t\t\t\"dataType\": \"STRING\",\r
+
+      \t\t\t\"default\": \"\",\r
+
+      \t\t\t\"allFacet\": [],\r
+
+      \t\t\t\"enumElements\": [],\r
+
+      \t\t\t\"enum\": false\r
+
+      \t\t},\r
+
+      \t\t{\r
+
+      \t\t\t\"name\": \"ch_ChangeStatus\",\r
+
+      \t\t\t\"dataType\": \"STRING\",\r
+
+      \t\t\t\"default\": \"\",\r
+
+      \t\t\t\"allFacet\": [],\r
+
+      \t\t\t\"enumElements\": [],\r
+
+      \t\t\t\"enum\": false\r
+
+      \t\t},\r
+
+      \t\t{\r
+
+      \t\t\t\"name\": \"ch_actualEndDateEpoch\",\r
+
+      \t\t\t\"dataType\": \"DATE\",\r
+
+      \t\t\t\"default\": \"0\",\r
+
+      \t\t\t\"allFacet\": [],\r
+
+      \t\t\t\"enumElements\": [],\r
+
+      \t\t\t\"enum\": false\r
+
+      \t\t},\r
+
+      \t\t{\r
+
+      \t\t\t\"name\": \"ch_modifiedDateEpoch\",\r
+
+      \t\t\t\"dataType\": \"DATE\",\r
+
+      \t\t\t\"default\": \"0\",\r
+
+      \t\t\t\"allFacet\": [],\r
+
+      \t\t\t\"enumElements\": [],\r
+
+      \t\t\t\"enum\": false\r
+
+      \t\t},\r
+
+      \t\t{\r
+
+      \t\t\t\"name\": \"ch_scheduledEndDateEpoch\",\r
+
+      \t\t\t\"dataType\": \"DATE\",\r
+
+      \t\t\t\"default\": \"0\",\r
+
+      \t\t\t\"allFacet\": [],\r
+
+      \t\t\t\"enumElements\": [],\r
+
+      \t\t\t\"enum\": false\r
+
+      \t\t},\r
+
+      \t\t{\r
+
+      \t\t\t\"name\": \"ch_ciAssociationDateEpoch\",\r
+
+      \t\t\t\"dataType\": \"DATE\",\r
+
+      \t\t\t\"default\": \"0\",\r
+
+      \t\t\t\"allFacet\": [],\r
+
+      \t\t\t\"enumElements\": [],\r
+
+      \t\t\t\"enum\": false\r
+
+      \t\t},\r
+
+      \t\t{\r
+
+      \t\t\t\"name\": \"ch_changeCategory\",\r
+
+      \t\t\t\"dataType\": \"STRING\",\r
+
+      \t\t\t\"default\": \"\",\r
+
+      \t\t\t\"allFacet\": [],\r
+
+      \t\t\t\"enumElements\": [],\r
+
+      \t\t\t\"enum\": false\r
+
+      \t\t},\r
+
+      \t\t{\r
+
+      \t\t\t\"name\": \"ch_changeUrgency\",\r
+
+      \t\t\t\"dataType\": \"STRING\",\r
+
+      \t\t\t\"default\": \"\",\r
+
+      \t\t\t\"allFacet\": [],\r
+
+      \t\t\t\"enumElements\": [],\r
+
+      \t\t\t\"enum\": false\r
+
+      \t\t},\r
+
+      \t\t{\r
+
+      \t\t\t\"name\": \"ch_completionDateEpoch\",\r
+
+      \t\t\t\"dataType\": \"DATE\",\r
+
+      \t\t\t\"default\": \"0\",\r
+
+      \t\t\t\"allFacet\": [],\r
+
+      \t\t\t\"enumElements\": [],\r
+
+      \t\t\t\"enum\": false\r
+
+      \t\t},\r
+
+      \t\t{\r
+
+      \t\t\t\"name\": \"ch_changeOwner\",\r
+
+      \t\t\t\"dataType\": \"STRING\",\r
+
+      \t\t\t\"default\": \"\",\r
+
+      \t\t\t\"allFacet\": [],\r
+
+      \t\t\t\"enumElements\": [],\r
+
+      \t\t\t\"enum\": false\r
+
+      \t\t},\r
+
+      \t\t{\r
+
+      \t\t\t\"name\": \"ch_changeID\",\r
+
+      \t\t\t\"dataType\": \"STRING\",\r
+
+      \t\t\t\"default\": \"\",\r
+
+      \t\t\t\"allFacet\": [],\r
+
+      \t\t\t\"enumElements\": [],\r
+
+      \t\t\t\"enum\": false\r
+
+      \t\t},\r
+
+      \t\t{\r
+
+      \t\t\t\"name\": \"ch_changeCoordinator\",\r
+
+      \t\t\t\"dataType\": \"STRING\",\r
+
+      \t\t\t\"default\": \"\",\r
+
+      \t\t\t\"allFacet\": [],\r
+
+      \t\t\t\"enumElements\": [],\r
+
+      \t\t\t\"enum\": false\r
+
+      \t\t},\r
+
+      \t\t{\r
+
+      \t\t\t\"name\": \"ch_changeReason\",\r
+
+      \t\t\t\"dataType\": \"STRING\",\r
+
+      \t\t\t\"default\": \"\",\r
+
+      \t\t\t\"allFacet\": [],\r
+
+      \t\t\t\"enumElements\": [],\r
+
+      \t\t\t\"enum\": false\r
+
+      \t\t},\r
+
+      \t\t{\r
+
+      \t\t\t\"name\": \"ch_scheduledStartDateEpoch\",\r
+
+      \t\t\t\"dataType\": \"DATE\",\r
+
+      \t\t\t\"default\": \"0\",\r
+
+      \t\t\t\"allFacet\": [],\r
+
+      \t\t\t\"enumElements\": [],\r
+
+      \t\t\t\"enum\": false\r
+
+      \t\t},\r
+
+      \t\t{\r
+
+      \t\t\t\"name\": \"ch_CICompany\",\r
+
+      \t\t\t\"dataType\": \"STRING\",\r
+
+      \t\t\t\"default\": \"\",\r
+
+      \t\t\t\"allFacet\": [],\r
+
+      \t\t\t\"enumElements\": [],\r
+
+      \t\t\t\"enum\": false\r
+
+      \t\t},\r
+
+      \t\t{\r
+
+      \t\t\t\"name\": \"ch_ciName\",\r
+
+      \t\t\t\"dataType\": \"STRING\",\r
+
+      \t\t\t\"default\": \"\",\r
+
+      \t\t\t\"allFacet\": [],\r
+
+      \t\t\t\"enumElements\": [],\r
+
+      \t\t\t\"enum\": false\r
+
+      \t\t},\r
+
+      \t\t{\r
+
+      \t\t\t\"name\": \"ch_statusReason\",\r
+
+      \t\t\t\"dataType\": \"STRING\",\r
+
+      \t\t\t\"default\": \"\",\r
+
+      \t\t\t\"allFacet\": [],\r
+
+      \t\t\t\"enumElements\": [],\r
+
+      \t\t\t\"enum\": false\r
+
+      \t\t}\r
+
+      \t]\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Fri, 14 Oct 2022 05:18:16 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    Strict-Transport-Security: max-age=15724800; includeSubDomains
+    Content-Encoding: gzip
+    TraceId: c7b1e16d-5000-4ec3-8449-926356a15826 973174603
+    Pragma: no-cache
+    Cache-control: no-store
+  body:
+    type: json
+    content: |-
+      {
+          "responseTimeStamp": 1665724696942,
+          "statusCode": "200",
+          "statusMsg": "[Successfully created event class.]",
+          "resourceId": [
+              "9bdfabbb-4b7f-11ed-9cb4-2ffc692482f8"
+          ]
+      }
+order: 1000

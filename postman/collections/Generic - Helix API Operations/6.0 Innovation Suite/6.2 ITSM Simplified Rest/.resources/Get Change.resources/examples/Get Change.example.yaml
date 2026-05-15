@@ -1,0 +1,107 @@
+$kind: http-example
+request:
+  url: "{{is_base_url}}/api/com.bmc.dsm.itsm.itsm-rest-api/v2/change/CRQ000000024701"
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    - key: Date
+      value: Wed, 11 Feb 2026 19:02:18 GMT
+    - key: Content-Type
+      value: application/json
+    - key: Content-Length
+      value: "1481"
+    - key: Connection
+      value: keep-alive
+    - key: X-Frame-Options
+      value: SAMEORIGIN
+    - key: Referrer-Policy
+      value: strict-origin-when-cross-origin
+    - key: X-Content-Type-Options
+      value: nosniff
+    - key: Strict-Transport-Security
+      value: max-age=31536000; includeSubDomains
+    - key: Cache-Control
+      value: no-store
+    - key: sso-provider-type
+      value: RSSO
+    - key: Set-Cookie
+      value: _cacheId=155012; Path=/; Secure; HttpOnly
+    - key: Set-Cookie
+      value: _cacheId=155012; Path=/; Secure; HttpOnly; SameSite=None
+    - key: Expires
+      value: Thu, 01 Jan 1970 00:00:00 GMT
+    - key: X-AR-CacheId
+      value: "155012"
+    - key: Session-Expiration
+      value: Thu, 12 Feb 2026 03:02:18 GMT
+    - key: Absolute-Session-Expiration
+      value: Thu, 12 Feb 2026 19:02:18 GMT
+    - key: status
+      value: "200"
+    - key: Operation-Id
+      value: OPGGYNQFEWHWYAT01GHUT01GHU1CMH
+    - key: Metadata-Last-Update-Time
+      value: 2026-02-11T13:21:11.000Z
+    - key: Vary
+      value: Accept-Encoding, User-Agent
+  body:
+    type: text
+    content: |-
+      {
+          "status": "Success",
+          "details": {
+              "requestedFor": {
+                  "firstName": "Mia",
+                  "lastName": "Ramirez",
+                  "fullName": "Mia Ramirez",
+                  "personId": "PPL000000000813",
+                  "company": "Apex Global",
+                  "id": "Mia"
+              },
+              "changeManagerGroupCompany": "Apex Global",
+              "changeManagerGroupOrganization": "Information Technology",
+              "locationCompany": "Apex Global",
+              "coordinatorGroupCompany": "Apex Global",
+              "urgency": 1000,
+              "actualStartDate": "2026-01-17T16:07:42.000Z",
+              "id": "CRQ000000024701",
+              "class": 4000,
+              "createDate": "2026-01-16T18:07:43.000Z",
+              "summary": "Switch Firmware Upgrade on ip-172-31-29-124",
+              "actualEndDate": "2026-01-19T16:07:42.000Z",
+              "coordinator": {
+                  "firstName": "Mikal",
+                  "lastName": "Perreault",
+                  "fullName": "Mikal Perreault",
+                  "personId": "PPL000000000815",
+                  "company": "Apex Global",
+                  "id": "Mikal"
+              },
+              "impact": 1000,
+              "priority": 0,
+              "changeManagerGroup": "Change Management",
+              "changeManagerGroupId": "SGP000000000113",
+              "coordinatorGroup": "Change Management",
+              "changeManager": {
+                  "firstName": "Liam",
+                  "lastName": "Shay",
+                  "fullName": "Liam Shay",
+                  "personId": "GPL000000001075",
+                  "company": "Apex Global",
+                  "id": "Liam"
+              },
+              "recordInstance": "AGGCLCMPJXLD0ATIYY2VTIYY2VAEPT",
+              "scheduleEndDate": "2026-01-20T16:07:42.000Z",
+              "scheduleStartDate": "2026-01-17T16:07:42.000Z",
+              "service": "Apex-Watches.com (AWS)",
+              "modifiedDate": "2026-01-16T18:07:45.000Z",
+              "coordinatorGroupId": "SGP000000000113",
+              "guid": "AGGCLCMPJXLD0ATIYY2VTIYY2VAEPT",
+              "coordinatorGroupOrganization": "Information Technology",
+              "launchURL": "http://{Host}:{Port}/smartit/app/#/change/AGGCLCMPJXLD0ATIYY2VTIYY2VAEPT",
+              "status": 1
+          }
+      }
+order: 1000

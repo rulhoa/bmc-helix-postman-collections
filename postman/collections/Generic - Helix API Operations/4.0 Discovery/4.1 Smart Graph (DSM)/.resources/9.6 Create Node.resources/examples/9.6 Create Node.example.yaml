@@ -1,0 +1,38 @@
+$kind: http-example
+request:
+  url: "{{disco_base_url}}/api/v1.4/data/write"
+  method: POST
+  body:
+    type: json
+    content: "[\r
+
+      {\r
+
+      \    \"cmd\":       \"create_node\",\r
+
+      \    \"partition\": \"614d9461a249e6fb4b8912ef\",\r
+
+      \    \"kind\":      \"Host\",\r
+
+      \t\"state\": {\r
+
+      \        \t\t\"name\": \"{{01_host}}\",\r
+
+      \                \"hostname\": \"{{01_host}}\",\r
+
+      \                \"host_type\": \"{{01_type}}\",\r
+
+      \                \"type\": \"{{01_type}}\"\r
+
+      \    }\r
+
+      }\r
+
+      ]"
+response:
+  statusCode: 200
+  statusText: OK
+  body:
+    type: text
+    content: ""
+order: 1000

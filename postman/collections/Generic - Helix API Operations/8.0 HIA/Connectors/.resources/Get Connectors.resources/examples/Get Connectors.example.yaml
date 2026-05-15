@@ -1,0 +1,68 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/intelligent-automation/api/v1/connectors"
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Mon, 13 Feb 2023 18:46:38 GMT
+    Content-Type: application/json; charset=utf-8
+    Content-Length: "1220"
+    Connection: keep-alive
+    X-Powered-By: Express
+    ETag: W/"4c4-huKk8mXqVyo2jT/SVypywuFAI2Q"
+  body:
+    type: json
+    content: |-
+      [
+          {
+              "id": "385dcf40-1b50-11ed-8296-0613ed995521",
+              "code": "aws",
+              "name": "awsconnector",
+              "is_remote": false,
+              "target_id": "654307556001",
+              "created_time": 1660426687535.337,
+              "created_by": "553694080029185",
+              "updated_time": 1667242978992.7148,
+              "updated_by": "553694080029185",
+              "status": true
+          },
+          {
+              "id": "09a42fa6-23e7-11ed-bb81-0613ed995521",
+              "code": "tssa",
+              "name": "Server Automation Connector",
+              "is_remote": true,
+              "target_id": "https://192.168.100.22:9843",
+              "created_time": 1661371072452.118,
+              "created_by": "727271959027036",
+              "updated_time": 1661525855626.721,
+              "updated_by": "553694080029185",
+              "status": true
+          },
+          {
+              "id": "b5757460-29f6-11ed-9641-0613ed995521",
+              "code": "generic_rest",
+              "name": "Control-M Connector",
+              "is_remote": true,
+              "target_id": "https://se-preprod-aapi.us1.controlm.com:443/automation-api",
+              "created_time": 1662037510141.532,
+              "created_by": "727271959027036",
+              "updated_time": 1662037528012.084,
+              "updated_by": "553694080029185",
+              "status": true
+          },
+          {
+              "id": "6018a950-2f74-11ed-a756-0613ed995521",
+              "code": "innovation_studio",
+              "name": "Innovation Studio Connector",
+              "is_remote": false,
+              "target_id": "https://helixtrialsjc497-dev-is.onbmc.com",
+              "created_time": 1662641239328.8,
+              "created_by": "553694080029185",
+              "updated_time": 1662641239328.8,
+              "updated_by": "553694080029185",
+              "status": true
+          }
+      ]
+order: 1000

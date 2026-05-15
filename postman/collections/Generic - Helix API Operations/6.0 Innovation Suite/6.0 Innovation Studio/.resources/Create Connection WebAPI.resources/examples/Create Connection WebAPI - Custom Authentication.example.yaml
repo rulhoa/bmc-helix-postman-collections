@@ -1,0 +1,97 @@
+$kind: http-example
+request:
+  url: "{{is_base_url}}/api/rx/application/webapi/connection"
+  method: POST
+  headers:
+    X-Requested-By: XMLHttpRequest
+  body:
+    type: json
+    content: "{\r
+
+      \    \"authTypeCode\": 3,\r
+
+      \    \"authTypeDetails\": {\r
+
+      \        \"username\": \"\",\r
+
+      \        \"credentials\": \"\",\r
+
+      \        \"httpHeaders\": [\r
+
+      \            {\r
+
+      \                \"key\": \"X-Requested-By\",\r
+
+      \                \"value\": \"XMLHttpRequest\"\r
+
+      \            }\r
+
+      \        ],\r
+
+      \        \"queryParams\": [\r
+
+      \            {\r
+
+      \                \"key\": \"appid\",\r
+
+      \                \"value\": \"1234\"\r
+
+      \            }\r
+
+      \        ],\r
+
+      \        \"tokenFetchMechanism\": 0,\r
+
+      \        \"additionalFormParams\": []\r
+
+      \    },\r
+
+      \    \"hostname\": \"api.hostname.com\",\r
+
+      \    \"name\": \"New Web API Connection\",\r
+
+      \    \"port\": 443,\r
+
+      \    \"secure\": 1\r
+
+      }"
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    - key: Date
+      value: Fri, 10 Apr 2026 14:38:28 GMT
+    - key: Content-Length
+      value: "0"
+    - key: Connection
+      value: keep-alive
+    - key: X-Frame-Options
+      value: SAMEORIGIN
+    - key: Referrer-Policy
+      value: strict-origin-when-cross-origin
+    - key: X-Content-Type-Options
+      value: nosniff
+    - key: Strict-Transport-Security
+      value: max-age=31536000; includeSubDomains
+    - key: Cache-Control
+      value: no-store
+    - key: sso-provider-type
+      value: RSSO
+    - key: Set-Cookie
+      value: _cacheId=717468; Path=/; Secure; HttpOnly
+    - key: Set-Cookie
+      value: _cacheId=717468; Path=/; Secure; HttpOnly; SameSite=None
+    - key: Expires
+      value: Thu, 01 Jan 1970 00:00:00 GMT
+    - key: X-AR-CacheId
+      value: "717468"
+    - key: Session-Expiration
+      value: Fri, 10 Apr 2026 22:38:28 GMT
+    - key: Absolute-Session-Expiration
+      value: Sat, 11 Apr 2026 14:38:28 GMT
+    - key: Metadata-Last-Update-Time
+      value: 2026-04-10T14:30:19.908Z
+  body:
+    type: text
+    content: ""
+order: 1000

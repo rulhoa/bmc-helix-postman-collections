@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{disco_base_url}}/api/v1.0/discovery"
+method: GET
+order: 3000

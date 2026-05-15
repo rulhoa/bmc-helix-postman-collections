@@ -1,0 +1,27 @@
+$kind: http-request
+description: "There is a direct URL to jump straight to a Alarm Policy creation screen with starting values. Example: [https://helixtrialsjc497-or1-dev.onbmc.com/monitor/#/configuration/alarmPolicies/manage?entityTypeId=K8S_NODE_CPU&metricId=AverageUsageCores&instanceName=KubernetesLabCluster@dsom-k8s-node3@cpu&deviceHostName=dsom-k8s-node3](https://helixtrialsjc497-or1-dev.onbmc.com/monitor/#/configuration/alarmPolicies/manage?entityTypeId=K8S_NODE_CPU&metricId=AverageUsageCores&instanceName=KubernetesLabCluster@dsom-k8s-node3@cpu&deviceHostName=dsom-k8s-node3)"
+url: "{{bhom_base_url}}/events-service/api/v1.0/alarm_policies/search/matched"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: "[\r
+
+    \    {\r
+
+    \        \"entityTypeId\":\"K8S_NODE_CPU\",\r
+
+    \        \"metric\":\"AverageUsageCores\",\r
+
+    \        \"entityId\":\"7826b445-d294-4ef0-a4d0-2a5aedd9813c:K8S_NODE_CPU:KubernetesLabCluster@dsom-k8s-node3@cpu\",\r
+
+    \        \"entityName\":\"KubernetesLabCluster@dsom-k8s-node3@cpu\",\r
+
+    \        \"deviceName\":\"dsom-k8s-node3\"\r
+
+    \    }\r
+
+    ]"
+examples: ./.resources/Search Alarm Policy Matched.resources/examples
+order: 2000

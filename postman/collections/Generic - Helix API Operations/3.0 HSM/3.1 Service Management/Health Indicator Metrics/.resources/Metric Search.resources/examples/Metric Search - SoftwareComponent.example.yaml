@@ -1,0 +1,120 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/service-management/api/v1.0/topology/search"
+  method: POST
+  body:
+    type: json
+    content: "{\r
+
+      \    \"query\": \"SEARCH SoftwareComponent ORDER BY name SHOW #id as ciId, name, #kind as ciKind\",\r
+
+      \    \"limit\": 10\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    - key: Date
+      value: Mon, 24 Jul 2023 16:56:19 GMT
+    - key: Content-Type
+      value: application/json
+    - key: Transfer-Encoding
+      value: chunked
+    - key: Connection
+      value: keep-alive
+    - key: Vary
+      value: Origin
+    - key: Vary
+      value: Access-Control-Request-Method
+    - key: Vary
+      value: Access-Control-Request-Headers
+    - key: X-Content-Type-Options
+      value: nosniff
+    - key: X-XSS-Protection
+      value: 1; mode=block
+    - key: Cache-Control
+      value: no-cache, no-store, max-age=0, must-revalidate
+    - key: Pragma
+      value: no-cache
+    - key: Expires
+      value: "0"
+    - key: Strict-Transport-Security
+      value: max-age=31536000; includeSubDomains
+    - key: X-Frame-Options
+      value: DENY
+    - key: Referrer-Policy
+      value: same-origin
+    - key: Permissions-Policy
+      value: idle-detection=self
+  body:
+    type: json
+    content: |-
+      [
+          {
+              "count": 1846,
+              "headings": [
+                  "ciId",
+                  "name",
+                  "ciKind"
+              ],
+              "kind": "SoftwareComponent",
+              "next": "https://smart-graph-api:8000/smart-graph-api/api/v1.4/data/search?results_id=U29mdHdhcmVDb21wb25lbnQAbgHnrGQCAAABAAABq7g%3D&offset=10&limit=10",
+              "next_offset": 10,
+              "offset": 0,
+              "results": [
+                  [
+                      "04a38562c00502d70b9f81826e536f667477617265436f6d706f6e656e74",
+                      "AdminConsole module on Apache Tomcat Application Server 7.0 listening on 8085, 80 on onbmc-d",
+                      "SoftwareComponent"
+                  ],
+                  [
+                      "04a38562c00502d70ba648f66e536f667477617265436f6d706f6e656e74",
+                      "Apache HTTPD-based Webserver Website ais-mdmdr-01.apexglobal.com",
+                      "SoftwareComponent"
+                  ],
+                  [
+                      "04a38562c00502d70bac7eb76e536f667477617265436f6d706f6e656e74",
+                      "Apache HTTPD-based Webserver Website ais-mdmdr-02.apexglobal.com",
+                      "SoftwareComponent"
+                  ],
+                  [
+                      "04a38562c00502d70ba492a26e536f667477617265436f6d706f6e656e74",
+                      "Apache HTTPD-based Webserver Website ais-webdpr-01.apexglobal.com",
+                      "SoftwareComponent"
+                  ],
+                  [
+                      "04a38562c00502d70ba412ce6e536f667477617265436f6d706f6e656e74",
+                      "Apache HTTPD-based Webserver Website ais-webdpr-02.apexglobal.com",
+                      "SoftwareComponent"
+                  ],
+                  [
+                      "04a38562c00502d70ba8e4816e536f667477617265436f6d706f6e656e74",
+                      "Apache HTTPD-based Webserver Website keystone",
+                      "SoftwareComponent"
+                  ],
+                  [
+                      "04a38562c00502d70bb541e96e536f667477617265436f6d706f6e656e74",
+                      "Apache HTTPD-based Webserver Website mcr-eidmdev-02.apexglobal.com",
+                      "SoftwareComponent"
+                  ],
+                  [
+                      "04a38562c00502d70bb951fb6e536f667477617265436f6d706f6e656e74",
+                      "Apache HTTPD-based Webserver Website mcr-jirapr-01",
+                      "SoftwareComponent"
+                  ],
+                  [
+                      "04a38562c00502d70bb8e5b96e536f667477617265436f6d706f6e656e74",
+                      "Apache HTTPD-based Webserver Website mcr-jirapr-02",
+                      "SoftwareComponent"
+                  ],
+                  [
+                      "04a38562c00502d70bb9cb3d6e536f667477617265436f6d706f6e656e74",
+                      "Apache HTTPD-based Webserver Website mcr-jiraqa-01.apexglobal.com",
+                      "SoftwareComponent"
+                  ]
+              ],
+              "results_id": "U29mdHdhcmVDb21wb25lbnQAbgHnrGQCAAABAAABq7g="
+          }
+      ]
+order: 2000

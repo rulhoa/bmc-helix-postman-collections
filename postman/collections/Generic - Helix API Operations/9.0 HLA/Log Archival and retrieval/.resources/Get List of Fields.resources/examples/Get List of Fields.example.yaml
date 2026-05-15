@@ -1,0 +1,336 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/logs-service/api/v1.0/logs/mapping"
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Thu, 12 Oct 2023 01:09:52 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    Content-Encoding: gzip
+    TraceId: d1449c95-0d99-4aaa-931f-4dd9562a9f72 660181721
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+  body:
+    type: json
+    content: |-
+      {
+          "log-07_r3_v1-000211": {
+              "mappings": {
+                  "properties": {
+                      "_attributes": {
+                          "type": "object",
+                          "enabled": false
+                      },
+                      "_model": {
+                          "type": "keyword"
+                      },
+                      "_tenant_id": {
+                          "type": "keyword"
+                      },
+                      "verb": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      },
+                      "agent.type": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      },
+                      "log.offset": {
+                          "type": "long"
+                      },
+                      "LogLevel": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      },
+                      "timestamp": {
+                          "type": "date"
+                      },
+                      "host.os.name": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      },
+                      "Hosts": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      },
+                      "EventID": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      },
+                      "Hosts.WebLogic Cluster 11g Release 1 oacore_cluster1": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      },
+                      "Method": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      },
+                      "host.os.kernel": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      },
+                      "User": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      },
+                      "host.vendor": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      },
+                      "host.os.build": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      },
+                      "Type": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      },
+                      "agent.id": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      },
+                      "@@timestamp": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      },
+                      "agent.hostname": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      },
+                      "Response": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      },
+                      "host.os.platform": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      },
+                      "IP Address": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      },
+                      "@timestamp": {
+                          "type": "date"
+                      },
+                      "message": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      },
+                      "tags": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      },
+                      "auth": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      },
+                      "IP Address.WebLogic Cluster 11g Release 1 oacore_cluster1": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      },
+                      "Log Location": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      },
+                      "input.type": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      },
+                      "host.os.version": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      },
+                      "host.os.family": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      },
+                      "host.model": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      },
+                      "host.ID": {
+                          "type": "text",
+                          "fields": {
+                              "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                              }
+                          },
+                          "analyzer": "whitespace_log_analyzer"
+                      }
+                  }
+              }
+          }
+      }
+order: 1000

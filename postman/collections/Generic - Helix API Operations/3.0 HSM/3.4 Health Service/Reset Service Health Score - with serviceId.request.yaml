@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{bhom_base_url}}/health-service/api/v1.0/internal/reset-health-score"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"serviceId\": \"pCPp8Y3UWU74ozn6NgICjp-SoG3fa0JX\"\r
+
+    }"
+order: 1000

@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{bhom_base_url}}/alarm-service/api/v1.0/alarm_policies/:alarm_policy_id/enable"
+method: POST
+queryParams:
+  - key: idType
+    value: id
+    disabled: true
+pathVariables:
+  alarm_policy_id: 5a2bb7f6-f994-46f9-9a34-18d2afc89a2c
+order: 3000

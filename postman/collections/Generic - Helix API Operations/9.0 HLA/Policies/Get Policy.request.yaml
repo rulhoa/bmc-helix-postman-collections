@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{bhom_base_url}}/logs-service/api/v1.0/logs/policies/87c64f41-04de-413d-9efe-de44129dd647"
+method: GET
+order: 6000

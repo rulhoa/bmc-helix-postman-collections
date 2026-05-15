@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{v1}}/execution-tasks/{{id}}"
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "name": "Updated Task"
+    }
+order: 4000

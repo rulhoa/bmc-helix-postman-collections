@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{v1}}/snapshot-jobs/{{id}}/jobruns/{{run_id}}/results/servers"
+method: GET
+order: 1000

@@ -1,0 +1,28 @@
+$kind: http-request
+url: "{{bhom_base_url}}/prediction-api-service/api/v1.0/predictions"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"start_time\": 1706895990,\r
+
+    \    \"end_time\": 1706939190,\r
+
+    \    \"name\": \"\",\r
+
+    \    \"tags\": [],\r
+
+    \    \"severity\": [],\r
+
+    \    \"page_number\": 0,\r
+
+    \    \"page_size\": 10,\r
+
+    \    \"sort_by\": \"impacted_in\",\r
+
+    \    \"sort_order\": \"asc\"\r
+
+    }"
+examples: ./.resources/Get Predictions.resources/examples
+order: 1000

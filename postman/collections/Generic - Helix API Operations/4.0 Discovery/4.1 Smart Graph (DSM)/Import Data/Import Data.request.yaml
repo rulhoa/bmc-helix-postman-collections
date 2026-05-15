@@ -1,0 +1,45 @@
+$kind: http-request
+url: "{{disco_base_url}}/api/v1.4/data/import"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \t\"source\": \"BHOM\",\r
+
+    \t\"type\":   \"Server\",\r
+
+    \t\"items\": [\r
+
+    \t\t{\r
+
+    \        \"kind\": \"Host\",\r
+
+    \t\t\t\"data\": {\r
+
+    \          \"hostname\": \"04THENEWHOST\",\r
+
+    \        \"kernel\": \"5.4.0-77-generic\",\r
+
+    \        \"name\": \"04THENEWHOST\",\r
+
+    \        \"os\": \"Linux\",\r
+
+    \        \"os_class\": \"UNIX\",\r
+
+    \        \"os_type\": \"Linux\",\r
+
+    \        \"source\": \"External\",\r
+
+    \        \"type\": \"UNIX Server\"\r
+
+    \t\t\t}\r
+
+    \t\t}\r
+
+    \t],\r
+
+    \t\"complete\": true\r
+
+    }"
+order: 2000

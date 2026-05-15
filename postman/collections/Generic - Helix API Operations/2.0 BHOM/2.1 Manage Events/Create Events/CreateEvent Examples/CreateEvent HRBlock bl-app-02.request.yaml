@@ -1,0 +1,93 @@
+$kind: http-request
+url: https://helixtrialsjc148-or1-dev.onbmc.com/tsws/api/v1.0/events
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+  - key: Authorization
+    value: apiKey 35c9f38f-8a60-4874-92a1-a87b6e0881a3
+  - key: ""
+    value: ""
+    disabled: true
+body:
+  type: text
+  content: "[\r
+
+    \t{\r
+
+    \t\t\"class\": \"EVENT\",\r
+
+    \t\t\"severity\": \"MAJOR\",\r
+
+    \        \"object\": \"i-0ef0fee9122386871\",\r
+
+    \t\t\"msg\": \"Disk Busy Time %80\",\r
+
+    \        \"source_identifier\": \"bl-app-02:3181\",\r
+
+    \t\t\"source_hostname\": \"bl-app-02\",\r
+
+    \t\t\"status\": \"OPEN\",\r
+
+    \t\t\"priority\": \"PRIORITY_3\"\r
+
+    \t},\r
+
+    \    \t{\r
+
+    \t\t\"class\": \"EVENT\",\r
+
+    \t\t\"severity\": \"MAJOR\",\r
+
+    \        \"object\": \"i-0ef0fee9122386871\",\r
+
+    \t\t\"msg\": \"Disk queue length 89\",\r
+
+    \        \"source_identifier\": \"bl-app-02:3181\",\r
+
+    \t\t\"source_hostname\": \"bl-app-02\",\r
+
+    \t\t\"status\": \"OPEN\",\r
+
+    \t\t\"priority\": \"PRIORITY_3\"\r
+
+    \t},\r
+
+    \    {\r
+
+    \t\t\"class\": \"EVENT\",\r
+
+    \t\t\"severity\": \"MAJOR\",\r
+
+    \t\t\"msg\": \"Long running transactions 30\",\r
+
+    \        \"source_identifier\": \"bl-app-02:3181\",\r
+
+    \t\t\"source_hostname\": \"bl-app-02\",\r
+
+    \t\t\"status\": \"OPEN\",\r
+
+    \t\t\"priority\": \"PRIORITY_3\"\r
+
+    \t},\r
+
+    \    \t{\r
+
+    \t\t\"class\": \"EVENT\",\r
+
+    \t\t\"severity\": \"MAJOR\",\r
+
+    \t\t\"msg\": \"Number of current Locks 5\",\r
+
+    \        \"source_identifier\": \"bl-app-02:3181\",\r
+
+    \t\t\"source_hostname\": \"bl-app-02\",\r
+
+    \t\t\"status\": \"OPEN\",\r
+
+    \t\t\"priority\": \"PRIORITY_3\"\r
+
+    \t}\r
+
+    ]"
+order: 12000

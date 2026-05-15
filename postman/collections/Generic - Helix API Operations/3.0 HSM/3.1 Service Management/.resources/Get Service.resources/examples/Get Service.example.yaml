@@ -1,0 +1,115 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/service-management/api/v1.0/service/get"
+  method: POST
+  headers:
+    - key: Content-Type
+      value: application/json
+      disabled: true
+    - key: Authorization
+      value: apiKey {{bhom_apiKey}}
+      disabled: true
+    - key: Authorization
+      value: ""
+      disabled: true
+  body:
+    type: json
+    content: '{"serviceNodeId":"305d2e6401000621502396786e427573696e65737353657276696365","includeDownstream":false,"includeUpstream":false}'
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    - key: Server
+      value: nginx
+    - key: Date
+      value: Mon, 10 Jul 2023 21:48:03 GMT
+    - key: Content-Type
+      value: application/json
+    - key: Transfer-Encoding
+      value: chunked
+    - key: Connection
+      value: keep-alive
+    - key: Vary
+      value: Accept-Encoding
+    - key: Vary
+      value: Origin
+    - key: Vary
+      value: Access-Control-Request-Method
+    - key: Vary
+      value: Access-Control-Request-Headers
+    - key: X-Content-Type-Options
+      value: nosniff
+    - key: X-XSS-Protection
+      value: 1; mode=block
+    - key: Cache-Control
+      value: no-cache, no-store, max-age=0, must-revalidate
+    - key: Pragma
+      value: no-cache
+    - key: Expires
+      value: "0"
+    - key: Strict-Transport-Security
+      value: max-age=31536000; includeSubDomains
+    - key: X-Frame-Options
+      value: DENY
+    - key: Referrer-Policy
+      value: same-origin
+    - key: Permissions-Policy
+      value: idle-detection=self
+    - key: X-Request-ID
+      value: 036cbf674a4101b2223acf196dceba7c
+    - key: Content-Encoding
+      value: gzip
+  body:
+    type: json
+    content: |-
+      {
+          "nodes": [
+              {
+                  "compatibleOnly": "false",
+                  "name": "WEB01",
+                  "id": "JT8BUZur-WqtSToQWKrs2cEieoxr_SxJ",
+                  "publishedId": "305d2e6401000621502396786e427573696e65737353657276696365",
+                  "kind": "BusinessService",
+                  "criticality": 1,
+                  "labels": {
+                      "Entorno": "CERTIF",
+                      "Pais": "Chile"
+                  },
+                  "associatedElements": [
+                      {
+                          "type": "metric_group",
+                          "label": "tempId#1",
+                          "elements": [
+                              {
+                                  "selectors": [
+                                      {
+                                          "value": {
+                                              "entityId": "Dynatrace%3A1309047720%40bcicrtlapgee001%3ADynatrace_host%3Acpu",
+                                              "entityTypeId": "Dynatrace_host",
+                                              "node_kind": "Server",
+                                              "source": "",
+                                              "metric": "CPU_I/O_wait"
+                                          },
+                                          "selector_type": "metric_entity_ade"
+                                      }
+                                  ],
+                                  "element_type": "metrics_kpi"
+                              },
+                              {
+                                  "selectors": [],
+                                  "element_type": "metrics_supporting"
+                              }
+                          ]
+                      }
+                  ],
+                  "blueprintConfigurations": [],
+                  "staticNodeIds": [
+                      "4f451d64010094985a817b116e536f667477617265436f6d706f6e656e74",
+                      "dc5d2e6401004d0b220e76486e536f667477617265436f6d706f6e656e74"
+                  ],
+                  "serviceModelSource": "aiops"
+              }
+          ],
+          "links": []
+      }
+order: 3000

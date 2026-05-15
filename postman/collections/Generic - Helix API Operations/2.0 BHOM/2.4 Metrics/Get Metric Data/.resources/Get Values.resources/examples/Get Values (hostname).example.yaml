@@ -1,0 +1,149 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/metrics-query-service/api/v1.0/label/hostname/values"
+  method: GET
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Authorization
+      value: apiKey {{bhom_apiKey}}
+    - key: ""
+      value: ""
+      disabled: true
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Tue, 04 Jul 2023 20:28:18 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    Access-Control-Allow-Origin: "*"
+    Permissions-Policy: idle-detection=self
+    Pragma: no-cache
+    Referrer-Policy: same-origin
+    X-Server-Hostname: victoria-metrics-victoria-metrics-cluster-vmselect-5c89554kp6vx
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    Content-Encoding: gzip
+    TraceId: d01f0588-fdf0-44dd-af69-98637e4cea71 null
+    Vary: Accept-Encoding
+    Cache-control: no-store
+  body:
+    type: json
+    content: |-
+      {
+          "status": "success",
+          "isPartial": false,
+          "data": [
+              "DEMOPLEX",
+              "EBIZQA",
+              "LPAR-BMCA",
+              "adservice-8cb8649b8-tnmqp",
+              "cartservice-549649589f-959q4",
+              "cebsqa",
+              "checkoutservice-64c7966554-4brrz",
+              "coredns-74ff55c5b-tjxnf",
+              "coredns-74ff55c5b-zmnd4",
+              "currencyservice-5479d8959f-w6p6g",
+              "dsom-k8s-node1",
+              "dsom-k8s-node2",
+              "dsom-k8s-node3",
+              "emailservice-86b5565b6d-ngqtx",
+              "etcd-dsom-k8s-node1",
+              "frontend-6b6685bc6f-mxqbz",
+              "kube-apiserver-dsom-k8s-node1",
+              "kube-controller-manager-dsom-k8s-node1",
+              "kube-flannel-ds-5hwzf",
+              "kube-flannel-ds-hqlnw",
+              "kube-flannel-ds-mtqd6",
+              "kube-proxy-b7kdn",
+              "kube-proxy-gwtfj",
+              "kube-proxy-j46s5",
+              "kube-scheduler-dsom-k8s-node1",
+              "loadgenerator-5b7bdb8c48-th548",
+              "mcr-erpqa-01",
+              "mcr-erpqa-02",
+              "mcr-erpqacm-01",
+              "mcr-erpqacm-02",
+              "mcr-oradev-11b",
+              "pat_sim1.bmc.com",
+              "pat_sim2.bmc.com",
+              "pat_sim3.bmc.com",
+              "pat_sim4.bmc.com",
+              "pat_sim5.bmc.com",
+              "paymentservice-8b8f99b6f-kgpsh",
+              "productcatalogservice-868c87bd67-qnc8d",
+              "recommendationservice-7f65579754-wrz68",
+              "redis-cart-7c7b99f588-hb7bp",
+              "shippingservice-76886dfb8f-srqkt",
+              "sw-prod-dist-uk-mcr2-01.apexglobal.com",
+              "sw-prod-dist-uk-mcr2-02.apexglobal.com",
+              "ts-admin-basic-info-service-686bd77f5d-wbfhm",
+              "ts-admin-order-service-78cb699c84-x2zlv",
+              "ts-admin-route-service-5f9c4b9667-9hxm9",
+              "ts-admin-travel-service-567bd4b5bd-phpm9",
+              "ts-admin-user-service-65c86cff75-krzp9",
+              "ts-assurance-mongo-75d58c4f95-7jnh7",
+              "ts-assurance-service-684947d9bf-h9675",
+              "ts-auth-mongo-5d4974c78f-w8stz",
+              "ts-auth-service-666b57b58d-hnt65",
+              "ts-basic-service-649676976-mvjm7",
+              "ts-cancel-service-77948bfdc6-x4tff",
+              "ts-config-mongo-74699d5589-8ff9z",
+              "ts-config-service-7974c7749b-dxhv9",
+              "ts-consign-mongo-5479499695-zxlgm",
+              "ts-consign-price-mongo-5558b645c5-pp59n",
+              "ts-consign-price-service-6fbc46ccfc-rn8qj",
+              "ts-consign-service-5d5655f4bf-d8ksq",
+              "ts-contacts-mongo-6d68cf5d47-qx96p",
+              "ts-contacts-service-856d95959f-n7dbw",
+              "ts-execute-service-6867467595-tghd5",
+              "ts-food-map-mongo-56476c6d55-9wfvh",
+              "ts-food-map-service-d6b4fd985-2bmg7",
+              "ts-food-mongo-5699d7bf7-55d4z",
+              "ts-food-service-6f889886c4-xbzvq",
+              "ts-inside-payment-mongo-5564f8c86c-99k5b",
+              "ts-inside-payment-service-f6566c485-wq58z",
+              "ts-news-service-d6668dcd5-z7pg6",
+              "ts-notification-service-79957fb84f-k2vkk",
+              "ts-order-mongo-c94b44b8c-dpqzv",
+              "ts-order-other-mongo-6ccbdb754c-tjlqb",
+              "ts-order-other-service-6b9797f675-xfgxx",
+              "ts-order-service-5fc8cbb55d-xksvq",
+              "ts-payment-mongo-6845877d4c-5swgl",
+              "ts-payment-service-68b54bd9b-7m8gq",
+              "ts-preserve-other-service-679bb5c957-nkpxj",
+              "ts-preserve-service-6fcd5688cd-rgm4c",
+              "ts-price-mongo-85bf87bdd7-284np",
+              "ts-price-service-6bb6ccd74f-wf4dl",
+              "ts-rebook-service-64fcd7bd58-qwfjh",
+              "ts-route-mongo-d8ff4c9dc-xcs46",
+              "ts-route-plan-service-85558d68df-75vt2",
+              "ts-route-service-744cc6fbb5-q6x8c",
+              "ts-seat-service-fb46fd4dc-92ptb",
+              "ts-security-mongo-665c67ccdf-4cjf2",
+              "ts-security-service-849b99475b-lsnxz",
+              "ts-station-mongo-78b4f8f84c-4vbr9",
+              "ts-station-service-c7c75db-dplfh",
+              "ts-ticket-office-mongo-78c9d55fdc-qn5hw",
+              "ts-ticket-office-service-8479b6f88c-hl4zz",
+              "ts-ticketinfo-service-58cc85b74-d78f6",
+              "ts-train-mongo-685dcc4dc-n7cp7",
+              "ts-train-service-7759479bd4-57c4r",
+              "ts-travel-mongo-845b4f9b9-5wd4n",
+              "ts-travel-plan-service-964db66f4-9ggmg",
+              "ts-travel-service-68d4c578b-wdhct",
+              "ts-travel2-mongo-d98bb9bbc-5bfjk",
+              "ts-travel2-service-759c8b7688-56hgn",
+              "ts-ui-dashboard-84669b85b8-7pg8w",
+              "ts-user-mongo-566db96975-bvng9",
+              "ts-user-service-cc577b45c-j9rrg",
+              "ts-verification-code-service-c7c878c5-4gcb8",
+              "ts-voucher-mysql-847696f9dd-brn8f",
+              "ts-voucher-service-85cf6777d8-5hhzw",
+              "web-fe-01",
+              "web-fe-02",
+              "web-fe-03"
+          ]
+      }
+order: 4000

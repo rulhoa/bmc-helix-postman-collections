@@ -1,0 +1,19 @@
+$kind: http-request
+url: "{{itsm_base_url}}/api/arsys/v1/entry/PBM:ProblemInterface/ PBI000000054259|PBI000000054259"
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: "{\r
+
+    \    \"values\":{\r
+
+    \        \"Support Group Name Requester\": \"\",\r
+
+    \        \r
+
+    \    }\r
+
+    }"
+order: 2000

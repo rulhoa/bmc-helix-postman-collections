@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{bhom_base_url}}/DSPerformancealarm/api/alarm/v1/alarm/3808667825580951064"
+method: GET
+body:
+  type: json
+  content: ""
+order: 5000

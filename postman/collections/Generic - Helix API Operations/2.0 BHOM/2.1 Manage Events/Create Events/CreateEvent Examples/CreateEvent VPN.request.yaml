@@ -1,0 +1,61 @@
+$kind: http-request
+url: "{{bhom_base_url}}/events-service/api/v1.0/events"
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+  - key: Authorization
+    value: apiKey {{bhom_apiKey}}
+  - key: ""
+    value: ""
+    disabled: true
+body:
+  type: text
+  content: "[\r
+
+    \    {\r
+
+    \        \"class\": \"EVENT\",\r
+
+    \        \"severity\": \"CRITICAL\",\r
+
+    \        \"msg\": \"Connection Lost: Interface Gi1/0/0 operationally down on rtr-mpls-vpn-service-aus-mel9.bmc.com\",\r
+
+    \        \"status\": \"OPEN\",\r
+
+    \        \"source_identifier\": \"rtr-mpls-vpn-service-aus-mel9.bmc.com\",\r
+
+    \        \"source_attributes\": {\r
+
+    \            \"source_hostname\": \"rtr-mpls-vpn-service-aus-mel9.bmc.com\",\r
+
+    \            \"source_port\": \"3181\"\r
+
+    \        }\r
+
+    \    },\r
+
+    \    {\r
+
+    \        \"class\": \"EVENT\",\r
+
+    \        \"severity\": \"CRITICAL\",\r
+
+    \        \"msg\": \"Interface Link Down: Interface wan1_0 link Down on rbed-wan-acc-vpn-service-mel2.bmc.com\",\r
+
+    \        \"status\": \"OPEN\",\r
+
+    \        \"source_identifier\": \"rbed-wan-acc-vpn-service-mel2.bmc.com\",\r
+
+    \        \"source_attributes\": {\r
+
+    \            \"source_hostname\": \"rbed-wan-acc-vpn-service-mel2.bmc.com\",\r
+
+    \            \"source_port\": \"3181\"\r
+
+    \        }\r
+
+    \    }\r
+
+    ]"
+order: 7000

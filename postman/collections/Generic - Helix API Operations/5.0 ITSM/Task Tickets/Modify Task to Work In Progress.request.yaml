@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{applicationserver}}/api/arsys/v1/entry/TMS:TaskInterface/TAS000001292390|TAS000001292390"
+method: PUT
+headers:
+  Authorization: "{{tokensignature}}{{token}}"
+  Content-Type: application/json
+body:
+  type: text
+  content: |
+    {
+    	"values": {
+    		"Status":"Work In Progress",
+    		"z1D Char01":"UPDATE"
+    	}
+    }
+order: 4000

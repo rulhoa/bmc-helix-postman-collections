@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{v1}}/patching-jobs/{{id}}/jobruns/{{run_id}}/results/remediation"
+method: GET
+order: 14000

@@ -1,0 +1,71 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/alarm-service/api/v1.0/alarm_policies/:alarm_policy_id?idType=id"
+  method: GET
+  queryParams:
+    idType: id
+  pathVariables:
+    alarm_policy_id: 3805aee0-c0c9-4f3b-bed0-6b485550cfcc
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Wed, 20 Mar 2024 11:58:48 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    Referrer-Policy: same-origin
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    Permissions-Policy: idle-detection=self
+    Content-Encoding: gzip
+    TraceId: e13d0e62-219f-4ddf-8d1e-5264de545bc1 158670711
+  body:
+    type: json
+    content: |-
+      {
+          "statusCode": "200",
+          "policy": [
+              {
+                  "tenantId": "158670711",
+                  "id": "3805aee0-c0c9-4f3b-bed0-6b485550cfcc",
+                  "policyName": "CPU Anomily ",
+                  "description": "",
+                  "enabled": false,
+                  "owner": "NEN7HO6SSD3PDMABHNS09566W4J7HI",
+                  "createdTime": 1701209674421,
+                  "modifiedTime": 1709146685476,
+                  "executionOrder": 9999,
+                  "entityThresholds": [
+                      {
+                          "metricDetails": {
+                              "entityTypeId": "NT_CPU",
+                              "metricId": "CPUprcrProcessorTimePercent",
+                              "unit": "%",
+                              "label": "Processor time",
+                              "path": "psx_epd/20.05.11/NT_CPU/CPUprcrProcessorTimePercent"
+                          },
+                          "type": "ALL",
+                          "evaluationCriteria": "",
+                          "alarmConfigurations": [
+                              {
+                                  "configId": "b8be7270-a60d-43b7-aad2-cd79ebcf7d63",
+                                  "condition": {
+                                      "duration": 5,
+                                      "occurrence": 0,
+                                      "baseline": true
+                                  },
+                                  "action": {
+                                      "severity": "INFO",
+                                      "autoClose": true,
+                                      "closeDuration": 0
+                                  },
+                                  "configOrder": 0
+                              }
+                          ],
+                          "order": 0
+                      }
+                  ]
+              }
+          ]
+      }
+order: 1000

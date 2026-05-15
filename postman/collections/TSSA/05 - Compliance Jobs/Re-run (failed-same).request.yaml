@@ -1,0 +1,5 @@
+$kind: http-request
+name: Re-run (failed/same)
+url: "{{v1}}/compliance-jobs/{{id}}/jobruns/{{run_id}}/"
+method: PATCH
+order: 7000

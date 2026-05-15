@@ -1,0 +1,72 @@
+$kind: http-request
+name: "Search for events: CTM_ALERT"
+url: "{{bhom_base_url}}/tsws/monitoring/api/v1.0/events/search"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"advanceFilter\": {\r
+
+    \        \"name\": \"Control-M Jobs\",\r
+
+    \        \"eventClass\": \"CTM_JOB\",\r
+
+    \        \"status\": \"OPEN,ACK,ASSIGNED,BLACKOUT,CLOSED\",\r
+
+    \        \"severity\": \"CRITICAL,MAJOR,MINOR,WARNING,INFO\",\r
+
+    \        \"filterConditions\": [\r
+
+    \            {\r
+
+    \                \"condition_order\": 0,\r
+
+    \                \"condition_operator\": \"\",\r
+
+    \                \"slot_name\": \"class\",\r
+
+    \                \"slot_operator\": \"equals\",\r
+
+    \                \"slot_value\": \"CTM_JOB\",\r
+
+    \                \"condition_bracket\": \"\",\r
+
+    \                \"end_bracket\": \"\"\r
+
+    \            }\r
+
+    \        ]\r
+
+    \    },\r
+
+    \    \"slotList\": [\r
+
+    \        \"_identifier\",\r
+
+    \        \"class\",\r
+
+    \        \"status\",\r
+
+    \        \"severity\",\r
+
+    \        \"_repeat_count\",\r
+
+    \        \"source_identifier\",\r
+
+    \        \"source_hostname\",\r
+
+    \        \"ctmJobName\",\r
+
+    \        \"ctmFolder\",\r
+
+    \        \"msg\",\r
+
+    \        \"details\"\r
+
+    \    ],\r
+
+    \    \"view\": \"events\"\r
+
+    }"
+order: 1000

@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{bhom_base_url}}/events-service/api/v1.0/event_policies/:event_policy_id?idType=id"
+method: GET
+queryParams:
+  idType: id
+pathVariables:
+  event_policy_id: ead4a41b-1c41-11ee-b683-678302963d38
+examples: ./.resources/Get Event Policy.resources/examples
+order: 1000

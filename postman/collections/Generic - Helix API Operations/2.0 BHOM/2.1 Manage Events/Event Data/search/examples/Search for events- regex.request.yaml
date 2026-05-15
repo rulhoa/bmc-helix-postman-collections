@@ -1,0 +1,50 @@
+$kind: http-request
+name: "Search for events: regex"
+url: "{{bhom_base_url}}/tsws/monitoring/api/v1.0/events/search"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"size\": 10000,\r
+
+    \    \"query\": {\r
+
+    \        \"bool\": {\r
+
+    \            \"filter\": [\r
+
+    \                {\r
+
+    \                    \"query_string\": {\r
+
+    \                        \"analyze_wildcard\": true,\r
+
+    \                        \"query\": \"class:FTH AND !object_class:/.{1,}/\"\r
+
+    \                    }\r
+
+    \                }\r
+
+    \            ]\r
+
+    \        }\r
+
+    \    },\r
+
+    \    \"sort\": {\r
+
+    \        \"creation_time\": {\r
+
+    \            \"order\": \"desc\",\r
+
+    \            \"unmapped_type\": \"boolean\"\r
+
+    \        }\r
+
+    \    },\r
+
+    \    \"script_fields\": {}\r
+
+    }"
+order: 2000

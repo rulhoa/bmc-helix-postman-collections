@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{v1}}/deploy-jobs/{{id}}"
+method: DELETE
+order: 3000

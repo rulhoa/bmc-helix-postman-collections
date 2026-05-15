@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{v1}}/templates/{{id}}"
+method: GET
+order: 2000

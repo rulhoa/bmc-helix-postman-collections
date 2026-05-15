@@ -1,0 +1,8 @@
+$kind: http-request
+url: "{{bhom_base_url}}/tdc/api/v1.0/connectors"
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: "{{bhom_json_web_token}}"
+order: 1000

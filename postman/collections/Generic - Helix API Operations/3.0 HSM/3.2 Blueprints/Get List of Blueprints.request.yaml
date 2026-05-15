@@ -1,0 +1,44 @@
+$kind: http-request
+url: "{{bhom_base_url}}/service-management/api/v1.0/blueprint/list"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"outputAttributes\": [\r
+
+    \    \"key\",\r
+
+    \    \"name\",\r
+
+    \    \"namespace\",\r
+
+    \    \"description\",\r
+
+    \    \"defaultBpId\",\r
+
+    \    \"read_only\",\r
+
+    \    \"state\",\r
+
+    \    \"instances_count\"\r
+
+    \  ],\r
+
+    \  \"multiSortMeta\": [\r
+
+    \    {\r
+
+    \      \"attribute\": \"name\",\r
+
+    \      \"order\": 1\r
+
+    \    }\r
+
+    \  ],\r
+
+    \  \"globalStats\": true\r
+
+    }"
+examples: ./.resources/Get List of Blueprints.resources/examples
+order: 1000

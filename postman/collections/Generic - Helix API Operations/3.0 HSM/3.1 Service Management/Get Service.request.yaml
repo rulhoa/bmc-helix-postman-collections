@@ -1,0 +1,8 @@
+$kind: http-request
+url: "{{bhom_base_url}}/service-management/api/v1.0/service/get"
+method: POST
+body:
+  type: json
+  content: '{"modelKey":"5yhSf2A4eTc2LgKKRknP9apkS71-9Ypt","includeDownstream":true,"includeUpstream":true}'
+examples: ./.resources/Get Service.resources/examples
+order: 2000

@@ -1,0 +1,74 @@
+$kind: http-example
+name: Update baseline metrics for specific algorithm - 3rd party metrics
+request:
+  url: "{{bhom_base_url}}/aiops-config/api/v2.0/algorithms/tdigest/metrics"
+  method: PUT
+  body:
+    type: json
+    content: "{\r
+
+      \    \"metrics\": [\r
+
+      \        {\r
+
+      \            \"entityTypeId\": \"CashDynamics_Available_Cash\",\r
+
+      \            \"isThirdparty\": \"true\",\r
+
+      \            \"attributes\": [\"Available_Cash\"]\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    - key: Date
+      value: Fri, 15 Mar 2024 21:29:52 GMT
+    - key: Content-Type
+      value: application/json
+    - key: Transfer-Encoding
+      value: chunked
+    - key: Connection
+      value: keep-alive
+    - key: Vary
+      value: Origin
+    - key: Vary
+      value: Access-Control-Request-Method
+    - key: Vary
+      value: Access-Control-Request-Headers
+    - key: X-Content-Type-Options
+      value: nosniff
+    - key: X-XSS-Protection
+      value: "0"
+    - key: Cache-Control
+      value: no-cache, no-store, max-age=0, must-revalidate
+    - key: Pragma
+      value: no-cache
+    - key: Expires
+      value: "0"
+    - key: Strict-Transport-Security
+      value: max-age=31536000; includeSubDomains
+    - key: X-Frame-Options
+      value: DENY
+    - key: Referrer-Policy
+      value: same-origin
+    - key: Permissions-Policy
+      value: idle-detection=self
+  body:
+    type: json
+    content: |-
+      {
+          "metrics": [
+              {
+                  "entityTypeId": "CashDynamics_Available_Cash",
+                  "baselineStatus": {
+                      "Available_Cash": "ENABLED"
+                  }
+              }
+          ]
+      }
+order: 1000

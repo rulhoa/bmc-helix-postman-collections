@@ -1,0 +1,8 @@
+$kind: http-request
+url: "{{bhom_base_url}}/events-service/api/v1.0/events/msearch"
+method: POST
+body:
+  type: json
+  content: '{"from":0,"size":9999,"query":{"bool":{"filter":[{"bool":{"must":[{"term":{"_relationships.rstat":"primary"}},{"range":{"_relationships.evcount":{"gt":0}}},{"bool":{"should":[{"bool":{"must_not":[{"term":{"class":"Situation"}},{"exists":{"field":"situation_relation_type"}}]}},{"bool":{"must":[{"exists":{"field":"situation_relation_type"}},{"bool":{"must_not":[{"term":{"situation_relation_type":{"value":"child"}}}]}}]}}]}},{"bool":{"must_not":[{"term":{"status":"CLOSED"}}]}}]}}]}},"sort":[{"creation_time":{"order":"desc"}}]}'
+examples: ./.resources/Search for Situations.resources/examples
+order: 4000

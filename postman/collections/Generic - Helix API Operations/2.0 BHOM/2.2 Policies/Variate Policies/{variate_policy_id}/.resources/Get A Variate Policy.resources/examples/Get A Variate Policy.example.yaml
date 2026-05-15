@@ -1,0 +1,315 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/aif/api/v1.0/algorithm/0f7ec0e1-0b94-40ae-af97-4bb927a8f6f1"
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Tue, 04 Jul 2023 20:29:49 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    Referrer-Policy: same-origin
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    Content-Security-Policy: script-src 'self';
+    Permissions-Policy: idle-detection=self
+    Content-Encoding: gzip
+    TraceId: 5747f899-c183-4971-8b72-c20f3b42827f 660181721
+  body:
+    type: json
+    content: |-
+      {
+          "statusCode": "200",
+          "statusMessage": "Success",
+          "response": {
+              "tenantId": "660181721",
+              "id": "0f7ec0e1-0b94-40ae-af97-4bb927a8f6f1",
+              "name": "PredefinedAlgorithmForIncidentCorrelation",
+              "description": "Predefined algorithm for incident correlation",
+              "creationTime": "1679546990533",
+              "template": {
+                  "id": "b558d267-c958-4c4d-8734-b40b0961fd11",
+                  "name": "PredefinedAlgorithmTemplateForIncidentCorrelation",
+                  "type": "IncidentCorrelation",
+                  "executionMode": "Streaming",
+                  "jobScript": "",
+                  "description": "This is predefined algorithm template for the Incident Correlation.",
+                  "algorithmSchema": {
+                      "$schema": "http://json-schema.org/draft-06/schema#",
+                      "$ref": "#/template/definition",
+                      "template": {
+                          "definition": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                  "input": {
+                                      "$ref": "#/template/input"
+                                  },
+                                  "config": {
+                                      "$ref": "#/template/config"
+                                  }
+                              },
+                              "required": [
+                                  "input",
+                                  "config"
+                              ],
+                              "title": "AlgorithmSchema"
+                          },
+                          "input": {
+                              "type": "object",
+                              "additionalProperties": true,
+                              "properties": {
+                                  "systemFields": {
+                                      "type": "array",
+                                      "items": {
+                                          "type": "string"
+                                      }
+                                  },
+                                  "groupByLevel": {
+                                      "type": "array",
+                                      "items": {
+                                          "type": "string"
+                                      },
+                                      "maxItems": 3
+                                  },
+                                  "clusteringFields": {
+                                      "type": "array",
+                                      "items": {
+                                          "type": "string"
+                                      },
+                                      "minItems": 1,
+                                      "maxItems": 5
+                                  },
+                                  "priorityEnum": {
+                                      "type": "array",
+                                      "items": {
+                                          "type": "object",
+                                          "required": [],
+                                          "properties": {
+                                              "name": {
+                                                  "type": "string"
+                                              },
+                                              "id": {
+                                                  "type": "integer"
+                                              }
+                                          }
+                                      },
+                                      "default": [
+                                          {
+                                              "name": "Critical",
+                                              "id": 0
+                                          },
+                                          {
+                                              "name": "High",
+                                              "id": 1
+                                          },
+                                          {
+                                              "name": "Medium",
+                                              "id": 2
+                                          },
+                                          {
+                                              "name": "Low",
+                                              "id": 3
+                                          }
+                                      ]
+                                  }
+                              },
+                              "required": [
+                                  "systemFields",
+                                  "clusteringFields"
+                              ],
+                              "title": "Input schema"
+                          },
+                          "config": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                  "params": {
+                                      "$ref": "#/template/params"
+                                  }
+                              },
+                              "required": [
+                                  "params"
+                              ],
+                              "title": "ConfigSchema"
+                          },
+                          "params": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                  "clusterTimeToLive": {
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                          "days": {
+                                              "type": "integer",
+                                              "default": 7,
+                                              "minimum": 0
+                                          },
+                                          "hours": {
+                                              "type": "integer",
+                                              "minimum": 0
+                                          }
+                                      },
+                                      "required": [
+                                          "days",
+                                          "hours"
+                                      ]
+                                  },
+                                  "similarityThreshold": {
+                                      "type": "number",
+                                      "default": 0.7
+                                  },
+                                  "noOfIncidentsToMakeClusterVisible": {
+                                      "type": "integer",
+                                      "default": 5
+                                  },
+                                  "trendWindow": {
+                                      "type": [
+                                          "integer",
+                                          "null"
+                                      ],
+                                      "default": 2,
+                                      "minimum": 1,
+                                      "maximum": 999
+                                  },
+                                  "majorIncidentCriteria": {
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                          "noOfIncidentsInClusterReaches": {
+                                              "type": [
+                                                  "integer",
+                                                  "null"
+                                              ],
+                                              "default": 50,
+                                              "minimum": 1,
+                                              "maximum": 99999
+                                          },
+                                          "noOfIncidentsInTrendWindow": {
+                                              "type": [
+                                                  "integer",
+                                                  "null"
+                                              ],
+                                              "default": 25,
+                                              "minimum": 1,
+                                              "maximum": 99999
+                                          }
+                                      },
+                                      "required": []
+                                  },
+                                  "trendAndMiDisabled": {
+                                      "type": [
+                                          "boolean",
+                                          "null"
+                                      ],
+                                      "default": false
+                                  }
+                              },
+                              "required": [
+                                  "trendWindow"
+                              ],
+                              "title": "Params"
+                          }
+                      }
+                  },
+                  "productType": "IC"
+              },
+              "modifiedTime": "1684949219210",
+              "owner": "hannah_admin",
+              "enable": "true",
+              "executionMode": "Streaming",
+              "definition": {
+                  "input": {
+                      "systemFields": [
+                          "Assignee Groups",
+                          "Product Categorization Tier 1",
+                          "Product Categorization Tier 2",
+                          "Product Categorization Tier 3",
+                          "Categorization Tier 1",
+                          "Categorization Tier 2",
+                          "Categorization Tier 3",
+                          "City",
+                          "Closed Date",
+                          "SV_ComCoord_SupportCompany",
+                          "SV_ComCoordSGP",
+                          "Reported Date",
+                          "Detailed Decription",
+                          "Assignee",
+                          "Assigned Support Company",
+                          "Assigned Group",
+                          "Company",
+                          "SV_MIM_Company",
+                          "SV_MIM_SGP",
+                          "Site Group",
+                          "HPD_CI_ReconID",
+                          "HPD_CI",
+                          "Incident Number",
+                          "Impact",
+                          "Major Incident",
+                          "InstanceId",
+                          "Last Resolved Date",
+                          "Priority",
+                          "Product Name",
+                          "Region",
+                          "Description",
+                          "ServiceCI_ReconID",
+                          "ServiceCI",
+                          "Site",
+                          "Status",
+                          "Status_Reason",
+                          "Submit Date",
+                          "Submitter",
+                          "Service Type",
+                          "Total Time Spent",
+                          "Urgency",
+                          "Vendor Assignee Groups"
+                      ],
+                      "groupByLevel": [
+                          "HPD_CI",
+                          "ServiceCI"
+                      ],
+                      "priorityEnum": [
+                          {
+                              "name": "Critical",
+                              "id": 0
+                          },
+                          {
+                              "name": "High",
+                              "id": 1
+                          },
+                          {
+                              "name": "Medium",
+                              "id": 2
+                          },
+                          {
+                              "name": "Low",
+                              "id": 3
+                          }
+                      ],
+                      "clusteringFields": [
+                          "Description"
+                      ]
+                  },
+                  "config": {
+                      "params": {
+                          "majorIncidentCriteria": {
+                              "noOfIncidentsInClusterReaches": 50,
+                              "noOfIncidentsInTrendWindow": 25
+                          },
+                          "noOfIncidentsToMakeClusterVisible": 5,
+                          "clusterTimeToLive": {
+                              "hours": 0,
+                              "days": 7
+                          },
+                          "similarityThreshold": 0.7,
+                          "trendWindow": 5,
+                          "trendAndMiDisabled": false
+                      }
+                  }
+              }
+          },
+          "responseTimeStamp": "1688502589450"
+      }
+order: 1000

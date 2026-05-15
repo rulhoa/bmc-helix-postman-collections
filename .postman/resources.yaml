@@ -1,0 +1,18 @@
+# Use this workspace to collaborate
+workspace:
+  id: 769bbac6-526b-405b-b2a7-6174b73d70ca
+
+localResources:
+  collections:
+    - ..\Generic - Helix API Operations.postman_collection.json
+    - ..\TSSA_25.2_REST_v2.postman_collection.json
+  environments:
+    - ..\Helix.postman_environment.json
+    - ..\TSSA_Env.postman_environment.json
+
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
+cloudResources:
+  collections:
+    ..\postman\collections\Generic - Helix API Operations: f9b9f2f6-af3d-4992-bd2a-04b3c7e11925
+    ..\postman\collections\TSSA: 218c06f4-2b0c-46b5-9e61-7c9014bc11f9

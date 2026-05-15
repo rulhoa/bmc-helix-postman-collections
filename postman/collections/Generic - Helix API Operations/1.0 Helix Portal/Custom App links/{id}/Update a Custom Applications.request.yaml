@@ -1,0 +1,47 @@
+$kind: http-request
+url: "{{bhom_base_url}}/ims/api/v1/custom_ui_applications/:id"
+method: PUT
+pathVariables:
+  id: custom-is-hgm
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\": \"HelixGPT Manager\",\r
+
+    \  \"description\": \"HelixGPT Manager\",\r
+
+    \  \"version\": \"\",\r
+
+    \  \"config\": {\r
+
+    \    \"ui_configurations\": {\r
+
+    \      \"components\": [\r
+
+    \        {\r
+
+    \          \"name\": \"HelixGPT Manager\",\r
+
+    \          \"description\": \"Configuration UI\",\r
+
+    \          \"icon_source_uri\": \"https://raw.githubusercontent.com/tailwindlabs/heroicons/refs/heads/master/optimized/24/outline/clipboard.svg\",\r
+
+    \          \"image_source_uri\": \"https://raw.githubusercontent.com/tailwindlabs/heroicons/refs/heads/master/optimized/24/outline/clipboard.svg\"\r
+
+    \        }\r
+
+    \      ]\r
+
+    \    }\r
+
+    \  },\r
+
+    \  \"application_id\": \"custom-is-hgm\",\r
+
+    \  \"service_type\": \"CUSTOM_UI\",\r
+
+    \  \"service_url\": \"https://XXXXX-is.onbmc.com/helix/index.html#/com.bmc.dsom.hgm/view/com.bmc.dsom.hgm:Home\"\r
+
+    }"
+order: 1000

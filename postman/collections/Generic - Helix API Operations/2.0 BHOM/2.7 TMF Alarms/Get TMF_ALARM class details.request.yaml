@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{bhom_base_url}}/events-service/api/v1.0/events/classes/TMF_ALARM?idType=name"
+method: GET
+queryParams:
+  idType: name
+order: 1000

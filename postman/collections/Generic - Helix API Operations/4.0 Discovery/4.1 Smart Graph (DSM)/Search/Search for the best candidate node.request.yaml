@@ -1,0 +1,55 @@
+$kind: http-request
+description: '"Kind" attribute is limited to Host, NetworkDevice, SNMPManagedDevice, Printer, ManagementController, StorageSystem or \* for the all the previously listed.'
+url: "{{disco_base_url}}/api/v1.9/data/candidate"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"kind\": \"Host\",\r
+
+    \    \"name\": \"string\",\r
+
+    \    \"hostname\": \"string\",\r
+
+    \    \"sysname\": \"string\",\r
+
+    \    \"serial\": \"string\",\r
+
+    \    \"uuid\": \"string\",\r
+
+    \    \"wwnn\": \"string\",\r
+
+    \    \"scope\": \"string\",\r
+
+    \    \"endpoint\": \"string\",\r
+
+    \    \"dns_name\": [\r
+
+    \        \"string\"\r
+
+    \    ],\r
+
+    \    \"ip_address\": [\r
+
+    \        \"string\"\r
+
+    \    ],\r
+
+    \    \"mac_address\": [\r
+
+    \        \"string\"\r
+
+    \    ],\r
+
+    \    \"limit\": 100,\r
+
+    \    \"attributes\": [\r
+
+    \        \"string\"\r
+
+    \    ]\r
+
+    }"
+examples: ./.resources/Search for the best candidate node.resources/examples
+order: 1000

@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{bhom_base_url}}/logs-service/api/v1.0/logs/archive/indices"
+method: GET
+order: 1000

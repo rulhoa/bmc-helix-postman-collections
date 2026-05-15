@@ -1,0 +1,145 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/featureflag/api/v1/tenantfeatures"
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Wed, 28 Jun 2023 15:04:15 GMT
+    Content-Type: application/json; charset=utf-8
+    Content-Length: "1926"
+    Connection: keep-alive
+    X-Powered-By: Express
+    ETag: W/"786-YHshaAwazahnTqf6HIPKvDmyaMg"
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+  body:
+    type: json
+    content: |-
+      {
+          "tenantfeatures": [
+              {
+                  "Name": "remediate",
+                  "State": "state",
+                  "Status": true,
+                  "Solution": "cloud",
+                  "Description": "Remediate_feature_flag",
+                  "FeatureLevel": "service",
+                  "id": 32,
+                  "Tenant": "*"
+              },
+              {
+                  "Name": "service-modeling",
+                  "Status": true,
+                  "Solution": "service-modeling",
+                  "Description": "service-modeling",
+                  "ReleaseVersion": "22.1.00",
+                  "id": 40,
+                  "Tenant": "*"
+              },
+              {
+                  "Name": "import-export-policy",
+                  "Status": true,
+                  "Solution": "import-export-policy",
+                  "Description": "import-export-policy",
+                  "ReleaseVersion": "22.3.00",
+                  "id": 41,
+                  "Tenant": "*"
+              },
+              {
+                  "Name": "automationapifeature_4iylmyaf4sgf",
+                  "State": "BETA",
+                  "Status": true,
+                  "Solution": "4iylmyaf4sgf",
+                  "UpdatedBy": "Automation",
+                  "Description": "Description automationapifeature_4IYLMYAF4SGF",
+                  "LastUpdated": "",
+                  "FeatureLevel": "4IYLMYAF4SGF",
+                  "ReleaseVersion": "",
+                  "id": 15,
+                  "Tenant": "*"
+              },
+              {
+                  "Name": "auto-remediation-phase1",
+                  "Status": true,
+                  "Solution": "cloud",
+                  "id": 16,
+                  "Tenant": "*"
+              },
+              {
+                  "Name": "pendo",
+                  "State": "",
+                  "Status": true,
+                  "Solution": "pendo",
+                  "Description": "pendo integration",
+                  "LastUpdated": "",
+                  "FeatureLevel": "",
+                  "ReleaseVersion": "",
+                  "id": 17,
+                  "Tenant": "*"
+              },
+              {
+                  "Name": "resource-consistency-phase1",
+                  "Status": true,
+                  "Solution": "cloud",
+                  "id": 18,
+                  "Tenant": "*"
+              },
+              {
+                  "Name": "cost",
+                  "State": "state",
+                  "Status": true,
+                  "Solution": "cloud",
+                  "Description": "Cost feature flag",
+                  "FeatureLevel": "service",
+                  "id": 31,
+                  "Tenant": "*"
+              },
+              {
+                  "Name": "gainsight",
+                  "Status": true,
+                  "Solution": "ade",
+                  "FeatureLevel": "service",
+                  "id": 42,
+                  "Tenant": "*"
+              },
+              {
+                  "Name": "gpt-situation-summary",
+                  "State": "state",
+                  "Status": true,
+                  "Solution": "gpt-situation-summary",
+                  "FeatureLevel": "service",
+                  "id": 43,
+                  "Tenant": "*"
+              },
+              {
+                  "Name": "root-cause-isolation",
+                  "Status": true,
+                  "Tenant": "660181721",
+                  "Solution": "root-cause-isolation",
+                  "id": 1510
+              },
+              {
+                  "Name": "ml-situations",
+                  "Status": true,
+                  "Tenant": "660181721",
+                  "Solution": "ml-situations",
+                  "id": 1511
+              },
+              {
+                  "Name": "intelligent-automations",
+                  "Status": true,
+                  "Tenant": "660181721",
+                  "Solution": "intelligent-automations",
+                  "id": 1513
+              },
+              {
+                  "Name": "predictions",
+                  "Status": true,
+                  "Tenant": "660181721",
+                  "Solution": "predictions",
+                  "id": 1512
+              }
+          ]
+      }
+order: 1000

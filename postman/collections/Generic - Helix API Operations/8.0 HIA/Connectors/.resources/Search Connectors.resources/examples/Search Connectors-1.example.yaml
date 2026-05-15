@@ -1,0 +1,81 @@
+$kind: http-example
+name: Search Connectors
+request:
+  url: "{{bhom_base_url}}/intelligent-automation/api/v1/connectors/search"
+  method: POST
+  headers:
+    - key: helix_jwt_token
+      value: "{{bhom_json_web_token}}"
+      disabled: true
+    - key: Origin
+      value: https://helixtrialsjc497-or1-dev.onbmc.com
+      disabled: true
+    - key: Referer
+      value: https://helixtrialsjc497-or1-dev.onbmc.com/intelligent-automation/
+      disabled: true
+    - key: Authorization
+      value: Bearer {{bhom_token}}
+      disabled: true
+  body:
+    type: json
+    content: "{\r
+
+      \    \"filter\":\"status = true\"\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Fri, 10 Feb 2023 20:44:28 GMT
+    Content-Type: application/json; charset=utf-8
+    Content-Length: "1003"
+    Connection: keep-alive
+    X-Powered-By: Express
+    ETag: W/"3eb-zEdakGNZEunjsN9i0GsRSEiPZhY"
+  body:
+    type: json
+    content: |-
+      [
+          {
+              "id": "385dcf40-1b50-11ed-8296-0613ed995521",
+              "code": "aws",
+              "name": "awsconnector",
+              "target_id": "654307556001",
+              "is_remote": false,
+              "status": true,
+              "last_sync_at": null,
+              "updated_time": "2022-10-31T19:02:58.992Z"
+          },
+          {
+              "id": "b5757460-29f6-11ed-9641-0613ed995521",
+              "code": "generic_rest",
+              "name": "Control-M Connector",
+              "target_id": "https://se-preprod-aapi.us1.controlm.com:443/automation-api",
+              "is_remote": true,
+              "status": true,
+              "last_sync_at": null,
+              "updated_time": "2022-09-01T13:05:28.012Z"
+          },
+          {
+              "id": "6018a950-2f74-11ed-a756-0613ed995521",
+              "code": "innovation_studio",
+              "name": "Innovation Studio Connector",
+              "target_id": "https://helixtrialsjc497-dev-is.onbmc.com",
+              "is_remote": false,
+              "status": true,
+              "last_sync_at": "2022-09-08T12:55:51.322Z",
+              "updated_time": "2022-09-08T12:47:19.328Z"
+          },
+          {
+              "id": "09a42fa6-23e7-11ed-bb81-0613ed995521",
+              "code": "tssa",
+              "name": "Server Automation Connector",
+              "target_id": "https://192.168.100.22:9843",
+              "is_remote": true,
+              "status": true,
+              "last_sync_at": "2022-08-24T19:59:28.335Z",
+              "updated_time": "2022-08-26T14:57:35.626Z"
+          }
+      ]
+order: 2000

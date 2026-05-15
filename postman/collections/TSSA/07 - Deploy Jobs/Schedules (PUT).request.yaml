@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{v1}}/deploy-jobs/{{id}}/schedules"
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "schedules": []
+    }
+order: 10000

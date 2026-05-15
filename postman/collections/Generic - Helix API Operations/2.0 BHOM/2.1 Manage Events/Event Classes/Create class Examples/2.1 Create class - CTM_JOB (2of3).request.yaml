@@ -1,0 +1,168 @@
+$kind: http-request
+description: "Source: [https://github.com/controlm/automation-api-community-solutions/blob/master/helix-control-m/2-external-monitoring-tools-examples/alerts-to-bhom/bhom_ctm_event_class.json](https://github.com/controlm/automation-api-community-solutions/blob/master/helix-control-m/2-external-monitoring-tools-examples/alerts-to-bhom/bhom_ctm_event_class.json)"
+url: "{{bhom_base_url}}/events-service/api/v1.0/events/classes/"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\": \"CTM_JOB\",\r
+
+    \    \"parentClassName\": \"CTM_EVENT\",\r
+
+    \    \"attributes\": [\r
+
+    \        {\r
+
+    \            \"name\": \"jobKey\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [\r
+
+    \                {\r
+
+    \                    \"name\": \"read_only\",\r
+
+    \                    \"value\": \"true\"\r
+
+    \                },\r
+
+    \                {\r
+
+    \                    \"name\": \"topology_lookup\",\r
+
+    \                    \"value\": \"key,name,short_name\"\r
+
+    \                }\r
+
+    \            ],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"ctmFolder\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"ctmFolderID\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"ctmJobHeld\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"ctmJobType\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"ctmJobCyclic\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"ctmOwner\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"ctmJobID\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        }\r
+
+    \    ]\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{bhom_json_web_token}}"
+order: 4000

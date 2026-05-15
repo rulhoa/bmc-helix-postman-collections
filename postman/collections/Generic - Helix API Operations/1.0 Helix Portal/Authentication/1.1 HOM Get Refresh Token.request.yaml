@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{bhom_base_url}}/ims/api/v1/access_keys/login"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"access_key\": \"{{bhom_access_key}}\",\r
+
+    \  \"access_secret_key\": \"{{bhom_secret_key}}\"\r
+
+    }"
+order: 1000

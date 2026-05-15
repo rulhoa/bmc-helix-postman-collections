@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{bhom_base_url}}/intelligent-automation/api/v1/workflows/7f880287-93e9-c887-d8cf-f86ab49f213a/checksum/99af9293e5a657721e9ef2883b23dd7df6a66946da3a9639aa0f763b2530b2b0"
+method: GET
+headers:
+  helix_jwt_token: "{{bhom_json_web_token}}"
+examples: ./.resources/Get Automation Policy Detailed.resources/examples
+order: 3000

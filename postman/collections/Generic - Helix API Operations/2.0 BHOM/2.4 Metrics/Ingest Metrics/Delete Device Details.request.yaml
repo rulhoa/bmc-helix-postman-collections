@@ -1,0 +1,29 @@
+$kind: http-request
+url: "{{bhom_base_url}}/metrics-gateway-service/api/v1.0/delete"
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+    disabled: true
+  - key: Authorization
+    value: apiKey {{bhom_apiKey}}
+    disabled: true
+body:
+  type: json
+  content: "{\r
+
+    \    \"devices\": [\r
+
+    \        {\r
+
+    \            \"hostname\": \"sqlsinfep\",\r
+
+    \            \"source\": \"CTM\"\r
+
+    \        }\r
+
+    \    ]\r
+
+    }"
+examples: ./.resources/Delete Device Details.resources/examples
+order: 3000

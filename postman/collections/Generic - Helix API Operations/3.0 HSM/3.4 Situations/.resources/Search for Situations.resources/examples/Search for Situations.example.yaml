@@ -1,0 +1,117 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/events-service/api/v1.0/events/msearch"
+  method: POST
+  body:
+    type: json
+    content: '{"from":0,"size":9999,"query":{"bool":{"filter":[{"bool":{"must":[{"term":{"_relationships.rstat":"primary"}},{"range":{"creation_time":{"gte":1687877077000,"lt":1687963477000}}},{"range":{"_relationships.evcount":{"gt":0}}},{"bool":{"should":[{"bool":{"must_not":[{"term":{"class":"Situation"}},{"exists":{"field":"situation_relation_type"}}]}},{"bool":{"must":[{"exists":{"field":"situation_relation_type"}},{"bool":{"must_not":[{"term":{"situation_relation_type":{"value":"child"}}}]}}]}}]}},{"bool":{"must_not":[{"term":{"status":"CLOSED"}}]}},{"bool":{"should":[{"term":{"severity":"CRITICAL"}},{"term":{"severity":"MAJOR"}},{"term":{"severity":"MINOR"}}]}}]}}]}},"sort":[{"creation_time":{"order":"desc"}}]}'
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Wed, 28 Jun 2023 14:49:15 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    Referrer-Policy: same-origin
+    X-Frame-Options: SAMEORIGIN
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    X-Content-Type-Options: nosniff
+    Permissions-Policy: idle-detection=self
+    Content-Encoding: gzip
+    TraceId: f9033f36-b31d-44e7-839e-853b591b0a10 660181721
+    Pragma: no-cache
+    X-XSS-Protection: 1; mode=block
+    Cache-control: no-store
+  body:
+    type: json
+    content: |-
+      {
+          "took": 6,
+          "status": 200,
+          "responses": [
+              {
+                  "took": 6,
+                  "timed_out": false,
+                  "_shards": {
+                      "total": 10,
+                      "successful": 10,
+                      "skipped": 0,
+                      "failed": 0
+                  },
+                  "hits": {
+                      "total": {
+                          "value": 1,
+                          "relation": "eq"
+                      },
+                      "max_score": null,
+                      "hits": [
+                          {
+                              "_score": null,
+                              "_source": {
+                                  "_tenant_id": "660181721",
+                                  "msg": "SERVICOS_INF_DW_PROD2-DNA - Control-M Agent Host: Disk >99%",
+                                  "creation_time": 1687963304636,
+                                  "child_situation_ids": [],
+                                  "causal_node_ids": [
+                                      "3f376764010032c31dd2f2b26e486f7374"
+                                  ],
+                                  "severity_ordinal": 70,
+                                  "_relationships": {
+                                      "evcount": 2,
+                                      "rstat": "primary",
+                                      "primary": "3c366764010053a93454b8766e427573696e65737353657276696365_b1d8ccbbbc974151814736f60014b471"
+                                  },
+                                  "_signature": "-1169383885",
+                                  "incident_sysid": "",
+                                  "detection_time": 47980,
+                                  "source_identifier": "3c366764010053a93454b8766e427573696e65737353657276696365_b1d8ccbbbc974151814736f60014b471",
+                                  "parent_situation_ids": [],
+                                  "incident_id": "INC000000022268",
+                                  "_service_id": [
+                                      "3c366764010053a93454b8766e427573696e65737353657276696365"
+                                  ],
+                                  "is_updated": false,
+                                  "_operations": "[0x189027402bc,admin,,Situation created based on ML Based algorithm,'',0x18902740308,,Predefined Policy for Incident,NOTIFICATION,'']",
+                                  "_service_key": [
+                                      "hO-zY4S2Z6TawW-MfYMrIgtlO-NmqgQr"
+                                  ],
+                                  "alias": [
+                                      "BMC_ComputerSystem:SERVICOS_INF_DW_PROD2-DNA"
+                                  ],
+                                  "_modified_time": 1687963306812,
+                                  "state": "CONFIRMED",
+                                  "class": "Situation",
+                                  "severity": "CRITICAL",
+                                  "priority_ordinal": 10,
+                                  "_service_name": [
+                                      "SERVICOS_INF_DW_PROD2-DNA"
+                                  ],
+                                  "causal_node_keys": [
+                                      "HG-SIST-SVI"
+                                  ],
+                                  "state_ordinal": null,
+                                  "algorithm_name": "ML",
+                                  "priority": "PRIORITY_5",
+                                  "_unmapped_data": {},
+                                  "_identifier": "e7d864cd-a058-4257-8b55-aeb8a35103d3",
+                                  "situation_relation_type": "",
+                                  "status_ordinal": 0,
+                                  "_model": "Situation",
+                                  "source_hostname": "SERVICOS_INF_DW_PROD2-DNA",
+                                  "status": "OPEN"
+                              },
+                              "sort": [
+                                  1687963304636
+                              ]
+                          }
+                      ]
+                  },
+                  "profile": {
+                      "shards": []
+                  },
+                  "status": 200
+              }
+          ]
+      }
+order: 1000

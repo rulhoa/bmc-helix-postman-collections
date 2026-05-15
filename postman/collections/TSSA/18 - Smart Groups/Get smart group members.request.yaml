@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{v1}}/smart-groups/{{type}}/{{id}}/members"
+method: GET
+order: 2000

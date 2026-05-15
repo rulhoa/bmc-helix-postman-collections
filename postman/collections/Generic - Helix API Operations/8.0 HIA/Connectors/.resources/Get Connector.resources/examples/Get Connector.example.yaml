@@ -1,0 +1,45 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/intelligent-automation/api/v1/connectors/b5757460-29f6-11ed-9641-0613ed995521"
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Mon, 13 Feb 2023 18:45:50 GMT
+    Content-Type: application/json; charset=utf-8
+    Content-Length: "529"
+    Connection: keep-alive
+    X-Powered-By: Express
+    ETag: W/"211-a4ibCXoNzPO52VKdTDneIkioNaI"
+  body:
+    type: json
+    content: |-
+      {
+          "id": "b5757460-29f6-11ed-9641-0613ed995521",
+          "code": "generic_rest",
+          "name": "Control-M Connector",
+          "is_remote": true,
+          "target_id": "https://se-preprod-aapi.us1.controlm.com:443/automation-api",
+          "created_time": 1662037510141.532,
+          "created_by": "727271959027036",
+          "updated_time": 1662037528012.084,
+          "updated_by": "553694080029185",
+          "status": true,
+          "plugins": [
+              {
+                  "name": "Server_Automation",
+                  "access_key": "7R5Y6AKVJRG10VIICHNPV7A273O7QE",
+                  "instances": [
+                      {
+                          "status": "Disconnected",
+                          "metadata": {
+                              "host_name": "WIN-RD4PB36EI3N",
+                              "ip_address": "192.168.100.23"
+                          }
+                      }
+                  ]
+              }
+          ]
+      }
+order: 1000

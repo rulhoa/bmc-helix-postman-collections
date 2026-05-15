@@ -1,0 +1,473 @@
+$kind: http-example
+name: Notify of Automation Runs for AUTOMATION_STATUS_EV recreated as EVENTS
+request:
+  url: "{{bhom_base_url}}/intelligent-automation/api/v1/workflows/7f880287-93e9-c887-d8cf-f86ab49f213a/checksum/99af9293e5a657721e9ef2883b23dd7df6a66946da3a9639aa0f763b2530b2b0"
+  method: GET
+  headers:
+    helix_jwt_token: "{{bhom_json_web_token}}"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Mon, 03 Jul 2023 16:05:06 GMT
+    Content-Type: application/json; charset=utf-8
+    Content-Length: "10637"
+    Connection: keep-alive
+    X-Powered-By: Express
+    ETag: W/"298d-4gYjKO9YAgZoAbv99+hCDxyIgM0"
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+  body:
+    type: json
+    content: |-
+      {
+          "id": "7f880287-93e9-c887-d8cf-f86ab49f213a",
+          "name": "Notify of Automation Runs - Attempt3",
+          "type": "user_defined",
+          "description": "",
+          "metadata": {
+              "event": {
+                  "msg": "Your PATROL Simulator",
+                  "tags": [
+                      "http://mobility88-nodered.trybmc.com/ui"
+                  ],
+                  "alias": [
+                      "BMC_ComputerSystem:pat_sim1"
+                  ],
+                  "class": "EVENT",
+                  "_ci_id": "",
+                  "_model": "",
+                  "_notes": "[]",
+                  "status": "OPEN",
+                  "_errors": "[]",
+                  "details": "",
+                  "_entropy": "",
+                  "_node_id": "[]",
+                  "category": "AVAILABILITY_MANAGEMENT",
+                  "cdmclass": "",
+                  "location": "California",
+                  "priority": "PRIORITY_5",
+                  "severity": "INFO",
+                  "modelname": "",
+                  "_signature": "-2073814224",
+                  "_tenant_id": "660181721",
+                  "_identifier": "eps.660181721.5409774712520034.eca24ed7-8f46-4eb6-a4a4-4a68a82bdf3f",
+                  "_operations": "[]",
+                  "_service_id": "[]",
+                  "incident_id": "",
+                  "source_port": 80,
+                  "_tenant_name": "",
+                  "instancename": "",
+                  "significance": "0",
+                  "sub_category": "OTHER",
+                  "_arrival_time": 1685119019970,
+                  "_repeat_count": "0",
+                  "_service_name": "[]",
+                  "creation_time": 1685119019970,
+                  "user_assigned": "",
+                  "_modified_time": 1685119019970,
+                  "_relationships": {
+                      "rstat": "norelation"
+                  },
+                  "_unmapped_data": {
+                      "object": "CPU"
+                  },
+                  "componentalias": "",
+                  "incident_sysid": "",
+                  "source_address": "172.17.0.132",
+                  "_lifecycle_time": "0",
+                  "source_hostname": "pat_sim1",
+                  "incident_company": "",
+                  "sourceEntityType": "",
+                  "source_identifier": "pat_sim1:3181",
+                  "_node_service_mapping": "[]",
+                  "_node_service_key_mapping": "[]"
+              },
+              "event_type": "EVENT: Media Service",
+              "json_paths": {
+                  "$.msg": [
+                      "BEA-000101: Cannot resolve ClusterAddress: {0}. Insta-banking.com is unresponsive",
+                      "Bad cluster encountered - /var/hd5",
+                      "[AMIOPS]::CAGA TargetName: CAGA (%MaxTask >=10) ",
+                      "[AMIOPS]::CAGA TargetName: CAGA (Task ElapsedTime <=1 seconds",
+                      "[AMIOPS]::DAGA (Thread Elapsed Time <= 3 secs)",
+                      "[AMIOPS]::MAGM Queue Name: BANKING.QDEPTH.QUEUE (Q Dep High? = N)",
+                      "Tomcat Error 504: socket_connect_timeout >1000ms",
+                      "[Nagios] CPU Util Exceeded 84% on mcr-erpqa-01",
+                      "[Nagios] CPU Util Exceeded 90% on mcr-erpqa-01",
+                      "Your PATROL Simulator"
+                  ],
+                  "$.tags": [
+                      "[]"
+                  ],
+                  "$.class": [
+                      "EVENT"
+                  ],
+                  "$._ci_id": [
+                      ""
+                  ],
+                  "$._model": [
+                      ""
+                  ],
+                  "$._notes": [
+                      "[]"
+                  ],
+                  "$.status": [
+                      "OPEN"
+                  ],
+                  "$._errors": [
+                      "[]"
+                  ],
+                  "$.details": [
+                      ""
+                  ],
+                  "$.tags[*]": [
+                      "http://mobility88-nodered.trybmc.com/ui"
+                  ],
+                  "$._entropy": [
+                      ""
+                  ],
+                  "$._node_id": [
+                      "[]"
+                  ],
+                  "$.alias[*]": [
+                      "BMC_ComputerSystem:i-0282bfd01619bba18",
+                      "BMC_ComputerSystem:se-preprod-aapi.us1",
+                      "BMC_ComputerSystem:rtr-generatereport",
+                      "BMC_ComputerSystem:IBM DB2 Database Server 12.1 DB2-DEMOPLEX-DJJ1 on DEMOPLEX",
+                      "BMC_ComputerSystem:Oracle WebLogic Server 11g Release 1 EBS_domain:AdminServer on mcr-erpqa-01",
+                      "BMC_ComputerSystem:WebLogic Cluster 11g Release 1 oacore_cluster1",
+                      "BMC_ComputerSystem:IBM CICS Region 7.3 CICS-DEMOPLEX-CAGA on DEMOPLEX",
+                      "BMC_ComputerSystem:IBM WebSphere MQ 9.1 MQS-DEMOPLEX-MAGA on DEMOPLEX",
+                      "BMC_ComputerSystem:mcr-erpqa-01",
+                      "BMC_ComputerSystem:pat_sim1"
+                  ],
+                  "$.category": [
+                      "OPERATIONS_MANAGEMENT",
+                      "AVAILABILITY_MANAGEMENT"
+                  ],
+                  "$.cdmclass": [
+                      ""
+                  ],
+                  "$.location": [
+                      "",
+                      "California"
+                  ],
+                  "$.priority": [
+                      "PRIORITY_1",
+                      "PRIORITY_3",
+                      "PRIORITY_2",
+                      "PRIORITY_5"
+                  ],
+                  "$.severity": [
+                      "CRITICAL",
+                      "MINOR",
+                      "MAJOR",
+                      "INFO"
+                  ],
+                  "$.modelname": [
+                      ""
+                  ],
+                  "$._signature": [
+                      "-2118651912",
+                      "-1026554907",
+                      "-1762685881",
+                      "1034893419",
+                      "-1391736599",
+                      "-217713637",
+                      "-1194870",
+                      "-1654325666",
+                      "-1007815517",
+                      "-2073814224"
+                  ],
+                  "$._tenant_id": [
+                      "660181721"
+                  ],
+                  "$.is_updated": [
+                      false
+                  ],
+                  "$._identifier": [
+                      "eps.660181721.7006505406771023.444cb9dd-1ca2-4669-bc95-f8d4b39e20c5",
+                      "eps.660181721.13685120251251478.112c36e9-fd3e-4911-bf15-ec3fdef0a3d7",
+                      "eps.660181721.13685161374210417.f3201d1e-18ef-4409-b3ca-5ed098460e27",
+                      "eps.660181721.11755104325097563.93ffac77-4199-4c21-bcaa-e7094d3aacbb",
+                      "eps.660181721.4887738431430691.ff3a6e41-ba1a-4b97-9688-6f919cc3efb6",
+                      "eps.660181721.7005249419624762.dd84fd4e-71f7-44cd-96fc-63d0d6de273b",
+                      "eps.660181721.11755186777832536.df98cb89-d5c9-4ed8-b325-c52cc2a5c6f9",
+                      "eps.660181721.4887769351884476.aaa04494-1d23-4906-aaf6-e879223f7733",
+                      "eps.660181721.7005280335060362.1222a648-dbd9-49d0-86fd-8d9e36758d99",
+                      "eps.660181721.5409774712520034.eca24ed7-8f46-4eb6-a4a4-4a68a82bdf3f"
+                  ],
+                  "$._node_id[*]": [
+                      "04a38562c00502d70bb24ed46e53746f72616765436f6e6e656374696f6e",
+                      "04a38562c00502d70bb24eda6e53746f72616765436f6e6e656374696f6e",
+                      "04a38562c00502d70bb24ed76e53746f72616765436f6e6e656374696f6e",
+                      "04a38562c00502d70bb0e91a6e53746f72616765566f6c756d65",
+                      "04a38562c00502d70bb24edd6e53746f72616765436f6e6e656374696f6e",
+                      "04a38562c00502d70bba2dce6e486f7374",
+                      "04a38562c00502d70bbbc2e96e536f667477617265496e7374616e6365",
+                      "04a38562c00502d70bcae0f16e536f667477617265436c7573746572",
+                      "04a38562c00502d70ba5199f6e536f667477617265496e7374616e6365",
+                      "04a38562c00502d70ba523af6e536f667477617265496e7374616e6365"
+                  ],
+                  "$._operations": [
+                      "[0x18834bc973a,,Predefined Policy for Incident,NOTIFICATION,'']",
+                      "[0x18834bcbf46,,Predefined Policy for Incident,NOTIFICATION,'']",
+                      "[0x18834bd5ff4,,Predefined Policy for Incident,NOTIFICATION,'']",
+                      "[0x18834bd87d1,,Predefined Policy for Incident,NOTIFICATION,'']",
+                      "[0x18834be79b3,,Predefined Policy for Incident,NOTIFICATION,'']",
+                      "[0x18834bea22b,,Predefined Policy for Incident,NOTIFICATION,'']",
+                      "[0x18834beca19,,Predefined Policy for Incident,NOTIFICATION,'']",
+                      "[0x18834bef29a,,Predefined Policy for Incident,NOTIFICATION,'']",
+                      "[0x18834bf1aca,,Predefined Policy for Incident,NOTIFICATION,'']",
+                      "[]"
+                  ],
+                  "$._service_id": [
+                      "[]"
+                  ],
+                  "$.incident_id": [
+                      "INC000000021466",
+                      "INC000000021467",
+                      "INC000000021719",
+                      "",
+                      "INC000000021734",
+                      "INC000000021744",
+                      "INC000000021747",
+                      "INC000000021753",
+                      "INC000000021758",
+                      "INC000000021769"
+                  ],
+                  "$.source_port": [
+                      3181,
+                      3946,
+                      80
+                  ],
+                  "$._tenant_name": [
+                      ""
+                  ],
+                  "$.instancename": [
+                      ""
+                  ],
+                  "$.significance": [
+                      "0"
+                  ],
+                  "$.sub_category": [
+                      "OTHER"
+                  ],
+                  "$._arrival_time": [
+                      1684511954663,
+                      1684511964961,
+                      1684512006075,
+                      1684512016328,
+                      1684512078242,
+                      1684512088603,
+                      1684512098790,
+                      1684512109192,
+                      1684512119492,
+                      1685119019970
+                  ],
+                  "$._repeat_count": [
+                      "0"
+                  ],
+                  "$._service_name": [
+                      "[]"
+                  ],
+                  "$.creation_time": [
+                      1684511954663,
+                      1684511964961,
+                      1684512006075,
+                      1684512016328,
+                      1684512078242,
+                      1684512088603,
+                      1684512098790,
+                      1684512109192,
+                      1684512119492,
+                      1685119019970
+                  ],
+                  "$.user_assigned": [
+                      ""
+                  ],
+                  "$._modified_time": [
+                      1684511964998,
+                      1684512006132,
+                      1684512009981,
+                      1684512016337,
+                      1684512078259,
+                      1684512088619,
+                      1684512098841,
+                      1684512111002,
+                      1684512119498,
+                      1685119019970
+                  ],
+                  "$._service_id[*]": [
+                      "04a38562c00502d70b9f861c6e427573696e65737353657276696365",
+                      "3c251c6401008de1246ad6546e427573696e65737353657276696365",
+                      "77638762c1053fc953f9b6ac6e427573696e65737353657276696365",
+                      "7a3667640100e1ba50c17b7e6e427573696e65737353657276696365",
+                      "7a3667640100e1ba50c1778a6e427573696e65737353657276696365"
+                  ],
+                  "$.componentalias": [
+                      ""
+                  ],
+                  "$.incident_sysid": [
+                      ""
+                  ],
+                  "$.source_address": [
+                      "",
+                      "172.17.0.132"
+                  ],
+                  "$._lifecycle_time": [
+                      "0"
+                  ],
+                  "$.source_hostname": [
+                      "i-0282bfd01619bba18",
+                      "se-preprod-aapi.us1",
+                      "rtr-generatereport",
+                      "IBM DB2 Database Server 12.1 DB2-DEMOPLEX-DJJ1 on DEMOPLEX",
+                      "Oracle WebLogic Server 11g Release 1 EBS_domain:AdminServer on mcr-erpqa-01",
+                      "WebLogic Cluster 11g Release 1 oacore_cluster1",
+                      "IBM CICS Region 7.3 CICS-DEMOPLEX-CAGA on DEMOPLEX",
+                      "IBM WebSphere MQ 9.1 MQS-DEMOPLEX-MAGA on DEMOPLEX",
+                      "mcr-erpqa-01",
+                      "pat_sim1"
+                  ],
+                  "$._service_name[*]": [
+                      "Media Service",
+                      "Faturamento Control-M",
+                      "insta-banking.com",
+                      "Mobile Banking",
+                      "Core Banking"
+                  ],
+                  "$.incident_company": [
+                      ""
+                  ],
+                  "$.sourceEntityType": [
+                      ""
+                  ],
+                  "$.source_identifier": [
+                      "i-0282bfd01619bba18",
+                      "se-preprod-aapi.us1",
+                      "rtr-generatereport",
+                      "IBM DB2 Database Server 12.1 DB2-DEMOPLEX-DJJ1 on DEMOPLEX",
+                      "Oracle WebLogic Server 11g Release 1 EBS_domain:AdminServer on mcr-erpqa-01",
+                      "WebLogic Cluster 11g Release 1 oacore_cluster1",
+                      "IBM CICS Region 7.3 CICS-DEMOPLEX-CAGA on DEMOPLEX",
+                      "IBM WebSphere MQ 9.1 MQS-DEMOPLEX-MAGA on DEMOPLEX",
+                      "mcr-erpqa-01",
+                      "pat_sim1:3181"
+                  ],
+                  "$._relationships.rstat": [
+                      "norelation"
+                  ],
+                  "$._unmapped_data.delay": [
+                      "",
+                      "yes"
+                  ],
+                  "$._node_service_mapping": [
+                      "[]"
+                  ],
+                  "$._unmapped_data.object": [
+                      "App",
+                      "TP",
+                      "Queue",
+                      "Util",
+                      "Task",
+                      "Thread",
+                      "Queue Depth",
+                      "Host",
+                      "CPU"
+                  ],
+                  "$._node_service_mapping[*]": [
+                      "04a38562c00502d70bb24ed76e53746f72616765436f6e6e656374696f6e",
+                      "04a38562c00502d70bb24eda6e53746f72616765436f6e6e656374696f6e",
+                      "04a38562c00502d70bb24edd6e53746f72616765436f6e6e656374696f6e",
+                      "04a38562c00502d70bb0e91a6e53746f72616765566f6c756d65",
+                      "04a38562c00502d70bb0ee3f6e53746f72616765566f6c756d65",
+                      "04a38562c00502d70bb0f6136e53746f72616765566f6c756d65",
+                      "04a38562c00502d70bbbc2e96e536f667477617265496e7374616e6365:77638762c1053fc953f9b6ac6e427573696e65737353657276696365,7a3667640100e1ba50c17b7e6e427573696e65737353657276696365",
+                      "04a38562c00502d70bcae0f16e536f667477617265436c7573746572:77638762c1053fc953f9b6ac6e427573696e65737353657276696365,7a3667640100e1ba50c17b7e6e427573696e65737353657276696365",
+                      "04a38562c00502d70ba5199f6e536f667477617265496e7374616e6365:7a3667640100e1ba50c1778a6e427573696e65737353657276696365",
+                      "04a38562c00502d70ba523af6e536f667477617265496e7374616e6365:7a3667640100e1ba50c1778a6e427573696e65737353657276696365"
+                  ],
+                  "$._node_service_key_mapping": [
+                      "[]"
+                  ],
+                  "$._node_service_key_mapping[*]": [
+                      "aXCqMueNCgGNZdYWf2V+0g==",
+                      "EFrRq5r+b6EPZZZLsUGQag==",
+                      "B6p1/2sNOlpJDfb/MppQ4g==",
+                      "VSP F1500.22212/4224/00:10:80",
+                      "VSP F1500.22212/4669/00:12:3d",
+                      "VSP F1500.22212/5808/00:16:b0",
+                      "EBS_domain/AdminServer/2KL25I6ghFQo1a1+lHpQKg==/Oracle WebLogic Server/WeShR9rRJh8YlhjeGDS3gA==::77638762c1053fc953f9b50f6e4d6f64656c446566696e6974696f6e,c__k--Z8A0uFSgLKtGEloQLsJo0jmBzs",
+                      "mgP3cLebN82EDgDodzQqwQ==/oacore_cluster1/Oracle WebLogic Server Cluster::77638762c1053fc953f9b50f6e4d6f64656c446566696e6974696f6e,c__k--Z8A0uFSgLKtGEloQLsJo0jmBzs",
+                      "DB2-DEMOPLEX-DJJ1::GngnuIrWSmXBZXhofSLL02J18rxsOBpv",
+                      "MQS-DEMOPLEX-MAGA::GngnuIrWSmXBZXhofSLL02J18rxsOBpv"
+                  ]
+              },
+              "trigger_condition_expression_metadata": [
+                  {
+                      "slot_name": "$.event.class",
+                      "slot_value": "EVENT",
+                      "end_bracket": ")",
+                      "slot_operator": "==",
+                      "condition_order": 0,
+                      "condition_bracket": "(",
+                      "condition_operator": ""
+                  },
+                  {
+                      "slot_name": "$.event.msg",
+                      "slot_value": "HIA ran the automation",
+                      "end_bracket": "",
+                      "slot_operator": "starts with",
+                      "condition_order": 1,
+                      "condition_bracket": "",
+                      "condition_operator": "&&"
+                  }
+              ]
+          },
+          "tag_specs": {},
+          "trigger_condition_expression": "$?($.\"event\".\"class\" == \"EVENT\" && $.\"event\".\"msg\" starts with \"HIA ran the automation\")",
+          "checksum": "99af9293e5a657721e9ef2883b23dd7df6a66946da3a9639aa0f763b2530b2b0",
+          "workflowproperties": {
+              "publish_status_event": false
+          },
+          "status": "PUBLISHED",
+          "is_active": true,
+          "auto_enabled": true,
+          "actions": {
+              ":Event_Remediation:Service_Health_Check": {
+                  "action_def_uri": "/tso/baocdp/rest/process/:Event_Remediation:Service_Health_Check/execute/post",
+                  "plugin_type": "remote_plugin",
+                  "credential": {
+                      "target_id": "https://bao.calbro.local:38080",
+                      "provider_id": "tso"
+                  },
+                  "continue_on_failure": false,
+                  "action": {
+                      "server": "https://bao.calbro.local:38080",
+                      "/baocdp/rest/process/:Event_Remediation:Service_Health_Check/execute": {
+                          "post": {
+                              "parameters": [],
+                              "requestBody": {
+                                  "content": {
+                                      "application/json": {
+                                          "inputParameters": [
+                                              {
+                                                  "name": "HostName",
+                                                  "value": "$.event.source_hostname"
+                                              },
+                                              {
+                                                  "name": "ServiceName",
+                                                  "value": "$.event.msg"
+                                              }
+                                          ]
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      }
+order: 5000

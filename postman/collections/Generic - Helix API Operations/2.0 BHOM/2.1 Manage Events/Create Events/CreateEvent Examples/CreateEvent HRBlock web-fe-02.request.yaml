@@ -1,0 +1,53 @@
+$kind: http-request
+url: https://helixtrialsjc148-or1-dev.onbmc.com/tsws/api/v1.0/events
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+  - key: Authorization
+    value: apiKey 35c9f38f-8a60-4874-92a1-a87b6e0881a3
+  - key: ""
+    value: ""
+    disabled: true
+body:
+  type: text
+  content: "[\r
+
+    \t{\r
+
+    \t\t\"class\": \"EVENT\",\r
+
+    \t\t\"severity\": \"MAJOR\",\r
+
+    \t\t\"msg\": \"Total requests per cycle 20\",\r
+
+    \        \"source_identifier\": \"web-fe-02:3181\",\r
+
+    \t\t\"source_hostname\": \"web-fe-02\",\r
+
+    \t\t\"status\": \"OPEN\",\r
+
+    \t\t\"priority\": \"PRIORITY_3\"\r
+
+    \t},\r
+
+    \    \t{\r
+
+    \t\t\"class\": \"EVENT\",\r
+
+    \t\t\"severity\": \"MAJOR\",\r
+
+    \t\t\"msg\": \"Number of errors 30\",\r
+
+    \        \"source_identifier\": \"web-fe-02:3181\",\r
+
+    \t\t\"source_hostname\": \"web-fe-02\",\r
+
+    \t\t\"status\": \"OPEN\",\r
+
+    \t\t\"priority\": \"PRIORITY_3\"\r
+
+    \t}\r
+
+    ]"
+order: 13000

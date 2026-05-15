@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{v1}}/metrics/dbcleanup/history"
+method: GET
+order: 16000

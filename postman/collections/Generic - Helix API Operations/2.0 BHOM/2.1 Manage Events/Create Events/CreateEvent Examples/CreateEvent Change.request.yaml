@@ -1,0 +1,203 @@
+$kind: http-request
+url: "{{bhom_base_url}}/events-service/api/v1.0/events"
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+  - key: Authorization
+    value: apiKey {{bhom_apiKey}}
+  - key: ""
+    value: ""
+    disabled: true
+body:
+  type: text
+  content: "[\r
+
+    \    {\r
+
+    \        \"class\": \"Change\",\r
+
+    \        \"_arrival_time\": \"1738785258637\",\r
+
+    \        \"_ci_id\": \"\",\r
+
+    \        \"_entropy\": \"\",\r
+
+    \        \"_errors\": \"[]\",\r
+
+    \        \"_identifier\": \"crq000000022201oi_75c0e9d640ce11eeb598c2828ef5a02b\",\r
+
+    \        \"_impacted_service_key\": \"[]\",\r
+
+    \        \"_impacted_service_name\": \"[]\",\r
+
+    \        \"_lifecycle_time\": \"42803\",\r
+
+    \        \"_model\": \"Change\",\r
+
+    \        \"_modified_time\": \"1738785301429\",\r
+
+    \        \"_node_id\": \"[]\",\r
+
+    \        \"_node_impacted_service_key_mapping\": \"[]\",\r
+
+    \        \"_node_key\": \"[]\",\r
+
+    \        \"_node_service_key_mapping\": \"[]\",\r
+
+    \        \"_node_service_mapping\": \"[]\",\r
+
+    \        \"_notes\": \"[]\",\r
+
+    \        \"_operations\": \"[0x194d7ad7c91,,Predefined Policy for Incident,NOTIFICATION Configuration 1,'',0x194d7ae23b5,IXBZW5VY0WQNQC0PD8IN2CGO50TXQY,'', Event Updated Successfully. Updated slots:  status,'']\",\r
+
+    \        \"_relationships\": \"{rstat=norelation}\",\r
+
+    \        \"_repeat_count\": \"0\",\r
+
+    \        \"_service_id\": \"[]\",\r
+
+    \        \"_service_key\": \"[]\",\r
+
+    \        \"_service_name\": \"[]\",\r
+
+    \        \"_signature\": \"-1794417386\",\r
+
+    \        \"_tenant_id\": \"1826420192\",\r
+
+    \        \"_tenant_name\": \"\",\r
+
+    \        \"_unmapped_data\": \"{}\",\r
+
+    \        \"actual_end_date\": 1738828800000,\r
+
+    \        \"actual_start_date\": 1738814400000,\r
+
+    \        \"agent_address\": \"\",\r
+
+    \        \"agent_name\": \"\",\r
+
+    \        \"agent_port\": \"0\",\r
+
+    \        \"alias\": \"[BMC_ComputerSystem:sw-prod-dist-uk-mcr2-02.apexglobal.com]\",\r
+
+    \        \"category\": \"OPERATIONS_MANAGEMENT\",\r
+
+    \        \"category_ordinal\": \"190\",\r
+
+    \        \"cdmclass\": \"\",\r
+
+    \        \"change_category\": \"Normal\",\r
+
+    \        \"change_company\": \"Apex Global\",\r
+
+    \        \"change_coordinator\": \"Liam Shay\",\r
+
+    \        \"change_id\": \"CRQ000000001337\",\r
+
+    \        \"change_owner\": \"\",\r
+
+    \        \"change_priority\": \"Critical\",\r
+
+    \        \"change_reason\": \"\",\r
+
+    \        \"change_status\": \"Implementation In Progress\",\r
+
+    \        \"ci_name\": \"sw-prod-dist-uk-mcr2-02.apexglobal.com\",\r
+
+    \        \"ci_recon_id\": \"OI-75C0E9D640CE11EEB598C2828EF5A02B\",\r
+
+    \        \"completed_date\": 0,\r
+
+    \        \"componentalias\": \"\",\r
+
+    \        \"creation_time\": \"1738785258637\",\r
+
+    \        \"details\": \"\",\r
+
+    \        \"event_internal_tags\": \"[]\",\r
+
+    \        \"impact\": \"1-Extensive/Widespread\",\r
+
+    \        \"incident_company\": \"\",\r
+
+    \        \"incident_id\": \"INC000000074356\",\r
+
+    \        \"incident_sysid\": \"\",\r
+
+    \        \"instancename\": \"\",\r
+
+    \        \"is_updated\": \"true\",\r
+
+    \        \"location\": \"\",\r
+
+    \        \"metric_name\": \"\",\r
+
+    \        \"metric_unit\": \"\",\r
+
+    \        \"metric_value\": \"\",\r
+
+    \        \"modelname\": \"\",\r
+
+    \        \"msg\": \"Switch Firmware Upgrade on ip-172-31-29-124\",\r
+
+    \        \"object\": \"\",\r
+
+    \        \"object_class\": \"\",\r
+
+    \        \"object_id\": \"\",\r
+
+    \        \"prev_change_status\": \"Scheduled\",\r
+
+    \        \"priority\": \"PRIORITY_1\",\r
+
+    \        \"priority_ordinal\": \"50\",\r
+
+    \        \"relationship_type\": \"Impacts\",\r
+
+    \        \"risk_level\": \"Risk Level 1\",\r
+
+    \        \"scheduled_end_date\": 1738828800000,\r
+
+    \        \"scheduled_start_date\": 1738814400000,\r
+
+    \        \"service_ci\": \"Core-Networks\",\r
+
+    \        \"service_recon_id\": \"OI-74BA92EE40CE11EEB4EDC2828EF5A02B\",\r
+
+    \        \"severity\": \"CRITICAL\",\r
+
+    \        \"severity_ordinal\": \"70\",\r
+
+    \        \"significance\": \"0\",\r
+
+    \        \"source_address\": \"127.0.0.1\",\r
+
+    \        \"source_hostname\": \"sw-prod-dist-uk-mcr2-02.apexglobal.com\",\r
+
+    \        \"source_identifier\": \"crq000000022201\",\r
+
+    \        \"source_port\": \"0\",\r
+
+    \        \"sourceEntityType\": \"\",\r
+
+    \        \"status\": \"OPEN\",\r
+
+    \        \"status_ordinal\": \"30\",\r
+
+    \        \"status_reason\": \"\",\r
+
+    \        \"sub_category\": \"OTHER\",\r
+
+    \        \"sub_category_ordinal\": \"10\",\r
+
+    \        \"tags\": \"[]\",\r
+
+    \        \"urgency\": \"1-Critical\",\r
+
+    \        \"user_assigned\": \"\"\r
+
+    \    }\r
+
+    ]"
+order: 11000

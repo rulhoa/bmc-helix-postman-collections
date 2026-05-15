@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{bhom_base_url}}/opt/api/v1/catalog/entities/284900/relations"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"target_entity_id\": 0,\r
+
+    \  \"target_entity_type\": \"app:gen\",\r
+
+    \  \"relation_type\": \"CONTAINED_IN\"\r
+
+    }"
+order: 11000

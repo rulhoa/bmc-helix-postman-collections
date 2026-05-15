@@ -1,0 +1,67 @@
+$kind: http-request
+url: "{{bhom_base_url}}/prediction-api-service/api/v1.0/kpi_config"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"service_id\": \"98d55261aa4bd0d6453953636e427573696e6573735365727669605\",\r
+
+    \    \"configuration\": {\r
+
+    \        \"metrics\": [\r
+
+    \          {\r
+
+    \            \"predictionInterval\": 15,\r
+
+    \            \"upperThresholdValue\": 8.4,\r
+
+    \            \"lowerThresholdValue\": 2.4,\r
+
+    \            \"kpi_metrics\": {\r
+
+    \                \"entityId\": \"f195eebd-0c5d-4e76-a40d-9af0618403e6\",\r
+
+    \                \"entityTypeId\": \"response_time\",\r
+
+    \                \"__name__\": \"kpi_metric_id_1\"\r
+
+    \            },\r
+
+    \            \"system_metrics\": [\r
+
+    \              {\r
+
+    \                    \"entityId\": \"f595eebd-0c5d-4e76-a40d-9af0618403e6\",\r
+
+    \                    \"entityTypeId\": \"memory_utilization\",\r
+
+    \                    \"__name__\": \"system_metric_id_1\"\r
+
+    \                },\r
+
+    \                {\r
+
+    \                    \"entityId\": \"f495eebd-0c5d-4e76-a40d-9af0618403e6\",\r
+
+    \                    \"entityTypeId\": \"cpu_utilization\",\r
+
+    \                    \"__name__\": \"system_metric_id_2\"\r
+
+    \                }\r
+
+    \            ]\r
+
+    \        }\r
+
+    \        ]\r
+
+    \    }\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{bhom_json_web_token}}"
+order: 2000

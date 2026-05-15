@@ -1,0 +1,545 @@
+$kind: http-request
+url: "{{ADEURL}}/DSPerformancealarm/api/alarm/v1/tmf/mapping"
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \    \"attributes\": [\r
+
+    \        {\r
+
+    \            \"tmf\": {\r
+
+    \                \"name\": \"id\",\r
+
+    \                \"dataType\": \"LONG\",\r
+
+    \                \"default\": \"\",\r
+
+    \                \"overrideIfEmpty\": false\r
+
+    \            },\r
+
+    \            \"bhom\": {\r
+
+    \                \"name\": \"_identifier\",\r
+
+    \                \"dataType\": \"STRING\",\r
+
+    \                \"default\": \"\",\r
+
+    \                \"overrideIfEmpty\": false\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"tmf\": {\r
+
+    \                \"name\": \"externalAlarmId\",\r
+
+    \                \"dataType\": \"STRING\",\r
+
+    \                \"default\": \"\",\r
+
+    \                \"overrideIfEmpty\": false\r
+
+    \            },\r
+
+    \            \"bhom\": {\r
+
+    \                \"name\": \"source_identifier\",\r
+
+    \                \"dataType\": \"STRING\",\r
+
+    \                \"default\": \"\",\r
+
+    \                \"overrideIfEmpty\": false\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"tmf\": {\r
+
+    \                \"name\": \"perceivedSeverity\",\r
+
+    \                \"dataType\": \"ENUM\",\r
+
+    \                \"default\": \"\",\r
+
+    \                \"values\": [\r
+
+    \                    \"CRITICAL\",\r
+
+    \                    \"MAJOR\",\r
+
+    \                    \"MINOR\",\r
+
+    \                    \"WARNING\"\r
+
+    \                ],\r
+
+    \                \"overrideIfEmpty\": true\r
+
+    \            },\r
+
+    \            \"bhom\": {\r
+
+    \                \"name\": \"severity\",\r
+
+    \                \"dataType\": \"ENUM\",\r
+
+    \                \"default\": \"\",\r
+
+    \                \"values\": [\r
+
+    \                    \"CRITICAL\",\r
+
+    \                    \"MAJOR\",\r
+
+    \                    \"MINOR\",\r
+
+    \                    \"WARNING\"\r
+
+    \                ],\r
+
+    \                \"overrideIfEmpty\": false\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"tmf\": {\r
+
+    \                \"name\": \"sourceSystemId\",\r
+
+    \                \"dataType\": \"STRING\",\r
+
+    \                \"default\": \"\",\r
+
+    \                \"overrideIfEmpty\": false\r
+
+    \            },\r
+
+    \            \"bhom\": {\r
+
+    \                \"name\": \"source_hostname\",\r
+
+    \                \"dataType\": \"STRING\",\r
+
+    \                \"default\": \"\",\r
+
+    \                \"overrideIfEmpty\": false\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"tmf\": {\r
+
+    \                \"name\": \"alarmDetails\",\r
+
+    \                \"dataType\": \"STRING\",\r
+
+    \                \"default\": \"\",\r
+
+    \                \"overrideIfEmpty\": false\r
+
+    \            },\r
+
+    \            \"bhom\": {\r
+
+    \                \"name\": \"msg\",\r
+
+    \                \"dataType\": \"STRING\",\r
+
+    \                \"default\": \"\",\r
+
+    \                \"overrideIfEmpty\": false\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"tmf\": {\r
+
+    \                \"name\": \"alarmRaisedTime\",\r
+
+    \                \"dataType\": \"DATE\",\r
+
+    \                \"default\": \"\",\r
+
+    \                \"overrideIfEmpty\": false\r
+
+    \            },\r
+
+    \            \"bhom\": {\r
+
+    \                \"name\": \"creation_time\",\r
+
+    \                \"dataType\": \"DATE\",\r
+
+    \                \"default\": \"\",\r
+
+    \                \"overrideIfEmpty\": false\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"tmf\": {\r
+
+    \                \"name\": \"alarmClearedTime\",\r
+
+    \                \"dataType\": \"DATE\",\r
+
+    \                \"default\": \"\",\r
+
+    \                \"overrideIfEmpty\": false\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"tmf\": {\r
+
+    \                \"name\": \"alarmChangedTime\",\r
+
+    \                \"dataType\": \"DATE\",\r
+
+    \                \"default\": \"\",\r
+
+    \                \"overrideIfEmpty\": false\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"tmf\": {\r
+
+    \                \"name\": \"alarmReportingTime\",\r
+
+    \                \"dataType\": \"DATE\",\r
+
+    \                \"default\": \"\",\r
+
+    \                \"overrideIfEmpty\": false\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"tmf\": {\r
+
+    \                \"name\": \"ackState\",\r
+
+    \                \"dataType\": \"ENUM\",\r
+
+    \                \"default\": \"\",\r
+
+    \                \"values\": [\r
+
+    \                    \"ACKNOWLEDGED\",\r
+
+    \                    \"UNACKNOWLEDGED\"\r
+
+    \                ],\r
+
+    \                \"overrideIfEmpty\": true\r
+
+    \            },\r
+
+    \            \"bhom\": {\r
+
+    \                \"name\": \"status\",\r
+
+    \                \"dataType\": \"ENUM\",\r
+
+    \                \"default\": \"\",\r
+
+    \                \"values\": [\r
+
+    \                    \"ACK\",\r
+
+    \                    \"OPEN\"\r
+
+    \                ],\r
+
+    \                \"overrideIfEmpty\": false\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"tmf\": {\r
+
+    \                \"name\": \"alarmedObject\",\r
+
+    \                \"dataType\": \"OBJECT\",\r
+
+    \                \"default\": \"\",\r
+
+    \                \"overrideIfEmpty\": false\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"tmf\": {\r
+
+    \                \"name\": \"affectedService\",\r
+
+    \                \"dataType\": \"OBJECT_LIST\",\r
+
+    \                \"default\": \"\",\r
+
+    \                \"overrideIfEmpty\": false\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"tmf\": {\r
+
+    \                \"name\": \"correlatedAlarm\",\r
+
+    \                \"dataType\": \"OBJECT_LIST\",\r
+
+    \                \"default\": \"\",\r
+
+    \                \"overrideIfEmpty\": false\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"tmf\": {\r
+
+    \                \"name\": \"parentAlarm\",\r
+
+    \                \"dataType\": \"OBJECT_LIST\",\r
+
+    \                \"default\": \"\",\r
+
+    \                \"overrideIfEmpty\": false\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"tmf\": {\r
+
+    \                \"name\": \"crossedThresholdInformation\",\r
+
+    \                \"dataType\": \"OBJECT\",\r
+
+    \                \"default\": \"\",\r
+
+    \                \"overrideIfEmpty\": true\r
+
+    \            },\r
+
+    \            \"attributes\": [\r
+
+    \                {\r
+
+    \                    \"tmf\": {\r
+
+    \                        \"name\": \"thresholdId\",\r
+
+    \                        \"dataType\": \"STRING\",\r
+
+    \                        \"default\": \"\",\r
+
+    \                        \"overrideIfEmpty\": false\r
+
+    \                    },\r
+
+    \                    \"bhom\": {\r
+
+    \                        \"name\": \"metric_value\",\r
+
+    \                        \"dataType\": \"STRING\",\r
+
+    \                        \"default\": \"\",\r
+
+    \                        \"overrideIfEmpty\": false\r
+
+    \                    }\r
+
+    \                },\r
+
+    \                {\r
+
+    \                    \"tmf\": {\r
+
+    \                        \"name\": \"indicatorName\",\r
+
+    \                        \"dataType\": \"STRING\",\r
+
+    \                        \"default\": \"\",\r
+
+    \                        \"overrideIfEmpty\": false\r
+
+    \                    },\r
+
+    \                    \"bhom\": {\r
+
+    \                        \"name\": \"metric_name\",\r
+
+    \                        \"dataType\": \"STRING\",\r
+
+    \                        \"default\": \"\",\r
+
+    \                        \"overrideIfEmpty\": false\r
+
+    \                    }\r
+
+    \                },\r
+
+    \                {\r
+
+    \                    \"tmf\": {\r
+
+    \                        \"name\": \"indicatorUnit\",\r
+
+    \                        \"dataType\": \"STRING\",\r
+
+    \                        \"default\": \"\",\r
+
+    \                        \"overrideIfEmpty\": false\r
+
+    \                    },\r
+
+    \                    \"bhom\": {\r
+
+    \                        \"name\": \"metric_unit\",\r
+
+    \                        \"dataType\": \"STRING\",\r
+
+    \                        \"default\": \"\",\r
+
+    \                        \"overrideIfEmpty\": false\r
+
+    \                    }\r
+
+    \                }\r
+
+    \            ]\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"tmf\": {\r
+
+    \                \"name\": \"comments\",\r
+
+    \                \"dataType\": \"OBJECT_LIST\",\r
+
+    \                \"default\": \"\",\r
+
+    \                \"overrideIfEmpty\": false\r
+
+    \            },\r
+
+    \            \"bhom\": {\r
+
+    \                \"name\": \"_notes\",\r
+
+    \                \"dataType\": \"STRING_LIST\",\r
+
+    \                \"default\": \"\",\r
+
+    \                \"overrideIfEmpty\": false\r
+
+    \            },\r
+
+    \            \"attributes\": [\r
+
+    \                {\r
+
+    \                    \"tmf\": {\r
+
+    \                        \"name\": \"time\",\r
+
+    \                        \"dataType\": \"DATE\",\r
+
+    \                        \"default\": \"\",\r
+
+    \                        \"overrideIfEmpty\": false\r
+
+    \                    }\r
+
+    \                },\r
+
+    \                {\r
+
+    \                    \"tmf\": {\r
+
+    \                        \"name\": \"userId\",\r
+
+    \                        \"dataType\": \"STRING\",\r
+
+    \                        \"default\": \"\",\r
+
+    \                        \"overrideIfEmpty\": false\r
+
+    \                    }\r
+
+    \                },\r
+
+    \                {\r
+
+    \                    \"tmf\": {\r
+
+    \                        \"name\": \"comment\",\r
+
+    \                        \"dataType\": \"STRING\",\r
+
+    \                        \"default\": \"\",\r
+
+    \                        \"overrideIfEmpty\": false\r
+
+    \                    }\r
+
+    \                }\r
+
+    \            ]\r
+
+    \        }\r
+
+    \    ]\r
+
+    }"
+order: 3000

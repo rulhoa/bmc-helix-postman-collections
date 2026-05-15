@@ -1,0 +1,49 @@
+$kind: http-request
+url: "{{bhom_base_url}}/impact-service/api/v1.0/entities"
+method: POST
+headers:
+  - key: Origin
+    value: "{{bhom_base_url}}"
+    disabled: true
+  - key: Referer
+    value: "{{bhom_base_url}}"
+    disabled: true
+body:
+  type: json
+  content: "{\r
+
+    \  \"entityType\": \"service\",\r
+
+    \  \"showHierarchy\": false,\r
+
+    \  \"filter\": {\r
+
+    \    \"severity\": [\r
+
+    \      \"critical\",\r
+
+    \      \"major\",\r
+
+    \      \"minor\",\r
+
+    \      \"ok\"\r
+
+    \    ],\r
+
+    \    \"searchText\": \"\",\r
+
+    \    \"labels\": {}\r
+
+    \  },\r
+
+    \  \"sortBy\": \"NAME\",\r
+
+    \  \"sortDirection\": \"descending\",\r
+
+    \  \"startIndex\": 0,\r
+
+    \  \"endIndex\": 199\r
+
+    }"
+examples: ./.resources/Get List of Entities - Get All Services based on filter.resources/examples
+order: 5000

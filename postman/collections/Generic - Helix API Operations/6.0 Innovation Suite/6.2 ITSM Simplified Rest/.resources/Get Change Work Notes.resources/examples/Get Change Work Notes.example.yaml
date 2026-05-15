@@ -1,0 +1,133 @@
+$kind: http-example
+request:
+  url: "{{is_base_url}}/api/com.bmc.dsm.itsm.itsm-rest-api/v2/worknote/change/CRQ000000024701"
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    - key: Date
+      value: Wed, 11 Feb 2026 19:07:21 GMT
+    - key: Content-Type
+      value: application/json
+    - key: Content-Length
+      value: "2067"
+    - key: Connection
+      value: keep-alive
+    - key: X-Frame-Options
+      value: SAMEORIGIN
+    - key: Referrer-Policy
+      value: strict-origin-when-cross-origin
+    - key: X-Content-Type-Options
+      value: nosniff
+    - key: Strict-Transport-Security
+      value: max-age=31536000; includeSubDomains
+    - key: Cache-Control
+      value: no-store
+    - key: sso-provider-type
+      value: RSSO
+    - key: Set-Cookie
+      value: _cacheId=156232; Path=/; Secure; HttpOnly
+    - key: Set-Cookie
+      value: _cacheId=156232; Path=/; Secure; HttpOnly; SameSite=None
+    - key: Expires
+      value: Thu, 01 Jan 1970 00:00:00 GMT
+    - key: X-AR-CacheId
+      value: "156232"
+    - key: Session-Expiration
+      value: Thu, 12 Feb 2026 03:07:21 GMT
+    - key: Absolute-Session-Expiration
+      value: Thu, 12 Feb 2026 19:07:20 GMT
+    - key: status
+      value: "200"
+    - key: Metadata-Last-Update-Time
+      value: 2026-02-11T13:21:11.000Z
+    - key: Vary
+      value: Accept-Encoding, User-Agent
+  body:
+    type: text
+    content: |-
+      {
+          "status": "Success",
+          "recordCount": 6,
+          "details": [
+              {
+                  "note": "Implementation and rollback plan",
+                  "submitter": "Liam",
+                  "attachments": [
+                      {
+                          "fileName": "Implementation steps.docx",
+                          "fileSize": 14788,
+                          "downloadUrl": "api/com.bmc.dsm.itsm.itsm-rest-api/attachment/download/CHG:WorkLog/1000000351/AGGGYNQFEWHWYAT01EH2T01EH2J1M8",
+                          "id": "AGGGYNQFEWHWYAT01EH2T01EH2J1M8",
+                          "attachmentReference": {
+                              "dataSourceId": "AGGGYNQFEWHWYAT01EH2T01EH2J1M8",
+                              "attachmentFieldId": "1000000351",
+                              "dataSource": "CHG:WorkLog"
+                          }
+                      }
+                  ],
+                  "attachmentCount": 1,
+                  "id": "AGGGYNQFEWHWYAT01EH2T01EH2J1M8",
+                  "type": "14000",
+                  "activityType": "user",
+                  "viewAccess": false,
+                  "createDate": "2026-02-11T18:18:48.000Z"
+              },
+              {
+                  "note": "Assigned To Change Coordinator: Mikal by Remedy Application Service",
+                  "submitter": "Remedy Application Service",
+                  "attachments": [],
+                  "attachmentCount": 0,
+                  "id": "AGGCLCMPJXLD0ATIYY2XTIYY2XAESM",
+                  "type": "38001",
+                  "activityType": "system",
+                  "viewAccess": false,
+                  "createDate": "2026-01-16T18:07:45.000Z"
+              },
+              {
+                  "note": "Assigned To Change Manager: Liam by Remedy Application Service",
+                  "submitter": "Remedy Application Service",
+                  "attachments": [],
+                  "attachmentCount": 0,
+                  "id": "AGGCLCMPJXLD0ATIYY2XTIYY2XAESV",
+                  "type": "38002",
+                  "activityType": "system",
+                  "viewAccess": false,
+                  "createDate": "2026-01-16T18:07:45.000Z"
+              },
+              {
+                  "note": "Status Transition: Draft > Request For Authorization > Request For Change > Planning In Progress > Scheduled For Review > Scheduled For Approval > Scheduled > Implementation In Progress > Completed > Closed",
+                  "submitter": "Liam",
+                  "attachments": [],
+                  "attachmentCount": 0,
+                  "id": "AGGCLCMPJXLD0ATIYY2WTIYY2WAEQD",
+                  "type": "29000",
+                  "activityType": "user",
+                  "viewAccess": false,
+                  "createDate": "2026-01-16T18:07:43.000Z"
+              },
+              {
+                  "note": " ",
+                  "submitter": "Liam",
+                  "attachmentCount": 0,
+                  "id": "AGGCLCMPJXLD0ATIYY2VTIYY2VAEPT",
+                  "type": "5",
+                  "activityType": "system",
+                  "viewAccess": false,
+                  "createDate": "2026-01-16T18:07:43.000Z"
+              },
+              {
+                  "note": "This ticket was created from the external request system",
+                  "submitter": "Liam",
+                  "attachments": [],
+                  "attachmentCount": 0,
+                  "id": "AGGCLCMPJXLD0ATIYY2WTIYY2WAERK",
+                  "type": "31000",
+                  "activityType": "system",
+                  "viewAccess": false,
+                  "createDate": "2026-01-16T18:07:43.000Z"
+              }
+          ]
+      }
+order: 1000

@@ -1,0 +1,59 @@
+$kind: http-request
+name: "CreateEvent Control-M Event: CTM_JOB"
+url: "{{bhom_base_url}}/events-service/api/v1.0/events"
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+  - key: Authorization
+    value: apiKey {{bhom_apiKey}}
+  - key: ""
+    value: ""
+    disabled: true
+body:
+  type: text
+  content: "[\r
+
+    \    {\r
+
+    \        \"CLASS\": \"CTM_JOB\",\r
+
+    \        \"severity\": \"MAJOR\",\r
+
+    \        \"msg\": \"Job Step 1 Ended not OK\",\r
+
+    \        \"details\": \"CTRL-M Job Step 1 Ended not OK. Job ID: mwl-ctm-em.bmc.com:xxxxx with Job Run Count: 00001\",\r
+
+    \        \"source_identifier\": \"mwl-ctm-em.bmc.com\",\r
+
+    \        \"source_hostname\": \"mwl-ctm-em.bmc.com\",\r
+
+    \        \"ctmJobName\": \"Step 1\",\r
+
+    \        \"ctmFolder\": \"ParentFolder\"\r
+
+    \    },\r
+
+    \    {\r
+
+    \        \"CLASS\": \"CTM_JOB\",\r
+
+    \        \"severity\": \"CRITICAL\",\r
+
+    \        \"msg\": \"Job Step 4 - failure Ended not OK\",\r
+
+    \        \"details\": \"CTRL-M Job My Job 2 Ended not OK. Job ID: mwl-ctm-em.bmc.com:xxxxxx with Job Run Count: 00001\",\r
+
+    \        \"source_identifier\": \"mwl-ctm-em.bmc.com\",\r
+
+    \        \"source_hostname\": \"mwl-ctm-em.bmc.com\",\r
+
+    \        \"ctmJobName\": \"Step 1\",\r
+
+    \        \"ctmFolder\": \"ParentFolder/SubFolder/Subsubfolder\"\r
+
+    \    }\r
+
+    ]"
+examples: ./.resources/CreateEvent Control-M Event- CTM_JOB.resources/examples
+order: 1000

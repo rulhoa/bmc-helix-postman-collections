@@ -1,0 +1,18 @@
+$kind: http-request
+url: "{{bhom_base_url}}/logs-service/api/v1.0/logs/enrichment_sources/14c244b8-80f8-4913-9f3e-e672b92b4f89"
+method: GET
+body:
+  type: json
+  content: "{\r
+
+    \    \"page_index\": 1,\r
+
+    \    \"page_size\": 100,\r
+
+    \    \"search_string\": \"enabled = true\",\r
+
+    \    \"sort_criteria\": \"name DESC, enabled ASC\"\r
+
+    }"
+examples: ./.resources/Get an enrichment source by ID.resources/examples
+order: 2000

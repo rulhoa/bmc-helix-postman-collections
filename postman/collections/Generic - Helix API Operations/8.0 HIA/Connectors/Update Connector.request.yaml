@@ -1,0 +1,43 @@
+$kind: http-request
+url: "{{bhom_base_url}}/intelligent-automation/api/v1/connectors/d230ed26-d40f-11ef-95b7-0200171022f2"
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \    \"code\": \"HELIX_ITSM\",\r
+
+    \    \"name\": \"BMC HELIX ITSM\",\r
+
+    \    \"is_remote\": false,\r
+
+    \    \"target_id\": \"https://xxx-demo-restapi.onbmc.com\",\r
+
+    \    \"credentials\": [\r
+
+    \        {\r
+
+    \            \"security_scheme\": {\r
+
+    \                \"type\": \"apiKey\",\r
+
+    \                \"in\": \"cookie\",\r
+
+    \                \"name\": \"AR-JWT\"\r
+
+    \            },\r
+
+    \            \"params\": {\r
+
+    \                \"username\": \"Username\",\r
+
+    \                \"password\": \"Password\"\r
+
+    \            }\r
+
+    \        }\r
+
+    \    ]\r
+
+    }"
+order: 2000

@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{bhom_base_url}}/logs-service/api/v1.0/logs/policies/search"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"page_index\": 1,\r
+
+    \    \"search_string\": \"type = 'ALERT'\",\r
+
+    \    \"page_size\": 2000,\r
+
+    \    \"sort_criteria\": \"name ASC\"\r
+
+    }"
+order: 1000

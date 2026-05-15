@@ -1,0 +1,128 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/service-management/api/v1.0/service/metric/names"
+  method: POST
+  body:
+    type: json
+    content: "{\r
+
+      \    \"metricIds\": [\r
+
+      \        {\r
+
+      \            \"entityTypeId\": \"Dynatrace_App_Health\",\r
+
+      \            \"metric\": \"Dynatrace_avg_response_time\"\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"entityTypeId\": \"Dynatrace_App_Health\",\r
+
+      \            \"metric\": \"Dynatrace_page_load_time\"\r
+
+      \        },\r
+
+      \        {\r
+
+      \            \"entityTypeId\": \"Nagios_Infra_metrics\",\r
+
+      \            \"metric\": \"Nagios_free_disk\"\r
+
+      \        }\r
+
+      \    ],\r
+
+      \    \"entityIds\": [\r
+
+      \        \"Dynatrace:660181721@web-fe-01:Dynatrace_App_Health:Dynatrace-app-health\",\r
+
+      \        \"Nagios:660181721@web-fe-01:Nagios_Infra_metrics:Nagios-device-health\"\r
+
+      \    ]\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    - key: Date
+      value: Mon, 24 Jul 2023 16:52:12 GMT
+    - key: Content-Type
+      value: application/json
+    - key: Transfer-Encoding
+      value: chunked
+    - key: Connection
+      value: keep-alive
+    - key: Vary
+      value: Origin
+    - key: Vary
+      value: Access-Control-Request-Method
+    - key: Vary
+      value: Access-Control-Request-Headers
+    - key: X-Content-Type-Options
+      value: nosniff
+    - key: X-XSS-Protection
+      value: 1; mode=block
+    - key: Cache-Control
+      value: no-cache, no-store, max-age=0, must-revalidate
+    - key: Pragma
+      value: no-cache
+    - key: Expires
+      value: "0"
+    - key: Strict-Transport-Security
+      value: max-age=31536000; includeSubDomains
+    - key: X-Frame-Options
+      value: DENY
+    - key: Referrer-Policy
+      value: same-origin
+    - key: Permissions-Policy
+      value: idle-detection=self
+  body:
+    type: json
+    content: |-
+      {
+          "metricDisplayNames": [
+              {
+                  "entityTypeId": "Nagios_Infra_metrics",
+                  "entityTypeDisplayName": "Infra_metrics",
+                  "metricDisplayName": "Nagios_free_disk",
+                  "unit": "KB",
+                  "metric": "Nagios_free_disk"
+              },
+              {
+                  "entityTypeId": "Dynatrace_App_Health",
+                  "entityTypeDisplayName": "App_Health",
+                  "metricDisplayName": "Dynatrace_page_load_time",
+                  "unit": "ms",
+                  "metric": "Dynatrace_page_load_time"
+              },
+              {
+                  "entityTypeId": "Dynatrace_App_Health",
+                  "entityTypeDisplayName": "App_Health",
+                  "metricDisplayName": "Dynatrace_avg_response_time",
+                  "unit": "ms",
+                  "metric": "Dynatrace_avg_response_time"
+              }
+          ],
+          "entityDisplayNames": {
+              "Dynatrace:660181721@web-fe-01:Dynatrace_App_Health:Dynatrace-app-health": {
+                  "ciDisplayName": "web-fe-01",
+                  "deviceHostName": "web-fe-01",
+                  "entityName": "Dynatrace-app-health",
+                  "labels": "{entityName=\"Dynatrace-app-health\",entityTypeId=\"App_Health\",entityId=\"Dynatrace:web-fe-01:App_Health:Dynatrace-app-health\",source=\"Dynatrace\"}",
+                  "metricStoreEntityId": "Dynatrace:web-fe-01:App_Health:Dynatrace-app-health",
+                  "topoStoreEntityTypeId": "Dynatrace_App_Health"
+              },
+              "Nagios:660181721@web-fe-01:Nagios_Infra_metrics:Nagios-device-health": {
+                  "ciDisplayName": "web-fe-01",
+                  "deviceHostName": "web-fe-01",
+                  "entityName": "Nagios-device-health",
+                  "labels": "{entityName=\"Nagios-device-health\",entityTypeId=\"Infra_metrics\",entityId=\"Nagios:web-fe-01:Infra_metrics:Nagios-device-health\",source=\"Nagios\"}",
+                  "metricStoreEntityId": "Nagios:web-fe-01:Infra_metrics:Nagios-device-health",
+                  "topoStoreEntityTypeId": "Nagios_Infra_metrics"
+              }
+          }
+      }
+order: 1000

@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{bhom_base_url}}/intelligent-automation/api/v1/connectors/09a42fa6-23e7-11ed-bb81-0613ed995521/sync_actions"
+method: GET
+examples: ./.resources/Resync Connector Actions.resources/examples
+order: 6000

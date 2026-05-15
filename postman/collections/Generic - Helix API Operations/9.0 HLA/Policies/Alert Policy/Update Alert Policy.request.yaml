@@ -1,0 +1,105 @@
+$kind: http-request
+url: "{{bhom_base_url}}/logs-service/api/v1.0/logs/policies/109e0c83-51f7-43c2-9e00-14dd91bba5b0"
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \    \"id\": \"109e0c83-51f7-43c2-9e00-14dd91bba5b0\",\r
+
+    \    \"name\": \"Resolver Alertas\",\r
+
+    \    \"description\": \"\",\r
+
+    \    \"tenant_id\": \"2085794782\",\r
+
+    \    \"selection_criteria\": \"agent.type EQUALS 'SYS' AND message CONTAINS 'Resolucao'\",\r
+
+    \    \"enabled\": true,\r
+
+    \    \"created_by\": \"activationuser\",\r
+
+    \    \"created_at\": 1698328461219,\r
+
+    \    \"updated_by\": \"activationuser\",\r
+
+    \    \"updated_at\": 1698328539951,\r
+
+    \    \"execution_order\": 9999,\r
+
+    \    \"configurations\": [\r
+
+    \        {\r
+
+    \            \"name\": \"Resolver Alertas\",\r
+
+    \            \"type\": \"ALERT\",\r
+
+    \            \"details\": {\r
+
+    \                \"groupBy\": [\r
+
+    \                    \"host.name\",\r
+
+    \                    \"EventID\",\r
+
+    \                    \"message\"\r
+
+    \                ],\r
+
+    \                \"time_window\": {\r
+
+    \                    \"duration\": 1,\r
+
+    \                    \"unit\": \"MINUTES\"\r
+
+    \                },\r
+
+    \                \"conditionals\": [\r
+
+    \                    {\r
+
+    \                        \"count\": 1,\r
+
+    \                        \"severity\": \"OK\"\r
+
+    \                    }\r
+
+    \                ],\r
+
+    \                \"destination\": {\r
+
+    \                    \"details\": {\r
+
+    \                        \"class\": \"LOGALERT_EV\",\r
+
+    \                        \"source_hostname\": \"$.host.name\",\r
+
+    \                        \"msg\": \"{{ $.message }}\",\r
+
+    \                        \"additional_params\": {\r
+
+    \                            \"modelname\": \"$.host.model\",\r
+
+    \                            \"componentalias\": \"$.Device\"\r
+
+    \                        }\r
+
+    \                    },\r
+
+    \                    \"type\": \"BHOM_EVENT\"\r
+
+    \                }\r
+
+    \            },\r
+
+    \            \"display_order\": 0,\r
+
+    \            \"id\": \"e7a7827b-71b2-4dba-abae-94fa0ecac791\"\r
+
+    \        }\r
+
+    \    ]\r
+
+    }"
+order: 2000

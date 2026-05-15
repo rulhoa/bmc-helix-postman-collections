@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{v1}}/compliance-jobs"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "name": "My Compliance Job",
+      "template_id": 0
+    }
+order: 2000

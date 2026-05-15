@@ -1,0 +1,8 @@
+$kind: http-request
+url: "{{bhom_base_url}}/tsws/monitoring/api/v1.0/tenant/info"
+method: GET
+auth:
+  type: bearer
+  credentials:
+    token: "{{bhom_json_web_token}}"
+order: 1000

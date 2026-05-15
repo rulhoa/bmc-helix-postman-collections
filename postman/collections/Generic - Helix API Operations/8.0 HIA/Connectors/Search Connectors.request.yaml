@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{bhom_base_url}}/intelligent-automation/api/v1/connectors/search"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"filter\":\"status = true AND code = HELIX_ITSM\"\r
+
+    }"
+examples: ./.resources/Search Connectors.resources/examples
+order: 1000

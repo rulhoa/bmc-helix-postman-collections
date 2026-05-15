@@ -1,0 +1,5631 @@
+$kind: http-request
+url: "{{bhom_base_url}}/events-service/api/v1.0/events"
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+  - key: Authorization
+    value: apiKey {{bhom_apiKey}}
+  - key: ""
+    value: ""
+    disabled: true
+body:
+  type: text
+  content: "[\r
+
+    \    \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"INFO\",\r
+
+    \t\t\"msg\": \"SQL Server is down\",\r
+
+    \        \"source_identifier\": \"MSSQL 2012 SP3 MSSQLSERVER\",\r
+
+    \t\t\"source_hostname\": \"MSSQL 2012 SP3 MSSQLSERVER\"\r
+
+    \t},\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t},\r
+
+    \           \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database ARPLC_prod\",\r
+
+    \        \"source_identifier\": \"ARPLC_prod\",\r
+
+    \t\t\"source_hostname\": \"ARPLC_prod\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RnD_Metric_Prd\",\r
+
+    \        \"source_identifier\": \"RnD_Metric_Prd\",\r
+
+    \t\t\"source_hostname\": \"RnD_Metric_Prd\"\r
+
+    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database JIRAPRD1\",\r
+
+    \        \"source_identifier\": \"JIRAPRD1\",\r
+
+    \t\t\"source_hostname\": \"JIRAPRD1\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database nlyte\",\r
+
+    \        \"source_identifier\": \"nlyte\",\r
+
+    \t\t\"source_hostname\": \"nlyte\"\r
+
+    \    },\r
+
+    \       \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Lost connection to database RDCONFPD\",\r
+
+    \        \"source_identifier\": \"RDCONFPD\",\r
+
+    \t\t\"source_hostname\": \"RDCONFPD\"\r
+
+    \t}\r
+
+    ]"
+order: 6000

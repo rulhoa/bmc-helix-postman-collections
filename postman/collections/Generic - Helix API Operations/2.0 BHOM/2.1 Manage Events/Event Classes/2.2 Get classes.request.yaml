@@ -1,0 +1,8 @@
+$kind: http-request
+url: "{{bhom_base_url}}/events-service/api/v1.0/events/classes/"
+method: GET
+body:
+  type: json
+  content: ""
+examples: ./.resources/2.2 Get classes.resources/examples
+order: 4000

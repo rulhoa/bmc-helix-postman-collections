@@ -1,0 +1,56 @@
+$kind: http-request
+url: "{{bhom_base_url}}/tsws/monitoring/api/v1.0/graph/data?istextparam=false"
+method: POST
+queryParams:
+  istextparam: "false"
+body:
+  type: json
+  content: "{\r
+
+    \    \"startTime\": 1707122987,\r
+
+    \    \"endTime\": 1707137387,\r
+
+    \    \"dataType\": 0,\r
+
+    \    \"baseLines\": [\r
+
+    \        0,\r
+
+    \        5\r
+
+    \    ],\r
+
+    \    \"thresholds\": [\r
+
+    \        0,\r
+
+    \        1,\r
+
+    \        2\r
+
+    \    ],\r
+
+    \    \"graphDatas\": [],\r
+
+    \    \"dataSets\": [\r
+
+    \        {\r
+
+    \            \"serverId\": \"613873398\",\r
+
+    \            \"moTypeId\": \"K8S_POD_CPU\",\r
+
+    \            \"monitorId\": \"688baebf-4054-436f-86e7-225ca4bad3e3%3AK8S_POD_CPU%3AKubernetesLabCluster%40ticketing%40ts-assurance-mongo-75d58c4f95-7jnh7%40cpu\",\r
+
+    \            \"attributeId\": \"Utilization\"\r
+
+    \        }\r
+
+    \    ],\r
+
+    \    \"considerDataFromPA\": true\r
+
+    }"
+examples: ./.resources/Get Graph Data - Undocumented.resources/examples
+order: 9000

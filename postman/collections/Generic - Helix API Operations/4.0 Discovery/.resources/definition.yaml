@@ -1,0 +1,8 @@
+$kind: collection
+auth:
+  - id: 02a1e27b-2a0d-44eb-814e-cdfba813e32b
+    type: bearer
+    name: bearer auth
+    credentials:
+      token: "{{disco_token}}"
+order: 4000

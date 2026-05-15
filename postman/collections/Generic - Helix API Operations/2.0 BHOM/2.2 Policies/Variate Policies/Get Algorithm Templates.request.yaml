@@ -1,0 +1,10 @@
+$kind: http-request
+url: "{{bhom_base_url}}/aif/api/v1.0/algorithm_template?type=Anomaly&sortBy=modifiedTime&order=DESC&minimalInfo=true"
+method: GET
+queryParams:
+  type: Anomaly
+  sortBy: modifiedTime
+  order: DESC
+  minimalInfo: "true"
+examples: ./.resources/Get Algorithm Templates.resources/examples
+order: 4000

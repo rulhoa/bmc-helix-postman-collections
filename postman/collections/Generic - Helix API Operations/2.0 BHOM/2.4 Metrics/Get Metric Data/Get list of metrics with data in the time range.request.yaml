@@ -1,0 +1,27 @@
+$kind: http-request
+url: "{{bhom_base_url}}/metrics-query-service/api/v1.0/series?match%5B%5D=%7Bhostname%3D%7E%22lph1%22%7D&start=1706290805&end=1706377205"
+method: GET
+queryParams:
+  - key: match%5B%5D
+    value: "%7Bhostname%3D%7E%22lph1%22%7D"
+    description: match[]={hostname=~\"lph1"}
+  - key: start
+    value: "1706290805"
+  - key: end
+    value: "1706377205"
+body:
+  type: formdata
+  content:
+    - type: text
+      key: query
+      value: '{ __name__ =~ "JobRunState", hostname =~ "ctmClearingP" }'
+    - type: text
+      key: step
+      value: "2"
+    - type: text
+      key: start
+      value: "1689079720"
+    - type: text
+      key: end
+      value: "1689082964"
+order: 8000

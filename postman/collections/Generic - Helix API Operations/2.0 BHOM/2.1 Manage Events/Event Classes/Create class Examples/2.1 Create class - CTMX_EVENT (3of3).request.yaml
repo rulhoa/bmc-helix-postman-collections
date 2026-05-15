@@ -1,0 +1,310 @@
+$kind: http-request
+description: "Source: [https://github.com/controlm/automation-api-community-solutions/blob/master/helix-control-m/2-external-monitoring-tools-examples/alerts-to-bhom/bhom_ctm_event_class.json](https://github.com/controlm/automation-api-community-solutions/blob/master/helix-control-m/2-external-monitoring-tools-examples/alerts-to-bhom/bhom_ctm_event_class.json)"
+url: "{{bhom_base_url}}/events-service/api/v1.0/events/classes/"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\": \"CTMX_EVENT\",\r
+
+    \    \"parentClassName\": \"CTM_EVENT\",\r
+
+    \    \"attributes\": [\r
+
+    \        {\r
+
+    \            \"name\": \"xctmcalltype\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"xctmserial\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"xctmCompType\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"xctmCompMachine\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"xctmCompName\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"xctmMessageId\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"xctmXSeverity\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"xctmMessage\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"xctmXTime\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"xctmXTimeOFLast\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"xctmCounter\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"xctmStatus\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"xctmNote\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"xctmKey1\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"xctmKey2\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"xctmKey3\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"xctmKey4\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"xctmKey5\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        }\r
+
+    \    ]\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{bhom_json_web_token}}"
+order: 5000

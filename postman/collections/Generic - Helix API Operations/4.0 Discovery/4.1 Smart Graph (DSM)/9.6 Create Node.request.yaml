@@ -1,0 +1,32 @@
+$kind: http-request
+url: "{{disco_base_url}}/api/v1.4/data/write"
+method: POST
+body:
+  type: json
+  content: "[\r
+
+    {\r
+
+    \    \"cmd\":       \"create_rel\",\r
+
+    \    \"partition\": \"d4a80363b2129d361cfb6eaf\",\r
+
+    \    \"kind\":      \"HostedSoftware\",\r
+
+    \t\"state\": {\r
+
+    \        \t\t\"name\": \"{{01_host}}\",\r
+
+    \                \"hostname\": \"{{01_host}}\",\r
+
+    \                \"host_type\": \"{{01_type}}\",\r
+
+    \                \"type\": \"{{01_type}}\"\r
+
+    \    }\r
+
+    }\r
+
+    ]"
+examples: ./.resources/9.6 Create Node.resources/examples
+order: 7000

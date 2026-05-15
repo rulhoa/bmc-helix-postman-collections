@@ -1,0 +1,348 @@
+$kind: http-example
+name: Get Automation Policy Detailed
+request:
+  url: "{{bhom_base_url}}/intelligent-automation/api/v1/workflows/30799dc1-3039-3fe2-d895-d3a0daa70269/checksum/2bd8db4dcec26d4abd59e33cbf986e8a5e930e2378128c0aa5ffc1c13d8ed8b3"
+  method: GET
+  headers:
+    helix_jwt_token: "{{bhom_json_web_token}}"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Wed, 15 Feb 2023 14:56:44 GMT
+    Content-Type: application/json; charset=utf-8
+    Content-Length: "6616"
+    Connection: keep-alive
+    X-Powered-By: Express
+    ETag: W/"19d8-9vb5k8SG5qBOmiHIZcyjFo+B9ns"
+  body:
+    type: json
+    content: |-
+      {
+          "id": "30799dc1-3039-3fe2-d895-d3a0daa70269",
+          "name": "Linux Disk Cleanup",
+          "type": "user_defined",
+          "description": "Delete temporary files to free diskspace",
+          "metadata": {
+              "event": {
+                  "msg": "[Splunk] File size exceeding the threshold - /etc/helix.log",
+                  "tags": "[]",
+                  "alias": [
+                      "BMC_ComputerSystem:web-fe-01"
+                  ],
+                  "class": "EVENT",
+                  "_ci_id": "",
+                  "_model": "",
+                  "_notes": "[]",
+                  "status": "OPEN",
+                  "_errors": "[]",
+                  "details": "",
+                  "_entropy": "",
+                  "_node_id": [
+                      "c956c862bd2e716c4ace65646e486f7374",
+                      "c956c862bd2e716c4ace655f6e5669727475616c4d616368696e65"
+                  ],
+                  "category": "OPERATIONS_MANAGEMENT",
+                  "cdmclass": "",
+                  "location": "",
+                  "priority": "PRIORITY_3",
+                  "severity": "MINOR",
+                  "modelname": "",
+                  "_signature": "996824922",
+                  "_tenant_id": "1738801444",
+                  "_identifier": "eps.1738801444.1079128185515814.1c3435dc-dd27-42ce-93f2-39d984da148c",
+                  "_operations": "[0x182d1281b68,Seth,'',Incident:Request for manual incident creation submitted.,'']",
+                  "_service_id": [
+                      "b949da62b459fa4e0974bcd26e427573696e65737353657276696365",
+                      "c956c862bd2e716c4ace65696e427573696e65737353657276696365",
+                      "b949da62b459fa4e0974bcd26e427573696e65737353657276696365",
+                      "c956c862bd2e716c4ace65696e427573696e65737353657276696365"
+                  ],
+                  "incident_id": "INC000000020335",
+                  "source_port": 3181,
+                  "_tenant_name": "",
+                  "instancename": "",
+                  "significance": "0",
+                  "sub_category": "OTHER",
+                  "_arrival_time": 1661364285118,
+                  "_repeat_count": "0",
+                  "_service_name": [
+                      "Media Service",
+                      "Puma Traiding System",
+                      "Media Service",
+                      "Puma Traiding System"
+                  ],
+                  "creation_time": 1661364285118,
+                  "user_assigned": "",
+                  "_modified_time": 1661366454422,
+                  "_relationships": {
+                      "rstat": "secondary",
+                      "mlsituation": [
+                          "c956c862bd2e716c4ace65696e427573696e65737353657276696365_98ccdb6e1d994a1fbb919a127a103c69",
+                          "b949da62b459fa4e0974bcd26e427573696e65737353657276696365_c7c8953cc3d74483859cc021eab3737b"
+                      ]
+                  },
+                  "_unmapped_data": {
+                      "delay": "yes",
+                      "object": "App"
+                  },
+                  "componentalias": "",
+                  "source_address": "",
+                  "status_ordinal": 0,
+                  "_lifecycle_time": "0",
+                  "source_hostname": "web-fe-01",
+                  "category_ordinal": 190,
+                  "incident_company": "",
+                  "priority_ordinal": 30,
+                  "severity_ordinal": 50,
+                  "source_identifier": "web-fe-01",
+                  "sub_category_ordinal": 10,
+                  "_node_service_mapping": [
+                      "c956c862bd2e716c4ace65646e486f7374:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365",
+                      "c956c862bd2e716c4ace655f6e5669727475616c4d616368696e65:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365"
+                  ],
+                  "_node_service_key_mapping": [
+                      "6RVryw4vWCisatvcSuAW+g==::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e",
+                      "aws/us-east-2/ec2/i-0daede9476e67b825::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e"
+                  ]
+              },
+              "effort": 30,
+              "event_type": "EVENT: Media Service",
+              "json_paths": {
+                  "$.msg": [
+                      "[Splunk] File size exceeding the threshold - /etc/helix.log"
+                  ],
+                  "$.tags": [
+                      "[]"
+                  ],
+                  "$.class": [
+                      "EVENT"
+                  ],
+                  "$._ci_id": [
+                      ""
+                  ],
+                  "$._model": [
+                      ""
+                  ],
+                  "$._notes": [
+                      "[]"
+                  ],
+                  "$.status": [
+                      "OPEN"
+                  ],
+                  "$._errors": [
+                      "[]"
+                  ],
+                  "$.details": [
+                      ""
+                  ],
+                  "$._entropy": [
+                      ""
+                  ],
+                  "$.alias[*]": [
+                      "BMC_ComputerSystem:web-fe-01"
+                  ],
+                  "$.category": [
+                      "OPERATIONS_MANAGEMENT"
+                  ],
+                  "$.cdmclass": [
+                      ""
+                  ],
+                  "$.location": [
+                      ""
+                  ],
+                  "$.priority": [
+                      "PRIORITY_3"
+                  ],
+                  "$.severity": [
+                      "MINOR"
+                  ],
+                  "$.modelname": [
+                      ""
+                  ],
+                  "$._signature": [
+                      "996824922"
+                  ],
+                  "$._tenant_id": [
+                      "1738801444"
+                  ],
+                  "$.is_updated": [
+                      true
+                  ],
+                  "$._identifier": [
+                      "eps.1738801444.1079128185515814.1c3435dc-dd27-42ce-93f2-39d984da148c"
+                  ],
+                  "$._node_id[*]": [
+                      "c956c862bd2e716c4ace65646e486f7374",
+                      "c956c862bd2e716c4ace655f6e5669727475616c4d616368696e65"
+                  ],
+                  "$._operations": [
+                      "[0x182d1281b68,Seth,'',Incident:Request for manual incident creation submitted.,'']"
+                  ],
+                  "$.incident_id": [
+                      "",
+                      "INC000000020335"
+                  ],
+                  "$.source_port": [
+                      3181
+                  ],
+                  "$._tenant_name": [
+                      ""
+                  ],
+                  "$.instancename": [
+                      ""
+                  ],
+                  "$.significance": [
+                      "0"
+                  ],
+                  "$.sub_category": [
+                      "OTHER"
+                  ],
+                  "$._arrival_time": [
+                      1661364285118
+                  ],
+                  "$._repeat_count": [
+                      "0"
+                  ],
+                  "$.creation_time": [
+                      1661364285118
+                  ],
+                  "$.user_assigned": [
+                      ""
+                  ],
+                  "$._modified_time": [
+                      1661366442856,
+                      1661366454422
+                  ],
+                  "$._service_id[*]": [
+                      "b949da62b459fa4e0974bcd26e427573696e65737353657276696365",
+                      "c956c862bd2e716c4ace65696e427573696e65737353657276696365",
+                      "b949da62b459fa4e0974bcd26e427573696e65737353657276696365",
+                      "c956c862bd2e716c4ace65696e427573696e65737353657276696365"
+                  ],
+                  "$.componentalias": [
+                      ""
+                  ],
+                  "$.source_address": [
+                      ""
+                  ],
+                  "$.status_ordinal": [
+                      0
+                  ],
+                  "$._lifecycle_time": [
+                      "0"
+                  ],
+                  "$.source_hostname": [
+                      "web-fe-01"
+                  ],
+                  "$._service_name[*]": [
+                      "Media Service",
+                      "Puma Traiding System",
+                      "Media Service",
+                      "Puma Traiding System"
+                  ],
+                  "$.category_ordinal": [
+                      190
+                  ],
+                  "$.incident_company": [
+                      ""
+                  ],
+                  "$.priority_ordinal": [
+                      30
+                  ],
+                  "$.severity_ordinal": [
+                      50
+                  ],
+                  "$.source_identifier": [
+                      "web-fe-01"
+                  ],
+                  "$._relationships.rstat": [
+                      "secondary"
+                  ],
+                  "$._unmapped_data.delay": [
+                      "yes"
+                  ],
+                  "$.sub_category_ordinal": [
+                      10
+                  ],
+                  "$._unmapped_data.object": [
+                      "App"
+                  ],
+                  "$._node_service_mapping[*]": [
+                      "c956c862bd2e716c4ace65646e486f7374:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365",
+                      "c956c862bd2e716c4ace655f6e5669727475616c4d616368696e65:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365"
+                  ],
+                  "$._node_service_key_mapping[*]": [
+                      "6RVryw4vWCisatvcSuAW+g==::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e",
+                      "aws/us-east-2/ec2/i-0daede9476e67b825::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e"
+                  ],
+                  "$._relationships.mlsituation[*]": [
+                      "c956c862bd2e716c4ace65696e427573696e65737353657276696365_98ccdb6e1d994a1fbb919a127a103c69",
+                      "b949da62b459fa4e0974bcd26e427573696e65737353657276696365_c7c8953cc3d74483859cc021eab3737b"
+                  ]
+              },
+              "trigger_condition_expression_metadata": [
+                  {
+                      "slot_name": "$.event.class",
+                      "slot_value": "EVENT",
+                      "end_bracket": ")",
+                      "slot_operator": "==",
+                      "condition_order": 0,
+                      "condition_bracket": "(",
+                      "condition_operator": ""
+                  }
+              ]
+          },
+          "tag_specs": {},
+          "trigger_condition_expression": "$?($.\"event\".\"class\" == \"EVENT\")",
+          "checksum": "2bd8db4dcec26d4abd59e33cbf986e8a5e930e2378128c0aa5ffc1c13d8ed8b3",
+          "status": "PUBLISHED",
+          "is_active": true,
+          "auto_enabled": false,
+          "actions": {
+              "Linux Disk Cleanup": {
+                  "action_def_uri": "09a42fa6-23e7-11ed-bb81-0613ed995521/rest/api/v1/execution-tasks#17038",
+                  "plugin_type": "remote_plugin",
+                  "credential": {
+                      "target_id": "https://192.168.100.22:9843",
+                      "provider_id": "tssa"
+                  },
+                  "continue_on_failure": false,
+                  "action": {
+                      "server": "https://192.168.100.22:9843",
+                      "/rest/api/v1/execution-tasks": {
+                          "post": {
+                              "parameters": [
+                                  {
+                                      "in": "headers",
+                                      "x-bmc-callback": "$.callback"
+                                  }
+                              ],
+                              "requestBody": {
+                                  "content": {
+                                      "application/json": {
+                                          "job": {
+                                              "id": 17038
+                                          },
+                                          "name": "ia",
+                                          "group": {
+                                              "path": "/Event Automation"
+                                          },
+                                          "targets": {
+                                              "servers": [
+                                                  {
+                                                      "name": "$.event.source_hostname"
+                                                  }
+                                              ]
+                                          },
+                                          "description": "Intelligent Automation"
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      }
+order: 4000

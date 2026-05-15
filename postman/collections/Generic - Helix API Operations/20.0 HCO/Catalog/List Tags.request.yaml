@@ -1,0 +1,27 @@
+$kind: http-request
+url: "{{bhom_base_url}}/opt/api/v1/catalog/entities/tags"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"filters\": [\r
+
+    \    {\r
+
+    \      \"field_name\": \"entity.type\",\r
+
+    \      \"operator\": \"LIKE\",\r
+
+    \      \"values\": [\r
+
+    \        \"*\"\r
+
+    \      ]\r
+
+    \    }\r
+
+    \  ]\r
+
+    }"
+order: 8000

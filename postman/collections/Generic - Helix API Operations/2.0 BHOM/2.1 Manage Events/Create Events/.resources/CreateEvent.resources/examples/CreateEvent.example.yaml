@@ -1,0 +1,61 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/events-service/api/v1.0/events"
+  method: POST
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Authorization
+      value: apiKey {{bhom_apiKey}}
+    - key: ""
+      value: ""
+      disabled: true
+  body:
+    type: text
+    content: "[\r
+
+      \    \t{\r
+
+      \t\t\"class\": \"MonitorEvent\",\r
+
+      \t\t\"severity\": \"MAJOR\",\r
+
+      \t\t\"msg\": \"BMC TEST\",\r
+
+      \        \"source_identifier\": \"CLOSENODE\",\r
+
+      \t\t\"source_hostname\": \"CLOSENODE\"\r
+
+      \t}\r
+
+      ]"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Mon, 27 Mar 2023 18:57:53 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    Referrer-Policy: same-origin
+    X-Frame-Options: SAMEORIGIN
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    X-Content-Type-Options: nosniff
+    Permissions-Policy: idle-detection=self
+    Content-Encoding: gzip
+    TraceId: 6e55cce3-6a76-4d73-9109-f9b4ef60f81f 1738801444
+    Pragma: no-cache
+    X-XSS-Protection: 1; mode=block
+    Cache-control: no-store
+  body:
+    type: json
+    content: |-
+      {
+          "responseTimeStamp": 1679943473021,
+          "statusCode": "200",
+          "statusMsg": "OK",
+          "resourceId": [
+              "eps.1738801444.13158639031353526.3945c9d1-1e8a-4e89-a2d2-9558618fc3af"
+          ]
+      }
+order: 1000

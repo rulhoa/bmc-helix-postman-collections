@@ -1,0 +1,101 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/service-management/api/v1.0/blueprint/get"
+  method: POST
+  body:
+    type: json
+    content: "{\r
+
+      \  \"blueprintIds\": [\r
+
+      \    {\r
+
+      \      \"id\": \"J7xkeO7wH9V8Lz3f73J8YEjc5lH849OO\",\r
+
+      \      \"version\": \"1.0.0\"\r
+
+      \    }\r
+
+      \  ]\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    - key: Date
+      value: Wed, 15 Feb 2023 18:33:46 GMT
+    - key: Content-Type
+      value: application/json
+    - key: Transfer-Encoding
+      value: chunked
+    - key: Connection
+      value: keep-alive
+    - key: Vary
+      value: Origin
+    - key: Vary
+      value: Access-Control-Request-Method
+    - key: Vary
+      value: Access-Control-Request-Headers
+    - key: X-Content-Type-Options
+      value: nosniff
+    - key: X-XSS-Protection
+      value: 1; mode=block
+    - key: Cache-Control
+      value: no-cache, no-store, max-age=0, must-revalidate
+    - key: Pragma
+      value: no-cache
+    - key: Expires
+      value: "0"
+    - key: Strict-Transport-Security
+      value: max-age=31536000 ; includeSubDomains
+    - key: X-Frame-Options
+      value: DENY
+  body:
+    type: json
+    content: |-
+      {
+          "resultMessage": "OK",
+          "blueprints": [
+              {
+                  "blueprintId": {
+                      "id": "J7xkeO7wH9V8Lz3f73J8YEjc5lH849OO",
+                      "version": "1.0.0"
+                  },
+                  "description": "Selects host  using CMDB info - SISTEMA",
+                  "name": "Host - CMDB",
+                  "namespace": "com",
+                  "contentSelector": {
+                      "nodes": [
+                          {
+                              "id": "nHost",
+                              "includeContent": true,
+                              "kinds": [
+                                  "Host"
+                              ],
+                              "rules": [
+                                  {
+                                      "ruleCriterias": [
+                                          {
+                                              "attribute": "Sistema",
+                                              "path": "",
+                                              "values": [],
+                                              "regex": false,
+                                              "variable": true,
+                                              "variableInputName": "Ingrese Sistema"
+                                          }
+                                      ]
+                                  }
+                              ],
+                              "associatedElementSelectors": []
+                          }
+                      ],
+                      "links": [],
+                      "variables": []
+                  },
+                  "state": "ENABLED",
+                  "readOnly": false
+              }
+          ]
+      }
+order: 1000

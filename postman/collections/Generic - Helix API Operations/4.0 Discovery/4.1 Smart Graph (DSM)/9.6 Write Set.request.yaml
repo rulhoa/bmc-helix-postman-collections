@@ -1,0 +1,25 @@
+$kind: http-request
+url: "{{disco_base_url}}/api/v1.4/data/write"
+method: POST
+body:
+  type: json
+  content: "[\r
+
+    {\r
+
+    \t\"cmd\":       \"set\",\r
+
+    \t\"id\":        \"42930c62983720f330eb78c46e427573696e65737353657276696365\",\r
+
+    \t\"partition\": \"614d9461a249e6fb4b8912ef\",\r
+
+    \t\"state\": {\r
+
+    \t\t\"external_ids\": \"matchmyservice\"\r
+
+    \    }\r
+
+    }\r
+
+    ]"
+order: 6000

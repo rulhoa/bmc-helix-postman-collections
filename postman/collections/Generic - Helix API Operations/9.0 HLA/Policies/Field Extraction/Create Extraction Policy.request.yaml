@@ -1,0 +1,51 @@
+$kind: http-request
+url: "{{bhom_base_url}}/logs-service/api/v1.0/logs/policies/"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"id\": \"\",\r
+
+    \    \"name\": \"Extract Event Summary\",\r
+
+    \    \"description\": \"\",\r
+
+    \    \"selection_criteria\": \"agent.type EQUALS 'SYS' AND message CONTAINS 'Evento'\",\r
+
+    \    \"enabled\": false,\r
+
+    \    \"execution_order\": 9999,\r
+
+    \    \"configurations\": [\r
+
+    \        {\r
+
+    \            \"name\": \"Extract Event Summary\",\r
+
+    \            \"type\": \"EXTRACTION\",\r
+
+    \            \"details\": {\r
+
+    \                \"logField\": \"message\",\r
+
+    \                \"regex\": \"(Ocorrencia|ocorr): (?<EventSummary>.+) \\\\- Evento:\",\r
+
+    \                \"sampleInput\": \"Resolucao ocorr: BIOMETRIA Dispositivo inoperante - Evento:912 Disp:24 Erro:80 Tipo:TECNICO  Dt/hora 1a ocorr:04/10/2023-09:19:30\",\r
+
+    \                \"fieldsToExtract\": [\r
+
+    \                    \"EventSummary\"\r
+
+    \                ]\r
+
+    \            },\r
+
+    \            \"display_order\": 0\r
+
+    \        }\r
+
+    \    ]\r
+
+    }"
+order: 3000

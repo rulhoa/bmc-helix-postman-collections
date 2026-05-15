@@ -1,0 +1,303 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/impact-service/api/v1.0/entities"
+  method: POST
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Authorization
+      value: apiKey {{bhom_apiKey}}
+    - key: Authorization
+      value: ""
+      disabled: true
+  body:
+    type: text
+    content: "{\r
+
+      \  \"entityType\": \"service\",\r
+
+      \  \"showHierarchy\": false,\r
+
+      \  \"filter\": {\r
+
+      \    \"severity\": [\r
+
+      \      \"critical\",\r
+
+      \      \"major\",\r
+
+      \      \"minor\",\r
+
+      \      \"ok\"\r
+
+      \    ],\r
+
+      \    \"searchText\": \"\",\r
+
+      \    \"labels\": {}\r
+
+      \  },\r
+
+      \  \"sortBy\": \"HEALTH\",\r
+
+      \  \"sortDirection\": \"descending\",\r
+
+      \  \"startIndex\": 0,\r
+
+      \  \"endIndex\": 199\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    - key: Date
+      value: Thu, 02 Feb 2023 15:32:29 GMT
+    - key: Content-Type
+      value: application/json
+    - key: Transfer-Encoding
+      value: chunked
+    - key: Connection
+      value: keep-alive
+    - key: Vary
+      value: Origin
+    - key: Vary
+      value: Access-Control-Request-Method
+    - key: Vary
+      value: Access-Control-Request-Headers
+    - key: X-Content-Type-Options
+      value: nosniff
+    - key: X-XSS-Protection
+      value: 1; mode=block
+    - key: Cache-Control
+      value: no-cache, no-store, max-age=0, must-revalidate
+    - key: Pragma
+      value: no-cache
+    - key: Expires
+      value: "0"
+    - key: Strict-Transport-Security
+      value: max-age=31536000 ; includeSubDomains
+    - key: X-Frame-Options
+      value: DENY
+  body:
+    type: json
+    content: |-
+      {
+          "stateSummary": {
+              "CRITICAL": 0,
+              "MAJOR": 0,
+              "MINOR": 0,
+              "OK": 12
+          },
+          "services": {
+              "f36f5d63835a86fb749a448f6e427573696e65737353657276696365": {
+                  "name": "Media Service",
+                  "id": "f36f5d63835a86fb749a448f6e427573696e65737353657276696365",
+                  "key": "62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e",
+                  "totalEventCount": 0,
+                  "actualEventCount": 0,
+                  "situationCount": 0,
+                  "totalIncidentCount": 0,
+                  "actualTotalIncidentCount": 0,
+                  "health": 94,
+                  "healthState": "OK",
+                  "impactedEntityCount": 0,
+                  "modified": 1675078432,
+                  "kind": "BusinessService",
+                  "eventsDistribution": [],
+                  "actualEventsDistribution": []
+              },
+              "ca56c862504dfbd6388b68066e427573696e65737353657276696365": {
+                  "name": "VPN-North America",
+                  "id": "ca56c862504dfbd6388b68066e427573696e65737353657276696365",
+                  "key": "62005a60e158c52675d587566e4d6f64656c446566696e6974696f6e",
+                  "totalEventCount": 0,
+                  "actualEventCount": 0,
+                  "situationCount": 0,
+                  "totalIncidentCount": 0,
+                  "actualTotalIncidentCount": 0,
+                  "health": 98,
+                  "healthState": "OK",
+                  "impactedEntityCount": 0,
+                  "modified": 1657571891,
+                  "kind": "BusinessService",
+                  "eventsDistribution": [],
+                  "actualEventsDistribution": []
+              },
+              "f36f5d63835a86fb749a469e6e427573696e65737353657276696365": {
+                  "name": "Insurance System",
+                  "id": "f36f5d63835a86fb749a469e6e427573696e65737353657276696365",
+                  "key": "b949da62b459fa4e0974bcdd6e4d6f64656c446566696e6974696f6e",
+                  "totalEventCount": 0,
+                  "actualEventCount": 0,
+                  "situationCount": 0,
+                  "totalIncidentCount": 0,
+                  "actualTotalIncidentCount": 0,
+                  "health": 100,
+                  "healthState": "OK",
+                  "impactedEntityCount": 0,
+                  "modified": 1675111863,
+                  "kind": "BusinessService",
+                  "eventsDistribution": [],
+                  "actualEventsDistribution": []
+              },
+              "ca56c862504dfbd6388b41146e427573696e65737353657276696365": {
+                  "name": "ITSM - Hybrid",
+                  "id": "ca56c862504dfbd6388b41146e427573696e65737353657276696365",
+                  "key": "62005a60e158c52675d5771e6e4d6f64656c446566696e6974696f6e",
+                  "totalEventCount": 0,
+                  "actualEventCount": 0,
+                  "situationCount": 0,
+                  "totalIncidentCount": 0,
+                  "actualTotalIncidentCount": 0,
+                  "health": 100,
+                  "healthState": "OK",
+                  "impactedEntityCount": 0,
+                  "modified": 1672320269,
+                  "kind": "BusinessService",
+                  "eventsDistribution": [],
+                  "actualEventsDistribution": []
+              },
+              "b949da62b459fa4e0974b4466e427573696e65737353657276696365": {
+                  "name": "Train Ticketing",
+                  "id": "b949da62b459fa4e0974b4466e427573696e65737353657276696365",
+                  "key": "b949da62b459fa4e0974b0c56e4d6f64656c446566696e6974696f6e",
+                  "totalEventCount": 0,
+                  "actualEventCount": 0,
+                  "situationCount": 0,
+                  "totalIncidentCount": 0,
+                  "actualTotalIncidentCount": 0,
+                  "health": 100,
+                  "healthState": "OK",
+                  "impactedEntityCount": 0,
+                  "modified": 1675111863,
+                  "kind": "BusinessService",
+                  "eventsDistribution": [],
+                  "actualEventsDistribution": []
+              },
+              "05adc2630100c20f6fdfe09f6e427573696e65737353657276696365": {
+                  "name": "AWS",
+                  "id": "05adc2630100c20f6fdfe09f6e427573696e65737353657276696365",
+                  "key": "l0GOuypO5Fm-rrbwpJE9WyPnsOYn4eJ_",
+                  "totalEventCount": 0,
+                  "actualEventCount": 0,
+                  "situationCount": 0,
+                  "totalIncidentCount": 0,
+                  "actualTotalIncidentCount": 0,
+                  "health": 100,
+                  "healthState": "OK",
+                  "impactedEntityCount": 0,
+                  "modified": 1674231075,
+                  "kind": "BusinessService",
+                  "eventsDistribution": [],
+                  "actualEventsDistribution": []
+              },
+              "14393163514cb8eb608729516e546563686e6963616c53657276696365": {
+                  "name": "Issue Management Production",
+                  "id": "14393163514cb8eb608729516e546563686e6963616c53657276696365",
+                  "key": "8ba43163d1059a15509fef7d6e4d6f64656c446566696e6974696f6e",
+                  "totalEventCount": 0,
+                  "actualEventCount": 0,
+                  "situationCount": 0,
+                  "totalIncidentCount": 0,
+                  "actualTotalIncidentCount": 0,
+                  "health": 100,
+                  "healthState": "OK",
+                  "impactedEntityCount": 0,
+                  "modified": 1665516598,
+                  "kind": "TechnicalService",
+                  "eventsDistribution": [],
+                  "actualEventsDistribution": []
+              },
+              "05adc2630100c20f6fdfeb846e427573696e65737353657276696365": {
+                  "name": "London",
+                  "id": "05adc2630100c20f6fdfeb846e427573696e65737353657276696365",
+                  "key": "3WIecOxdmyZ3aTIa1ZgZZEKwssinAnVe",
+                  "totalEventCount": 0,
+                  "actualEventCount": 0,
+                  "situationCount": 0,
+                  "totalIncidentCount": 0,
+                  "actualTotalIncidentCount": 0,
+                  "health": 100,
+                  "healthState": "OK",
+                  "impactedEntityCount": 0,
+                  "modified": 1674231075,
+                  "kind": "BusinessService",
+                  "eventsDistribution": [],
+                  "actualEventsDistribution": []
+              },
+              "05adc2630100c20f6fdfe8d06e427573696e65737353657276696365": {
+                  "name": "N. Virginia",
+                  "id": "05adc2630100c20f6fdfe8d06e427573696e65737353657276696365",
+                  "key": "zzcGBEQYljJiB1DPOodeCfwJ-dCcAWIn",
+                  "totalEventCount": 0,
+                  "actualEventCount": 0,
+                  "situationCount": 0,
+                  "totalIncidentCount": 0,
+                  "actualTotalIncidentCount": 0,
+                  "health": 100,
+                  "healthState": "OK",
+                  "impactedEntityCount": 0,
+                  "modified": 1674231075,
+                  "kind": "BusinessService",
+                  "eventsDistribution": [],
+                  "actualEventsDistribution": []
+              },
+              "14393163514cb8eb60a03c456e427573696e65737353657276696365": {
+                  "name": "Pex Production",
+                  "id": "14393163514cb8eb60a03c456e427573696e65737353657276696365",
+                  "key": "36007362c1059d73107318826e4d6f64656c446566696e6974696f6e",
+                  "totalEventCount": 0,
+                  "actualEventCount": 0,
+                  "situationCount": 0,
+                  "totalIncidentCount": 0,
+                  "actualTotalIncidentCount": 0,
+                  "health": 100,
+                  "healthState": "OK",
+                  "impactedEntityCount": 0,
+                  "modified": 1665516719,
+                  "kind": "BusinessService",
+                  "eventsDistribution": [],
+                  "actualEventsDistribution": []
+              },
+              "14393163514cb8eb60870cbf6e427573696e65737353657276696365": {
+                  "name": "Portal Clientes B2B",
+                  "id": "14393163514cb8eb60870cbf6e427573696e65737353657276696365",
+                  "key": "14393163514cb8eb60870be26e4d6f64656c446566696e6974696f6e",
+                  "totalEventCount": 0,
+                  "actualEventCount": 0,
+                  "situationCount": 0,
+                  "totalIncidentCount": 0,
+                  "actualTotalIncidentCount": 0,
+                  "health": 100,
+                  "healthState": "OK",
+                  "impactedEntityCount": 0,
+                  "modified": 1672835402,
+                  "kind": "BusinessService",
+                  "eventsDistribution": [],
+                  "actualEventsDistribution": []
+              },
+              "05adc2630100c20f6fe07b6a6e427573696e65737353657276696365": {
+                  "name": "Test Service",
+                  "id": "05adc2630100c20f6fe07b6a6e427573696e65737353657276696365",
+                  "key": "cRAZuGNAr04N9Or4EUgx0kifZe7ks4ns",
+                  "totalEventCount": 0,
+                  "actualEventCount": 0,
+                  "situationCount": 0,
+                  "totalIncidentCount": 0,
+                  "actualTotalIncidentCount": 0,
+                  "health": 100,
+                  "healthState": "OK",
+                  "impactedEntityCount": 0,
+                  "modified": 1675350447,
+                  "kind": "BusinessService",
+                  "eventsDistribution": [],
+                  "actualEventsDistribution": []
+              }
+          },
+          "totalRecords": 12,
+          "serviceCount": 12,
+          "startIndex": 0,
+          "endIndex": 199
+      }
+order: 1000

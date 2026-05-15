@@ -1,0 +1,53 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/intelligent-automation/api/v1/workflow_instances"
+  method: DELETE
+  body:
+    type: json
+    content: "{\r
+
+      \    \"filter\": {\r
+
+      \        \"NOP\": [\r
+
+      \            {\r
+
+      \                \"BETWEEN\": {\r
+
+      \                    \"key\": \"start_time\",\r
+
+      \                    \"value\": [\r
+
+      \                        \" 1643684400\",\r
+
+      \                        \" 1706756400\"\r
+
+      \                    ]\r
+
+      \                }\r
+
+      \            }\r
+
+      \        ]\r
+
+      \    }\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Thu, 07 Mar 2024 12:07:43 GMT
+    Content-Type: application/json; charset=utf-8
+    Content-Length: "59"
+    Connection: keep-alive
+    X-Powered-By: Express
+    ETag: W/"3b-NpXQOat6QgmkAzc+r3/Yk652JTM"
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+  body:
+    type: json
+    content: |-
+      {
+          "data": "Workflow instances deletion started successfully"
+      }
+order: 1000

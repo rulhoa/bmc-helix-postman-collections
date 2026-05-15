@@ -1,0 +1,56 @@
+$kind: http-request
+description: |-
+  ## Cria requisições a partir do template ID de um Fluxo.
+
+  ____________________________________________________________________________________________________________________
+
+  ##### Descrição:
+
+  Cria um registro no formulário SRM:RequestInterface_Create com campos básicos necessários para a criação de uma Requisição no formulário SRM:Request bem como seus filhos "Work Orders e/ou Incidents".
+
+  ____________________________________________________________________________________________________________________
+
+  ##### Pontos de Atenção:
+  * Não é possível abrir uma REQ cujo processo do template possui árvore de decisão, se isto for necessário será obrigatória a criação de um fluxo para cada condicional.
+  * Não é possível preencher campos de Perguntas e Respostas de fluxos via API na versão 9.1.
+
+  ____________________________________________________________________________________________________________________
+
+  ##### BODY:
+
+  * Z1D Action: Indica a ação à ser Realizada, geralmente "MODIFY" ou "CREATE".
+
+  * Source Keyword: Indica a origem da solicitação, auxiliando na identificação da origem, insira "Integração + Nome do Seu Sistema".
+
+  * TitleInstanceID: É o Instance ID do fluxo à ser utilizado, para entendimento da ferramenta de qual processo seguir.
+
+  * Status: É o status desejado da requisição, por default o valor é "Submitted" pois é o status que dará início à transação.
+
+  * Company: Indica a empresa que está solicitando a requisição, por default é "B3".
+
+  ____________________________________________________________________________________________________________________
+
+  ##### HEADERS:
+
+  * Authorization: É o token para acessar a ferramenta, obtido atravéz da chamada POST Request Token, sempre necessário o prefixo AR-JWT(espaço)+TOKEN.
+
+  * Content-Type: Deve indicar o modelo de dados que está sendo enviado, por ser REST e em geral linha de código, o valor default é "application/json".
+url: "{{itsm_base_url}}/api/arsys/v1/entry/SRM:RequestInterface_Create"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {       
+        "values": {
+            "Source Keyword": "",
+            "TitleInstanceID": "",
+            "Login ID": "",
+            "Customer Login":"",
+            "Status": "",
+            "z1D Action": "",
+            "Company": ""
+        }
+    }
+order: 2000

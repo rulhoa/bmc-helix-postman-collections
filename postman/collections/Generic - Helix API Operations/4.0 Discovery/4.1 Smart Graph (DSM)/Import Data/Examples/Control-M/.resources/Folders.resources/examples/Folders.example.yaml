@@ -1,0 +1,50 @@
+$kind: http-example
+request:
+  url: "{{disco_base_url}}/api/v1.9/data/import"
+  method: POST
+  body:
+    type: json
+    content: "{\r
+
+      \  \"source\": \"VSE\",\r
+
+      \  \"items\": [\r
+
+      \    {\r
+
+      \      \"kind\": \"Entity\",\r
+
+      \      \"data\": {\r
+
+      \        \"entity_id\": \"Finance_jobs\",\r
+
+      \        \"ControlmServer\": \"IN01\",\r
+
+      \        \"key\": \"ControlMFolder/Finance_jobs\",\r
+
+      \        \"Type\": \"Control-M Folder\",\r
+
+      \        \"entity_type\": \"SoftwareCluster\"\r
+
+      \      }\r
+
+      \    }\r
+
+      \  ],\r
+
+      \  \"type\": \"VSE_Entities\"\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Wed, 06 Sep 2023 17:46:21 GMT
+    Content-Type: application/json
+    Content-Length: "35"
+    Connection: keep-alive
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+  body:
+    type: json
+    content: '"a663ae3c2f0b36ee978c0a684b650001"'
+order: 1000

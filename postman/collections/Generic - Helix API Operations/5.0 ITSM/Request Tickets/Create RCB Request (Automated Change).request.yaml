@@ -1,0 +1,26 @@
+$kind: http-request
+url: "{{applicationserver}}/api/arsys/v1/entry/SRM:RequestInterface_Create"
+method: POST
+headers:
+  Authorization: "{{tokensignature}}{{token}}"
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {       
+        "values": {
+            "Source Keyword": "",
+            "TitleInstanceID": "",
+            "Login ID": "",
+            "Customer Login":"",
+            "Status": "",
+            "z1D Action": "",
+            "Company": "",
+            "SR Type Field 1":"",
+            "SR Type Field 16":"",
+            "SR Type Field 3":"",
+            "SR Type Field 4":"",
+            "SR Type Field 5":""
+        }
+    }
+order: 6000

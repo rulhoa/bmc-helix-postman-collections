@@ -1,0 +1,7 @@
+$kind: http-request
+url: "{{disco_base_url}}/api/v1.10/knowledge/status"
+method: GET
+body:
+  type: file
+  content: {}
+order: 3000

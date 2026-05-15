@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{is_base_url}}/api/com.bmc.dsm.itsm.itsm-rest-api/v2/worknote/change/CRQ000000024701"
+method: GET
+examples: ./.resources/Get Change Work Notes.resources/examples
+order: 2000

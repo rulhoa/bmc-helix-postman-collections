@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{v1}}/metrics/db/statistics"
+method: GET
+order: 13000

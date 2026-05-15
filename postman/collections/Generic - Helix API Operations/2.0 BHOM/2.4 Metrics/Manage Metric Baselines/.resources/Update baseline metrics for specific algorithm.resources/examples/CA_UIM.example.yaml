@@ -1,0 +1,433 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/aiops-config/api/v2.0/algorithms/tdigest/metrics"
+  method: PUT
+  body:
+    type: json
+    content: "{\r
+
+      \    \"metrics\": [\r
+
+      \r
+
+      \r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_DISK_USAGE\",\"attributes\": [\"/_Disk_Usage\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_DISK_USAGE_PERC\",\"attributes\": [\"/_Disk_Usage_pct\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_INODE_USAGE_PERC\",\"attributes\": [\"/_Inode_Usage_pct\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_DISK_USAGE\",\"attributes\": [\"/boot_Disk_Usage\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_DISK_USAGE_PERC\",\"attributes\": [\"/boot_Disk_Usage_pct\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_INODE_USAGE_PERC\",\"attributes\": [\"/boot_Inode_Usage_pct\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_DISK_USAGE\",\"attributes\": [\"/soft/buo/shared_Disk_Usage\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_DISK_USAGE_PERC\",\"attributes\": [\"/soft/buo/shared_Disk_Usage_pct\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_INODE_USAGE_PERC\",\"attributes\": [\"/soft/buo/shared_Inode_Usage_pct\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_DISK_USAGE\",\"attributes\": [\"/soft_Disk_Usage\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_DISK_USAGE_PERC\",\"attributes\": [\"/soft_Disk_Usage_pct\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_INODE_USAGE_PERC\",\"attributes\": [\"/soft_Inode_Usage_pct\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_Aggregated_Traffic\",\"attributes\": [\"Aggregated_Traffic\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_PROCESS_STATE\",\"attributes\": [\"Crond_Process_Availability\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_PROCESS_CPU\",\"attributes\": [\"Crond_Process_CPU_usage\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_PROCESS_COUNT\",\"attributes\": [\"Crond_Process_Instances\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_PROCESS_MEMORY\",\"attributes\": [\"Crond_Process_Memory_Usage\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_Inbound_Errors\",\"attributes\": [\"Inbound_Errors\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_Inbound_Utilization\",\"attributes\": [\"Inbound_Utilization\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_PROCESS_STATE\",\"attributes\": [\"LDAP_Process_Availability\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_PROCESS_CPU\",\"attributes\": [\"LDAP_Process_CPU_usage\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_PROCESS_COUNT\",\"attributes\": [\"LDAP_Process_Instances\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_PROCESS_MEMORY\",\"attributes\": [\"LDAP_Process_Memory_Usage\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_Outbound_Errors\",\"attributes\": [\"Outbound_Errors\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_Outbound_Utilization\",\"attributes\": [\"Outbound_Utilization\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_LOGMON_VARIABLE\",\"attributes\": [\"Proc_Zombies-w1-zombie_var_Logmon_Variable\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_IPC_PROCESSES_UTILIZATION\",\"attributes\": [\"Processes_Percentage_of_number_of_currently_running_Processes_to_maximum_number_of_Process_ids_available_in_tProcesses\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_IPC_PROCESSES_COUNT\",\"attributes\": [\"Processes_currently_running_on_system\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_PROCESS_STATE\",\"attributes\": [\"Rsyslogd_Process_Availability\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_PROCESS_CPU\",\"attributes\": [\"Rsyslogd_Process_CPU_usage\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_PROCESS_COUNT\",\"attributes\": [\"Rsyslogd_Process_Instances\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_PROCESS_MEMORY\",\"attributes\": [\"Rsyslogd_Process_Memory_Usage\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_PROCESS_STATE\",\"attributes\": [\"SNMP_Process_Availability\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_PROCESS_CPU\",\"attributes\": [\"SNMP_Process_CPU_usage\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_PROCESS_COUNT\",\"attributes\": [\"SNMP_Process_Instances\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_PROCESS_MEMORY\",\"attributes\": [\"SNMP_Process_Memory_Usage\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_PROCESS_STATE\",\"attributes\": [\"SSHD_Process_Availability\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_PROCESS_CPU\",\"attributes\": [\"SSHD_Process_CPU_usage\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_PROCESS_COUNT\",\"attributes\": [\"SSHD_Process_Instances\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_PROCESS_MEMORY\",\"attributes\": [\"SSHD_Process_Memory_Usage\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_Swap_Memory_Usage\",\"attributes\": [\"Swap_Memory_Usage_pct\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_Aggregate_CPU_Usage\",\"attributes\": [\"Total_CPU_Usage\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_Memory_Usage\",\"attributes\": [\"Total_Memory_Usage_pct\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_Processor_Queue_Length\",\"attributes\": [\"Total_Processor_Queue_Length\"]},\r
+
+      { \"entityTypeId\": \"CA_UIM_CA_UIM_QOS_NET_CONNECT\",\"attributes\": [\"ping_Network_Connectivity_Response\"]}\r
+
+      \r
+
+      \r
+
+      \    ]\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    - key: Server
+      value: nginx
+    - key: Date
+      value: Sat, 27 Jan 2024 18:04:02 GMT
+    - key: Content-Type
+      value: application/json
+    - key: Transfer-Encoding
+      value: chunked
+    - key: Connection
+      value: keep-alive
+    - key: Vary
+      value: Accept-Encoding
+    - key: Vary
+      value: Origin
+    - key: Vary
+      value: Access-Control-Request-Method
+    - key: Vary
+      value: Access-Control-Request-Headers
+    - key: X-Content-Type-Options
+      value: nosniff
+    - key: X-XSS-Protection
+      value: "0"
+    - key: Cache-Control
+      value: no-cache, no-store, max-age=0, must-revalidate
+    - key: Pragma
+      value: no-cache
+    - key: Expires
+      value: "0"
+    - key: Strict-Transport-Security
+      value: max-age=31536000; includeSubDomains
+    - key: X-Frame-Options
+      value: DENY
+    - key: Referrer-Policy
+      value: same-origin
+    - key: Permissions-Policy
+      value: idle-detection=self
+    - key: X-Request-ID
+      value: 968de2714f8598ce84435fcad72d934f
+    - key: Content-Encoding
+      value: gzip
+  body:
+    type: json
+    content: |-
+      {
+          "metrics": [
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_DISK_USAGE",
+                  "baselineStatus": {
+                      "/_Disk_Usage": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_DISK_USAGE_PERC",
+                  "baselineStatus": {
+                      "/_Disk_Usage_pct": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_INODE_USAGE_PERC",
+                  "baselineStatus": {
+                      "/_Inode_Usage_pct": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_DISK_USAGE",
+                  "baselineStatus": {
+                      "/boot_Disk_Usage": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_DISK_USAGE_PERC",
+                  "baselineStatus": {
+                      "/boot_Disk_Usage_pct": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_INODE_USAGE_PERC",
+                  "baselineStatus": {
+                      "/boot_Inode_Usage_pct": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_DISK_USAGE",
+                  "baselineStatus": {
+                      "/soft/buo/shared_Disk_Usage": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_DISK_USAGE_PERC",
+                  "baselineStatus": {
+                      "/soft/buo/shared_Disk_Usage_pct": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_INODE_USAGE_PERC",
+                  "baselineStatus": {
+                      "/soft/buo/shared_Inode_Usage_pct": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_DISK_USAGE",
+                  "baselineStatus": {
+                      "/soft_Disk_Usage": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_DISK_USAGE_PERC",
+                  "baselineStatus": {
+                      "/soft_Disk_Usage_pct": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_INODE_USAGE_PERC",
+                  "baselineStatus": {
+                      "/soft_Inode_Usage_pct": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_Aggregated_Traffic",
+                  "baselineStatus": {
+                      "Aggregated_Traffic": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_PROCESS_STATE",
+                  "baselineStatus": {
+                      "Crond_Process_Availability": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_PROCESS_CPU",
+                  "baselineStatus": {
+                      "Crond_Process_CPU_usage": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_PROCESS_COUNT",
+                  "baselineStatus": {
+                      "Crond_Process_Instances": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_PROCESS_MEMORY",
+                  "baselineStatus": {
+                      "Crond_Process_Memory_Usage": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_Inbound_Errors",
+                  "baselineStatus": {
+                      "Inbound_Errors": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_Inbound_Utilization",
+                  "baselineStatus": {
+                      "Inbound_Utilization": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_PROCESS_STATE",
+                  "baselineStatus": {
+                      "LDAP_Process_Availability": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_PROCESS_CPU",
+                  "baselineStatus": {
+                      "LDAP_Process_CPU_usage": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_PROCESS_COUNT",
+                  "baselineStatus": {
+                      "LDAP_Process_Instances": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_PROCESS_MEMORY",
+                  "baselineStatus": {
+                      "LDAP_Process_Memory_Usage": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_Outbound_Errors",
+                  "baselineStatus": {
+                      "Outbound_Errors": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_Outbound_Utilization",
+                  "baselineStatus": {
+                      "Outbound_Utilization": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_LOGMON_VARIABLE",
+                  "baselineStatus": {
+                      "Proc_Zombies-w1-zombie_var_Logmon_Variable": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_IPC_PROCESSES_UTILIZATION",
+                  "baselineStatus": {
+                      "Processes_Percentage_of_number_of_currently_running_Processes_to_maximum_number_of_Process_ids_available_in_tProcesses": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_IPC_PROCESSES_COUNT",
+                  "baselineStatus": {
+                      "Processes_currently_running_on_system": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_PROCESS_STATE",
+                  "baselineStatus": {
+                      "Rsyslogd_Process_Availability": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_PROCESS_CPU",
+                  "baselineStatus": {
+                      "Rsyslogd_Process_CPU_usage": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_PROCESS_COUNT",
+                  "baselineStatus": {
+                      "Rsyslogd_Process_Instances": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_PROCESS_MEMORY",
+                  "baselineStatus": {
+                      "Rsyslogd_Process_Memory_Usage": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_PROCESS_STATE",
+                  "baselineStatus": {
+                      "SNMP_Process_Availability": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_PROCESS_CPU",
+                  "baselineStatus": {
+                      "SNMP_Process_CPU_usage": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_PROCESS_COUNT",
+                  "baselineStatus": {
+                      "SNMP_Process_Instances": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_PROCESS_MEMORY",
+                  "baselineStatus": {
+                      "SNMP_Process_Memory_Usage": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_PROCESS_STATE",
+                  "baselineStatus": {
+                      "SSHD_Process_Availability": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_PROCESS_CPU",
+                  "baselineStatus": {
+                      "SSHD_Process_CPU_usage": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_PROCESS_COUNT",
+                  "baselineStatus": {
+                      "SSHD_Process_Instances": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_PROCESS_MEMORY",
+                  "baselineStatus": {
+                      "SSHD_Process_Memory_Usage": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_Swap_Memory_Usage",
+                  "baselineStatus": {
+                      "Swap_Memory_Usage_pct": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_Aggregate_CPU_Usage",
+                  "baselineStatus": {
+                      "Total_CPU_Usage": "ALREADY_ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_Memory_Usage",
+                  "baselineStatus": {
+                      "Total_Memory_Usage_pct": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_Processor_Queue_Length",
+                  "baselineStatus": {
+                      "Total_Processor_Queue_Length": "ENABLED"
+                  }
+              },
+              {
+                  "entityTypeId": "CA_UIM_CA_UIM_QOS_NET_CONNECT",
+                  "baselineStatus": {
+                      "ping_Network_Connectivity_Response": "ENABLED"
+                  }
+              }
+          ]
+      }
+order: 3000

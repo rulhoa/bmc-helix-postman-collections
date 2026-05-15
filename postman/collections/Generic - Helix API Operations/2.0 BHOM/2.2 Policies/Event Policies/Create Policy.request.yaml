@@ -1,0 +1,271 @@
+$kind: http-request
+url: "{{bhom_base_url}}/events-service/api/v1.0/event_policies/"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\": \"400 Set Direct Links GERE\",\r
+
+    \    \"types\": [\r
+
+    \        \"ADVANCED_ENRICHMENT\"\r
+
+    \    ],\r
+
+    \    \"description\": \"Generate Direct Links\",\r
+
+    \    \"executionOrder\": 7300,\r
+
+    \    \"selectorCriteria\": \"class equals 'MonitorEvent'\",\r
+
+    \    \"enabled\": true,\r
+
+    \    \"configurations\": [\r
+
+    \        {\r
+
+    \            \"type\": \"ADVANCED_ENRICHMENT\",\r
+
+    \            \"configOrder\": 1,\r
+
+    \            \"definition\": {\r
+
+    \                \"children\": [\r
+
+    \                    {\r
+
+    \                        \"children\": [],\r
+
+    \                        \"label\": \"Check gere\",\r
+
+    \                        \"type\": \"if\",\r
+
+    \                        \"conditions\": [\r
+
+    \                            {\r
+
+    \                                \"slotName\": \"$NEW.Gere\",\r
+
+    \                                \"slotOperator\": \"equals\",\r
+
+    \                                \"conditionOrder\": 0,\r
+
+    \                                \"conditionOperator\": \"\",\r
+
+    \                                \"conditionBracket\": \"\",\r
+
+    \                                \"endBracket\": \"\",\r
+
+    \                                \"slotValue\": \"NOMATCH\"\r
+
+    \                            }\r
+
+    \                        ]\r
+
+    \                    },\r
+
+    \                    {\r
+
+    \                        \"children\": [\r
+
+    \                            {\r
+
+    \                                \"children\": [\r
+
+    \                                    {\r
+
+    \                                        \"children\": [\r
+
+    \                                            {\r
+
+    \                                                \"showDescription\": false,\r
+
+    \                                                \"children\": [],\r
+
+    \                                                \"type\": \"data\",\r
+
+    \                                                \"value\": \"<a href=https://cmdb/forms/secmdbp001/SHR%3ALandingConsole/Default+Administrator+View/?mode=search&F304255500=AST%3AApplication&F1000000076=FormOpenNoAppList&F303647600=SearchTicketWithQual&F304255610=%27200000020%27%3D%22\"\r
+
+    \                                            },\r
+
+    \                                            {\r
+
+    \                                                \"showDescription\": false,\r
+
+    \                                                \"children\": [],\r
+
+    \                                                \"type\": \"data\",\r
+
+    \                                                \"value\": \"$NEW.Gere\"\r
+
+    \                                            }\r
+
+    \                                        ],\r
+
+    \                                        \"name\": \"Concat\",\r
+
+    \                                        \"type\": \"function\"\r
+
+    \                                    }\r
+
+    \                                ],\r
+
+    \                                \"label\": \"GERE10\",\r
+
+    \                                \"type\": \"assignVar\",\r
+
+    \                                \"key\": \"$GERE10\"\r
+
+    \                            },\r
+
+    \                            {\r
+
+    \                                \"children\": [\r
+
+    \                                    {\r
+
+    \                                        \"children\": [\r
+
+    \                                            {\r
+
+    \                                                \"showDescription\": false,\r
+
+    \                                                \"children\": [],\r
+
+    \                                                \"type\": \"data\",\r
+
+    \                                                \"value\": \"$GERE10\"\r
+
+    \                                            },\r
+
+    \                                            {\r
+
+    \                                                \"showDescription\": false,\r
+
+    \                                                \"children\": [],\r
+
+    \                                                \"type\": \"data\",\r
+
+    \                                                \"value\": \"%22AND%27400127400%27%3D%22BMC.ASSET%22&cacheid=2b9496e9  target=\\\"_blank\\\" title=\\\"View in CMDB\\\">\"\r
+
+    \                                            }\r
+
+    \                                        ],\r
+
+    \                                        \"name\": \"Concat\",\r
+
+    \                                        \"type\": \"function\"\r
+
+    \                                    }\r
+
+    \                                ],\r
+
+    \                                \"label\": \"GERE20\",\r
+
+    \                                \"type\": \"assignVar\",\r
+
+    \                                \"key\": \"$GERE20\"\r
+
+    \                            },\r
+
+    \                            {\r
+
+    \                                \"children\": [\r
+
+    \                                    {\r
+
+    \                                        \"children\": [\r
+
+    \                                            {\r
+
+    \                                                \"showDescription\": false,\r
+
+    \                                                \"children\": [],\r
+
+    \                                                \"type\": \"data\",\r
+
+    \                                                \"value\": \"$GERE20\"\r
+
+    \                                            },\r
+
+    \                                            {\r
+
+    \                                                \"showDescription\": false,\r
+
+    \                                                \"children\": [],\r
+
+    \                                                \"type\": \"data\",\r
+
+    \                                                \"value\": \"$NEW.Gere\"\r
+
+    \                                            }\r
+
+    \                                        ],\r
+
+    \                                        \"name\": \"Concat\",\r
+
+    \                                        \"type\": \"function\"\r
+
+    \                                    }\r
+
+    \                                ],\r
+
+    \                                \"label\": \"GERE30\",\r
+
+    \                                \"type\": \"assignVar\",\r
+
+    \                                \"key\": \"$GERE30\"\r
+
+    \                            },\r
+
+    \                            {\r
+
+    \                                \"children\": [\r
+
+    \                                    {\r
+
+    \                                        \"children\": [],\r
+
+    \                                        \"type\": \"data\",\r
+
+    \                                        \"value\": \"$GERE30\"\r
+
+    \                                    }\r
+
+    \                                ],\r
+
+    \                                \"label\": \"Set Gere to Gere30\",\r
+
+    \                                \"type\": \"enrich\",\r
+
+    \                                \"key\": \"$NEW.Gere\"\r
+
+    \                            }\r
+
+    \                        ],\r
+
+    \                        \"label\": \"\",\r
+
+    \                        \"type\": \"else\"\r
+
+    \                    }\r
+
+    \                ],\r
+
+    \                \"label\": \"Set CMDB ComputerSystem Link\",\r
+
+    \                \"type\": \"root\"\r
+
+    \            },\r
+
+    \            \"timeframeStatus\": \"\",\r
+
+    \            \"subType\": \"\"\r
+
+    \        }\r
+
+    \    ]\r
+
+    }"
+order: 4000

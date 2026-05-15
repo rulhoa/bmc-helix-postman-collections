@@ -1,0 +1,46 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/tsws/monitoring/api/v1.0/unifiedadmin/Policy/delete?idType=id"
+  method: POST
+  queryParams:
+    idType: id
+  body:
+    type: json
+    content: "{\r
+
+      \    \"policyIds\": \"64e82ce6-4285-4d39-bdb8-b5d587445dcf\"\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Tue, 08 Oct 2024 18:11:29 GMT
+    Content-Type: application/json
+    Content-Length: "198"
+    Connection: keep-alive
+    Content-Security-Policy: frame-ancestors 'self'
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    X-Frame-Options: SAMEORIGIN
+    X-Content-Type-Options: nosniff
+    Cache-Control: no-store
+    Referrer-Policy: same-origin
+    Permissions-Policy: idle-detection=self
+    TraceId: a7897991-9c5a-47a3-9d94-b8d0fa664cd1 613873398
+  body:
+    type: json
+    content: |-
+      {
+          "responseTimeStamp": 0,
+          "statusCode": "200",
+          "statusMsg": "200",
+          "response": [
+              {
+                  "resourceId": "64e82ce6-4285-4d39-bdb8-b5d587445dcf",
+                  "resourceName": "My Monitor Policy",
+                  "statusCode": "200",
+                  "statusMsg": "OK"
+              }
+          ]
+      }
+order: 1000

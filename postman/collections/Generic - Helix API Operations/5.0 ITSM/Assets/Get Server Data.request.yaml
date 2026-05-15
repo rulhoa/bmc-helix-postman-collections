@@ -1,0 +1,8 @@
+$kind: http-request
+url: "{{itsm_base_url}}/api/arsys/v1/entry/BOV:FormularioAdmissaoServidores?q='REQ_ID'=\"\""
+method: GET
+headers:
+  Content-Type: application/json
+queryParams:
+  q: "'REQ_ID'=\"\""
+order: 1000

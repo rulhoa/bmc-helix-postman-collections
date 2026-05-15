@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{bhom_base_url}}/ims/api/v1/applications?orderBy=name&sortOrder=asc&page=0"
+method: GET
+queryParams:
+  orderBy: name
+  sortOrder: asc
+  page: "0"
+examples: ./.resources/Get Applications - Modules and Versions.resources/examples
+order: 2000

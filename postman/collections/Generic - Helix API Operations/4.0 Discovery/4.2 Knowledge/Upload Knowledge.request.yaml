@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{disco_base_url}}/api/v1.10/knowledge/Import_VSE_ControlM.tpl?filename=Import_VSE_ControlM.tpl&activate=true&allow_restart=false"
+method: POST
+queryParams:
+  - key: filename
+    value: Import_VSE_ControlM.tpl
+    description: "Filename of the upload, for reporting purposes. Must have one of these extensions: .tpl, .zip, .drpm, .hrd"
+  - key: activate
+    value: "true"
+    description: Flag if patterns should be activated after upload
+  - key: allow_restart
+    value: "false"
+    description: Flag if services may be restarted in order to update Network Devices or Product Content. If this is false, but a restart IS required, the upload will not be performed. This case can be detected by checking the optional field 'restart_required' in the body of the error response
+body:
+  type: file
+  content: {}
+order: 2000

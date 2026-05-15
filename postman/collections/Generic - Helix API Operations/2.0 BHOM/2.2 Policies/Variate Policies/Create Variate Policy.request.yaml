@@ -1,0 +1,68 @@
+$kind: http-request
+url: "{{bhom_base_url}}/aif/api/v1.0/algorithm/"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"templateId\": \"b558d267-c958-4c4d-8734-b40b0961fdd8\",\r
+
+    \    \"name\": \"Control-M Job Status\",\r
+
+    \    \"definition\": {\r
+
+    \        \"algorithmAnalysisMode\": \"Univariate\",\r
+
+    \        \"name\": \"Univariate\",\r
+
+    \        \"dataConfig\": [\r
+
+    \            {\r
+
+    \                \"identifier\": [\r
+
+    \                    \"entityId=SVIBIM026,hostname=ctmClearingP,__name__=JobStatus\"\r
+
+    \                ],\r
+
+    \                \"duration\": 0,\r
+
+    \                \"autoClose\": false,\r
+
+    \                \"sensitivity\": {\r
+
+    \                    \"minor\": 1,\r
+
+    \                    \"major\": 2,\r
+
+    \                    \"critical\": 3.5\r
+
+    \                },\r
+
+    \                \"message\": \"Job Execution Status is abnormal\"\r
+
+    \            }\r
+
+    \        ],\r
+
+    \        \"algorithmConfig\": {\r
+
+    \            \"params\": {\r
+
+    \                \"numTrees\": 100,\r
+
+    \                \"numSamplesPerTree\": 256,\r
+
+    \                \"evalMetrics\": \"accuracy\",\r
+
+    \                \"shingleSize\": 1\r
+
+    \            }\r
+
+    \        }\r
+
+    \    }\r
+
+    }"
+examples: ./.resources/Create Variate Policy.resources/examples
+order: 3000

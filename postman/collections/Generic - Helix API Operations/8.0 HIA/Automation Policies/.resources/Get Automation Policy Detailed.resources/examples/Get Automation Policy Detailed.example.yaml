@@ -1,0 +1,378 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/intelligent-automation/api/v1/workflows/c5293b57-6c7c-ce72-908c-9c7cda3b4495/checksum/0bc5335ad00661a9b3bf4beaf6c3f2b718d7e6d5986d4c463989362ab68315bc"
+  method: GET
+  headers:
+    helix_jwt_token: "{{bhom_json_web_token}}"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Fri, 10 Feb 2023 20:22:50 GMT
+    Content-Type: application/json; charset=utf-8
+    Content-Length: "7589"
+    Connection: keep-alive
+    X-Powered-By: Express
+    ETag: W/"1da5-KJwALClXBQLzvUiphrhnYw5hCfc"
+  body:
+    type: json
+    content: |-
+      {
+          "id": "c5293b57-6c7c-ce72-908c-9c7cda3b4495",
+          "name": "Remediacao via Control-M",
+          "type": "user_defined",
+          "description": "",
+          "metadata": {
+              "event": {
+                  "msg": "[Dynatrace] Abnormal traffic pattern detected on tower220",
+                  "tags": "[]",
+                  "alias": [
+                      "BMC_ComputerSystem:web-fe-02"
+                  ],
+                  "class": "EVENT",
+                  "_ci_id": "",
+                  "_model": "",
+                  "_notes": "[]",
+                  "status": "OPEN",
+                  "_errors": "[]",
+                  "details": "",
+                  "_entropy": "",
+                  "_node_id": [
+                      "c956c862bd2e716c4ace65636e486f7374",
+                      "c956c862bd2e716c4ace65606e5669727475616c4d616368696e65"
+                  ],
+                  "category": "OPERATIONS_MANAGEMENT",
+                  "cdmclass": "",
+                  "location": "",
+                  "priority": "PRIORITY_1",
+                  "severity": "CRITICAL",
+                  "modelname": "",
+                  "_signature": "1428297848",
+                  "_tenant_id": "1738801444",
+                  "score_info": "",
+                  "start_time": null,
+                  "_identifier": "eps.1738801444.3818702292462257.6ad0841a-58f7-45f3-be9c-fa262cce7382",
+                  "_operations": "[0x182f9843c8b,,Predefined Policy for Incident,NOTIFICATION,'']",
+                  "_service_id": [
+                      "b949da62b459fa4e0974bcd26e427573696e65737353657276696365",
+                      "c956c862bd2e716c4ace65696e427573696e65737353657276696365"
+                  ],
+                  "automations": [
+                      {
+                          "id": "30799dc1-3039-3fe2-d895-d3a0daa70269",
+                          "name": "Linux Disk Cleanup",
+                          "type": "user_defined",
+                          "checksum": "2bd8db4dcec26d4abd59e33cbf986e8a5e930e2378128c0aa5ffc1c13d8ed8b3",
+                          "description": "Delete temporary files to free diskspace",
+                          "auto_enabled": false
+                      }
+                  ],
+                  "event_score": 14,
+                  "incident_id": "INC000000020895",
+                  "showRcaIcon": true,
+                  "situationID": "c956c862bd2e716c4ace65696e427573696e65737353657276696365_d730cace18b040dab045c1b1a316a235",
+                  "source_port": 3181,
+                  "_tenant_name": "",
+                  "instancename": "",
+                  "significance": "0",
+                  "sub_category": "OTHER",
+                  "_arrival_time": 1662043569244,
+                  "_repeat_count": "0",
+                  "_service_name": [
+                      "Puma Trading System",
+                      "Media Service"
+                  ],
+                  "creation_time": 1662043569244,
+                  "situationName": "Media Service - [Dynatrace] Abnormal traffic pattern detected on tower220",
+                  "user_assigned": "",
+                  "_modified_time": 1662043571385,
+                  "_relationships": {
+                      "rstat": "secondary",
+                      "mlsituation": [
+                          "c956c862bd2e716c4ace65696e427573696e65737353657276696365_d730cace18b040dab045c1b1a316a235",
+                          "b949da62b459fa4e0974bcd26e427573696e65737353657276696365_f20ef3f750374db2a560a6085894a068"
+                      ]
+                  },
+                  "_unmapped_data": {
+                      "delay": "yes",
+                      "object": "App"
+                  },
+                  "componentalias": "",
+                  "source_address": "",
+                  "status_ordinal": 0,
+                  "_lifecycle_time": "0",
+                  "source_hostname": "web-fe-02",
+                  "category_ordinal": 190,
+                  "incident_company": "",
+                  "priority_ordinal": 50,
+                  "severity_ordinal": 70,
+                  "situationEventId": "e136cd27-8699-455b-9796-2466b4760ab9",
+                  "source_identifier": "web-fe-02",
+                  "sub_category_ordinal": 10,
+                  "_node_service_mapping": [
+                      "c956c862bd2e716c4ace65636e486f7374:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365",
+                      "c956c862bd2e716c4ace65606e5669727475616c4d616368696e65:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365"
+                  ],
+                  "_node_service_key_mapping": [
+                      "nbVbha9RVH7gLtpBlv1Ttg==::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e",
+                      "aws/us-east-2/ec2/i-0d961a0e78261469f::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e"
+                  ]
+              },
+              "effort": 120,
+              "event_type": "EVENT: user_defined Puma Trading System",
+              "json_paths": {
+                  "$.msg": [
+                      "[Dynatrace] Abnormal traffic pattern detected on tower220"
+                  ],
+                  "$.tags": [
+                      "[]"
+                  ],
+                  "$.class": [
+                      "EVENT"
+                  ],
+                  "$._ci_id": [
+                      ""
+                  ],
+                  "$._model": [
+                      ""
+                  ],
+                  "$._notes": [
+                      "[]"
+                  ],
+                  "$.status": [
+                      "OPEN"
+                  ],
+                  "$._errors": [
+                      "[]"
+                  ],
+                  "$.details": [
+                      ""
+                  ],
+                  "$._entropy": [
+                      ""
+                  ],
+                  "$.alias[*]": [
+                      "BMC_ComputerSystem:web-fe-02"
+                  ],
+                  "$.category": [
+                      "OPERATIONS_MANAGEMENT"
+                  ],
+                  "$.cdmclass": [
+                      ""
+                  ],
+                  "$.location": [
+                      ""
+                  ],
+                  "$.priority": [
+                      "PRIORITY_1"
+                  ],
+                  "$.severity": [
+                      "CRITICAL"
+                  ],
+                  "$.modelname": [
+                      ""
+                  ],
+                  "$._signature": [
+                      "1428297848"
+                  ],
+                  "$._tenant_id": [
+                      "1738801444"
+                  ],
+                  "$.score_info": [
+                      ""
+                  ],
+                  "$._identifier": [
+                      "eps.1738801444.3818702292462257.6ad0841a-58f7-45f3-be9c-fa262cce7382"
+                  ],
+                  "$._node_id[*]": [
+                      "c956c862bd2e716c4ace65636e486f7374",
+                      "c956c862bd2e716c4ace65606e5669727475616c4d616368696e65"
+                  ],
+                  "$._operations": [
+                      "[0x182f9843c8b,,Predefined Policy for Incident,NOTIFICATION,'']"
+                  ],
+                  "$.event_score": [
+                      14
+                  ],
+                  "$.incident_id": [
+                      "INC000000020895"
+                  ],
+                  "$.showRcaIcon": [
+                      true
+                  ],
+                  "$.situationID": [
+                      "c956c862bd2e716c4ace65696e427573696e65737353657276696365_d730cace18b040dab045c1b1a316a235"
+                  ],
+                  "$.source_port": [
+                      3181
+                  ],
+                  "$._tenant_name": [
+                      ""
+                  ],
+                  "$.instancename": [
+                      ""
+                  ],
+                  "$.significance": [
+                      "0"
+                  ],
+                  "$.sub_category": [
+                      "OTHER"
+                  ],
+                  "$._arrival_time": [
+                      1662043569244
+                  ],
+                  "$._repeat_count": [
+                      "0"
+                  ],
+                  "$.creation_time": [
+                      1662043569244
+                  ],
+                  "$.situationName": [
+                      "Media Service - [Dynatrace] Abnormal traffic pattern detected on tower220"
+                  ],
+                  "$.user_assigned": [
+                      ""
+                  ],
+                  "$._modified_time": [
+                      1662043571385
+                  ],
+                  "$._service_id[*]": [
+                      "b949da62b459fa4e0974bcd26e427573696e65737353657276696365",
+                      "c956c862bd2e716c4ace65696e427573696e65737353657276696365"
+                  ],
+                  "$.componentalias": [
+                      ""
+                  ],
+                  "$.source_address": [
+                      ""
+                  ],
+                  "$.status_ordinal": [
+                      0
+                  ],
+                  "$._lifecycle_time": [
+                      "0"
+                  ],
+                  "$.source_hostname": [
+                      "web-fe-02"
+                  ],
+                  "$._service_name[*]": [
+                      "Puma Trading System",
+                      "Media Service"
+                  ],
+                  "$.category_ordinal": [
+                      190
+                  ],
+                  "$.incident_company": [
+                      ""
+                  ],
+                  "$.priority_ordinal": [
+                      50
+                  ],
+                  "$.severity_ordinal": [
+                      70
+                  ],
+                  "$.situationEventId": [
+                      "e136cd27-8699-455b-9796-2466b4760ab9"
+                  ],
+                  "$.automations[*].id": [
+                      "30799dc1-3039-3fe2-d895-d3a0daa70269"
+                  ],
+                  "$.source_identifier": [
+                      "web-fe-02"
+                  ],
+                  "$.automations[*].name": [
+                      "Linux Disk Cleanup"
+                  ],
+                  "$.automations[*].type": [
+                      "user_defined"
+                  ],
+                  "$._relationships.rstat": [
+                      "secondary"
+                  ],
+                  "$._unmapped_data.delay": [
+                      "yes"
+                  ],
+                  "$.sub_category_ordinal": [
+                      10
+                  ],
+                  "$._unmapped_data.object": [
+                      "App"
+                  ],
+                  "$.automations[*].checksum": [
+                      "2bd8db4dcec26d4abd59e33cbf986e8a5e930e2378128c0aa5ffc1c13d8ed8b3"
+                  ],
+                  "$._node_service_mapping[*]": [
+                      "c956c862bd2e716c4ace65636e486f7374:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365",
+                      "c956c862bd2e716c4ace65606e5669727475616c4d616368696e65:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365"
+                  ],
+                  "$.automations[*].description": [
+                      "Delete temporary files to free diskspace"
+                  ],
+                  "$.automations[*].auto_enabled": [
+                      false
+                  ],
+                  "$._node_service_key_mapping[*]": [
+                      "nbVbha9RVH7gLtpBlv1Ttg==::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e",
+                      "aws/us-east-2/ec2/i-0d961a0e78261469f::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e"
+                  ],
+                  "$._relationships.mlsituation[*]": [
+                      "c956c862bd2e716c4ace65696e427573696e65737353657276696365_d730cace18b040dab045c1b1a316a235",
+                      "b949da62b459fa4e0974bcd26e427573696e65737353657276696365_f20ef3f750374db2a560a6085894a068"
+                  ]
+              },
+              "trigger_condition_expression_metadata": [
+                  {
+                      "slot_name": "$.event.class",
+                      "slot_value": "EVENT",
+                      "end_bracket": ")",
+                      "slot_operator": "==",
+                      "condition_order": 0,
+                      "condition_bracket": "(",
+                      "condition_operator": ""
+                  },
+                  {
+                      "slot_name": "$.event.source_hostname",
+                      "slot_value": "web-fe-02",
+                      "end_bracket": ")",
+                      "slot_operator": "==",
+                      "condition_order": 1,
+                      "condition_bracket": "(",
+                      "condition_operator": "&&"
+                  }
+              ]
+          },
+          "tag_specs": {},
+          "trigger_condition_expression": "$?($.\"event\".\"class\" == \"EVENT\" && $.\"event\".\"source_hostname\" == \"web-fe-02\")",
+          "checksum": "0bc5335ad00661a9b3bf4beaf6c3f2b718d7e6d5986d4c463989362ab68315bc",
+          "status": "DRAFT",
+          "is_active": false,
+          "auto_enabled": false,
+          "actions": {
+              "Run Control-M Forecast Job": {
+                  "action_def_uri": "generic_rest/generic_rest/x-bmc-ia-any",
+                  "plugin_type": "remote_plugin",
+                  "credential": {
+                      "target_id": "https://se-preprod-aapi.us1.controlm.com:443/automation-api",
+                      "provider_id": "generic_rest"
+                  },
+                  "continue_on_failure": false,
+                  "action": {
+                      "server": "https://se-preprod-aapi.us1.controlm.com:443/automation-api",
+                      "/run/order": {
+                          "post": {
+                              "parameters": [],
+                              "requestBody": {
+                                  "content": {
+                                      "application/json": {
+                                          "ctm": "IN01",
+                                          "folder": "fde-forecast-flow-demo"
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      }
+order: 1000

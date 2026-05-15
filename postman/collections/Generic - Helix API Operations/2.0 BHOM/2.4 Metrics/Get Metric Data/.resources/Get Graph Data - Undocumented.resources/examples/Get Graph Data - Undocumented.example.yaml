@@ -1,0 +1,1257 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/tsws/monitoring/api/v1.0/graph/data?istextparam=false"
+  method: POST
+  queryParams:
+    istextparam: "false"
+  body:
+    type: json
+    content: "{\r
+
+      \    \"startTime\": 1707122987,\r
+
+      \    \"endTime\": 1707137387,\r
+
+      \    \"dataType\": 0,\r
+
+      \    \"baseLines\": [\r
+
+      \        0,\r
+
+      \        5\r
+
+      \    ],\r
+
+      \    \"thresholds\": [\r
+
+      \        0,\r
+
+      \        1,\r
+
+      \        2\r
+
+      \    ],\r
+
+      \    \"graphDatas\": [],\r
+
+      \    \"dataSets\": [\r
+
+      \        {\r
+
+      \            \"serverId\": \"613873398\",\r
+
+      \            \"moTypeId\": \"K8S_POD_CPU\",\r
+
+      \            \"monitorId\": \"688baebf-4054-436f-86e7-225ca4bad3e3%3AK8S_POD_CPU%3AKubernetesLabCluster%40ticketing%40ts-assurance-mongo-75d58c4f95-7jnh7%40cpu\",\r
+
+      \            \"attributeId\": \"Utilization\"\r
+
+      \        }\r
+
+      \    ],\r
+
+      \    \"considerDataFromPA\": true\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Mon, 05 Feb 2024 13:18:26 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    Content-Security-Policy: frame-ancestors 'self'
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    X-Frame-Options: SAMEORIGIN
+    X-Content-Type-Options: nosniff
+    Cache-Control: no-store
+    Referrer-Policy: same-origin
+    Permissions-Policy: idle-detection=self
+    TraceId: 8a457b4c-4c9f-4fbe-8ccf-0a44f3c8e0a6 613873398
+    vary: accept-encoding
+    Content-Encoding: gzip
+  body:
+    type: json
+    content: |-
+      {
+          "responseTimeStamp": "2024-02-05T13:18:25",
+          "statusCode": "200",
+          "statusMsg": "200",
+          "_object": {
+              "dataSeries": [
+                  {
+                      "name": "CPU Utilization (%)",
+                      "thresholdType": "All",
+                      "type": "null",
+                      "atttibuteId": "Utilization",
+                      "moInstId": "688baebf-4054-436f-86e7-225ca4bad3e3:K8S_POD_CPU:KubernetesLabCluster@ticketing@ts-assurance-mongo-75d58c4f95-7jnh7@cpu",
+                      "moTypeId": "K8S_POD_CPU",
+                      "displayName": "ts-assurance-mongo-75d58c4f95-7jnh7/CPU",
+                      "moTypeUniqueName": "K8S_POD_CPU",
+                      "moTypeDisplayName": "Kubernetes Pod CPU",
+                      "uniqueName": "Utilization",
+                      "attrDisplayName": "CPU Utilization",
+                      "monitorDisplayName": "CPU",
+                      "uom": "%",
+                      "graphDataPoints": [
+                          {
+                              "xDataValue": 1707123000,
+                              "yDataValue": 40.12
+                          },
+                          {
+                              "xDataValue": 1707123060,
+                              "yDataValue": 21.69
+                          },
+                          {
+                              "xDataValue": 1707123120,
+                              "yDataValue": 40.31
+                          },
+                          {
+                              "xDataValue": 1707123180,
+                              "yDataValue": 30.32
+                          },
+                          {
+                              "xDataValue": 1707123240,
+                              "yDataValue": 44.28
+                          },
+                          {
+                              "xDataValue": 1707123300,
+                              "yDataValue": 26.38
+                          },
+                          {
+                              "xDataValue": 1707123360,
+                              "yDataValue": 39.61
+                          },
+                          {
+                              "xDataValue": 1707123420,
+                              "yDataValue": 28.46
+                          },
+                          {
+                              "xDataValue": 1707123480,
+                              "yDataValue": 26.57
+                          },
+                          {
+                              "xDataValue": 1707123540,
+                              "yDataValue": 31.15
+                          },
+                          {
+                              "xDataValue": 1707123600,
+                              "yDataValue": 36.86
+                          },
+                          {
+                              "xDataValue": 1707123660,
+                              "yDataValue": 37.79
+                          },
+                          {
+                              "xDataValue": 1707123720,
+                              "yDataValue": 36.22
+                          },
+                          {
+                              "xDataValue": 1707123780,
+                              "yDataValue": 44.91
+                          },
+                          {
+                              "xDataValue": 1707123840,
+                              "yDataValue": 29.72
+                          },
+                          {
+                              "xDataValue": 1707123900,
+                              "yDataValue": 40.09
+                          },
+                          {
+                              "xDataValue": 1707123960,
+                              "yDataValue": 37.65
+                          },
+                          {
+                              "xDataValue": 1707124020,
+                              "yDataValue": 31.29
+                          },
+                          {
+                              "xDataValue": 1707124080,
+                              "yDataValue": 37.3
+                          },
+                          {
+                              "xDataValue": 1707124140,
+                              "yDataValue": 35.31
+                          },
+                          {
+                              "xDataValue": 1707124200,
+                              "yDataValue": 22.39
+                          },
+                          {
+                              "xDataValue": 1707124260,
+                              "yDataValue": 42.59
+                          },
+                          {
+                              "xDataValue": 1707124320,
+                              "yDataValue": 33.13
+                          },
+                          {
+                              "xDataValue": 1707124380,
+                              "yDataValue": 32.88
+                          },
+                          {
+                              "xDataValue": 1707124440,
+                              "yDataValue": 34.95
+                          },
+                          {
+                              "xDataValue": 1707124500,
+                              "yDataValue": 29.91
+                          },
+                          {
+                              "xDataValue": 1707124560,
+                              "yDataValue": 29.73
+                          },
+                          {
+                              "xDataValue": 1707124620,
+                              "yDataValue": 30.75
+                          },
+                          {
+                              "xDataValue": 1707124680,
+                              "yDataValue": 41.46
+                          },
+                          {
+                              "xDataValue": 1707124740,
+                              "yDataValue": 21.68
+                          },
+                          {
+                              "xDataValue": 1707124800,
+                              "yDataValue": 28.75
+                          },
+                          {
+                              "xDataValue": 1707124860,
+                              "yDataValue": 24.71
+                          },
+                          {
+                              "xDataValue": 1707124920,
+                              "yDataValue": 33.06
+                          },
+                          {
+                              "xDataValue": 1707124980,
+                              "yDataValue": 41.8
+                          },
+                          {
+                              "xDataValue": 1707125040,
+                              "yDataValue": 26.84
+                          },
+                          {
+                              "xDataValue": 1707125100,
+                              "yDataValue": 39.78
+                          },
+                          {
+                              "xDataValue": 1707125160,
+                              "yDataValue": 41.56
+                          },
+                          {
+                              "xDataValue": 1707125220,
+                              "yDataValue": 32.69
+                          },
+                          {
+                              "xDataValue": 1707125280,
+                              "yDataValue": 24.06
+                          },
+                          {
+                              "xDataValue": 1707125340,
+                              "yDataValue": 39.33
+                          },
+                          {
+                              "xDataValue": 1707125400,
+                              "yDataValue": 21.28
+                          },
+                          {
+                              "xDataValue": 1707125460,
+                              "yDataValue": 24.17
+                          },
+                          {
+                              "xDataValue": 1707125520,
+                              "yDataValue": 30.13
+                          },
+                          {
+                              "xDataValue": 1707125580,
+                              "yDataValue": 37.58
+                          },
+                          {
+                              "xDataValue": 1707125700,
+                              "yDataValue": 44.14
+                          },
+                          {
+                              "xDataValue": 1707125760,
+                              "yDataValue": 26.04
+                          },
+                          {
+                              "xDataValue": 1707125820,
+                              "yDataValue": 29.53
+                          },
+                          {
+                              "xDataValue": 1707125880,
+                              "yDataValue": 26.33
+                          },
+                          {
+                              "xDataValue": 1707125940,
+                              "yDataValue": 35.58
+                          },
+                          {
+                              "xDataValue": 1707126000,
+                              "yDataValue": 35.91
+                          },
+                          {
+                              "xDataValue": 1707126060,
+                              "yDataValue": 43.51
+                          },
+                          {
+                              "xDataValue": 1707126120,
+                              "yDataValue": 31.06
+                          },
+                          {
+                              "xDataValue": 1707126180,
+                              "yDataValue": 36.68
+                          },
+                          {
+                              "xDataValue": 1707126240,
+                              "yDataValue": 35.38
+                          },
+                          {
+                              "xDataValue": 1707126300,
+                              "yDataValue": 44.87
+                          },
+                          {
+                              "xDataValue": 1707126360,
+                              "yDataValue": 43.5
+                          },
+                          {
+                              "xDataValue": 1707126420,
+                              "yDataValue": 24.83
+                          },
+                          {
+                              "xDataValue": 1707126480,
+                              "yDataValue": 21.05
+                          },
+                          {
+                              "xDataValue": 1707126540,
+                              "yDataValue": 35.49
+                          },
+                          {
+                              "xDataValue": 1707126600,
+                              "yDataValue": 26.53
+                          },
+                          {
+                              "xDataValue": 1707126660,
+                              "yDataValue": 44.51
+                          },
+                          {
+                              "xDataValue": 1707126720,
+                              "yDataValue": 34.22
+                          },
+                          {
+                              "xDataValue": 1707126780,
+                              "yDataValue": 30.29
+                          },
+                          {
+                              "xDataValue": 1707126840,
+                              "yDataValue": 32.09
+                          },
+                          {
+                              "xDataValue": 1707126900,
+                              "yDataValue": 39.6
+                          },
+                          {
+                              "xDataValue": 1707126960,
+                              "yDataValue": 27.13
+                          },
+                          {
+                              "xDataValue": 1707127020,
+                              "yDataValue": 29.91
+                          },
+                          {
+                              "xDataValue": 1707127080,
+                              "yDataValue": 34.18
+                          },
+                          {
+                              "xDataValue": 1707127140,
+                              "yDataValue": 25.11
+                          },
+                          {
+                              "xDataValue": 1707127200,
+                              "yDataValue": 42.43
+                          },
+                          {
+                              "xDataValue": 1707127260,
+                              "yDataValue": 27.59
+                          },
+                          {
+                              "xDataValue": 1707127320,
+                              "yDataValue": 29.46
+                          },
+                          {
+                              "xDataValue": 1707127380,
+                              "yDataValue": 31.16
+                          },
+                          {
+                              "xDataValue": 1707127440,
+                              "yDataValue": 42.57
+                          },
+                          {
+                              "xDataValue": 1707127500,
+                              "yDataValue": 33.43
+                          },
+                          {
+                              "xDataValue": 1707127560,
+                              "yDataValue": 36.72
+                          },
+                          {
+                              "xDataValue": 1707127620,
+                              "yDataValue": 39.9
+                          },
+                          {
+                              "xDataValue": 1707127680,
+                              "yDataValue": 44.35
+                          },
+                          {
+                              "xDataValue": 1707127740,
+                              "yDataValue": 32.47
+                          },
+                          {
+                              "xDataValue": 1707127800,
+                              "yDataValue": 39.1
+                          },
+                          {
+                              "xDataValue": 1707127860,
+                              "yDataValue": 33.68
+                          },
+                          {
+                              "xDataValue": 1707127920,
+                              "yDataValue": 43.9
+                          },
+                          {
+                              "xDataValue": 1707127980,
+                              "yDataValue": 41.27
+                          },
+                          {
+                              "xDataValue": 1707128040,
+                              "yDataValue": 42.86
+                          },
+                          {
+                              "xDataValue": 1707128100,
+                              "yDataValue": 32.41
+                          },
+                          {
+                              "xDataValue": 1707128160,
+                              "yDataValue": 36.57
+                          },
+                          {
+                              "xDataValue": 1707128220,
+                              "yDataValue": 26.81
+                          },
+                          {
+                              "xDataValue": 1707128280,
+                              "yDataValue": 24.86
+                          },
+                          {
+                              "xDataValue": 1707128340,
+                              "yDataValue": 33.2
+                          },
+                          {
+                              "xDataValue": 1707128400,
+                              "yDataValue": 31.01
+                          },
+                          {
+                              "xDataValue": 1707128460,
+                              "yDataValue": 32.48
+                          },
+                          {
+                              "xDataValue": 1707128520,
+                              "yDataValue": 39.8
+                          },
+                          {
+                              "xDataValue": 1707128580,
+                              "yDataValue": 20.44
+                          },
+                          {
+                              "xDataValue": 1707128640,
+                              "yDataValue": 39.64
+                          },
+                          {
+                              "xDataValue": 1707128700,
+                              "yDataValue": 24.05
+                          },
+                          {
+                              "xDataValue": 1707128760,
+                              "yDataValue": 25.38
+                          },
+                          {
+                              "xDataValue": 1707128820,
+                              "yDataValue": 29.31
+                          },
+                          {
+                              "xDataValue": 1707128880,
+                              "yDataValue": 35.4
+                          },
+                          {
+                              "xDataValue": 1707128940,
+                              "yDataValue": 33.48
+                          },
+                          {
+                              "xDataValue": 1707129000,
+                              "yDataValue": 34.8
+                          },
+                          {
+                              "xDataValue": 1707129060,
+                              "yDataValue": 27.4
+                          },
+                          {
+                              "xDataValue": 1707129120,
+                              "yDataValue": 44.51
+                          },
+                          {
+                              "xDataValue": 1707129180,
+                              "yDataValue": 44.04
+                          },
+                          {
+                              "xDataValue": 1707129240,
+                              "yDataValue": 20.6
+                          },
+                          {
+                              "xDataValue": 1707129300,
+                              "yDataValue": 20.48
+                          },
+                          {
+                              "xDataValue": 1707129360,
+                              "yDataValue": 39.57
+                          },
+                          {
+                              "xDataValue": 1707129420,
+                              "yDataValue": 38.79
+                          },
+                          {
+                              "xDataValue": 1707129480,
+                              "yDataValue": 36.71
+                          },
+                          {
+                              "xDataValue": 1707129540,
+                              "yDataValue": 23.35
+                          },
+                          {
+                              "xDataValue": 1707129600,
+                              "yDataValue": 43.67
+                          },
+                          {
+                              "xDataValue": 1707129660,
+                              "yDataValue": 38.32
+                          },
+                          {
+                              "xDataValue": 1707129720,
+                              "yDataValue": 27.19
+                          },
+                          {
+                              "xDataValue": 1707129840,
+                              "yDataValue": 37.45
+                          },
+                          {
+                              "xDataValue": 1707129900,
+                              "yDataValue": 30.19
+                          },
+                          {
+                              "xDataValue": 1707129960,
+                              "yDataValue": 39.66
+                          },
+                          {
+                              "xDataValue": 1707130020,
+                              "yDataValue": 28.43
+                          },
+                          {
+                              "xDataValue": 1707130080,
+                              "yDataValue": 37.17
+                          },
+                          {
+                              "xDataValue": 1707130140,
+                              "yDataValue": 31.15
+                          },
+                          {
+                              "xDataValue": 1707130200,
+                              "yDataValue": 23.5
+                          },
+                          {
+                              "xDataValue": 1707130260,
+                              "yDataValue": 38.04
+                          },
+                          {
+                              "xDataValue": 1707130320,
+                              "yDataValue": 25.72
+                          },
+                          {
+                              "xDataValue": 1707130380,
+                              "yDataValue": 30.49
+                          },
+                          {
+                              "xDataValue": 1707130440,
+                              "yDataValue": 41.02
+                          },
+                          {
+                              "xDataValue": 1707130500,
+                              "yDataValue": 30.43
+                          },
+                          {
+                              "xDataValue": 1707130560,
+                              "yDataValue": 36.85
+                          },
+                          {
+                              "xDataValue": 1707130620,
+                              "yDataValue": 35.18
+                          },
+                          {
+                              "xDataValue": 1707130680,
+                              "yDataValue": 33.16
+                          },
+                          {
+                              "xDataValue": 1707130740,
+                              "yDataValue": 24.59
+                          },
+                          {
+                              "xDataValue": 1707130800,
+                              "yDataValue": 32.93
+                          },
+                          {
+                              "xDataValue": 1707130860,
+                              "yDataValue": 36.34
+                          },
+                          {
+                              "xDataValue": 1707130920,
+                              "yDataValue": 40.63
+                          },
+                          {
+                              "xDataValue": 1707130980,
+                              "yDataValue": 34.35
+                          },
+                          {
+                              "xDataValue": 1707131040,
+                              "yDataValue": 35.23
+                          },
+                          {
+                              "xDataValue": 1707131100,
+                              "yDataValue": 29.22
+                          },
+                          {
+                              "xDataValue": 1707131160,
+                              "yDataValue": 26.34
+                          },
+                          {
+                              "xDataValue": 1707131220,
+                              "yDataValue": 34.77
+                          },
+                          {
+                              "xDataValue": 1707131280,
+                              "yDataValue": 22.26
+                          },
+                          {
+                              "xDataValue": 1707131340,
+                              "yDataValue": 20.9
+                          },
+                          {
+                              "xDataValue": 1707131400,
+                              "yDataValue": 37.79
+                          },
+                          {
+                              "xDataValue": 1707131460,
+                              "yDataValue": 38.44
+                          },
+                          {
+                              "xDataValue": 1707131520,
+                              "yDataValue": 25.83
+                          },
+                          {
+                              "xDataValue": 1707131580,
+                              "yDataValue": 40.86
+                          },
+                          {
+                              "xDataValue": 1707131640,
+                              "yDataValue": 26.23
+                          },
+                          {
+                              "xDataValue": 1707131700,
+                              "yDataValue": 23.25
+                          },
+                          {
+                              "xDataValue": 1707131760,
+                              "yDataValue": 44.43
+                          },
+                          {
+                              "xDataValue": 1707131820,
+                              "yDataValue": 23.65
+                          },
+                          {
+                              "xDataValue": 1707131880,
+                              "yDataValue": 28.37
+                          },
+                          {
+                              "xDataValue": 1707131940,
+                              "yDataValue": 21.57
+                          },
+                          {
+                              "xDataValue": 1707132000,
+                              "yDataValue": 38.53
+                          },
+                          {
+                              "xDataValue": 1707132060,
+                              "yDataValue": 25.69
+                          },
+                          {
+                              "xDataValue": 1707132120,
+                              "yDataValue": 32.49
+                          },
+                          {
+                              "xDataValue": 1707132180,
+                              "yDataValue": 25.22
+                          },
+                          {
+                              "xDataValue": 1707132240,
+                              "yDataValue": 30.52
+                          },
+                          {
+                              "xDataValue": 1707132300,
+                              "yDataValue": 35.61
+                          },
+                          {
+                              "xDataValue": 1707132360,
+                              "yDataValue": 32.85
+                          },
+                          {
+                              "xDataValue": 1707132420,
+                              "yDataValue": 35.58
+                          },
+                          {
+                              "xDataValue": 1707132480,
+                              "yDataValue": 42.07
+                          },
+                          {
+                              "xDataValue": 1707132540,
+                              "yDataValue": 20.92
+                          },
+                          {
+                              "xDataValue": 1707132600,
+                              "yDataValue": 29.69
+                          },
+                          {
+                              "xDataValue": 1707132660,
+                              "yDataValue": 41.49
+                          },
+                          {
+                              "xDataValue": 1707132720,
+                              "yDataValue": 31.54
+                          },
+                          {
+                              "xDataValue": 1707132780,
+                              "yDataValue": 32.03
+                          },
+                          {
+                              "xDataValue": 1707132840,
+                              "yDataValue": 36.15
+                          },
+                          {
+                              "xDataValue": 1707132900,
+                              "yDataValue": 25.68
+                          },
+                          {
+                              "xDataValue": 1707132960,
+                              "yDataValue": 40.37
+                          },
+                          {
+                              "xDataValue": 1707133020,
+                              "yDataValue": 28.23
+                          },
+                          {
+                              "xDataValue": 1707133080,
+                              "yDataValue": 32.5
+                          },
+                          {
+                              "xDataValue": 1707133140,
+                              "yDataValue": 35.13
+                          },
+                          {
+                              "xDataValue": 1707133200,
+                              "yDataValue": 21.89
+                          },
+                          {
+                              "xDataValue": 1707133260,
+                              "yDataValue": 38.53
+                          },
+                          {
+                              "xDataValue": 1707133320,
+                              "yDataValue": 29.87
+                          },
+                          {
+                              "xDataValue": 1707133380,
+                              "yDataValue": 39.54
+                          },
+                          {
+                              "xDataValue": 1707133440,
+                              "yDataValue": 24.23
+                          },
+                          {
+                              "xDataValue": 1707133500,
+                              "yDataValue": 34.34
+                          },
+                          {
+                              "xDataValue": 1707133560,
+                              "yDataValue": 40.54
+                          },
+                          {
+                              "xDataValue": 1707133620,
+                              "yDataValue": 35.86
+                          },
+                          {
+                              "xDataValue": 1707133680,
+                              "yDataValue": 39.99
+                          },
+                          {
+                              "xDataValue": 1707133740,
+                              "yDataValue": 35.11
+                          },
+                          {
+                              "xDataValue": 1707133800,
+                              "yDataValue": 43.34
+                          },
+                          {
+                              "xDataValue": 1707133860,
+                              "yDataValue": 44.01
+                          },
+                          {
+                              "xDataValue": 1707133920,
+                              "yDataValue": 39.07
+                          },
+                          {
+                              "xDataValue": 1707133980,
+                              "yDataValue": 20.05
+                          },
+                          {
+                              "xDataValue": 1707134040,
+                              "yDataValue": 38.13
+                          },
+                          {
+                              "xDataValue": 1707134160,
+                              "yDataValue": 31.38
+                          },
+                          {
+                              "xDataValue": 1707134220,
+                              "yDataValue": 28.03
+                          },
+                          {
+                              "xDataValue": 1707134280,
+                              "yDataValue": 27.15
+                          },
+                          {
+                              "xDataValue": 1707134340,
+                              "yDataValue": 26.98
+                          },
+                          {
+                              "xDataValue": 1707134400,
+                              "yDataValue": 29.62
+                          },
+                          {
+                              "xDataValue": 1707134460,
+                              "yDataValue": 40.78
+                          },
+                          {
+                              "xDataValue": 1707134520,
+                              "yDataValue": 21.49
+                          },
+                          {
+                              "xDataValue": 1707134580,
+                              "yDataValue": 25.42
+                          },
+                          {
+                              "xDataValue": 1707134640,
+                              "yDataValue": 25.31
+                          },
+                          {
+                              "xDataValue": 1707134700,
+                              "yDataValue": 29.67
+                          },
+                          {
+                              "xDataValue": 1707134760,
+                              "yDataValue": 29.86
+                          },
+                          {
+                              "xDataValue": 1707134820,
+                              "yDataValue": 20.06
+                          },
+                          {
+                              "xDataValue": 1707134880,
+                              "yDataValue": 32.43
+                          },
+                          {
+                              "xDataValue": 1707134940,
+                              "yDataValue": 24.55
+                          },
+                          {
+                              "xDataValue": 1707135000,
+                              "yDataValue": 42.6
+                          },
+                          {
+                              "xDataValue": 1707135060,
+                              "yDataValue": 37.93
+                          },
+                          {
+                              "xDataValue": 1707135120,
+                              "yDataValue": 32.11
+                          },
+                          {
+                              "xDataValue": 1707135180,
+                              "yDataValue": 43.02
+                          },
+                          {
+                              "xDataValue": 1707135240,
+                              "yDataValue": 33.97
+                          },
+                          {
+                              "xDataValue": 1707135300,
+                              "yDataValue": 23.76
+                          },
+                          {
+                              "xDataValue": 1707135360,
+                              "yDataValue": 28.09
+                          },
+                          {
+                              "xDataValue": 1707135420,
+                              "yDataValue": 25.37
+                          },
+                          {
+                              "xDataValue": 1707135480,
+                              "yDataValue": 36.61
+                          },
+                          {
+                              "xDataValue": 1707135540,
+                              "yDataValue": 40.93
+                          },
+                          {
+                              "xDataValue": 1707135600,
+                              "yDataValue": 20.22
+                          },
+                          {
+                              "xDataValue": 1707135660,
+                              "yDataValue": 39.73
+                          },
+                          {
+                              "xDataValue": 1707135720,
+                              "yDataValue": 35.16
+                          },
+                          {
+                              "xDataValue": 1707135780,
+                              "yDataValue": 34.38
+                          },
+                          {
+                              "xDataValue": 1707135840,
+                              "yDataValue": 37.91
+                          },
+                          {
+                              "xDataValue": 1707135900,
+                              "yDataValue": 43.84
+                          },
+                          {
+                              "xDataValue": 1707135960,
+                              "yDataValue": 42.32
+                          },
+                          {
+                              "xDataValue": 1707136020,
+                              "yDataValue": 23.08
+                          },
+                          {
+                              "xDataValue": 1707136080,
+                              "yDataValue": 39.92
+                          },
+                          {
+                              "xDataValue": 1707136140,
+                              "yDataValue": 31.24
+                          },
+                          {
+                              "xDataValue": 1707136200,
+                              "yDataValue": 32.38
+                          },
+                          {
+                              "xDataValue": 1707136260,
+                              "yDataValue": 41.91
+                          },
+                          {
+                              "xDataValue": 1707136320,
+                              "yDataValue": 41.13
+                          },
+                          {
+                              "xDataValue": 1707136380,
+                              "yDataValue": 27.35
+                          },
+                          {
+                              "xDataValue": 1707136440,
+                              "yDataValue": 24.44
+                          },
+                          {
+                              "xDataValue": 1707136500,
+                              "yDataValue": 21.28
+                          },
+                          {
+                              "xDataValue": 1707136560,
+                              "yDataValue": 41.49
+                          },
+                          {
+                              "xDataValue": 1707136620,
+                              "yDataValue": 37.16
+                          },
+                          {
+                              "xDataValue": 1707136680,
+                              "yDataValue": 27.79
+                          },
+                          {
+                              "xDataValue": 1707136740,
+                              "yDataValue": 21.07
+                          },
+                          {
+                              "xDataValue": 1707136800,
+                              "yDataValue": 37.8
+                          },
+                          {
+                              "xDataValue": 1707136860,
+                              "yDataValue": 38.3
+                          },
+                          {
+                              "xDataValue": 1707136920,
+                              "yDataValue": 39.12
+                          },
+                          {
+                              "xDataValue": 1707136980,
+                              "yDataValue": 39.77
+                          },
+                          {
+                              "xDataValue": 1707137040,
+                              "yDataValue": 28.19
+                          },
+                          {
+                              "xDataValue": 1707137100,
+                              "yDataValue": 39.55
+                          },
+                          {
+                              "xDataValue": 1707137160,
+                              "yDataValue": 44.24
+                          },
+                          {
+                              "xDataValue": 1707137220,
+                              "yDataValue": 43.2
+                          },
+                          {
+                              "xDataValue": 1707137280,
+                              "yDataValue": 27.94
+                          },
+                          {
+                              "xDataValue": 1707137340,
+                              "yDataValue": 38.35
+                          }
+                      ]
+                  },
+                  {
+                      "name": "HOURLY",
+                      "thresholdType": "All",
+                      "type": "LOW",
+                      "atttibuteId": "Utilization_hourly_low",
+                      "moInstId": "688baebf-4054-436f-86e7-225ca4bad3e3:K8S_POD_CPU:KubernetesLabCluster@ticketing@ts-assurance-mongo-75d58c4f95-7jnh7@cpu",
+                      "moTypeId": "K8S_POD_CPU",
+                      "displayName": "ts-assurance-mongo-75d58c4f95-7jnh7/CPU",
+                      "moTypeUniqueName": "K8S_POD_CPU",
+                      "moTypeDisplayName": "Kubernetes Pod CPU",
+                      "monitorDisplayName": "CPU",
+                      "graphDataPoints": [
+                          {
+                              "xDataValue": 1707122987,
+                              "yDataValue": 21.338
+                          },
+                          {
+                              "xDataValue": 1707120000,
+                              "yDataValue": 21.338
+                          },
+                          {
+                              "xDataValue": 1707123600,
+                              "yDataValue": 21.492
+                          },
+                          {
+                              "xDataValue": 1707127200,
+                              "yDataValue": 21.384
+                          },
+                          {
+                              "xDataValue": 1707130800,
+                              "yDataValue": 21.318
+                          },
+                          {
+                              "xDataValue": 1707134400,
+                              "yDataValue": 21.322
+                          },
+                          {
+                              "xDataValue": 1707137387,
+                              "yDataValue": 21.322
+                          }
+                      ]
+                  },
+                  {
+                      "name": "HOURLY",
+                      "thresholdType": "All",
+                      "type": "HIGH",
+                      "atttibuteId": "Utilization_hourly_high",
+                      "moInstId": "688baebf-4054-436f-86e7-225ca4bad3e3:K8S_POD_CPU:KubernetesLabCluster@ticketing@ts-assurance-mongo-75d58c4f95-7jnh7@cpu",
+                      "moTypeId": "K8S_POD_CPU",
+                      "displayName": "ts-assurance-mongo-75d58c4f95-7jnh7/CPU",
+                      "moTypeUniqueName": "K8S_POD_CPU",
+                      "moTypeDisplayName": "Kubernetes Pod CPU",
+                      "monitorDisplayName": "CPU",
+                      "graphDataPoints": [
+                          {
+                              "xDataValue": 1707122987,
+                              "yDataValue": 43.483
+                          },
+                          {
+                              "xDataValue": 1707120000,
+                              "yDataValue": 43.483
+                          },
+                          {
+                              "xDataValue": 1707123600,
+                              "yDataValue": 43.743
+                          },
+                          {
+                              "xDataValue": 1707127200,
+                              "yDataValue": 43.221
+                          },
+                          {
+                              "xDataValue": 1707130800,
+                              "yDataValue": 42.989
+                          },
+                          {
+                              "xDataValue": 1707134400,
+                              "yDataValue": 43.275
+                          },
+                          {
+                              "xDataValue": 1707137387,
+                              "yDataValue": 43.275
+                          }
+                      ]
+                  },
+                  {
+                      "name": "MAJORABS",
+                      "thresholdType": "Multi",
+                      "type": "HIGH",
+                      "atttibuteId": "Utilization",
+                      "moInstId": "688baebf-4054-436f-86e7-225ca4bad3e3:K8S_POD_CPU:KubernetesLabCluster@ticketing@ts-assurance-mongo-75d58c4f95-7jnh7@cpu",
+                      "moTypeId": "K8S_POD_CPU",
+                      "moTypeUniqueName": "K8S_POD_CPU",
+                      "moTypeDisplayName": "Kubernetes Pod CPU",
+                      "uniqueName": "Utilization",
+                      "attrDisplayName": "CPU Utilization",
+                      "monitorDisplayName": "CPU",
+                      "uom": "%",
+                      "graphDataPoints": [
+                          {
+                              "xDataValue": 1707122987,
+                              "yDataValue": 80
+                          },
+                          {
+                              "xDataValue": 1707137387,
+                              "yDataValue": 80
+                          }
+                      ]
+                  },
+                  {
+                      "name": "MINORABS",
+                      "thresholdType": "Multi",
+                      "type": "HIGH",
+                      "atttibuteId": "Utilization",
+                      "moInstId": "688baebf-4054-436f-86e7-225ca4bad3e3:K8S_POD_CPU:KubernetesLabCluster@ticketing@ts-assurance-mongo-75d58c4f95-7jnh7@cpu",
+                      "moTypeId": "K8S_POD_CPU",
+                      "moTypeUniqueName": "K8S_POD_CPU",
+                      "moTypeDisplayName": "Kubernetes Pod CPU",
+                      "uniqueName": "Utilization",
+                      "attrDisplayName": "CPU Utilization",
+                      "monitorDisplayName": "CPU",
+                      "uom": "%",
+                      "graphDataPoints": [
+                          {
+                              "xDataValue": 1707122987,
+                              "yDataValue": 70
+                          },
+                          {
+                              "xDataValue": 1707137387,
+                              "yDataValue": 70
+                          }
+                      ]
+                  },
+                  {
+                      "name": "CRITICALABS",
+                      "thresholdType": "Multi",
+                      "type": "HIGH",
+                      "atttibuteId": "Utilization",
+                      "moInstId": "688baebf-4054-436f-86e7-225ca4bad3e3:K8S_POD_CPU:KubernetesLabCluster@ticketing@ts-assurance-mongo-75d58c4f95-7jnh7@cpu",
+                      "moTypeId": "K8S_POD_CPU",
+                      "moTypeUniqueName": "K8S_POD_CPU",
+                      "moTypeDisplayName": "Kubernetes Pod CPU",
+                      "uniqueName": "Utilization",
+                      "attrDisplayName": "CPU Utilization",
+                      "monitorDisplayName": "CPU",
+                      "uom": "%",
+                      "graphDataPoints": [
+                          {
+                              "xDataValue": 1707122987,
+                              "yDataValue": 85
+                          },
+                          {
+                              "xDataValue": 1707137387,
+                              "yDataValue": 85
+                          }
+                      ]
+                  }
+              ],
+              "attributes": [
+                  {
+                      "attributeId": "AverageUsageCores",
+                      "displayName": "Average CPU Usage Cores",
+                      "uniqueName": "AverageUsageCores",
+                      "kpi": true,
+                      "defaultAttr": false,
+                      "active": true,
+                      "uom": "#",
+                      "eventSeverity": 0,
+                      "moTypeUniqueName": "K8S_POD_CPU",
+                      "moTypeId": "K8S_POD_CPU",
+                      "baseline": true
+                  },
+                  {
+                      "attributeId": "Utilization",
+                      "displayName": "CPU Utilization",
+                      "uniqueName": "Utilization",
+                      "kpi": true,
+                      "defaultAttr": false,
+                      "active": true,
+                      "uom": "%",
+                      "eventSeverity": 0,
+                      "moTypeUniqueName": "K8S_POD_CPU",
+                      "moTypeId": "K8S_POD_CPU",
+                      "baseline": true
+                  },
+                  {
+                      "attributeId": "UsageCoreSeconds",
+                      "displayName": "CPU Usage",
+                      "uniqueName": "UsageCoreSeconds",
+                      "kpi": false,
+                      "defaultAttr": false,
+                      "active": true,
+                      "uom": "sec",
+                      "eventSeverity": 0,
+                      "moTypeUniqueName": "K8S_POD_CPU",
+                      "moTypeId": "K8S_POD_CPU",
+                      "baseline": false
+                  }
+              ],
+              "displayName": "Kubernetes Pod CPU",
+              "moFullPathName": "CPU",
+              "dnsName": "ts-assurance-mongo-75d58c4f95-7jnh7",
+              "instName": "CPU",
+              "showPAAnnonations": true,
+              "retrieveDataFromPA": false,
+              "dataStreamingOff": false,
+              "tsimPort": 0,
+              "textParam": false
+          }
+      }
+order: 1000

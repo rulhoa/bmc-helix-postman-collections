@@ -1,0 +1,29 @@
+$kind: http-request
+url: "{{bhom_base_url}}/events-service/api/v1.0/events"
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+  - key: Authorization
+    value: apiKey {{bhom_apiKey}}
+  - key: ""
+    value: ""
+    disabled: true
+body:
+  type: text
+  content: "[{\r
+
+    \  \"class\": \"INCIDENT_INFO\",\r
+
+    \  \"source_hostname\": \"HOSTA\",\r
+
+    \t\"msg\": \"INCIDENT EVENT\",\r
+
+    \  \"severity\": \"CRITICAL\",\r
+
+    \  \"source_identifier\": \"SOURCE\",\r
+
+    \  \"incident_id\": \"11111\"\r
+
+    }]"
+order: 10000

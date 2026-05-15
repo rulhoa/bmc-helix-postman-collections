@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{v1}}/groups/{{type}}"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "name": "My Group",
+      "parent_group_id": 0
+    }
+order: 2000

@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{bhom_base_url}}/opt/api/v1/viewdefinition/viewgroup"
+method: GET
+order: 1000

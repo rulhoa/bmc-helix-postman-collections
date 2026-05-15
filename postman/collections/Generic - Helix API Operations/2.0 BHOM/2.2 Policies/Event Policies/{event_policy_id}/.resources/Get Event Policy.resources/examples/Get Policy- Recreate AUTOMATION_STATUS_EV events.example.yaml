@@ -1,0 +1,146 @@
+$kind: http-example
+name: "Get Policy: Recreate AUTOMATION_STATUS_EV events"
+request:
+  url: "{{bhom_base_url}}/events-service/api/v1.0/event_policies/ead4a41b-1c41-11ee-b683-678302963d38?idType=id"
+  method: GET
+  queryParams:
+    idType: id
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Server: nginx
+    Date: Wed, 12 Jul 2023 16:00:04 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    Referrer-Policy: same-origin
+    X-Frame-Options: SAMEORIGIN
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    X-Content-Type-Options: nosniff
+    Permissions-Policy: idle-detection=self
+    Content-Encoding: gzip
+    TraceId: 3ebf767d-82fa-46a7-bcb7-545a75d6e705 1309047720
+    Pragma: no-cache
+    X-XSS-Protection: 1; mode=block
+    Cache-control: no-store
+    X-Request-ID: 422b5880701344829c81d5f680c608d4
+  body:
+    type: json
+    content: |-
+      {
+          "policy": {
+              "tenantId": "1309047720",
+              "id": "ead4a41b-1c41-11ee-b683-678302963d38",
+              "name": "Recreate AUTOMATION_STATUS_EV events",
+              "types": [
+                  "ADVANCED_ENRICHMENT"
+              ],
+              "description": "Recreate AUTOMATION_STATUS_EV events as generic EVENT events",
+              "executionOrder": 9999,
+              "selector": "ead36b9a-1c41-11ee-b683-b736af066798",
+              "selectorCriteriaList": [
+                  "class equals 'AUTOMATION_STATUS_EV' AND ( state equals 'failed' OR state equals 'success' )"
+              ],
+              "owner": "Liam",
+              "enabled": true,
+              "readOnly": false,
+              "creationTime": 1688677993334,
+              "modificationTime": 1688677993334,
+              "configurations": [
+                  {
+                      "tenantId": "1309047720",
+                      "policyId": "ead4a41b-1c41-11ee-b683-678302963d38",
+                      "id": "ead4a41c-1c41-11ee-b683-f1aa351bf3ac",
+                      "type": "ADVANCED_ENRICHMENT",
+                      "configOrder": 1,
+                      "creationTime": 0,
+                      "modificationTime": 0,
+                      "definition": {
+                          "children": [
+                              {
+                                  "all": false,
+                                  "children": [
+                                      {
+                                          "children": [
+                                              {
+                                                  "children": [
+                                                      {
+                                                          "showDescription": false,
+                                                          "children": [],
+                                                          "valueType": null,
+                                                          "placeholderText": null,
+                                                          "label": null,
+                                                          "id": null,
+                                                          "type": "data",
+                                                          "value": "$OLD.source_hostname"
+                                                      }
+                                                  ],
+                                                  "label": "Save host of the original event",
+                                                  "id": null,
+                                                  "type": "assignVar",
+                                                  "value": null,
+                                                  "key": "$originalhost"
+                                              },
+                                              {
+                                                  "children": [
+                                                      {
+                                                          "children": null,
+                                                          "label": null,
+                                                          "id": null,
+                                                          "type": "objectData",
+                                                          "value": {
+                                                              "severity": "$NEW.severity",
+                                                              "msg": "HIA ran the automation policy \"%policy_name%\" for \"$originalhost\" that had a \"%state%\" result.",
+                                                              "priority": "$NEW.priority",
+                                                              "class": "EVENT",
+                                                              "source_hostname": "$originalhost",
+                                                              "source_identifier": "%source_identifier%"
+                                                          }
+                                                      }
+                                                  ],
+                                                  "name": "GenerateNewEvent",
+                                                  "label": "Regenerate the AUTOMATION_STATUS_EV as a new EVENT class event",
+                                                  "id": null,
+                                                  "type": "function"
+                                              }
+                                          ],
+                                          "label": "",
+                                          "id": null,
+                                          "type": "updateNew"
+                                      }
+                                  ],
+                                  "withinInSeconds": 0,
+                                  "label": "Look for original event that triggered the AUTOMATION_STATUS_EV event",
+                                  "id": null,
+                                  "duplicate": false,
+                                  "type": "lookup",
+                                  "conditions": [
+                                      {
+                                          "slotName": "$OLD._identifier",
+                                          "slotOperator": "equals",
+                                          "conditionOperator": "",
+                                          "conditionBracket": "",
+                                          "conditionOrder": 0,
+                                          "endBracket": "",
+                                          "slotValue": "$NEW.object_id"
+                                      }
+                                  ],
+                                  "fetchEventForClass": "EVENT"
+                              }
+                          ],
+                          "id": null,
+                          "label": "Regenerate AUTOMATION_STATUS_EV event as a new EVENT with the original host name and a more meaningful message",
+                          "type": "root"
+                      },
+                      "timeframeStatus": "",
+                      "subType": ""
+                  }
+              ],
+              "timeframes": [
+                  "-1"
+              ],
+              "timeframe_state": []
+          }
+      }
+order: 1000

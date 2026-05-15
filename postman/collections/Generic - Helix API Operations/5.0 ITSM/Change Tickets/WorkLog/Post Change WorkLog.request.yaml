@@ -1,0 +1,18 @@
+$kind: http-request
+url: "{{itsm_base_url}}/api/arsys/v1/entry/CHG:WorkLog/"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+    	"values": {
+    		"Work Log Type": "",
+            "Communication Source":"",
+            "Description":"",
+            "Detailed Description":"",
+            "Infrastructure Change ID":""
+    	}
+    }
+order: 2000

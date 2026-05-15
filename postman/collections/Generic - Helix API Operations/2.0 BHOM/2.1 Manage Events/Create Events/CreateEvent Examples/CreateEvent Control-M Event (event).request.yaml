@@ -1,0 +1,46 @@
+$kind: http-request
+url: "{{bhom_base_url}}/events-service/api/v1.0/events"
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+  - key: Authorization
+    value: apiKey {{bhom_apiKey}}
+  - key: ""
+    value: ""
+    disabled: true
+body:
+  type: text
+  content: "[\r
+
+    \    {\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Control-M Agent Host: Disk >99%\",\r
+
+    \        \"source_identifier\": \"se-preprod-aapi.us1\",\r
+
+    \t\t\"source_hostname\": \"se-preprod-aapi.us1\"\r
+
+    \t}\r
+
+    \    ,{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"Control-M Job Run Failure: rtr-generatereport\",\r
+
+    \        \"source_identifier\": \"rtr-generatereport\",\r
+
+    \t\t\"source_hostname\": \"rtr-generatereport\"\r
+
+    \t}\r
+
+    ]"
+examples: ./.resources/CreateEvent Control-M Event (event).resources/examples
+order: 2000

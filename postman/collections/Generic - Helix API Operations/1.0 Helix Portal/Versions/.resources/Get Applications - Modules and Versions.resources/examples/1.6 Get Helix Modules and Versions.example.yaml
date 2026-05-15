@@ -1,0 +1,568 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/admin/ims-api/applications?orderBy=name"
+  method: GET
+  queryParams:
+    orderBy: name
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Wed, 28 Jun 2023 15:05:41 GMT
+    Content-Type: application/json
+    Content-Length: "12921"
+    Connection: keep-alive
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    X-Content-Type-Options: nosniff
+    X-XSS-Protection: 1; mode=block
+    Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+    Pragma: no-cache
+    Expires: "0"
+    X-Frame-Options: DENY
+    Content-Security-Policy: "script-src 'self' https://documents.bmc.com 'unsafe-inline' *.bmc.com *.aptrinsic.com *.secops.bmc.com *.truesight.bmc.com *.presecops.bmc.com *.onbmc.com; style-src *.aptrinsic.com *.bmc.com 'self' 'unsafe-inline' fonts.googleapis.com; frame-src 'self' https://www.youtube.com; child-src 'self' blob:;img-src 'self' *.aptrinsic.com storage.googleapis.com data: *; connect-src 'self' *.aptrinsic.com *.secops.bmc.com *.truesight.bmc.com *.onbmc.com *.presecops.bmc.com *.bmc.com https://webaim.org/resources/contrastchecker/ https://bmcapps--sfadev2.sandbox.my.salesforce.com; font-src 'self' https://fonts.gstatic.com/ data:;"
+    Referrer-Policy: same-origin
+    Permissions-Policy: idle-detection=self
+  body:
+    type: json
+    content: |-
+      {
+          "records": [
+              {
+                  "application_id": "audit",
+                  "name": "ADE Audit Service",
+                  "application_display_name": "Audit Service",
+                  "description": "Common Auditing Service for BMC Helix Applications",
+                  "version": "23.2.02",
+                  "config": {},
+                  "service_type": "GLOBAL"
+              },
+              {
+                  "application_id": "ans",
+                  "name": "ADE Notification Service",
+                  "application_display_name": "Notification Service",
+                  "description": "Common Notification Service for BMC Helix Applications",
+                  "version": "23.2.02",
+                  "config": {},
+                  "service_type": "GLOBAL"
+              },
+              {
+                  "application_id": "discovery",
+                  "name": "BMC Helix Discovery",
+                  "description": "Visualize and correlate assets, applications, services, and dependencies to optimize costs and security.",
+                  "version": "23.2.02",
+                  "config": {
+                      "rsso_configurations": {
+                          "service_domain_prefix": "disc",
+                          "redirect_url_clients": [
+                              {
+                                  "redirection_url_postfix": "/ui/OICRedirect",
+                                  "client_name": "ade-smartgraph"
+                              }
+                          ]
+                      },
+                      "ui_configurations": {
+                          "components": [
+                              {
+                                  "icon_source_uri": "/discovery/static/dsm-tile.svg",
+                                  "image_source_uri": "/discovery/static/dsm-tile.svg",
+                                  "name": "BMC Helix Discovery",
+                                  "description": "Visualize and correlate assets, applications, services, and dependencies to optimize costs and security.",
+                                  "link_route_path": "/discovery/redirect/ui/",
+                                  "product_services": true
+                              }
+                          ]
+                      }
+                  },
+                  "service_type": "TENANT",
+                  "service_url": "https://helixash106-disc-itom-demo.onbmc.com"
+              },
+              {
+                  "application_id": "BWF",
+                  "name": "BWF",
+                  "description": "Business Workflows Service",
+                  "version": "22.1.02",
+                  "config": {
+                      "ui_configurations": {
+                          "components": [
+                              {
+                                  "icon_source_uri": "d-icon-user_star",
+                                  "use_service_url": true,
+                                  "image_source_uri": "",
+                                  "name": "BMC Helix Business Workflows",
+                                  "description": "BMC Helix Business Workflows is an intelligent, cloud-native service management solution for all lines of business. It empowers business leaders to manage, automate, and scale service delivery to drive peak efficiency.",
+                                  "link_route_path": "/helix/index.html#/com.bmc.dsm.bwfa",
+                                  "product_services": true
+                              }
+                          ]
+                      }
+                  },
+                  "service_type": "EXTERNAL",
+                  "service_url": "https://helixash106-demo-is.onbmc.com"
+              },
+              {
+                  "application_id": "DWP",
+                  "name": "DWP",
+                  "description": "DWP Service",
+                  "version": "22.1.02",
+                  "config": {
+                      "ui_configurations": {
+                          "components": [
+                              {
+                                  "icon_source_uri": "d-icon-user_star",
+                                  "use_service_url": true,
+                                  "image_source_uri": "/digital-workplace/icon-helix-digitalworkplace.svg",
+                                  "name": "BMC Helix Digital Workplace",
+                                  "description": "Engaging omni-channel experiences to support employees however they want to work.",
+                                  "link_route_path": "/dwp",
+                                  "product_services": true
+                              }
+                          ]
+                      }
+                  },
+                  "service_type": "EXTERNAL",
+                  "service_url": "https://helixash106-demo-dwp.onbmc.com"
+              },
+              {
+                  "application_id": "DWPC",
+                  "name": "DWPC",
+                  "description": "DWP Catalog Service",
+                  "version": "22.1.02",
+                  "config": {
+                      "ui_configurations": {
+                          "components": [
+                              {
+                                  "icon_source_uri": "d-icon-user_star",
+                                  "use_service_url": true,
+                                  "image_source_uri": "",
+                                  "name": "BMC Helix Digital Workplace Catalog",
+                                  "description": "Manage your catalog of services offered to your employees, customers or business partners. Develop  No-Code workflows, Questionnaires,  control access and report on Digital Workplace usage.",
+                                  "link_route_path": "/",
+                                  "product_services": true
+                              }
+                          ]
+                      }
+                  },
+                  "service_type": "EXTERNAL",
+                  "service_url": "https://helixash106-demo-dwpcatalog.onbmc.com/dwpc/index.html#"
+              },
+              {
+                  "application_id": "intelligent_integrations",
+                  "name": "Developer Tools",
+                  "description": "BMC Helix Developer Tools reduces development efforts and costs with easy integration between multiple solutions and sources using a broad range of connectors and APIs in a simplified UI.",
+                  "version": "23.2.02",
+                  "config": {
+                      "rsso_configurations": {
+                          "redirect_url_clients": [
+                              {
+                                  "redirection_url_postfix": "/developertools/auth/code/callback",
+                                  "client_name": "ade-integrations"
+                              }
+                          ]
+                      },
+                      "ui_configurations": {
+                          "components": [
+                              {
+                                  "icon_source_uri": "/developertools/img/developertools.svg",
+                                  "image_source_uri": "/developertools/img/developertools.svg",
+                                  "name": "BMC Helix Developer Tools",
+                                  "description": "BMC Helix Developer Tools reduces development efforts and costs with easy integration between multiple solutions and sources using a broad range of connectors and APIs in a simplified UI.",
+                                  "link_route_path": "/developertools/#/",
+                                  "product_services": true
+                              }
+                          ]
+                      }
+                  },
+                  "service_type": "TENANT"
+              },
+              {
+                  "application_id": "IS",
+                  "name": "IS",
+                  "description": "Innovation Suite Service",
+                  "version": "22.1.02",
+                  "config": {
+                      "ui_configurations": {
+                          "components": [
+                              {
+                                  "icon_source_uri": "d-icon-user_star",
+                                  "use_service_url": true,
+                                  "image_source_uri": "",
+                                  "name": "BMC Helix Innovation Suite",
+                                  "description": "Empowers developers and business users to co-create digital enterprise apps.",
+                                  "link_route_path": "/",
+                                  "product_services": true
+                              }
+                          ]
+                      }
+                  },
+                  "service_type": "EXTERNAL",
+                  "service_url": "https://helixash106-demo-is.onbmc.com/innovationstudio/index.html#"
+              },
+              {
+                  "application_id": "ITSM",
+                  "name": "ITSM",
+                  "description": "ITSM Service",
+                  "version": "22.1.02",
+                  "config": {
+                      "ui_configurations": {
+                          "components": [
+                              {
+                                  "icon_source_uri": "d-icon-user_star",
+                                  "use_service_url": true,
+                                  "image_source_uri": "/itsm/icon-helix-ITSM.svg",
+                                  "name": "BMC Helix ITSM",
+                                  "description": "Award-winning predictive IT service management for your modern enterprise.",
+                                  "link_route_path": "/smartit",
+                                  "product_services": true
+                              }
+                          ]
+                      }
+                  },
+                  "service_type": "EXTERNAL",
+                  "service_url": "https://helixash106-demo-smartit.onbmc.com"
+              },
+              {
+                  "application_id": "swp",
+                  "name": "Intelligent Integrations",
+                  "description": "BMC Helix Intelligent Integrations offers a codeless, automated platform for easily connecting to all your monitoring tools.",
+                  "version": "23.2.0201-GAB19SHA21a78d4e",
+                  "config": {
+                      "rsso_configurations": {
+                          "redirect_url_clients": [
+                              {
+                                  "redirection_url_postfix": "/swpui/auth/code/callback",
+                                  "client_name": "ade-swpui-clientid"
+                              }
+                          ]
+                      },
+                      "ui_configurations": {
+                          "components": [
+                              {
+                                  "icon_source_uri": "/swpui/assets/Symbol-helix-intelligence-integration-72x72.svg",
+                                  "image_source_uri": "/swpui/assets/Symbol-helix-intelligence-integration-72x72.svg",
+                                  "name": "BMC Helix Intelligent Integrations",
+                                  "description": "BMC Helix Intelligent Integrations offers a codeless, automated platform for easily connecting to all your monitoring tools.",
+                                  "link_route_path": "/swpui",
+                                  "product_services": true
+                              }
+                          ]
+                      }
+                  },
+                  "service_type": "TENANT"
+              },
+              {
+                  "application_id": "aif",
+                  "name": "aif",
+                  "description": "AI Foundation Service",
+                  "version": "23.2.01",
+                  "config": {},
+                  "service_type": "GLOBAL"
+              },
+              {
+                  "application_id": "aiops",
+                  "name": "aiops",
+                  "description": "BMC Helix AIOps proactively monitors system health, reduces event noise, performs probable cause analysis, and boosts remediation abilities with automation, analytics, and machine learning.",
+                  "version": "23.2.02",
+                  "config": {
+                      "rsso_configurations": {
+                          "redirect_url_clients": [
+                              {
+                                  "redirection_url_postfix": "/aiops/auth/code/callback",
+                                  "client_name": "ade-aiops"
+                              }
+                          ]
+                      },
+                      "ui_configurations": {
+                          "components": [
+                              {
+                                  "icon_source_uri": "/aiops/img/aiops.svg",
+                                  "image_source_uri": "/aiops/img/aiops.svg",
+                                  "name": "BMC Helix Service Monitoring",
+                                  "description": "BMC Helix Service Monitoring proactively monitors system health, reduces event noise, performs probable cause analysis, and boosts remediation abilities with automation, analytics, and machine learning.",
+                                  "link_route_path": "/aiops/#/",
+                                  "product_services": true
+                              }
+                          ]
+                      },
+                      "external_auth_mappings": {
+                          "itsm_mappings": {
+                              "mappings": [
+                                  {
+                                      "ade_mappings": [
+                                          {
+                                              "associations": [
+                                                  {
+                                                      "values": [
+                                                          "Operator"
+                                                      ],
+                                                      "ade_object_type": "roles"
+                                                  }
+                                              ]
+                                          }
+                                      ],
+                                      "external_object_type": "groups",
+                                      "external_object_name": "Licensed User"
+                                  }
+                              ]
+                          }
+                      }
+                  },
+                  "service_type": "TENANT"
+              },
+              {
+                  "application_id": "capacity_optimization",
+                  "name": "capacity_optimization",
+                  "description": "Continuous Optimization",
+                  "version": "23.2.02",
+                  "config": {
+                      "rsso_configurations": {
+                          "redirect_url_clients": [
+                              {
+                                  "redirection_url_postfix": "/opt/auth/code/callback",
+                                  "client_name": "optwebclient"
+                              }
+                          ]
+                      },
+                      "ui_configurations": {
+                          "components": [
+                              {
+                                  "icon_source_uri": "/opt/dashboard/assets/favicon.ico",
+                                  "image_source_uri": "/opt/dash/assets/img/optimize.svg",
+                                  "name": "BMC Helix Continuous Optimization",
+                                  "description": "Uses AI, ML and predictive analytics to manage IT resources, infrastructure and applications including distributed, Kubernetes, pods, microservices, containers, and multi-cloud services.",
+                                  "link_route_path": "/opt/dashboard",
+                                  "product_services": true
+                              }
+                          ]
+                      }
+                  },
+                  "service_type": "TENANT"
+              },
+              {
+                  "application_id": "core",
+                  "name": "core",
+                  "application_display_name": "Core",
+                  "description": "core Service",
+                  "version": "23.2.02",
+                  "service_type": "GLOBAL"
+              },
+              {
+                  "application_id": "credential",
+                  "name": "credential",
+                  "description": "Credential Management Service",
+                  "version": "1.0",
+                  "config": {},
+                  "service_type": "GLOBAL"
+              },
+              {
+                  "application_id": "reporting",
+                  "name": "dashboards",
+                  "description": "Reporting",
+                  "version": "23.2.02",
+                  "config": {
+                      "rsso_configurations": {
+                          "redirect_url_clients": [
+                              {
+                                  "redirection_url_postfix": "/dashboards/auth/code/callback",
+                                  "client_name": "ade-reporting"
+                              }
+                          ]
+                      },
+                      "ui_configurations": {
+                          "components": [
+                              {
+                                  "icon_source_uri": "d-icon-chart_donut",
+                                  "image_source_uri": "/dashboards/public/img/icon-helix-dashboards.svg",
+                                  "name": "BMC Helix Dashboards",
+                                  "description": "Enables unified reporting with a consolidated view of data from applications across your environment to easily create, export, and share interactive dashboards internally and externally.",
+                                  "link_route_path": "/dashboards",
+                                  "product_services": true
+                              }
+                          ]
+                      },
+                      "external_auth_mappings": {
+                          "itsm_mappings": {
+                              "mappings": [
+                                  {
+                                      "ade_mappings": [
+                                          {
+                                              "associations": [
+                                                  {
+                                                      "values": [
+                                                          "Reporting Viewer"
+                                                      ],
+                                                      "ade_object_type": "roles"
+                                                  }
+                                              ]
+                                          }
+                                      ],
+                                      "external_object_type": "groups",
+                                      "external_object_name": "Licensed User"
+                                  }
+                              ]
+                          }
+                      }
+                  },
+                  "service_type": "GLOBAL"
+              },
+              {
+                  "application_id": "dsm",
+                  "name": "dsm",
+                  "description": "Digital Service Management",
+                  "version": "23.2.02",
+                  "config": {
+                      "rsso_configurations": {
+                          "service_domain_prefix": "disc",
+                          "redirect_url_clients": [
+                              {
+                                  "redirection_url_postfix": "/ui/OICRedirect",
+                                  "client_name": "ade-smartgraph"
+                              }
+                          ]
+                      }
+                  },
+                  "service_type": "GLOBAL",
+                  "service_url": "https://helixash106-disc-itom-demo.onbmc.com"
+              },
+              {
+                  "application_id": "ims",
+                  "name": "ims",
+                  "application_display_name": "Identity Management Service",
+                  "description": "Controls access to BMC Helix Portal common services",
+                  "version": "23.2.02",
+                  "config": {
+                      "ui_configurations": {
+                          "components": [
+                              {
+                                  "icon_source_uri": "d-icon-user_star",
+                                  "image_source_uri": "",
+                                  "name": "Roles and Permissions",
+                                  "link_route_path": "/admin/#/rolesPermissions",
+                                  "product_services": false,
+                                  "description": "Roles and permissions"
+                              },
+                              {
+                                  "icon_source_uri": "d-icon-user_circle",
+                                  "image_source_uri": "",
+                                  "name": "Users and Keys",
+                                  "link_route_path": "/admin/#/users",
+                                  "product_services": false,
+                                  "description": "Users and Keys"
+                              },
+                              {
+                                  "icon_source_uri": "d-icon-users_circle",
+                                  "image_source_uri": "",
+                                  "name": "User Groups",
+                                  "link_route_path": "/admin/#/groups",
+                                  "product_services": false,
+                                  "description": "User Groups"
+                              }
+                          ]
+                      }
+                  },
+                  "service_type": "GLOBAL"
+              },
+              {
+                  "application_id": "ia",
+                  "name": "intelligent-automation",
+                  "description": "Intelligent Automation",
+                  "version": "23.2.02",
+                  "config": {
+                      "rsso_configurations": {
+                          "redirect_url_clients": [
+                              {
+                                  "redirection_url_postfix": "/intelligent-automation/auth/code/callback",
+                                  "client_name": "ade-iaportal"
+                              }
+                          ]
+                      },
+                      "ui_configurations": {
+                          "components": [
+                              {
+                                  "icon_source_uri": "/intelligent-automation/assets/logo/icon-intelligent-automation.svg",
+                                  "image_source_uri": "/intelligent-automation/assets/logo/icon-intelligent-automation.svg",
+                                  "name": "BMC Helix Intelligent Automation",
+                                  "description": "Policy-driven automation broker that identifies opportunities to use the automation technology of your choice.",
+                                  "link_route_path": "/intelligent-automation",
+                                  "product_services": true
+                              }
+                          ]
+                      }
+                  },
+                  "service_type": "TENANT"
+              },
+              {
+                  "application_id": "itsm_insight",
+                  "name": "itsm_insight",
+                  "description": "ITSM Insight Application",
+                  "version": "23.2.01",
+                  "config": {},
+                  "service_type": "EXTERNAL",
+                  "service_url": "https://helixash106-demo-is.onbmc.com"
+              },
+              {
+                  "application_id": "loganalytics",
+                  "name": "loganalytics",
+                  "description": "BMC Helix Log Analytics provides ability to collect, analyze and visualize logs, and solve problems faster for your data driven business.",
+                  "version": "23.2.02",
+                  "config": {
+                      "rsso_configurations": {
+                          "redirect_url_clients": [
+                              {
+                                  "redirection_url_postfix": "/loganalytics/auth/code/callback",
+                                  "client_name": "ade-logsportal"
+                              }
+                          ]
+                      },
+                      "ui_configurations": {
+                          "components": [
+                              {
+                                  "icon_source_uri": "/logexplorer/img/loganalytics.svg",
+                                  "image_source_uri": "/logexplorer/img/loganalytics.svg",
+                                  "name": "BMC Helix Log Analytics",
+                                  "description": "BMC Helix Log Analytics provides ability to collect, analyze and visualize logs, and solve problems faster for your data driven business.",
+                                  "link_route_path": "/loganalytics/",
+                                  "product_services": true
+                              }
+                          ]
+                      }
+                  },
+                  "service_type": "TENANT"
+              },
+              {
+                  "application_id": "monitor",
+                  "name": "monitor",
+                  "description": "BMC Helix Operations Management delivers broad monitoring and event management capabilities, and enables ingestion of large scale event and metrics data.",
+                  "version": "23.2.02",
+                  "config": {
+                      "rsso_configurations": {
+                          "redirect_url_clients": [
+                              {
+                                  "redirection_url_postfix": "/monitor/auth/code/callback",
+                                  "client_name": "monitor"
+                              }
+                          ]
+                      },
+                      "ui_configurations": {
+                          "components": [
+                              {
+                                  "icon_source_uri": "/monitor/img/monitor.svg",
+                                  "image_source_uri": "/monitor/img/monitor.svg",
+                                  "name": "BMC Helix Operations Management",
+                                  "description": "BMC Helix Operations Management delivers broad monitoring and event management capabilities, and enables ingestion of large scale event and metrics data.",
+                                  "link_route_path": "/monitor/#/",
+                                  "product_services": true
+                              }
+                          ]
+                      }
+                  },
+                  "service_type": "TENANT"
+              }
+          ],
+          "_metadata": {
+              "page": 0,
+              "records_per_page": 1000,
+              "page_count": 1,
+              "total_count": 22
+          }
+      }
+order: 1000

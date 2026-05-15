@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{bhom_base_url}}/ims/api/v1/external/users/preferences"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"key\": \"aiops.dashboards.preferences\",\r
+
+    \    \"level\": \"USER\",\r
+
+    \    \"value\": \"{\\\"defaultDashboard\\\":\\\"e26969d7-cdce-4440-a5db-a4ee905bd66d/salud-atms\\\"}\"\r
+
+    }"
+order: 1000

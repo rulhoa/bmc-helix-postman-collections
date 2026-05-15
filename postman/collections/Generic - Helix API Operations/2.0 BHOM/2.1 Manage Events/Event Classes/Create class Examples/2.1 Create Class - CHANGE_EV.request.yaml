@@ -1,0 +1,404 @@
+$kind: http-request
+name: 2.1 Create Class - CHANGE_EV
+description: HP_NNM_EV
+url: "{{bhom_base_url}}/events-service/api/v1.0/events/classes/"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \t\"name\": \"CHANGE_EV\",\r
+
+    \t\"parentClassName\": \"EVENT\",\r
+
+    \t\"attributes\": [\t\t\r
+
+    \t\t{\r
+
+    \t\t\t\"name\": \"ch_summary\",\r
+
+    \t\t\t\"dataType\": \"STRING\",\r
+
+    \t\t\t\"default\": \"\",\r
+
+    \t\t\t\"allFacet\": [],\r
+
+    \t\t\t\"enumElements\": [],\r
+
+    \t\t\t\"enum\": false\r
+
+    \t\t},\r
+
+    \t\t{\r
+
+    \t\t\t\"name\": \"ch_changeImpact\",\r
+
+    \t\t\t\"dataType\": \"STRING\",\r
+
+    \t\t\t\"default\": \"\",\r
+
+    \t\t\t\"allFacet\": [],\r
+
+    \t\t\t\"enumElements\": [],\r
+
+    \t\t\t\"enum\": false\r
+
+    \t\t},\r
+
+    \t\t{\r
+
+    \t\t\t\"name\": \"ch_changeModifiedDateEpoch\",\r
+
+    \t\t\t\"dataType\": \"DATE\",\r
+
+    \t\t\t\"default\": \"0\",\r
+
+    \t\t\t\"allFacet\": [],\r
+
+    \t\t\t\"enumElements\": [],\r
+
+    \t\t\t\"enum\": false\r
+
+    \t\t},\r
+
+    \t\t{\r
+
+    \t\t\t\"name\": \"ch_changePriority\",\r
+
+    \t\t\t\"dataType\": \"STRING\",\r
+
+    \t\t\t\"default\": \"\",\r
+
+    \t\t\t\"allFacet\": [],\r
+
+    \t\t\t\"enumElements\": [],\r
+
+    \t\t\t\"enum\": false\r
+
+    \t\t},\r
+
+    \t\t{\r
+
+    \t\t\t\"name\": \"ch_actualStartDateEpoch\",\r
+
+    \t\t\t\"dataType\": \"DATE\",\r
+
+    \t\t\t\"default\": \"0\",\r
+
+    \t\t\t\"allFacet\": [],\r
+
+    \t\t\t\"enumElements\": [],\r
+
+    \t\t\t\"enum\": false\r
+
+    \t\t},\r
+
+    \t\t{\r
+
+    \t\t\t\"name\": \"ch_itsm_Location\",\r
+
+    \t\t\t\"dataType\": \"STRING\",\r
+
+    \t\t\t\"default\": \"\",\r
+
+    \t\t\t\"allFacet\": [],\r
+
+    \t\t\t\"enumElements\": [],\r
+
+    \t\t\t\"enum\": false\r
+
+    \t\t},\r
+
+    \t\t{\r
+
+    \t\t\t\"name\": \"ch_cellName\",\r
+
+    \t\t\t\"dataType\": \"STRING\",\r
+
+    \t\t\t\"default\": \"\",\r
+
+    \t\t\t\"allFacet\": [],\r
+
+    \t\t\t\"enumElements\": [],\r
+
+    \t\t\t\"enum\": false\r
+
+    \t\t},\r
+
+    \t\t{\r
+
+    \t\t\t\"name\": \"ch_changeRiskLevel\",\r
+
+    \t\t\t\"dataType\": \"STRING\",\r
+
+    \t\t\t\"default\": \"\",\r
+
+    \t\t\t\"allFacet\": [],\r
+
+    \t\t\t\"enumElements\": [],\r
+
+    \t\t\t\"enum\": false\r
+
+    \t\t},\r
+
+    \t\t{\r
+
+    \t\t\t\"name\": \"ch_ChangeStatus\",\r
+
+    \t\t\t\"dataType\": \"STRING\",\r
+
+    \t\t\t\"default\": \"\",\r
+
+    \t\t\t\"allFacet\": [],\r
+
+    \t\t\t\"enumElements\": [],\r
+
+    \t\t\t\"enum\": false\r
+
+    \t\t},\r
+
+    \t\t{\r
+
+    \t\t\t\"name\": \"ch_actualEndDateEpoch\",\r
+
+    \t\t\t\"dataType\": \"DATE\",\r
+
+    \t\t\t\"default\": \"0\",\r
+
+    \t\t\t\"allFacet\": [],\r
+
+    \t\t\t\"enumElements\": [],\r
+
+    \t\t\t\"enum\": false\r
+
+    \t\t},\r
+
+    \t\t{\r
+
+    \t\t\t\"name\": \"ch_modifiedDateEpoch\",\r
+
+    \t\t\t\"dataType\": \"DATE\",\r
+
+    \t\t\t\"default\": \"0\",\r
+
+    \t\t\t\"allFacet\": [],\r
+
+    \t\t\t\"enumElements\": [],\r
+
+    \t\t\t\"enum\": false\r
+
+    \t\t},\r
+
+    \t\t{\r
+
+    \t\t\t\"name\": \"ch_scheduledEndDateEpoch\",\r
+
+    \t\t\t\"dataType\": \"DATE\",\r
+
+    \t\t\t\"default\": \"0\",\r
+
+    \t\t\t\"allFacet\": [],\r
+
+    \t\t\t\"enumElements\": [],\r
+
+    \t\t\t\"enum\": false\r
+
+    \t\t},\r
+
+    \t\t{\r
+
+    \t\t\t\"name\": \"ch_ciAssociationDateEpoch\",\r
+
+    \t\t\t\"dataType\": \"DATE\",\r
+
+    \t\t\t\"default\": \"0\",\r
+
+    \t\t\t\"allFacet\": [],\r
+
+    \t\t\t\"enumElements\": [],\r
+
+    \t\t\t\"enum\": false\r
+
+    \t\t},\r
+
+    \t\t{\r
+
+    \t\t\t\"name\": \"ch_changeCategory\",\r
+
+    \t\t\t\"dataType\": \"STRING\",\r
+
+    \t\t\t\"default\": \"\",\r
+
+    \t\t\t\"allFacet\": [],\r
+
+    \t\t\t\"enumElements\": [],\r
+
+    \t\t\t\"enum\": false\r
+
+    \t\t},\r
+
+    \t\t{\r
+
+    \t\t\t\"name\": \"ch_changeUrgency\",\r
+
+    \t\t\t\"dataType\": \"STRING\",\r
+
+    \t\t\t\"default\": \"\",\r
+
+    \t\t\t\"allFacet\": [],\r
+
+    \t\t\t\"enumElements\": [],\r
+
+    \t\t\t\"enum\": false\r
+
+    \t\t},\r
+
+    \t\t{\r
+
+    \t\t\t\"name\": \"ch_completionDateEpoch\",\r
+
+    \t\t\t\"dataType\": \"DATE\",\r
+
+    \t\t\t\"default\": \"0\",\r
+
+    \t\t\t\"allFacet\": [],\r
+
+    \t\t\t\"enumElements\": [],\r
+
+    \t\t\t\"enum\": false\r
+
+    \t\t},\r
+
+    \t\t{\r
+
+    \t\t\t\"name\": \"ch_changeOwner\",\r
+
+    \t\t\t\"dataType\": \"STRING\",\r
+
+    \t\t\t\"default\": \"\",\r
+
+    \t\t\t\"allFacet\": [],\r
+
+    \t\t\t\"enumElements\": [],\r
+
+    \t\t\t\"enum\": false\r
+
+    \t\t},\r
+
+    \t\t{\r
+
+    \t\t\t\"name\": \"ch_changeID\",\r
+
+    \t\t\t\"dataType\": \"STRING\",\r
+
+    \t\t\t\"default\": \"\",\r
+
+    \t\t\t\"allFacet\": [],\r
+
+    \t\t\t\"enumElements\": [],\r
+
+    \t\t\t\"enum\": false\r
+
+    \t\t},\r
+
+    \t\t{\r
+
+    \t\t\t\"name\": \"ch_changeCoordinator\",\r
+
+    \t\t\t\"dataType\": \"STRING\",\r
+
+    \t\t\t\"default\": \"\",\r
+
+    \t\t\t\"allFacet\": [],\r
+
+    \t\t\t\"enumElements\": [],\r
+
+    \t\t\t\"enum\": false\r
+
+    \t\t},\r
+
+    \t\t{\r
+
+    \t\t\t\"name\": \"ch_changeReason\",\r
+
+    \t\t\t\"dataType\": \"STRING\",\r
+
+    \t\t\t\"default\": \"\",\r
+
+    \t\t\t\"allFacet\": [],\r
+
+    \t\t\t\"enumElements\": [],\r
+
+    \t\t\t\"enum\": false\r
+
+    \t\t},\r
+
+    \t\t{\r
+
+    \t\t\t\"name\": \"ch_scheduledStartDateEpoch\",\r
+
+    \t\t\t\"dataType\": \"DATE\",\r
+
+    \t\t\t\"default\": \"0\",\r
+
+    \t\t\t\"allFacet\": [],\r
+
+    \t\t\t\"enumElements\": [],\r
+
+    \t\t\t\"enum\": false\r
+
+    \t\t},\r
+
+    \t\t{\r
+
+    \t\t\t\"name\": \"ch_CICompany\",\r
+
+    \t\t\t\"dataType\": \"STRING\",\r
+
+    \t\t\t\"default\": \"\",\r
+
+    \t\t\t\"allFacet\": [],\r
+
+    \t\t\t\"enumElements\": [],\r
+
+    \t\t\t\"enum\": false\r
+
+    \t\t},\r
+
+    \t\t{\r
+
+    \t\t\t\"name\": \"ch_ciName\",\r
+
+    \t\t\t\"dataType\": \"STRING\",\r
+
+    \t\t\t\"default\": \"\",\r
+
+    \t\t\t\"allFacet\": [],\r
+
+    \t\t\t\"enumElements\": [],\r
+
+    \t\t\t\"enum\": false\r
+
+    \t\t},\r
+
+    \t\t{\r
+
+    \t\t\t\"name\": \"ch_statusReason\",\r
+
+    \t\t\t\"dataType\": \"STRING\",\r
+
+    \t\t\t\"default\": \"\",\r
+
+    \t\t\t\"allFacet\": [],\r
+
+    \t\t\t\"enumElements\": [],\r
+
+    \t\t\t\"enum\": false\r
+
+    \t\t}\r
+
+    \t]\r
+
+    }"
+examples: ./.resources/2.1 Create Class - CHANGE_EV.resources/examples
+order: 1000

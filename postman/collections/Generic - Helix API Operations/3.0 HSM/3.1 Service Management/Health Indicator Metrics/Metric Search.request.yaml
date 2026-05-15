@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{bhom_base_url}}/service-management/api/v1.0/topology/search"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"query\": \"SEARCH Host ORDER BY name SHOW #id as ciId, name, #kind as ciKind\",\r
+
+    \    \"limit\": 10\r
+
+    }"
+examples: ./.resources/Metric Search.resources/examples
+order: 1000

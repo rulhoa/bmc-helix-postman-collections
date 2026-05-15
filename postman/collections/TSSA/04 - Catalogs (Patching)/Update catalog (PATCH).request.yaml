@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{v1}}/catalogs/{{id}}"
+method: PATCH
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "action": "update"
+    }
+order: 2000

@@ -1,0 +1,122 @@
+$kind: http-request
+url: "{{bhom_base_url}}/events-service/api/v1.0/events"
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+  - key: Authorization
+    value: apiKey {{bhom_apiKey}}
+  - key: ""
+    value: ""
+    disabled: true
+body:
+  type: text
+  content: "[\r
+
+    \    {\r
+
+    \        \"class\": \"Prediction\",\r
+
+    \        \"_lifecycle_time\": \"0\",\r
+
+    \        \"_model\": \"Prediction\",\r
+
+    \        \"_notes\": \"[]\",\r
+
+    \        \"_operations\": \"[0x188db405480,admin,,Prediction created based on ML Based algorithm,'',0x188db4054de,,Predefined Enrichment Policy for Incident,BASIC_ENRICHMENT,'',0x188db405504,,Enrich Impact,ADVANCED_ENRICHMENT,'']\",\r
+
+    \        \"_relationships\": \"{rstat=norelation}\",\r
+
+    \        \"_repeat_count\": \"1\",\r
+
+    \        \"_service_id\": \"[0c4391640100fc1f2d36ff526e427573696e65737353657276696365]\",\r
+
+    \        \"_signature\": \"-1676640698\",\r
+
+    \        \"alias\": \"[BMC_ComputerSystem:Prediction Service]\",\r
+
+    \        \"category\": \"OPERATIONS_MANAGEMENT\",\r
+
+    \        \"category_ordinal\": \"190\",\r
+
+    \        \"cdmclass\": \"BMC_ComputerSystem\",\r
+
+    \        \"componentalias\": \"BMC_ComputerSystem:Prediction Service\",\r
+
+    \        \"instancename\": \"Prediction Service\",\r
+
+    \        \"metric_name\": \"Dynatrace_page_load_time\",\r
+
+    \        \"msg\": \"Prediction Event for Media Service v2\",\r
+
+    \        \"notificationService\": \"incident\",\r
+
+    \        \"object\": \"\",\r
+
+    \        \"object_class\": \"App_Health\",\r
+
+    \        \"object_id\": \"Dynatrace:660181721@web-fe-01:Dynatrace_App_Health:Dynatrace-app-health\",\r
+
+    \        \"pr_algorithm_name\": \"ML\",\r
+
+    \        \"pr_analysis_type\": \"BUSINESS_KPI\",\r
+
+    \        \"pr_attribution_metrics\": \"[]\",\r
+
+    \        \"pr_attribution_scores\": \"[]\",\r
+
+    \        \"pr_forecast_data_duration\": 24,\r
+
+    \        \"pr_number_of_violations\": 1,\r
+
+    \        \"pr_parameter_threshold\": \"\",\r
+
+    \        \"pr_prediction_id\": \"cfa0dc28-b354-4aea-a182-2e8c2f4828c6\",\r
+
+    \        \"pr_score\": \"\",\r
+
+    \        \"pr_service_name\": \"Media Service v2\",\r
+
+    \        \"pr_severity\": \"CRITICAL\",\r
+
+    \        \"pr_severity_ordinal\": \"70\",\r
+
+    \        \"pr_timestamp\": 1688477964000,\r
+
+    \        \"priority\": \"PRIORITY_1\",\r
+
+    \        \"priority_ordinal\": \"50\",\r
+
+    \        \"severity\": \"INFO\",\r
+
+    \        \"severity_ordinal\": \"30\",\r
+
+    \        \"significance\": \"0\",\r
+
+    \        \"source_address\": \"\",\r
+
+    \        \"source_hostname\": \"Prediction Service\",\r
+
+    \        \"source_identifier\": \"cfa0dc28-b354-4aea-a182-2e8c2f4828c6\",\r
+
+    \        \"source_port\": \"0\",\r
+
+    \        \"sourceEntityType\": \"\",\r
+
+    \        \"status\": \"OPEN\",\r
+
+    \        \"status_ordinal\": \"0\",\r
+
+    \        \"sub_category\": \"OTHER\",\r
+
+    \        \"sub_category_ordinal\": \"10\",\r
+
+    \        \"tags\": \"[NoImpact]\",\r
+
+    \        \"user_assigned\": \"\"\r
+
+    \    }\r
+
+    ]"
+examples: ./.resources/CreateEvent Prediction Event.resources/examples
+order: 14000

@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{bhom_base_url}}/intelligent-automation/api/v1/notification/policy"
+method: GET
+order: 2000

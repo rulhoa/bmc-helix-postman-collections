@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{v1}}/nshscript-jobs/{{id}}/jobruns"
+method: GET
+order: 5000

@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{v1}}/metrics/listJobManagerServiceDetails"
+method: GET
+order: 12000

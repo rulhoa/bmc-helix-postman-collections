@@ -1,0 +1,272 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/service-management/api/v1.0/metric/tree"
+  method: POST
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Authorization
+      value: apiKey {{bhom_apiKey}}
+    - key: Authorization
+      value: ""
+      disabled: true
+  body:
+    type: text
+    content: "{\r
+
+      \    \"nodeId\":\"c956c862bd2e716c4acfc52b6e486f7374\",\r
+
+      \    \"nodeKind\":\"Host\"\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    - key: Date
+      value: Thu, 02 Feb 2023 15:19:20 GMT
+    - key: Content-Type
+      value: application/json
+    - key: Transfer-Encoding
+      value: chunked
+    - key: Connection
+      value: keep-alive
+    - key: Vary
+      value: Origin
+    - key: Vary
+      value: Access-Control-Request-Method
+    - key: Vary
+      value: Access-Control-Request-Headers
+    - key: X-Content-Type-Options
+      value: nosniff
+    - key: X-XSS-Protection
+      value: 1; mode=block
+    - key: Cache-Control
+      value: no-cache, no-store, max-age=0, must-revalidate
+    - key: Pragma
+      value: no-cache
+    - key: Expires
+      value: "0"
+    - key: Strict-Transport-Security
+      value: max-age=31536000 ; includeSubDomains
+    - key: X-Frame-Options
+      value: DENY
+  body:
+    type: json
+    content: |-
+      {
+          "metrics": {
+              "c956c862bd2e716c4acfc52b6e486f7374": [
+                  {
+                      "source": "",
+                      "entityTypes": [
+                          {
+                              "entityTypeId": "K8S_NODE_MEMORY",
+                              "entityTypeDisplayName": "Kubernetes Node Memory",
+                              "metrics": [
+                                  {
+                                      "metricDisplayName": "Major Page Faults",
+                                      "unit": "#",
+                                      "entities": [],
+                                      "metric": "MajorPageFaults"
+                                  },
+                                  {
+                                      "metricDisplayName": "Page Faults",
+                                      "unit": "#",
+                                      "entities": [],
+                                      "metric": "PageFaults"
+                                  },
+                                  {
+                                      "metricDisplayName": "RSS Memory",
+                                      "unit": "MB",
+                                      "entities": [],
+                                      "metric": "RSSBytes"
+                                  },
+                                  {
+                                      "metricDisplayName": "WorkingSet Bytes",
+                                      "unit": "MB",
+                                      "entities": [],
+                                      "metric": "WorkingSetBytes"
+                                  },
+                                  {
+                                      "metricDisplayName": "Usage Bytes",
+                                      "unit": "MB",
+                                      "entities": [],
+                                      "metric": "UsageBytes"
+                                  },
+                                  {
+                                      "metricDisplayName": "Utilization",
+                                      "unit": "%",
+                                      "entities": [],
+                                      "metric": "Utilization"
+                                  },
+                                  {
+                                      "metricDisplayName": "Available Bytes",
+                                      "unit": "MB",
+                                      "entities": [],
+                                      "metric": "AvailableBytes"
+                                  }
+                              ]
+                          },
+                          {
+                              "entityTypeId": "K8S_NODE_CPU",
+                              "entityTypeDisplayName": "Kubernetes Node CPU",
+                              "metrics": [
+                                  {
+                                      "metricDisplayName": "CPU Usage",
+                                      "unit": "sec",
+                                      "entities": [],
+                                      "metric": "UsageCoreSeconds"
+                                  },
+                                  {
+                                      "metricDisplayName": "CPU Utilization",
+                                      "unit": "%",
+                                      "entities": [],
+                                      "metric": "Utilization"
+                                  },
+                                  {
+                                      "metricDisplayName": "Average CPU Usage Cores",
+                                      "unit": "#",
+                                      "entities": [],
+                                      "metric": "AverageUsageCores"
+                                  }
+                              ]
+                          },
+                          {
+                              "entityTypeId": "K8S_NODE_NETWORK",
+                              "entityTypeDisplayName": "Kubernetes Node Network",
+                              "metrics": [
+                                  {
+                                      "metricDisplayName": "Total Bytes",
+                                      "unit": "MB",
+                                      "entities": [],
+                                      "metric": "TotalBytes"
+                                  },
+                                  {
+                                      "metricDisplayName": "Transmitted Errors",
+                                      "unit": "#",
+                                      "entities": [],
+                                      "metric": "TransmittedErrors"
+                                  },
+                                  {
+                                      "metricDisplayName": "TransmittedBytes",
+                                      "unit": "MB",
+                                      "entities": [],
+                                      "metric": "TransmittedBytes"
+                                  },
+                                  {
+                                      "metricDisplayName": "Received Errors",
+                                      "unit": "#",
+                                      "entities": [],
+                                      "metric": "ReceivedErrors"
+                                  },
+                                  {
+                                      "metricDisplayName": "Received Bytes",
+                                      "unit": "MB",
+                                      "entities": [],
+                                      "metric": "ReceivedBytes"
+                                  }
+                              ]
+                          },
+                          {
+                              "entityTypeId": "K8S_NODE",
+                              "entityTypeDisplayName": "Kubernetes Cluster Node",
+                              "metrics": [
+                                  {
+                                      "metricDisplayName": "Monitoring Status",
+                                      "unit": "0 - Online, 1 - Offline, 2 - Unknown",
+                                      "entities": [],
+                                      "metric": "MonitoringStatus"
+                                  },
+                                  {
+                                      "metricDisplayName": "Total Pods",
+                                      "unit": "#",
+                                      "entities": [],
+                                      "metric": "TotalPods"
+                                  },
+                                  {
+                                      "metricDisplayName": "Total Running Pods",
+                                      "unit": "#",
+                                      "entities": [],
+                                      "metric": "TotalRunningPods"
+                                  },
+                                  {
+                                      "metricDisplayName": "PID Pressure",
+                                      "unit": "0 - False, 1 -True",
+                                      "entities": [],
+                                      "metric": "PIDPressure"
+                                  },
+                                  {
+                                      "metricDisplayName": "Disk Pressure",
+                                      "unit": "0 - False, 1 - True",
+                                      "entities": [],
+                                      "metric": "DiskPressure"
+                                  },
+                                  {
+                                      "metricDisplayName": "Memory Pressure",
+                                      "unit": "0 - False, 1 - True",
+                                      "entities": [],
+                                      "metric": "MemoryPressure"
+                                  },
+                                  {
+                                      "metricDisplayName": "Status",
+                                      "unit": "0 - Ready, 1 - Not Ready, 2 - Unknown",
+                                      "entities": [],
+                                      "metric": "Status"
+                                  }
+                              ]
+                          },
+                          {
+                              "entityTypeId": "K8S_NODE_FILESYSTEM",
+                              "entityTypeDisplayName": "Kubernetes Node FileSystem",
+                              "metrics": [
+                                  {
+                                      "metricDisplayName": "Used Inodes",
+                                      "unit": "#",
+                                      "entities": [],
+                                      "metric": "InodesUsed"
+                                  },
+                                  {
+                                      "metricDisplayName": "Total Inodes",
+                                      "unit": "#",
+                                      "entities": [],
+                                      "metric": "InodesTotal"
+                                  },
+                                  {
+                                      "metricDisplayName": "Free Inodes",
+                                      "unit": "#",
+                                      "entities": [],
+                                      "metric": "InodesFree"
+                                  },
+                                  {
+                                      "metricDisplayName": "Used Bytes",
+                                      "unit": "MB",
+                                      "entities": [],
+                                      "metric": "UsedBytes"
+                                  },
+                                  {
+                                      "metricDisplayName": "Capacity Bytes",
+                                      "unit": "MB",
+                                      "entities": [],
+                                      "metric": "CapacityBytes"
+                                  },
+                                  {
+                                      "metricDisplayName": "Utilization",
+                                      "unit": "%",
+                                      "entities": [],
+                                      "metric": "Utilization"
+                                  },
+                                  {
+                                      "metricDisplayName": "Available Bytes",
+                                      "unit": "MB",
+                                      "entities": [],
+                                      "metric": "AvailableBytes"
+                                  }
+                              ]
+                          }
+                      ]
+                  }
+              ]
+          }
+      }
+order: 1000

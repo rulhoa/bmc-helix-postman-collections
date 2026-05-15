@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{disco_base_url}}/api/v1.4/data/kinds/TechnicalService"
+method: GET
+order: 4000

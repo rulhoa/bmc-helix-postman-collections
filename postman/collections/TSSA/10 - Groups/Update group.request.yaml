@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{v1}}/groups/{{id}}"
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "name": "New Name"
+    }
+order: 3000

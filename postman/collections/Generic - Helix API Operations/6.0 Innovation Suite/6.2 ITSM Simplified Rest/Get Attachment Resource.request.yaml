@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{is_base_url}}/api/com.bmc.dsm.itsm.itsm-rest-api/attachment/download/CHG:WorkLog/1000000351/AGGGYNQFEWHWYAT01EH2T01EH2J1M8"
+method: GET
+examples: ./.resources/Get Attachment Resource.resources/examples
+order: 3000

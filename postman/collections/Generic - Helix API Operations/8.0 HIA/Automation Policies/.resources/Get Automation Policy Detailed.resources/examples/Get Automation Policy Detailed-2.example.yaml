@@ -1,0 +1,449 @@
+$kind: http-example
+name: Get Automation Policy Detailed
+request:
+  url: "{{bhom_base_url}}/intelligent-automation/api/v1/workflows/c5293b57-6c7c-ce72-908c-9c7cda3b4495/checksum/b6eb6617338f098b1f0755c9983bdb603030ad73d423b91a63be37af82840612"
+  method: GET
+  headers:
+    helix_jwt_token: "{{bhom_json_web_token}}"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Wed, 15 Feb 2023 14:49:19 GMT
+    Content-Type: application/json; charset=utf-8
+    Content-Length: "10444"
+    Connection: keep-alive
+    X-Powered-By: Express
+    ETag: W/"28cc-2CSuE756Clb8YCOGkeP85nwps3I"
+  body:
+    type: json
+    content: |-
+      {
+          "id": "c5293b57-6c7c-ce72-908c-9c7cda3b4495",
+          "name": "Innovation Studio Control-M Job Automation Process",
+          "type": "user_defined",
+          "description": "",
+          "metadata": {
+              "event": {
+                  "msg": "Your PATROL Simulator",
+                  "tags": [
+                      "http://mobility165-nodered.trybmc.com/ui"
+                  ],
+                  "alias": [
+                      "BMC_ComputerSystem:pat_sim1"
+                  ],
+                  "class": "EVENT",
+                  "_ci_id": "",
+                  "_model": "",
+                  "_notes": "[]",
+                  "status": "OPEN",
+                  "_errors": "[]",
+                  "details": "",
+                  "_entropy": "",
+                  "_node_id": "[]",
+                  "category": "AVAILABILITY_MANAGEMENT",
+                  "cdmclass": "",
+                  "location": "California",
+                  "priority": "PRIORITY_5",
+                  "severity": "INFO",
+                  "modelname": "",
+                  "_signature": "-2073814224",
+                  "_tenant_id": "1738801444",
+                  "_identifier": "eps.1738801444.3831759756832602.5d618047-df4a-4f8c-8b56-785322d2266a",
+                  "_operations": "[]",
+                  "_service_id": "[]",
+                  "incident_id": "",
+                  "source_port": 80,
+                  "_tenant_name": "",
+                  "instancename": "",
+                  "significance": "0",
+                  "sub_category": "OTHER",
+                  "_arrival_time": 1662052007696,
+                  "_repeat_count": "0",
+                  "_service_name": "[]",
+                  "creation_time": 1662052007696,
+                  "user_assigned": "",
+                  "_modified_time": 1662052007696,
+                  "_relationships": {
+                      "rstat": "norelation"
+                  },
+                  "_unmapped_data": {
+                      "object": "CPU"
+                  },
+                  "componentalias": "",
+                  "source_address": "172.17.0.132",
+                  "_lifecycle_time": "0",
+                  "source_hostname": "pat_sim1",
+                  "incident_company": "",
+                  "source_identifier": "pat_sim1:3181",
+                  "_node_service_mapping": "[]",
+                  "_node_service_key_mapping": "[]"
+              },
+              "effort": 45,
+              "event_type": "EVENT: Puma Trading System",
+              "json_paths": {
+                  "$.msg": [
+                      "[AWS] EC2 instance is not responding on HTTP 8080.",
+                      "[Splunk] File size exceeding the threshold - /etc/helix.log",
+                      "[Splunk] File size exceeding the threshold - /etc/asd.log",
+                      "[Splunk] File size exceeding the threshold - /etc/dyna.log",
+                      "[Nagios] Memory utilization above 85% for last 15 minutes",
+                      "Load balancer node unable to reach web-fe-01",
+                      "[Dynatrace] Media Service Application impacted",
+                      "Media Service Application impacted. Error 503 in LB pool detected.",
+                      "Abnormality detected in LB pool web-fe-01",
+                      "Your PATROL Simulator"
+                  ],
+                  "$.tags": [
+                      "[]"
+                  ],
+                  "$.class": [
+                      "EVENT"
+                  ],
+                  "$._ci_id": [
+                      ""
+                  ],
+                  "$._model": [
+                      ""
+                  ],
+                  "$._notes": [
+                      "[]"
+                  ],
+                  "$.status": [
+                      "OPEN"
+                  ],
+                  "$._errors": [
+                      "[]"
+                  ],
+                  "$.details": [
+                      ""
+                  ],
+                  "$.tags[*]": [
+                      "http://mobility165-nodered.trybmc.com/ui"
+                  ],
+                  "$._entropy": [
+                      ""
+                  ],
+                  "$._node_id": [
+                      "[]"
+                  ],
+                  "$.alias[*]": [
+                      "BMC_ComputerSystem:web-fe-03",
+                      "BMC_ComputerSystem:web-fe-02",
+                      "BMC_ComputerSystem:lb-01",
+                      "BMC_ComputerSystem:web-fe-01",
+                      "BMC_ComputerSystem:i-0282bfd01619bba18",
+                      "BMC_ComputerSystem:pat_sim1"
+                  ],
+                  "$.category": [
+                      "OPERATIONS_MANAGEMENT",
+                      "AVAILABILITY_MANAGEMENT"
+                  ],
+                  "$.cdmclass": [
+                      ""
+                  ],
+                  "$.location": [
+                      "",
+                      "California"
+                  ],
+                  "$.priority": [
+                      "PRIORITY_1",
+                      "PRIORITY_3",
+                      "PRIORITY_5"
+                  ],
+                  "$.severity": [
+                      "CRITICAL",
+                      "MINOR",
+                      "MAJOR",
+                      "INFO"
+                  ],
+                  "$.modelname": [
+                      ""
+                  ],
+                  "$._signature": [
+                      "356138322",
+                      "996824922",
+                      "828521194",
+                      "999406996",
+                      "-1517530525",
+                      "44761357",
+                      "802990738",
+                      "1646917283",
+                      "1691981612",
+                      "-2073814224"
+                  ],
+                  "$._tenant_id": [
+                      "1738801444"
+                  ],
+                  "$.is_updated": [
+                      false
+                  ],
+                  "$._identifier": [
+                      "eps.1738801444.3825161325680193.225a9c9b-d8df-46e2-b7b7-21f203c11d13",
+                      "eps.1738801444.638492583625397.90ea7019-8497-4b38-8af8-2bba133f8f9d",
+                      "eps.1738801444.3825181811723304.7f437811-e775-4169-9e68-931178b9108a",
+                      "eps.1738801444.3825192065489170.e55e6229-835a-4039-a134-85b1e633006c",
+                      "eps.1738801444.3825192633129592.525ed4eb-baed-4af4-8dcf-15ec8966fd77",
+                      "eps.1738801444.3831891248679356.910c5238-c55e-4224-819d-408237123c29",
+                      "eps.1738801444.3834219684582808.c97cd8cc-3476-4d83-93a2-77b78ec9e496",
+                      "eps.1738801444.3828740888578932.4f7d0906-d349-4bd4-ae16-342b26e83d28",
+                      "eps.1738801444.3831136823764449.6d8f3b0f-2b4c-40c8-a986-acf5bbbf92c7",
+                      "eps.1738801444.3831759756832602.5d618047-df4a-4f8c-8b56-785322d2266a"
+                  ],
+                  "$._node_id[*]": [
+                      "c956c862bd2e716c4ace65596e486f7374",
+                      "c956c862bd2e716c4ace655e6e5669727475616c4d616368696e65",
+                      "c956c862bd2e716c4ace65636e486f7374",
+                      "c956c862bd2e716c4ace65606e5669727475616c4d616368696e65",
+                      "c956c862bd2e716c4ace65686e4c6f616442616c616e63657253657276696365",
+                      "c956c862bd2e716c4ace65646e486f7374",
+                      "c956c862bd2e716c4ace655f6e5669727475616c4d616368696e65",
+                      "c956c862bd2e716c4ace65706e4c6f616442616c616e6365724d656d626572"
+                  ],
+                  "$._operations": [
+                      "[0x182f9841464,,Predefined Policy for Incident,NOTIFICATION,'']",
+                      "[0x182f9843c8b,,Predefined Policy for Incident,NOTIFICATION,'']",
+                      "[]",
+                      "[0x182f984b4fb,,Predefined Policy for Incident,NOTIFICATION,'']",
+                      "[0x182f98554d4,,Predefined Policy for Incident,NOTIFICATION,'']",
+                      "[0x182f985a4ae,,Predefined Policy for Incident,NOTIFICATION,'']"
+                  ],
+                  "$._service_id": [
+                      "[]"
+                  ],
+                  "$.incident_id": [
+                      "",
+                      "INC000000020894",
+                      "INC000000020895",
+                      "INC000000020896",
+                      "INC000000020897",
+                      "INC000000020898"
+                  ],
+                  "$.source_port": [
+                      3181,
+                      80
+                  ],
+                  "$._tenant_name": [
+                      ""
+                  ],
+                  "$.instancename": [
+                      ""
+                  ],
+                  "$.significance": [
+                      "0"
+                  ],
+                  "$.sub_category": [
+                      "OTHER"
+                  ],
+                  "$._arrival_time": [
+                      1662043651232,
+                      1662043661479,
+                      1662043671819,
+                      1662043682040,
+                      1662046034588,
+                      1662046266058,
+                      1662048594484,
+                      1662049582781,
+                      1662051978746,
+                      1662052007696
+                  ],
+                  "$._repeat_count": [
+                      "0"
+                  ],
+                  "$._service_name": [
+                      "[]"
+                  ],
+                  "$.creation_time": [
+                      1662043651232,
+                      1662043661479,
+                      1662043671819,
+                      1662043682040,
+                      1662046034588,
+                      1662046266058,
+                      1662048594484,
+                      1662049582781,
+                      1662051978746,
+                      1662052007696
+                  ],
+                  "$.user_assigned": [
+                      ""
+                  ],
+                  "$._modified_time": [
+                      1662043661486,
+                      1662043663362,
+                      1662043671819,
+                      1662043682040,
+                      1662046034588,
+                      1662046266058,
+                      1662048594484,
+                      1662049582781,
+                      1662051978746,
+                      1662052007696
+                  ],
+                  "$._service_id[*]": [
+                      "b949da62b459fa4e0974bcd26e427573696e65737353657276696365",
+                      "c956c862bd2e716c4ace65696e427573696e65737353657276696365"
+                  ],
+                  "$.componentalias": [
+                      ""
+                  ],
+                  "$.source_address": [
+                      "",
+                      "172.17.0.132"
+                  ],
+                  "$._lifecycle_time": [
+                      "0"
+                  ],
+                  "$.source_hostname": [
+                      "web-fe-03",
+                      "web-fe-02",
+                      "lb-01",
+                      "web-fe-01",
+                      "i-0282bfd01619bba18",
+                      "pat_sim1"
+                  ],
+                  "$._service_name[*]": [
+                      "Puma Trading System",
+                      "Media Service"
+                  ],
+                  "$.incident_company": [
+                      ""
+                  ],
+                  "$.source_identifier": [
+                      "web-fe-03",
+                      "web-fe-02",
+                      "lb-01",
+                      "web-fe-01",
+                      "i-0282bfd01619bba18",
+                      "pat_sim1:3181"
+                  ],
+                  "$._relationships.rstat": [
+                      "norelation"
+                  ],
+                  "$._unmapped_data.delay": [
+                      "",
+                      "yes"
+                  ],
+                  "$._node_service_mapping": [
+                      "[]"
+                  ],
+                  "$._unmapped_data.object": [
+                      "App",
+                      "TP",
+                      "Network",
+                      "CPU"
+                  ],
+                  "$._node_service_mapping[*]": [
+                      "c956c862bd2e716c4ace65596e486f7374:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365",
+                      "c956c862bd2e716c4ace655e6e5669727475616c4d616368696e65:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365",
+                      "c956c862bd2e716c4ace65636e486f7374:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365",
+                      "c956c862bd2e716c4ace65606e5669727475616c4d616368696e65:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365",
+                      "c956c862bd2e716c4ace65686e4c6f616442616c616e63657253657276696365:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365",
+                      "c956c862bd2e716c4ace65646e486f7374:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365",
+                      "c956c862bd2e716c4ace655f6e5669727475616c4d616368696e65:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365",
+                      "c956c862bd2e716c4ace65706e4c6f616442616c616e6365724d656d626572:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365"
+                  ],
+                  "$._node_service_key_mapping": [
+                      "[]"
+                  ],
+                  "$._node_service_key_mapping[*]": [
+                      "CFRmgLx1zJs+GPum67rVuA==::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e",
+                      "aws/us-east-2/ec2/i-0282bfd01619bba18::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e",
+                      "nbVbha9RVH7gLtpBlv1Ttg==::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e",
+                      "aws/us-east-2/ec2/i-0d961a0e78261469f::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e",
+                      "arn:aws:elasticloadbalancing:us-east-2:258997833062:listener/net/lb-01/60ab644f6f9dd345/13829c3fea37eee7::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e",
+                      "6RVryw4vWCisatvcSuAW+g==::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e",
+                      "aws/us-east-2/ec2/i-0daede9476e67b825::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e",
+                      "09ojPUuzQLM9SurGCDDKNg==::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e"
+                  ]
+              },
+              "trigger_condition_expression_metadata": [
+                  {
+                      "slot_name": "$.event.class",
+                      "slot_value": "EVENT",
+                      "end_bracket": ")",
+                      "slot_operator": "==",
+                      "condition_order": 0,
+                      "condition_bracket": "(",
+                      "condition_operator": ""
+                  }
+              ]
+          },
+          "tag_specs": {},
+          "trigger_condition_expression": "$?($.\"event\".\"class\" == \"EVENT\")",
+          "checksum": "b6eb6617338f098b1f0755c9983bdb603030ad73d423b91a63be37af82840612",
+          "status": "DRAFT",
+          "is_active": false,
+          "auto_enabled": false,
+          "actions": {
+              "Execute HTTP Request for ControlM": {
+                  "action_def_uri": "/api/rx/application/command#myit-sb:Execute HTTP Request for ControlM",
+                  "plugin_type": "restapi_plugin",
+                  "credential": {
+                      "target_id": "https://helixsjc839-demo-is.onbmc.com",
+                      "provider_id": "innovation_studio"
+                  },
+                  "continue_on_failure": false,
+                  "action": {
+                      "server": "https://helixsjc839-demo-is.onbmc.com",
+                      "/api/rx/application/command": {
+                          "post": {
+                              "parameters": [
+                                  {
+                                      "in": "headers",
+                                      "x-requested-by": "XMLHttpRequest"
+                                  }
+                              ],
+                              "requestBody": {
+                                  "content": {
+                                      "application/json": {
+                                          "resourceType": "com.bmc.arsys.rx.application.process.command.StartProcessInstanceCommand",
+                                          "processInputValues": {
+                                              "context": "{ }"
+                                          },
+                                          "processDefinitionName": "myit-sb:Execute HTTP Request for ControlM"
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  }
+              },
+              "Execute HTTP Request for ControlM status": {
+                  "action_def_uri": "innovation_studio/api/rx/application/process/processinstance/{processDefinitionName}/{instanceId}//get",
+                  "plugin_type": "restapi_plugin",
+                  "credential": {
+                      "target_id": "https://helixsjc839-demo-is.onbmc.com",
+                      "provider_id": "innovation_studio"
+                  },
+                  "success_conditions": {
+                      "$.output.result.status": "COMPLETED"
+                  },
+                  "poll_conditions": {
+                      "$.output.result.status": "ACTIVE"
+                  },
+                  "continue_on_failure": false,
+                  "action": {
+                      "server": "https://helixsjc839-demo-is.onbmc.com",
+                      "/api/rx/application/process/processinstance/{processDefinitionName}/{instanceId}/": {
+                          "get": {
+                              "parameters": [
+                                  {
+                                      "in": "path",
+                                      "instanceId": "$.\"Execute HTTP Request for ControlM\".output.headers.\"x-bmc-process-instanceId\""
+                                  },
+                                  {
+                                      "in": "path",
+                                      "processDefinitionName": "myit-sb:Execute HTTP Request for ControlM"
+                                  }
+                              ]
+                          }
+                      }
+                  },
+                  "predecessor": [
+                      "Execute HTTP Request for ControlM"
+                  ]
+              }
+          }
+      }
+order: 3000

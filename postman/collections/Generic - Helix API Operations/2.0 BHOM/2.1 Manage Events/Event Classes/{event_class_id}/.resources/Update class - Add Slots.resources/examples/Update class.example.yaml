@@ -1,0 +1,63 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/events-service/api/v1.0/events/classes/:event_class_id?idType=id"
+  method: PUT
+  queryParams:
+    idType: id
+  pathVariables:
+    event_class_id: ef4bf2d8-e31e-11ee-95e0-aba365ab8f8e
+  body:
+    type: json
+    content: "{\r
+
+      \    \"attributes\": [\r
+
+      \        {\r
+
+      \            \"name\": \"ctmJobType\",\r
+
+      \            \"dataType\": \"STRING\",\r
+
+      \            \"default\": \"\",\r
+
+      \            \"allFacet\": [],\r
+
+      \            \"enumElements\": [],\r
+
+      \            \"enum\": false\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Mon, 07 Oct 2024 12:12:20 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    Referrer-Policy: same-origin
+    X-Frame-Options: SAMEORIGIN
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    X-Content-Type-Options: nosniff
+    Permissions-Policy: idle-detection=self
+    Content-Encoding: gzip
+    TraceId: 91d8f89d-a13f-4ec8-af9f-2df5cad4a98d 613873398
+    Pragma: no-cache
+    X-XSS-Protection: 1; mode=block
+    Cache-control: no-store
+  body:
+    type: json
+    content: |-
+      {
+          "responseTimeStamp": 1728303140405,
+          "statusCode": "200",
+          "statusMsg": "[Successfully updated event class.]",
+          "resourceId": [
+              "ef4bf2d8-e31e-11ee-95e0-aba365ab8f8e"
+          ]
+      }
+order: 1000

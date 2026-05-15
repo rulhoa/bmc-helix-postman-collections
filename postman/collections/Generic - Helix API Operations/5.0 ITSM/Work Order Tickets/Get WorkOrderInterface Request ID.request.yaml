@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{applicationserver}}/api/arsys/v1/entry/WOI:WorkOrderInterface?q='SRID'=\"\""
+method: GET
+headers:
+  Authorization: "{{tokensignature}}{{token}}"
+  Content-Type: application/json
+queryParams:
+  q: "'SRID'=\"\""
+body:
+  type: text
+  content: ""
+order: 1000

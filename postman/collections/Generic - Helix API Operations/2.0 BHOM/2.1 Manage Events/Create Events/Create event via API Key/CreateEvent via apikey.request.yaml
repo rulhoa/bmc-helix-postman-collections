@@ -1,0 +1,28 @@
+$kind: http-request
+url: "{{bhom_base_url}}/events-service/api/v1.0/events"
+method: POST
+body:
+  type: json
+  content: "[\r
+
+    \    {\r
+
+    \        \"class\": \"MonitorEvent\",\r
+
+    \        \"severity\": \"MAJOR\",\r
+
+    \        \"msg\": \"BMC TEST\",\r
+
+    \        \"source_identifier\": \"CLOSENODE\",\r
+
+    \        \"source_hostname\": \"CLOSENODE\"\r
+
+    \    }\r
+
+    ]"
+auth:
+  type: apikey
+  credentials:
+    value: apiKey {{tenant_id}}::{{bhom_access_key}}::{{bhom_secret_key}}
+    key: Authorization
+order: 1000

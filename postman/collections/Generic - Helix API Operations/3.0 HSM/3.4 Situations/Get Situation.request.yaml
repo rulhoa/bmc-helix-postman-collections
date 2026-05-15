@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{bhom_base_url}}/situation-detector/api/v1.0/situation/3c366764010053a93454b8766e427573696e65737353657276696365_b1d8ccbbbc974151814736f60014b471"
+method: GET
+headers:
+  - key: Content-Type
+    value: application/json
+  - key: Authorization
+    value: apiKey {{bhom_apiKey}}
+  - key: Authorization
+    value: ""
+    disabled: true
+body:
+  type: text
+  content: ""
+examples: ./.resources/Get Situation.resources/examples
+order: 3000

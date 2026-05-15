@@ -1,0 +1,127 @@
+$kind: http-request
+description: |-
+  ``` json
+  {
+      "code": "tso",
+      "name": "TrueSight Orchestration",
+      "description": "TSO server endpoint URL",
+      "is_hosted": true,
+      "is_remote": true,
+      "configurations": {
+          "application_params": [
+              {
+                  "key": "name",
+                  "type": "String",
+                  "format": "String",
+                  "name": "Name",
+                  "description": ""
+              },
+              {
+                  "key": "target_id",
+                  "type": "String",
+                  "format": "URL",
+                  "name": "Endpoint URL"
+              }
+          ],
+          "credentials": [
+              {
+                  "security_scheme": {
+                      "type": "http",
+                      "scheme": "basic"
+                  },
+                  "params": [
+                      {
+                          "key": "username",
+                          "type": "String",
+                          "format": "String",
+                          "name": "Username"
+                      },
+                      {
+                          "key": "password",
+                          "type": "password",
+                          "format": "Password",
+                          "name": "Password"
+                      }
+                  ]
+              },
+              {
+                  "security_scheme": {
+                      "type": "http",
+                      "scheme": "apikey"
+                  },
+                  "params": [
+                      {
+                          "key": "apikey",
+                          "type": "String",
+                          "format": "String",
+                          "name": "Token"
+                      }
+                  ]
+              }
+          ],
+          "plugin_params": [
+              {
+                  "key": "plugin_name",
+                  "type": "String",
+                  "format": "String",
+                  "name": "Plugin Name"
+              },
+              {
+                  "key": "plugin_key",
+                  "type": "String",
+                  "format": "String",
+                  "name": "Plugin Key"
+              }
+          ]
+      }
+  }
+
+  ```
+url: "{{bhom_base_url}}/intelligent-automation/api/v1/connectors"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"code\": \"generic_rest\",\r
+
+    \    \"name\": \"Control-M Connector\",\r
+
+    \    \"is_remote\": true,\r
+
+    \    \"target_id\": \"https://se-preprod-aapi.us1.controlm.com:443/automation-api\",\r
+
+    \    \"credentials\": [\r
+
+    \        {\r
+
+    \            \"security_scheme\": {\r
+
+    \                \"type\": \"http\",\r
+
+    \                \"scheme\": \"apikey\"\r
+
+    \            },\r
+
+    \            \"params\": [\r
+
+    \                {\r
+
+    \                    \"key\": \"apikey\",\r
+
+    \                    \"type\": \"String\",\r
+
+    \                    \"format\": \"String\",\r
+
+    \                    \"name\": \"Token\"\r
+
+    \                }\r
+
+    \            ]\r
+
+    \        }\r
+
+    \    ]\r
+
+    }\r\n"
+order: 7000

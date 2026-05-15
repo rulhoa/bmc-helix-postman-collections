@@ -1,0 +1,151 @@
+$kind: http-example
+name: Get Connector Actions
+request:
+  url: "{{bhom_base_url}}/intelligent-automation/api/v1/connectors/09a42fa6-23e7-11ed-bb81-0613ed995521/actions"
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Mon, 13 Feb 2023 18:58:25 GMT
+    Content-Type: application/json; charset=utf-8
+    Content-Length: "4291"
+    Connection: keep-alive
+    X-Powered-By: Express
+    ETag: W/"10c3-3pq6KrHRJtMAMu2VHPtSteQthmQ"
+  body:
+    type: json
+    content: |-
+      {
+          "connectorExists": true,
+          "data": [
+              {
+                  "id": "09a42fa6-23e7-11ed-bb81-0613ed995521/rest/api/v1/execution-tasks#8024",
+                  "display_name": "Scripting: OS Survey",
+                  "summary": "Scripting: OS Survey",
+                  "description": ""
+              },
+              {
+                  "id": "09a42fa6-23e7-11ed-bb81-0613ed995521/rest/api/v1/execution-tasks#9278",
+                  "display_name": "BMCCacheCreatorPciv3Rhel7",
+                  "summary": "BMCCacheCreatorPciv3Rhel7",
+                  "description": ""
+              },
+              {
+                  "id": "09a42fa6-23e7-11ed-bb81-0613ed995521/rest/api/v1/execution-tasks#8174",
+                  "display_name": "patch job Saturday test_Remediation Script Linux",
+                  "summary": "patch job Saturday test_Remediation Script Linux",
+                  "description": "patch job Saturday test_Remediation Script Linux is created via remediation as operation_name_remediation_content_name"
+              },
+              {
+                  "id": "09a42fa6-23e7-11ed-bb81-0613ed995521/rest/api/v1/execution-tasks#7877",
+                  "display_name": "BMCCacheCreatorPci",
+                  "summary": "BMCCacheCreatorPci",
+                  "description": ""
+              },
+              {
+                  "id": "09a42fa6-23e7-11ed-bb81-0613ed995521/rest/api/v1/execution-tasks#5718",
+                  "display_name": "BMCCacheCreatorDisaSolaris10Sparc",
+                  "summary": "BMCCacheCreatorDisaSolaris10Sparc",
+                  "description": ""
+              },
+              {
+                  "id": "09a42fa6-23e7-11ed-bb81-0613ed995521/rest/api/v1/execution-tasks#5284",
+                  "display_name": "BMCCacheCreatorDisaHpux1131",
+                  "summary": "BMCCacheCreatorDisaHpux1131",
+                  "description": ""
+              },
+              {
+                  "id": "09a42fa6-23e7-11ed-bb81-0613ed995521/rest/api/v1/execution-tasks#5000",
+                  "display_name": "BMCCacheCreatorPciv2Rhel5",
+                  "summary": "BMCCacheCreatorPciv2Rhel5",
+                  "description": ""
+              },
+              {
+                  "id": "09a42fa6-23e7-11ed-bb81-0613ed995521/rest/api/v1/execution-tasks#8030",
+                  "display_name": "PuppetDeployScriptJob",
+                  "summary": "PuppetDeployScriptJob",
+                  "description": "This job is used to run PuppetDeployScript.Please DO NOT DELETE THIS"
+              },
+              {
+                  "id": "09a42fa6-23e7-11ed-bb81-0613ed995521/rest/api/v1/execution-tasks#8031",
+                  "display_name": "BSA Recommended Database Cleanup Job-20180723-112227",
+                  "summary": "BSA Recommended Database Cleanup Job-20180723-112227",
+                  "description": "Database and File Server Cleanup Job"
+              },
+              {
+                  "id": "09a42fa6-23e7-11ed-bb81-0613ed995521/rest/api/v1/execution-tasks#9268",
+                  "display_name": "BMCCacheCreatorPciv3Aix53and61",
+                  "summary": "BMCCacheCreatorPciv3Aix53and61",
+                  "description": ""
+              },
+              {
+                  "id": "09a42fa6-23e7-11ed-bb81-0613ed995521/rest/api/v1/execution-tasks#8222",
+                  "display_name": "CVE-2011-3389_Remediation Script Linux",
+                  "summary": "CVE-2011-3389_Remediation Script Linux",
+                  "description": "CVE-2011-3389_Remediation Script Linux is created via remediation as operation_name_remediation_content_name"
+              },
+              {
+                  "id": "09a42fa6-23e7-11ed-bb81-0613ed995521/rest/api/v1/execution-tasks#8034",
+                  "display_name": "ChefDeployScriptJob",
+                  "summary": "ChefDeployScriptJob",
+                  "description": "This job is used to run ChefDeployScriptJob.Please DO NOT DELETE THIS"
+              },
+              {
+                  "id": "09a42fa6-23e7-11ed-bb81-0613ed995521/rest/api/v1/execution-tasks#6376",
+                  "display_name": "ChefPackagerScriptJob",
+                  "summary": "ChefPackagerScriptJob",
+                  "description": "This job is used to run ChefPackagerScript.Please DO NOT DELETE THIS"
+              },
+              {
+                  "id": "09a42fa6-23e7-11ed-bb81-0613ed995521/rest/api/v1/execution-tasks#5724",
+                  "display_name": "BMCCacheCreatorDisaSolaris11Sparc",
+                  "summary": "BMCCacheCreatorDisaSolaris11Sparc",
+                  "description": ""
+              },
+              {
+                  "id": "09a42fa6-23e7-11ed-bb81-0613ed995521/rest/api/v1/execution-tasks#8738",
+                  "display_name": "BMCCacheCreatorCisSolaris11_1",
+                  "summary": "BMCCacheCreatorCisSolaris11_1",
+                  "description": ""
+              },
+              {
+                  "id": "09a42fa6-23e7-11ed-bb81-0613ed995521/rest/api/v1/execution-tasks#8420",
+                  "display_name": "BSA Recommended Database Cleanup Job",
+                  "summary": "BSA Recommended Database Cleanup Job",
+                  "description": "Database and File Server Cleanup Job"
+              },
+              {
+                  "id": "09a42fa6-23e7-11ed-bb81-0613ed995521/rest/api/v1/execution-tasks#8724",
+                  "display_name": "BMCCacheCreatorCisAix71",
+                  "summary": "BMCCacheCreatorCisAix71",
+                  "description": ""
+              },
+              {
+                  "id": "09a42fa6-23e7-11ed-bb81-0613ed995521/rest/api/v1/execution-tasks#5780",
+                  "display_name": "BMCCacheCreatorPciv3Rhel6",
+                  "summary": "BMCCacheCreatorPciv3Rhel6",
+                  "description": ""
+              },
+              {
+                  "id": "09a42fa6-23e7-11ed-bb81-0613ed995521/rest/api/v1/execution-tasks#9204",
+                  "display_name": "BMCCacheCreatorPci",
+                  "summary": "BMCCacheCreatorPci",
+                  "description": ""
+              },
+              {
+                  "id": "09a42fa6-23e7-11ed-bb81-0613ed995521/rest/api/v1/execution-tasks#7176",
+                  "display_name": "BMCCacheCreatorCisRhel5",
+                  "summary": "BMCCacheCreatorCisRhel5",
+                  "description": ""
+              }
+          ],
+          "metadata": {
+              "total": "107",
+              "pageNumber": 0,
+              "pageSize": 20,
+              "startOffset": 0,
+              "endOffset": 20
+          }
+      }
+order: 2000

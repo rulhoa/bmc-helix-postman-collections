@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{v1}}/metrics/24hours/{{param}}"
+method: GET
+order: 3000

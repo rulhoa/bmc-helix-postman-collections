@@ -1,0 +1,91 @@
+$kind: http-request
+url: "{{bhom_base_url}}/logs-service/api/v1.0/logs/policies/"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"id\": \"\",\r
+
+    \    \"name\": \"Resolver Alertas\",\r
+
+    \    \"description\": \"\",\r
+
+    \    \"execution_order\": 9999,\r
+
+    \    \"enabled\": false,\r
+
+    \    \"selection_criteria\": \"agent.type EQUALS 'SYS' AND message CONTAINS 'Resolucao'\",\r
+
+    \    \"configurations\": [\r
+
+    \        {\r
+
+    \            \"name\": \"Resolver Alertas\",\r
+
+    \            \"type\": \"ALERT\",\r
+
+    \            \"details\": {\r
+
+    \                \"groupBy\": [\r
+
+    \                    \"host.name\",\r
+
+    \                    \"EventID\",\r
+
+    \                    \"message\"\r
+
+    \                ],\r
+
+    \                \"time_window\": {\r
+
+    \                    \"duration\": 1,\r
+
+    \                    \"unit\": \"MINUTES\"\r
+
+    \                },\r
+
+    \                \"conditionals\": [\r
+
+    \                    {\r
+
+    \                        \"count\": 1,\r
+
+    \                        \"severity\": \"OK\"\r
+
+    \                    }\r
+
+    \                ],\r
+
+    \                \"destination\": {\r
+
+    \                    \"details\": {\r
+
+    \                        \"class\": \"LOGALERT_EV\",\r
+
+    \                        \"source_hostname\": \"$.host.name\",\r
+
+    \                        \"msg\": \"{{ $.message }}\",\r
+
+    \                        \"additional_params\": {\r
+
+    \                            \"modelname\": \"$.host.model\"\r
+
+    \                        }\r
+
+    \                    },\r
+
+    \                    \"type\": \"BHOM_EVENT\"\r
+
+    \                }\r
+
+    \            },\r
+
+    \            \"display_order\": 0\r
+
+    \        }\r
+
+    \    ]\r
+
+    }"
+order: 3000

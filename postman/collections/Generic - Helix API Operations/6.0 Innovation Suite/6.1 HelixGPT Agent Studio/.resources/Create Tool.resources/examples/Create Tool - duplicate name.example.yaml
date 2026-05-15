@@ -1,0 +1,125 @@
+$kind: http-example
+request:
+  url: "{{is_base_url}}/api/com.bmc.dsom.hgm/tool/"
+  method: POST
+  headers:
+    - key: Referer
+      value: "{{is_base_url}}/helix/index.html"
+      disabled: true
+    - key: X-Requested-By
+      value: XMLHttpRequest
+  body:
+    type: json
+    content: "{\r
+
+      \  \"name\": \"Evaluate_Change_Request_For_Automation 2\",\r
+
+      \  \"description\": \"This tool is responsible for Checking if a Change can have automation ran against it. If it can be automation can be run, it will be. The change id, requires downtime and run immediately are a required input. The Answer to downtime and run immediately **must** be true or false. Be objective, consistent, and concise. You **must** obtain from the user all of the required inputs before invoking a tool. The out contains the output of the determination of if the change can be automated.\",\r
+
+      \  \"type\": \"IS_PROCESS\",\r
+
+      \  \"primitiveType\": \"Tool\",\r
+
+      \  \"seedData\": false,\r
+
+      \  \"enabled\": true,\r
+
+      \  \"connectionId\": null,\r
+
+      \  \"configuration\": {\r
+
+      \    \"process_name\": \"helix.se.utilities:Evaluate_CRQ_For_Automation\",\r
+
+      \    \"input_parameters\": [\r
+
+      \      {\r
+
+      \        \"name\": \"Change_ID\",\r
+
+      \        \"description\": \"The change id and is a required field.\",\r
+
+      \        \"type\": \"str\"\r
+
+      \      },\r
+
+      \      {\r
+
+      \        \"name\": \"Require_Downtime\",\r
+
+      \        \"description\": \"If the change requires downtime to complete and is a required field.\",\r
+
+      \        \"type\": \"str\"\r
+
+      \      },\r
+
+      \      {\r
+
+      \        \"name\": \"Run_immediately\",\r
+
+      \        \"description\": \"If the change should be run now or when it is scheduled  and is a required field.\",\r
+
+      \        \"type\": \"str\"\r
+
+      \      }\r
+
+      \    ],\r
+
+      \    \"output\": [\r
+
+      \      \"Result\"\r
+
+      \    ]\r
+
+      \  }\r
+
+      }"
+response:
+  statusCode: 400
+  statusText: Bad Request
+  headers:
+    - key: Date
+      value: Fri, 10 Apr 2026 14:19:04 GMT
+    - key: Content-Type
+      value: application/json
+    - key: Content-Length
+      value: "201"
+    - key: Connection
+      value: keep-alive
+    - key: X-Frame-Options
+      value: SAMEORIGIN
+    - key: Referrer-Policy
+      value: strict-origin-when-cross-origin
+    - key: X-Content-Type-Options
+      value: nosniff
+    - key: Strict-Transport-Security
+      value: max-age=31536000; includeSubDomains
+    - key: Cache-Control
+      value: no-store
+    - key: sso-provider-type
+      value: RSSO
+    - key: Set-Cookie
+      value: _cacheId=713742; Path=/; Secure; HttpOnly
+    - key: Set-Cookie
+      value: _cacheId=713742; Path=/; Secure; HttpOnly; SameSite=None
+    - key: Expires
+      value: Thu, 01 Jan 1970 00:00:00 GMT
+    - key: X-AR-CacheId
+      value: "713742"
+    - key: Session-Expiration
+      value: Fri, 10 Apr 2026 22:19:04 GMT
+    - key: Absolute-Session-Expiration
+      value: Sat, 11 Apr 2026 14:19:04 GMT
+    - key: Metadata-Last-Update-Time
+      value: 2026-04-10T13:56:09.144Z
+  body:
+    type: text
+    content: |-
+      [
+          {
+              "messageType": "ERROR",
+              "messageNumber": 382,
+              "messageText": "The value(s) for this entry violate a unique index that has been defined for this record definition.",
+              "appendedText": "com.bmc.dsom.hgm:Tool"
+          }
+      ]
+order: 2000

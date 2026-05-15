@@ -1,0 +1,23 @@
+$kind: http-request
+description: "There is a direct URL to jump straight to a Alarm Policy creation screen with starting values. Example: [https://helixtrialsjc497-or1-dev.onbmc.com/monitor/#/configuration/alarmPolicies/manage?entityTypeId=K8S_NODE_CPU&metricId=AverageUsageCores&instanceName=KubernetesLabCluster@dsom-k8s-node3@cpu&deviceHostName=dsom-k8s-node3](https://helixtrialsjc497-or1-dev.onbmc.com/monitor/#/configuration/alarmPolicies/manage?entityTypeId=K8S_NODE_CPU&metricId=AverageUsageCores&instanceName=KubernetesLabCluster@dsom-k8s-node3@cpu&deviceHostName=dsom-k8s-node3)"
+url: "{{bhom_base_url}}/events-service/api/v1.0/alarm_policies/search"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: "{\r
+
+    \   \"searchString\":\"Test\",\r
+
+    \   \"sortCriteria\":{\r
+
+    \      \"attribute\":\"name\",\r
+
+    \      \"order\":\"ASC\"\r
+
+    \   }\r
+
+    }"
+examples: ./.resources/Search Alarm Policy.resources/examples
+order: 3000

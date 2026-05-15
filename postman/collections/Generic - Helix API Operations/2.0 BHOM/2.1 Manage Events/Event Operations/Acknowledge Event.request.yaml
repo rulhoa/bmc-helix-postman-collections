@@ -1,0 +1,23 @@
+$kind: http-request
+url: "{{bhom_base_url}}/events-service/api/v1.0/events/operations/acknowledge"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"eventIds\": [\r
+
+    \        \"eedeffdc-27fc-11ee-af2a-02001712c492\",\r
+
+    \        \"eeed17ac-27ed-11ee-a53c-02001712c492\"\r
+
+    \    ],\r
+
+    \    \"slots\": {\r
+
+    \        \"notes\": \"add a note to the current operation\"\r
+
+    \    }\r
+
+    }"
+order: 6000

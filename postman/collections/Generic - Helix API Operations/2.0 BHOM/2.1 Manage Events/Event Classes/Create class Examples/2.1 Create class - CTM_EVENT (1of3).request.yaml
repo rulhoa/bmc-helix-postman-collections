@@ -1,0 +1,374 @@
+$kind: http-request
+description: "Source: [https://github.com/controlm/automation-api-community-solutions/blob/master/helix-control-m/2-external-monitoring-tools-examples/alerts-to-bhom/bhom_ctm_event_class.json](https://github.com/controlm/automation-api-community-solutions/blob/master/helix-control-m/2-external-monitoring-tools-examples/alerts-to-bhom/bhom_ctm_event_class.json)"
+url: "{{bhom_base_url}}/events-service/api/v1.0/events/classes/"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\": \"CTM_EVENT\",\r
+
+    \    \"parentClassName\": \"MonitorEvent\",\r
+
+    \    \"attributes\": [\r
+
+    \        {\r
+
+    \            \"name\": \"system_category\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"system_status\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"ctmUpdateType\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"ctmAlertId\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"ctmDataCenter\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"ctmMemName\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"ctmOrderId\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"ctmTime\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"ctmStatus\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"ctmJobName\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"ctmMessage\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"ctmApplication\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"ctmSubApplication\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"ctmAlertType\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"ctmClosedFromEM\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"ctmTicketNumber\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"ctmRunCounter\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"ctmUser\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"ctmUpdateTime\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"ctmNotes\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"ctmseverity\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"name\": \"ctmNodeid\",\r
+
+    \            \"dataType\": \"STRING\",\r
+
+    \            \"default\": \"\",\r
+
+    \            \"allFacet\": [],\r
+
+    \            \"enumElements\": [],\r
+
+    \            \"enum\": false\r
+
+    \        }\r
+
+    \    ]\r
+
+    }"
+auth:
+  type: bearer
+  credentials:
+    token: "{{bhom_json_web_token}}"
+order: 3000

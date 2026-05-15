@@ -1,0 +1,1157 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/aif/api/v1.0/algorithm_template"
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Wed, 12 Jul 2023 12:28:42 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    Referrer-Policy: same-origin
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    Content-Security-Policy: script-src 'self';
+    Permissions-Policy: idle-detection=self
+    Content-Encoding: gzip
+    TraceId: a73c854a-7861-43f0-8a1c-f979fd857676 660181721
+  body:
+    type: json
+    content: |-
+      {
+          "statusCode": "200",
+          "statusMessage": "Success",
+          "response": [
+              {
+                  "id": "b558d267-c958-4c4d-8734-b40b0961fd12",
+                  "name": "PredefinedAlgorithmTemplateForClassification",
+                  "type": "Classification",
+                  "executionMode": "OnDemand",
+                  "jobScript": "YXBpVmVyc2lvbjogYmF0Y2gvdjEKa2luZDogSm9iCm1ldGFkYXRhOgogIG5hbWU6IGFpZi1jbGFzc2lmaWVyLWpvYgogIG5hbWVzcGFjZTogYXNoMWFkZW5vbnByb2QzCnNwZWM6CiAgdHRsU2Vjb25kc0FmdGVyRmluaXNoZWQ6IDEyMAogIGJhY2tvZmZMaW1pdDogMgogIHRlbXBsYXRlOgogICAgc3BlYzoKICAgICAgaW1hZ2VQdWxsU2VjcmV0czogCiAgICAgIC0gbmFtZTogYm1jLWR0cmh1YgogICAgICBjb250YWluZXJzOgogICAgICAtIG5hbWU6IGFpZi1jbGFzc2lmaWVyLWpvYi1wb2QKICAgICAgICBpbWFnZTogY29udGFpbmVycy5ibWMuY29tL2JtYy9scGFkZTphaWYtY2xhc3NpZmllci1qb2ItYjNhYTdiMS0xNjIKICAgICAgICByZXNvdXJjZXM6CiAgICAgICAgICByZXF1ZXN0czoKICAgICAgICAgICAgbWVtb3J5OiAiNTEyTWkiCiAgICAgICAgICAgIGNwdTogIjUwMG0iCiAgICAgICAgICBsaW1pdHM6CiAgICAgICAgICAgIG1lbW9yeTogIjhHaSIKICAgICAgICAgICAgY3B1OiAiMjAwMG0iCiAgICAgICAgZW52OgogICAgICAgIC0gbmFtZTogVEVOQU5UX0lECiAgICAgICAgICB2YWx1ZTogIiIKICAgICAgICAtIG5hbWU6IFVTRVJfSUQKICAgICAgICAgIHZhbHVlOiAiIgogICAgICAgIC0gbmFtZTogQUxHT1JJVEhNX0pTT04KICAgICAgICAgIHZhbHVlOiAiIgogICAgICAgIC0gbmFtZTogQUxHT1JJVEhNX0lECiAgICAgICAgICB2YWx1ZTogIiIKICAgICAgICAtIG5hbWU6IEVYRUNVVElPTl9JRAogICAgICAgICAgdmFsdWU6ICIiCiAgICAgICAgLSBuYW1lOiBOQU1FU1BBQ0UKICAgICAgICAgIHZhbHVlOiAiIgogICAgICAgIC0gbmFtZTogSVNfU0VDVVJFCiAgICAgICAgICB2YWx1ZTogIiIKICAgICAgICAtIG5hbWU6IEFJRl9USUNLRVRfU0VSVklDRV9IT1NUCiAgICAgICAgICB2YWx1ZTogImFpZi10aWNrZXQtc2VydmljZSIKICAgICAgICAtIG5hbWU6IEFJRl9USUNLRVRfU0VSVklDRV9QT1JUCiAgICAgICAgICB2YWx1ZTogIjUwMjE3IgogICAgICAgIC0gbmFtZTogSVNfU1RSQVRJRlkKICAgICAgICAgIHZhbHVlOiAieWVzIgogICAgICAgIC0gbmFtZTogRlJFUVVFTlRfQ0xBU1NfVEhSRVNIT0xECiAgICAgICAgICB2YWx1ZTogIjIiCiAgICAgICAgLSBuYW1lOiBBV1NfQUNDRVNTX0tFWV9JRAogICAgICAgICAgdmFsdWVGcm9tOgogICAgICAgICAgICBzZWNyZXRLZXlSZWY6CiAgICAgICAgICAgICAga2V5OiBBV1NfQUNDRVNTX0tFWV9JRF9BSUYKICAgICAgICAgICAgICBuYW1lOiBhd3NzM3NlY3JldAogICAgICAgIC0gbmFtZTogQVdTX1NFQ1JFVF9BQ0NFU1NfS0VZCiAgICAgICAgICB2YWx1ZUZyb206CiAgICAgICAgICAgIHNlY3JldEtleVJlZjoKICAgICAgICAgICAgICBrZXk6IEFXU19TRUNSRVRfQUNDRVNTX0tFWV9BSUYKICAgICAgICAgICAgICBuYW1lOiBhd3NzM3NlY3JldAogICAgICAgIC0gbmFtZTogQVdTX1MzX0VORFBPSU5UCiAgICAgICAgICB2YWx1ZUZyb206CiAgICAgICAgICAgIHNlY3JldEtleVJlZjoKICAgICAgICAgICAgICBrZXk6IEFXU19TM19FTkRQT0lOVAogICAgICAgICAgICAgIG5hbWU6IGF3c3Mzc2VjcmV0CiAgICAgICAgLSBuYW1lOiBLQUZLQV9DT05ORUNUX1NUUklORwogICAgICAgICAgdmFsdWVGcm9tOgogICAgICAgICAgICBzZWNyZXRLZXlSZWY6CiAgICAgICAgICAgICAga2V5OiBLQUZLQV9DTFVTVEVSCiAgICAgICAgICAgICAgbmFtZToga2Fma2FzZWNyZXQKICAgICAgcmVzdGFydFBvbGljeTogTmV2ZXIKICAgICAgYXV0b21vdW50U2VydmljZUFjY291bnRUb2tlbjogZmFsc2UK",
+                  "description": "This is predefined algorithm template for the Classification",
+                  "algorithmSchema": {
+                      "$schema": "http://json-schema.org/draft-06/schema#",
+                      "$ref": "#/template/definition",
+                      "template": {
+                          "definition": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                  "trainingInput": {
+                                      "$ref": "#/template/trainingInput"
+                                  },
+                                  "params": {
+                                      "$ref": "#/template/params"
+                                  },
+                                  "hyperParams": {
+                                      "$ref": "#/template/hyperParams"
+                                  },
+                                  "sourceData": {
+                                      "$ref": "#/template/sourceData"
+                                  }
+                              },
+                              "required": [
+                                  "trainingInput",
+                                  "params",
+                                  "sourceData"
+                              ],
+                              "title": "AlgorithmSchema"
+                          },
+                          "trainingInput": {
+                              "type": "object",
+                              "additionalProperties": true,
+                              "properties": {
+                                  "inputFields": {
+                                      "type": "array",
+                                      "items": {
+                                          "type": "string"
+                                      }
+                                  },
+                                  "outputFields": {
+                                      "type": "array",
+                                      "items": {
+                                          "type": "string"
+                                      }
+                                  }
+                              },
+                              "required": [
+                                  "inputFields",
+                                  "outputFields"
+                              ]
+                          },
+                          "params": {
+                              "type": "object",
+                              "additionalProperties": true,
+                              "properties": {
+                                  "dataSetId": {
+                                      "type": "string"
+                                  },
+                                  "fileAdeId": {
+                                      "type": "string"
+                                  },
+                                  "autoPublish": {
+                                      "type": "string",
+                                      "enum": [
+                                          "on",
+                                          "off"
+                                      ],
+                                      "default": "on"
+                                  },
+                                  "metrics": {
+                                      "type": "string",
+                                      "enum": [
+                                          "precision",
+                                          "recall",
+                                          "accuracy",
+                                          "f1"
+                                      ]
+                                  },
+                                  "autoML": {
+                                      "type": "string",
+                                      "enum": [
+                                          "on",
+                                          "off"
+                                      ]
+                                  },
+                                  "trainTestSplitPercentage": {
+                                      "type": "number"
+                                  }
+                              },
+                              "required": [
+                                  "dataSetId"
+                              ]
+                          },
+                          "hyperParams": {
+                              "type": "object",
+                              "additionalProperties": true,
+                              "properties": {
+                                  "learningRate": {
+                                      "type": "number"
+                                  },
+                                  "stopWords": {
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                          "fileName": {
+                                              "type": "string"
+                                          },
+                                          "fileContent": {
+                                              "type": "string"
+                                          }
+                                      }
+                                  },
+                                  "vocabSize": {
+                                      "type": "integer"
+                                  },
+                                  "embeddingDimensions": {
+                                      "type": "integer"
+                                  },
+                                  "maxLength": {
+                                      "type": "integer"
+                                  },
+                                  "truncType": {
+                                      "type": "string"
+                                  },
+                                  "paddingType": {
+                                      "type": "string"
+                                  },
+                                  "oovTok": {
+                                      "type": "string"
+                                  },
+                                  "numEpochs": {
+                                      "type": "integer"
+                                  },
+                                  "optimizer": {
+                                      "type": "string",
+                                      "enum": [
+                                          "adam",
+                                          "sgd"
+                                      ]
+                                  },
+                                  "loss": {
+                                      "type": "string"
+                                  },
+                                  "monitoringMetric": {
+                                      "type": "string"
+                                  },
+                                  "trainingMMVThreshold": {
+                                      "type": "number"
+                                  },
+                                  "activation": {
+                                      "type": "string"
+                                  },
+                                  "modelMetric": {
+                                      "type": "string"
+                                  }
+                              },
+                              "required": []
+                          },
+                          "sourceData": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                  "lookBackTime": {
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                          "value": {
+                                              "type": "integer"
+                                          },
+                                          "unit": {
+                                              "type": "string",
+                                              "enum": [
+                                                  "day",
+                                                  "week",
+                                                  "month"
+                                              ]
+                                          }
+                                      },
+                                      "required": [
+                                          "value",
+                                          "unit"
+                                      ]
+                                  },
+                                  "lookBackDateField": {
+                                      "type": "string"
+                                  },
+                                  "formName": {
+                                      "type": "string"
+                                  },
+                                  "queryExpression": {
+                                      "type": "string"
+                                  }
+                              },
+                              "required": [
+                                  "lookBackTime",
+                                  "lookBackDateField",
+                                  "formName"
+                              ]
+                          }
+                      }
+                  },
+                  "productType": "ITSM_SGP"
+              },
+              {
+                  "id": "b558d267-c958-4c4d-8734-b40b0961fdd8",
+                  "name": "PredefinedAlgorithmTemplateForAnomaly",
+                  "type": "Anomaly",
+                  "executionMode": "Streaming",
+                  "jobScript": "",
+                  "description": "This is predefined algorithm template for the anomaly type algorithms",
+                  "algorithmSchema": {
+                      "$schema": "http://json-schema.org/draft-06/schema#",
+                      "$ref": "#/template/algorithmSchema",
+                      "template": {
+                          "algorithmSchema": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                  "algorithmAnalysisMode": {
+                                      "type": "string"
+                                  },
+                                  "name": {
+                                      "type": "string",
+                                      "minLength": 1
+                                  },
+                                  "algorithmConfig": {
+                                      "$ref": "#/template/algorithmConfig"
+                                  },
+                                  "dataConfig": {
+                                      "type": "array",
+                                      "items": {
+                                          "$ref": "#/template/dataConfig"
+                                      }
+                                  }
+                              },
+                              "required": [
+                                  "algorithmAnalysisMode",
+                                  "dataConfig",
+                                  "algorithmConfig",
+                                  "name"
+                              ],
+                              "title": "Algorithm Schema"
+                          },
+                          "algorithmConfig": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                  "name": {
+                                      "type": "string",
+                                      "const": "RCF"
+                                  },
+                                  "params": {
+                                      "$ref": "#/template/params"
+                                  }
+                              },
+                              "required": [
+                                  "params"
+                              ],
+                              "title": "Algorithm Config"
+                          },
+                          "params": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                  "numTrees": {
+                                      "type": "integer",
+                                      "readOnly": true,
+                                      "default": 100
+                                  },
+                                  "numSamplesPerTree": {
+                                      "type": "integer",
+                                      "readOnly": true,
+                                      "default": 256
+                                  },
+                                  "evalMetrics": {
+                                      "type": "string",
+                                      "readOnly": true,
+                                      "default": "accuracy"
+                                  },
+                                  "shingleSize": {
+                                      "type": "integer",
+                                      "readOnly": true,
+                                      "default": 1
+                                  }
+                              },
+                              "required": [],
+                              "title": "Params"
+                          },
+                          "dataConfig": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                  "identifier": {
+                                      "type": "array",
+                                      "minItems": 1,
+                                      "items": {
+                                          "type": "string"
+                                      }
+                                  },
+                                  "nViolation": {
+                                      "type": "integer",
+                                      "readOnly": true
+                                  },
+                                  "duration": {
+                                      "type": "integer",
+                                      "enum": [
+                                          0,
+                                          5,
+                                          10,
+                                          15
+                                      ]
+                                  },
+                                  "message": {
+                                      "type": "string"
+                                  },
+                                  "autoClose": {
+                                      "type": "boolean",
+                                      "default": true
+                                  },
+                                  "sensitivity": {
+                                      "$ref": "#/template/sensitivity"
+                                  },
+                                  "additionalParams": {
+                                      "$ref": "#/template/additionalParams"
+                                  }
+                              },
+                              "required": [
+                                  "duration",
+                                  "identifier",
+                                  "sensitivity"
+                              ],
+                              "title": "Data Config"
+                          },
+                          "additionalParams": {
+                              "type": "object",
+                              "additionalProperties": true,
+                              "title": "Additional Params"
+                          },
+                          "sensitivity": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                  "minor": {
+                                      "type": "number",
+                                      "readOnly": true,
+                                      "default": "1"
+                                  },
+                                  "major": {
+                                      "type": "number",
+                                      "readOnly": true,
+                                      "default": "2"
+                                  },
+                                  "critical": {
+                                      "type": "number",
+                                      "readOnly": true,
+                                      "default": "3.5"
+                                  }
+                              },
+                              "required": [],
+                              "title": "Sensitivity"
+                          }
+                      }
+                  },
+                  "productType": "HM"
+              },
+              {
+                  "id": "b558d267-c958-4c4d-8734-b40b0961fdd9",
+                  "name": "PredefinedAlgorithmTemplateForClustering",
+                  "type": "Clustering",
+                  "executionMode": "OnDemand",
+                  "jobScript": "YXBpVmVyc2lvbjogYmF0Y2gvdjEKa2luZDogSm9iCm1ldGFkYXRhOgogIG5hbWU6IGFpZi1jbHVzdGVyaW5nLWpvYgogIG5hbWVzcGFjZTogYXNoMWFkZW5vbnByb2QzCnNwZWM6CiAgdHRsU2Vjb25kc0FmdGVyRmluaXNoZWQ6IDEyMAogIGJhY2tvZmZMaW1pdDogMgogIHRlbXBsYXRlOgogICAgc3BlYzoKICAgICAgaW1hZ2VQdWxsU2VjcmV0czogCiAgICAgIC0gbmFtZTogYm1jLWR0cmh1YgogICAgICBjb250YWluZXJzOgogICAgICAtIG5hbWU6IGFpZi1jbHVzdGVyaW5nLWpvYi1wb2QKICAgICAgICBpbWFnZTogY29udGFpbmVycy5ibWMuY29tL2JtYy9scGFkZTphaWYtY2x1c3RlcmluZy1qb2ItMzE3ODAwOS0zNzY4CiAgICAgICAgcmVzb3VyY2VzOgogICAgICAgICAgcmVxdWVzdHM6CiAgICAgICAgICAgIG1lbW9yeTogIjI1Nk1pIgogICAgICAgICAgICBjcHU6ICI1MDBtIgogICAgICAgICAgbGltaXRzOgogICAgICAgICAgICBtZW1vcnk6ICIxR2kiCiAgICAgICAgICAgIGNwdTogIjc1MG0iCiAgICAgICAgZW52OgogICAgICAgIC0gbmFtZTogVEVOQU5UX0lECiAgICAgICAgICB2YWx1ZTogIiIKICAgICAgICAtIG5hbWU6IFVTRVJfSUQKICAgICAgICAgIHZhbHVlOiAiIgogICAgICAgIC0gbmFtZTogQUxHT1JJVEhNX0pTT04KICAgICAgICAgIHZhbHVlOiAiIgogICAgICAgIC0gbmFtZTogQUxHT1JJVEhNX0lECiAgICAgICAgICB2YWx1ZTogIiIKICAgICAgICAtIG5hbWU6IEVYRUNVVElPTl9JRAogICAgICAgICAgdmFsdWU6ICIiCiAgICAgICAgLSBuYW1lOiBBSUZfQ09SRV9TRVJWSUNFX1NFUlZJQ0VfSE9TVAogICAgICAgICAgdmFsdWU6ICJhaWYtY29yZS1zZXJ2aWNlIgogICAgICAgIC0gbmFtZTogQUlGX0NPUkVfU0VSVklDRV9TRVJWSUNFX1BPUlQKICAgICAgICAgIHZhbHVlOiAiNTAxNzciCiAgICAgICAgLSBuYW1lOiBBSUZfVElDS0VUX1NFUlZJQ0VfSE9TVAogICAgICAgICAgdmFsdWU6ICJhaWYtdGlja2V0LXNlcnZpY2UiCiAgICAgICAgLSBuYW1lOiBBSUZfVElDS0VUX1NFUlZJQ0VfUE9SVAogICAgICAgICAgdmFsdWU6ICI1MDIxNyIKICAgICAgICAtIG5hbWU6IEFXU19BQ0NFU1NfS0VZX0lECiAgICAgICAgICB2YWx1ZUZyb206CiAgICAgICAgICAgIHNlY3JldEtleVJlZjoKICAgICAgICAgICAgICBrZXk6IEFXU19BQ0NFU1NfS0VZX0lEX0FJRgogICAgICAgICAgICAgIG5hbWU6IGF3c3Mzc2VjcmV0CiAgICAgICAgLSBuYW1lOiBBV1NfU0VDUkVUX0FDQ0VTU19LRVkKICAgICAgICAgIHZhbHVlRnJvbToKICAgICAgICAgICAgc2VjcmV0S2V5UmVmOgogICAgICAgICAgICAgIGtleTogQVdTX1NFQ1JFVF9BQ0NFU1NfS0VZX0FJRgogICAgICAgICAgICAgIG5hbWU6IGF3c3Mzc2VjcmV0CiAgICAgICAgLSBuYW1lOiBBV1NfUzNfRU5EUE9JTlQKICAgICAgICAgIHZhbHVlRnJvbToKICAgICAgICAgICAgc2VjcmV0S2V5UmVmOgogICAgICAgICAgICAgIGtleTogQVdTX1MzX0VORFBPSU5UCiAgICAgICAgICAgICAgbmFtZTogYXdzczNzZWNyZXQKICAgICAgICAtIG5hbWU6IEFXU19TM19SRUdJT04KICAgICAgICAgIHZhbHVlRnJvbToKICAgICAgICAgICAgc2VjcmV0S2V5UmVmOgogICAgICAgICAgICAgIGtleTogQVdTX1MzX1JFR0lPTgogICAgICAgICAgICAgIG5hbWU6IGF3c3Mzc2VjcmV0CiAgICAgICAgLSBuYW1lOiBLQUZLQV9DT05ORUNUX1NUUklORwogICAgICAgICAgdmFsdWVGcm9tOgogICAgICAgICAgICBzZWNyZXRLZXlSZWY6CiAgICAgICAgICAgICAga2V5OiBLQUZLQV9DTFVTVEVSCiAgICAgICAgICAgICAgbmFtZToga2Fma2FzZWNyZXQKICAgICAgcmVzdGFydFBvbGljeTogTmV2ZXIKICAgICAgYXV0b21vdW50U2VydmljZUFjY291bnRUb2tlbjogZmFsc2UK",
+                  "description": "This is predefined algorithm template for the clustering type algorithms.",
+                  "algorithmSchema": {
+                      "$schema": "http://json-schema.org/draft-06/schema#",
+                      "$ref": "#/template/definition",
+                      "template": {
+                          "definition": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                  "input": {
+                                      "$ref": "#/template/input"
+                                  },
+                                  "config": {
+                                      "$ref": "#/template/config"
+                                  }
+                              },
+                              "required": [
+                                  "input",
+                                  "config"
+                              ],
+                              "title": "AlgorithmSchema"
+                          },
+                          "input": {
+                              "type": "object",
+                              "additionalProperties": true,
+                              "properties": {
+                                  "fileId": {
+                                      "type": "string"
+                                  },
+                                  "scoringSlot": {
+                                      "type": "string"
+                                  },
+                                  "scoringFunction": {
+                                      "type": "string"
+                                  },
+                                  "inputSlots": {
+                                      "type": "array",
+                                      "items": {
+                                          "type": "string"
+                                      }
+                                  },
+                                  "categorySlot": {
+                                      "type": "string"
+                                  },
+                                  "outputSlots": {
+                                      "type": "array",
+                                      "items": {
+                                          "type": "string"
+                                      }
+                                  },
+                                  "groupByLevel1": {
+                                      "type": "string"
+                                  },
+                                  "groupByLevel2": {
+                                      "type": "string"
+                                  },
+                                  "language": {
+                                      "type": "string"
+                                  },
+                                  "stopWords": {
+                                      "type": "string"
+                                  }
+                              },
+                              "required": [
+                                  "fileId",
+                                  "inputSlots"
+                              ],
+                              "title": "Input schema"
+                          },
+                          "config": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                  "name": {
+                                      "type": "string",
+                                      "const": "K-Means"
+                                  },
+                                  "params": {
+                                      "$ref": "#/template/params"
+                                  }
+                              },
+                              "required": [
+                                  "params"
+                              ],
+                              "title": "ConfigSchema"
+                          },
+                          "params": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                  "k": {
+                                      "type": "integer"
+                                  },
+                                  "subK": {
+                                      "type": "integer"
+                                  },
+                                  "initMethod": {
+                                      "type": "string",
+                                      "default": "k-means++"
+                                  },
+                                  "maxIteration": {
+                                      "type": "integer",
+                                      "default": 500
+                                  },
+                                  "nInit": {
+                                      "type": "integer",
+                                      "default": 10
+                                  },
+                                  "tolerance": {
+                                      "type": "number",
+                                      "default": 0.8
+                                  },
+                                  "algorithm": {
+                                      "type": "string",
+                                      "default": "full"
+                                  },
+                                  "sub_k": {
+                                      "type": "integer",
+                                      "default": 3
+                                  },
+                                  "threshold": {
+                                      "type": "number",
+                                      "default": 0.5
+                                  }
+                              },
+                              "required": [],
+                              "title": "Params"
+                          }
+                      }
+                  },
+                  "productType": "TH"
+              },
+              {
+                  "id": "b558d267-c958-4c4d-8734-b40b0961fd11",
+                  "name": "PredefinedAlgorithmTemplateForIncidentCorrelation",
+                  "type": "IncidentCorrelation",
+                  "executionMode": "Streaming",
+                  "jobScript": "",
+                  "description": "This is predefined algorithm template for the Incident Correlation.",
+                  "algorithmSchema": {
+                      "$schema": "http://json-schema.org/draft-06/schema#",
+                      "$ref": "#/template/definition",
+                      "template": {
+                          "definition": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                  "input": {
+                                      "$ref": "#/template/input"
+                                  },
+                                  "config": {
+                                      "$ref": "#/template/config"
+                                  }
+                              },
+                              "required": [
+                                  "input",
+                                  "config"
+                              ],
+                              "title": "AlgorithmSchema"
+                          },
+                          "input": {
+                              "type": "object",
+                              "additionalProperties": true,
+                              "properties": {
+                                  "systemFields": {
+                                      "type": "array",
+                                      "items": {
+                                          "type": "string"
+                                      }
+                                  },
+                                  "groupByLevel": {
+                                      "type": "array",
+                                      "items": {
+                                          "type": "string"
+                                      },
+                                      "maxItems": 3
+                                  },
+                                  "clusteringFields": {
+                                      "type": "array",
+                                      "items": {
+                                          "type": "string"
+                                      },
+                                      "minItems": 1,
+                                      "maxItems": 5
+                                  },
+                                  "priorityEnum": {
+                                      "type": "array",
+                                      "items": {
+                                          "type": "object",
+                                          "required": [],
+                                          "properties": {
+                                              "name": {
+                                                  "type": "string"
+                                              },
+                                              "id": {
+                                                  "type": "integer"
+                                              }
+                                          }
+                                      },
+                                      "default": [
+                                          {
+                                              "name": "Critical",
+                                              "id": 0
+                                          },
+                                          {
+                                              "name": "High",
+                                              "id": 1
+                                          },
+                                          {
+                                              "name": "Medium",
+                                              "id": 2
+                                          },
+                                          {
+                                              "name": "Low",
+                                              "id": 3
+                                          }
+                                      ]
+                                  }
+                              },
+                              "required": [
+                                  "systemFields",
+                                  "clusteringFields"
+                              ],
+                              "title": "Input schema"
+                          },
+                          "config": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                  "params": {
+                                      "$ref": "#/template/params"
+                                  }
+                              },
+                              "required": [
+                                  "params"
+                              ],
+                              "title": "ConfigSchema"
+                          },
+                          "params": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                  "clusterTimeToLive": {
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                          "days": {
+                                              "type": "integer",
+                                              "default": 7,
+                                              "minimum": 0
+                                          },
+                                          "hours": {
+                                              "type": "integer",
+                                              "minimum": 0
+                                          }
+                                      },
+                                      "required": [
+                                          "days",
+                                          "hours"
+                                      ]
+                                  },
+                                  "similarityThreshold": {
+                                      "type": "number",
+                                      "default": 0.7
+                                  },
+                                  "noOfIncidentsToMakeClusterVisible": {
+                                      "type": "integer",
+                                      "default": 5
+                                  },
+                                  "trendWindow": {
+                                      "type": [
+                                          "integer",
+                                          "null"
+                                      ],
+                                      "default": 2,
+                                      "minimum": 1,
+                                      "maximum": 999
+                                  },
+                                  "majorIncidentCriteria": {
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                          "noOfIncidentsInClusterReaches": {
+                                              "type": [
+                                                  "integer",
+                                                  "null"
+                                              ],
+                                              "default": 50,
+                                              "minimum": 1,
+                                              "maximum": 99999
+                                          },
+                                          "noOfIncidentsInTrendWindow": {
+                                              "type": [
+                                                  "integer",
+                                                  "null"
+                                              ],
+                                              "default": 25,
+                                              "minimum": 1,
+                                              "maximum": 99999
+                                          }
+                                      },
+                                      "required": []
+                                  },
+                                  "trendAndMiDisabled": {
+                                      "type": [
+                                          "boolean",
+                                          "null"
+                                      ],
+                                      "default": false
+                                  }
+                              },
+                              "required": [
+                                  "trendWindow"
+                              ],
+                              "title": "Params"
+                          }
+                      }
+                  },
+                  "productType": "IC"
+              },
+              {
+                  "id": "b558d267-c958-4c4d-8734-b40b0961fd10",
+                  "name": "BMC K-Means",
+                  "type": "Clustering",
+                  "executionMode": "OnDemand",
+                  "jobScript": "YXBpVmVyc2lvbjogYmF0Y2gvdjEKa2luZDogSm9iCm1ldGFkYXRhOgogIG5hbWU6IGFpZi1jbHVzdGVyaW5nLWpvYgogIG5hbWVzcGFjZTogYXNoMWFkZW5vbnByb2QzCnNwZWM6CiAgdHRsU2Vjb25kc0FmdGVyRmluaXNoZWQ6IDEyMAogIGJhY2tvZmZMaW1pdDogMgogIHRlbXBsYXRlOgogICAgc3BlYzoKICAgICAgaW1hZ2VQdWxsU2VjcmV0czoKICAgICAgLSBuYW1lOiBibWMtZHRyaHViCiAgICAgIGNvbnRhaW5lcnM6CiAgICAgIC0gbmFtZTogYWlmLWNsdXN0ZXJpbmctam9iLXBvZAogICAgICAgIGltYWdlOiBjb250YWluZXJzLmJtYy5jb20vYm1jL2xwYWRlOmFpZi1jbHVzdGVyaW5nLWpvYi0zMTc4MDA5LTM3NjgKICAgICAgICByZXNvdXJjZXM6CiAgICAgICAgICByZXF1ZXN0czoKICAgICAgICAgICAgbWVtb3J5OiAiNTEyTWkiCiAgICAgICAgICAgIGNwdTogIjUwMG0iCiAgICAgICAgICBsaW1pdHM6CiAgICAgICAgICAgIG1lbW9yeTogIjhHaSIKICAgICAgICAgICAgY3B1OiAiMjAwMG0iCiAgICAgICAgdm9sdW1lTW91bnRzOgogICAgICAgIC0gbmFtZToga2Fma2EtcGVtLXZvbAogICAgICAgICAgbW91bnRQYXRoOiAvb3B0L2JtYy9zZWN1cml0eS8KICAgICAgICBlbnY6CiAgICAgICAgLSBuYW1lOiBURU5BTlRfSUQKICAgICAgICAgIHZhbHVlOiAiIgogICAgICAgIC0gbmFtZTogVVNFUl9JRAogICAgICAgICAgdmFsdWU6ICIiCiAgICAgICAgLSBuYW1lOiBBTEdPUklUSE1fSlNPTgogICAgICAgICAgdmFsdWU6ICIiCiAgICAgICAgLSBuYW1lOiBBTEdPUklUSE1fSUQKICAgICAgICAgIHZhbHVlOiAiIgogICAgICAgIC0gbmFtZTogRVhFQ1VUSU9OX0lECiAgICAgICAgICB2YWx1ZTogIiIKICAgICAgICAtIG5hbWU6IEFJRl9DT1JFX1NFUlZJQ0VfU0VSVklDRV9IT1NUCiAgICAgICAgICB2YWx1ZTogImFpZi1jb3JlLXNlcnZpY2UiCiAgICAgICAgLSBuYW1lOiBBSUZfQ09SRV9TRVJWSUNFX1NFUlZJQ0VfUE9SVAogICAgICAgICAgdmFsdWU6ICI1MDE3NyIKICAgICAgICAtIG5hbWU6IEFJRl9USUNLRVRfU0VSVklDRV9IT1NUCiAgICAgICAgICB2YWx1ZTogImFpZi10aWNrZXQtc2VydmljZSIKICAgICAgICAtIG5hbWU6IEFJRl9USUNLRVRfU0VSVklDRV9QT1JUCiAgICAgICAgICB2YWx1ZTogIjUwMjE3IgogICAgICAgIC0gbmFtZTogQVdTX0FDQ0VTU19LRVlfSUQKICAgICAgICAgIHZhbHVlRnJvbToKICAgICAgICAgICAgc2VjcmV0S2V5UmVmOgogICAgICAgICAgICAgIGtleTogQVdTX0FDQ0VTU19LRVlfSURfQUlGCiAgICAgICAgICAgICAgbmFtZTogYXdzczNzZWNyZXQKICAgICAgICAtIG5hbWU6IEFXU19TRUNSRVRfQUNDRVNTX0tFWQogICAgICAgICAgdmFsdWVGcm9tOgogICAgICAgICAgICBzZWNyZXRLZXlSZWY6CiAgICAgICAgICAgICAga2V5OiBBV1NfU0VDUkVUX0FDQ0VTU19LRVlfQUlGCiAgICAgICAgICAgICAgbmFtZTogYXdzczNzZWNyZXQKICAgICAgICAtIG5hbWU6IEFXU19TM19FTkRQT0lOVAogICAgICAgICAgdmFsdWVGcm9tOgogICAgICAgICAgICBzZWNyZXRLZXlSZWY6CiAgICAgICAgICAgICAga2V5OiBBV1NfUzNfRU5EUE9JTlQKICAgICAgICAgICAgICBuYW1lOiBhd3NzM3NlY3JldAogICAgICAgIC0gbmFtZTogQVdTX1MzX1JFR0lPTgogICAgICAgICAgdmFsdWVGcm9tOgogICAgICAgICAgICBzZWNyZXRLZXlSZWY6CiAgICAgICAgICAgICAga2V5OiBBV1NfUzNfUkVHSU9OCiAgICAgICAgICAgICAgbmFtZTogYXdzczNzZWNyZXQKICAgICAgICAtIG5hbWU6IEtBRktBX0NPTk5FQ1RfU1RSSU5HCiAgICAgICAgICB2YWx1ZUZyb206CiAgICAgICAgICAgIHNlY3JldEtleVJlZjoKICAgICAgICAgICAgICBrZXk6IEtBRktBX0NMVVNURVIKICAgICAgICAgICAgICBuYW1lOiBrYWZrYXNlY3JldAogICAgICByZXN0YXJ0UG9saWN5OiBOZXZlcgogICAgICBhdXRvbW91bnRTZXJ2aWNlQWNjb3VudFRva2VuOiBmYWxzZQogICAgICB2b2x1bWVzOgogICAgICAtIG5hbWU6IGthZmthLXBlbS12b2wKICAgICAgICBzZWNyZXQ6CiAgICAgICAgICBzZWNyZXROYW1lOiBrYWZrYS1wZW0KICAgICAgICAgIG9wdGlvbmFsOiB0cnVlCg==",
+                  "description": "This is predefined algorithm template for the clustering type algorithms.",
+                  "algorithmSchema": {
+                      "$schema": "http://json-schema.org/draft-06/schema#",
+                      "$ref": "#/template/definition",
+                      "template": {
+                          "definition": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                  "input": {
+                                      "$ref": "#/template/input"
+                                  },
+                                  "config": {
+                                      "$ref": "#/template/config"
+                                  },
+                                  "ticketData": {
+                                      "$ref": "#/template/ticketData"
+                                  },
+                                  "schedulerInfo": {
+                                      "$ref": "#/template/schedulerInfo"
+                                  }
+                              },
+                              "required": [
+                                  "input",
+                                  "config",
+                                  "ticketData",
+                                  "schedulerInfo"
+                              ],
+                              "title": "AlgorithmSchema"
+                          },
+                          "input": {
+                              "type": "object",
+                              "additionalProperties": true,
+                              "properties": {
+                                  "fileId": {
+                                      "type": "string"
+                                  },
+                                  "scoringSlot": {
+                                      "type": "string"
+                                  },
+                                  "scoringFunction": {
+                                      "type": "string"
+                                  },
+                                  "inputSlots": {
+                                      "type": "array",
+                                      "items": {
+                                          "type": "string"
+                                      }
+                                  },
+                                  "categorySlot": {
+                                      "type": "string"
+                                  },
+                                  "outputSlots": {
+                                      "type": "array",
+                                      "items": {
+                                          "type": "string"
+                                      }
+                                  },
+                                  "groupByLevel1": {
+                                      "type": "string"
+                                  },
+                                  "groupByLevel2": {
+                                      "type": "string"
+                                  },
+                                  "language": {
+                                      "type": "string"
+                                  },
+                                  "stopWords": {
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                          "fileName": {
+                                              "type": "string"
+                                          },
+                                          "fileContent": {
+                                              "type": "string"
+                                          }
+                                      },
+                                      "required": [
+                                          "fileName",
+                                          "fileContent"
+                                      ]
+                                  },
+                                  "metricsCalculationFields": {
+                                      "type": "array",
+                                      "items": {
+                                          "type": "object",
+                                          "required": [],
+                                          "properties": {
+                                              "metrics": {
+                                                  "type": "string"
+                                              },
+                                              "functionName": {
+                                                  "type": "string"
+                                              },
+                                              "fields": {
+                                                  "type": "array",
+                                                  "items": {
+                                                      "type": "object",
+                                                      "required": [],
+                                                      "properties": {
+                                                          "name": {
+                                                              "type": "string"
+                                                          },
+                                                          "type": {
+                                                              "type": "string"
+                                                          }
+                                                      }
+                                                  }
+                                              }
+                                          }
+                                      },
+                                      "default": [
+                                          {
+                                              "metrics": "totalResolutionTime",
+                                              "functionName": "Subtraction",
+                                              "fields": [
+                                                  {
+                                                      "name": "Submit Date",
+                                                      "type": "date"
+                                                  },
+                                                  {
+                                                      "name": "Last Resolved Date",
+                                                      "type": "date"
+                                                  }
+                                              ]
+                                          }
+                                      ]
+                                  },
+                                  "priorityEnum": {
+                                      "type": "array",
+                                      "items": {
+                                          "type": "object",
+                                          "required": [],
+                                          "properties": {
+                                              "name": {
+                                                  "type": "string"
+                                              },
+                                              "id": {
+                                                  "type": "integer"
+                                              }
+                                          }
+                                      },
+                                      "default": [
+                                          {
+                                              "name": "Critical",
+                                              "id": 0
+                                          },
+                                          {
+                                              "name": "High",
+                                              "id": 1
+                                          },
+                                          {
+                                              "name": "Medium",
+                                              "id": 2
+                                          },
+                                          {
+                                              "name": "Low",
+                                              "id": 3
+                                          }
+                                      ]
+                                  }
+                              },
+                              "required": [
+                                  "inputSlots"
+                              ],
+                              "title": "Input schema"
+                          },
+                          "config": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                  "name": {
+                                      "type": "string",
+                                      "const": "K-Means"
+                                  },
+                                  "params": {
+                                      "$ref": "#/template/params"
+                                  },
+                                  "metrics": {
+                                      "$ref": "#/template/metrics"
+                                  }
+                              },
+                              "required": [
+                                  "params",
+                                  "metrics"
+                              ],
+                              "title": "ConfigSchema"
+                          },
+                          "params": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                  "k": {
+                                      "type": "integer"
+                                  },
+                                  "subK": {
+                                      "type": "integer"
+                                  },
+                                  "initMethod": {
+                                      "type": "string",
+                                      "default": "k-means++"
+                                  },
+                                  "maxIteration": {
+                                      "type": "integer",
+                                      "default": 500
+                                  },
+                                  "nInit": {
+                                      "type": "integer",
+                                      "default": 10
+                                  },
+                                  "tolerance": {
+                                      "type": "number",
+                                      "default": 0.8
+                                  },
+                                  "algorithm": {
+                                      "type": "string",
+                                      "default": "full"
+                                  },
+                                  "sub_k": {
+                                      "type": "integer",
+                                      "default": 3
+                                  },
+                                  "threshold": {
+                                      "type": "number",
+                                      "default": 0.5
+                                  }
+                              },
+                              "required": [],
+                              "title": "Params"
+                          },
+                          "metrics": {
+                              "type": "array",
+                              "items": {
+                                  "type": "object",
+                                  "required": [],
+                                  "properties": {
+                                      "metric": {
+                                          "type": "string"
+                                      },
+                                      "fields": {
+                                          "type": "array",
+                                          "items": {
+                                              "type": "string"
+                                          }
+                                      },
+                                      "function": {
+                                          "type": "object",
+                                          "required": [],
+                                          "properties": {
+                                              "name": {
+                                                  "type": "string"
+                                              }
+                                          }
+                                      }
+                                  }
+                              },
+                              "default": [
+                                  {
+                                      "metric": "trend",
+                                      "fields": [
+                                          "Tickets"
+                                      ],
+                                      "function": {
+                                          "name": "Custom"
+                                      }
+                                  },
+                                  {
+                                      "metric": "totalResolutionTime",
+                                      "fields": [
+                                          "Last Resolved Date",
+                                          "Submit Date"
+                                      ],
+                                      "function": {
+                                          "name": "Subtract"
+                                      }
+                                  },
+                                  {
+                                      "metric": "totalEffort",
+                                      "fields": [
+                                          "Total Time Spent"
+                                      ],
+                                      "function": {
+                                          "name": "Sum"
+                                      }
+                                  },
+                                  {
+                                      "metric": "averagePriority",
+                                      "fields": [
+                                          "Priority"
+                                      ],
+                                      "function": {
+                                          "name": "Average"
+                                      }
+                                  },
+                                  {
+                                      "metric": "BarChartCategoryFields",
+                                      "fields": [
+                                          "Resolution Category"
+                                      ],
+                                      "function": {
+                                          "name": "BarChartAggregation",
+                                          "secondLevelXAxisAggsFields": [
+                                              "Priority"
+                                          ],
+                                          "YAxisDetails": {
+                                              "fieldName": "totalEffort",
+                                              "aggsFunction": "Sum"
+                                          }
+                                      }
+                                  }
+                              ]
+                          },
+                          "ticketData": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                  "lookBackTime": {
+                                      "type": "object",
+                                      "additionalProperties": false,
+                                      "properties": {
+                                          "value": {
+                                              "type": "integer"
+                                          },
+                                          "unit": {
+                                              "type": "string"
+                                          },
+                                          "startDate": {
+                                              "type": "string"
+                                          },
+                                          "endDate": {
+                                              "type": "string"
+                                          }
+                                      },
+                                      "required": [
+                                          "value",
+                                          "unit",
+                                          "startDate",
+                                          "endDate"
+                                      ]
+                                  },
+                                  "lookBackDateField": {
+                                      "type": "string",
+                                      "default": "Closed Date"
+                                  },
+                                  "systemFields": {
+                                      "type": "array",
+                                      "items": {
+                                          "type": "string"
+                                      }
+                                  },
+                                  "selectedFields": {
+                                      "type": "array",
+                                      "items": {
+                                          "type": "string"
+                                      }
+                                  },
+                                  "fields": {
+                                      "type": "array",
+                                      "items": [
+                                          {
+                                              "type": "string"
+                                          }
+                                      ]
+                                  },
+                                  "filters": {
+                                      "type": "array",
+                                      "items": [
+                                          {
+                                              "type": "object",
+                                              "properties": {
+                                                  "field": {
+                                                      "type": "string"
+                                                  },
+                                                  "value": {
+                                                      "type": "array",
+                                                      "items": [
+                                                          {
+                                                              "type": "string"
+                                                          }
+                                                      ]
+                                                  }
+                                              },
+                                              "required": [
+                                                  "field",
+                                                  "value"
+                                              ]
+                                          }
+                                      ]
+                                  }
+                              },
+                              "required": [
+                                  "lookBackTime",
+                                  "lookBackDateField",
+                                  "fields",
+                                  "filters"
+                              ]
+                          },
+                          "schedulerInfo": {
+                              "type": "object",
+                              "properties": {
+                                  "cronExpression": {
+                                      "type": "string"
+                                  },
+                                  "startDate": {
+                                      "type": "string"
+                                  },
+                                  "endDate": {
+                                      "type": "string"
+                                  },
+                                  "timeZone": {
+                                      "type": "string"
+                                  }
+                              },
+                              "required": [
+                                  "cronExpression",
+                                  "startDate",
+                                  "endDate",
+                                  "timeZone"
+                              ]
+                          }
+                      }
+                  },
+                  "productType": "PIPM"
+              }
+          ],
+          "responseTimeStamp": "1689164922740"
+      }
+order: 1000

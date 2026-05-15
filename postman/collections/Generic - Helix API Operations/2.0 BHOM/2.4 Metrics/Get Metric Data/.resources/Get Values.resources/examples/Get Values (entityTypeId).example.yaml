@@ -1,0 +1,64 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/metrics-query-service/api/v1.0/label/entityTypeId/values"
+  method: GET
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Authorization
+      value: apiKey {{bhom_apiKey}}
+    - key: ""
+      value: ""
+      disabled: true
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Thu, 02 Feb 2023 16:28:41 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    X-Server-Hostname: victoria-metrics-victoria-metrics-cluster-vmselect-77bfddfsh86s
+    Access-Control-Allow-Origin: "*"
+    Content-Encoding: gzip
+    TraceId: 305d15c6-502d-4e55-b339-bbedb92f0791 null
+    Pragma: no-cache
+    Cache-control: no-store
+  body:
+    type: json
+    content: |-
+      {
+          "status": "success",
+          "isPartial": false,
+          "data": [
+              "K8S",
+              "K8S_CLUSTER",
+              "K8S_COMPONENT",
+              "K8S_DAEMONSET",
+              "K8S_DEPLOYMENT",
+              "K8S_NAMESPACE",
+              "K8S_NODE",
+              "K8S_NODE_CPU",
+              "K8S_NODE_FILESYSTEM",
+              "K8S_NODE_MEMORY",
+              "K8S_NODE_NETWORK",
+              "K8S_POD",
+              "K8S_POD_CPU",
+              "K8S_POD_EPHSTORAGE",
+              "K8S_POD_MEMORY",
+              "K8S_POD_NETWORK",
+              "K8S_POD_VOLUME",
+              "K8S_REPLICASET",
+              "NUK_CPU",
+              "NUK_FileSystem",
+              "NUK_FileSystem_Container",
+              "NUK_Linux_OS",
+              "NUK_Memory",
+              "NUK_Network",
+              "NUK_Network_Container",
+              "PatrolAgentHealthMonitor",
+              "SIMKM",
+              "SIMKM_KM_INST"
+          ]
+      }
+order: 3000

@@ -1,0 +1,9 @@
+$kind: collection
+auth:
+  - id: 61f988ec-0432-4eb7-9a0a-6fbe96a48ddf
+    type: apikey
+    name: apikey auth
+    credentials:
+      value: AR-JWT {{token}}
+      key: Authorization
+order: 5000

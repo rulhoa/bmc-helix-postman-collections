@@ -1,0 +1,58 @@
+$kind: http-request
+url: "{{is_base_url}}/api/rx/application/webapi/connection"
+method: POST
+headers:
+  X-Requested-By: XMLHttpRequest
+body:
+  type: json
+  content: "{\r
+
+    \    \"authTypeCode\": 3,\r
+
+    \    \"authTypeDetails\": {\r
+
+    \        \"username\": \"\",\r
+
+    \        \"credentials\": \"\",\r
+
+    \        \"httpHeaders\": [\r
+
+    \            {\r
+
+    \                \"key\": \"X-Requested-By\",\r
+
+    \                \"value\": \"XMLHttpRequest\"\r
+
+    \            }\r
+
+    \        ],\r
+
+    \        \"queryParams\": [\r
+
+    \            {\r
+
+    \                \"key\": \"appid\",\r
+
+    \                \"value\": \"1234\"\r
+
+    \            }\r
+
+    \        ],\r
+
+    \        \"tokenFetchMechanism\": 0,\r
+
+    \        \"additionalFormParams\": []\r
+
+    \    },\r
+
+    \    \"hostname\": \"api.hostname.com\",\r
+
+    \    \"name\": \"New Web API Connection\",\r
+
+    \    \"port\": 443,\r
+
+    \    \"secure\": 1\r
+
+    }"
+examples: ./.resources/Create Connection WebAPI.resources/examples
+order: 3000

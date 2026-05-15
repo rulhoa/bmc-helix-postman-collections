@@ -1,0 +1,8 @@
+$kind: http-request
+url: "{{bhom_base_url}}/service-management/api/v1.0/metric/tree"
+method: POST
+body:
+  type: json
+  content: '{"nodeId":"04a38562c00502d70bbb2dcd6e486f7374","nodeKind":"Host"}'
+examples: ./.resources/Metric Search - Specific CI.resources/examples
+order: 3000

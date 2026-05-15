@@ -1,0 +1,41 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/metrics-query-service/api/v1.0/label/source/values"
+  method: GET
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Authorization
+      value: apiKey {{bhom_apiKey}}
+    - key: ""
+      value: ""
+      disabled: true
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Thu, 02 Feb 2023 15:45:37 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    X-Server-Hostname: victoria-metrics-victoria-metrics-cluster-vmselect-77bfddfh8699
+    Access-Control-Allow-Origin: "*"
+    Content-Encoding: gzip
+    TraceId: 7e6f6d10-d8ad-452a-83e5-261139adaf5f null
+    Pragma: no-cache
+    Cache-control: no-store
+  body:
+    type: json
+    content: |-
+      {
+          "status": "success",
+          "isPartial": false,
+          "data": [
+              "HM",
+              "NAGIOS",
+              "bmc",
+              "opt:der",
+              "opt:meas"
+          ]
+      }
+order: 8000

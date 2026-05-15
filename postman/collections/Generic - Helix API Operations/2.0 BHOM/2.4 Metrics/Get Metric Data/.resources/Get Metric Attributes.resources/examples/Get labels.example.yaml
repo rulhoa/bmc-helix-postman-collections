@@ -1,0 +1,51 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/metrics-query-service/api/v1.0/labels"
+  method: GET
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Authorization
+      value: apiKey {{bhom_apiKey}}
+    - key: ""
+      value: ""
+      disabled: true
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Tue, 03 Jan 2023 17:58:30 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    X-Server-Hostname: victoria-metrics-victoria-metrics-cluster-vmselect-797bbf5qlxts
+    Access-Control-Allow-Origin: "*"
+    Content-Encoding: gzip
+    TraceId: ecd060a8-f245-4148-9bf8-a84e65e9ba0c null
+    Pragma: no-cache
+    Cache-control: no-store
+  body:
+    type: json
+    content: |-
+      {
+          "status": "success",
+          "isPartial": false,
+          "data": [
+              "__name__",
+              "anomaly",
+              "entityId",
+              "entityName",
+              "entityTypeId",
+              "external_id",
+              "hostType",
+              "hostname",
+              "incidentId",
+              "isKpi",
+              "nodeId",
+              "serviceId",
+              "severity",
+              "source",
+              "unit"
+          ]
+      }
+order: 1000

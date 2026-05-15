@@ -1,0 +1,463 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/intelligent-automation/api/v1/workflows/search"
+  method: POST
+  headers:
+    - key: helix_jwt_token
+      value: "{{bhom_json_web_token}}"
+      disabled: true
+    - key: Origin
+      value: https://helixtrialsjc497-or1-dev.onbmc.com
+      disabled: true
+    - key: Referer
+      value: https://helixtrialsjc497-or1-dev.onbmc.com/intelligent-automation/
+      disabled: true
+    - key: Authorization
+      value: Bearer {{bhom_token}}
+      disabled: true
+  body:
+    type: json
+    content: "{\r
+
+      \    \"pageSize\":25,\r
+
+      \    \"pageNumber\":0,\r
+
+      \    \"filter\":\"type = 'user_defined'\",\r
+
+      \    \"sortedOn\":\"updated_time DESC\"\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Fri, 10 Feb 2023 20:19:50 GMT
+    Content-Type: application/json; charset=utf-8
+    Content-Length: "15359"
+    Connection: keep-alive
+    X-Powered-By: Express
+    ETag: W/"3bff-M2mZd3N4fU6Z1/Y9dcXkJ3+QAO0"
+  body:
+    type: json
+    content: |-
+      {
+          "data": [
+              {
+                  "id": "28c6840b-eb81-2bcd-0730-5883a0d96eb7",
+                  "name": "IAP_2_Nagios_Compute_Health_Check_CPU - COPY",
+                  "type": "user_defined",
+                  "description": "The automation will provide the list of top CPU processes on the web server",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"msg\" == \"Nagios CPU Alert - CPU Utilization Above all Baselines >90\")",
+                  "checksum": "9e501efcea0a0863f206161bd7463b76d49d00dfc621e2cd3e84fe3c13c07438",
+                  "is_active": false,
+                  "status": "DRAFT",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "108206256570418",
+                  "updated_by": "108206256570418",
+                  "created_time": 1675102382863.127,
+                  "updated_time": 1675102382875.284
+              },
+              {
+                  "id": "6cb531f5-6753-cfe2-4e3f-363466b158c1",
+                  "name": "IAP_2_Nagios_Compute_Health_Check_CPU",
+                  "type": "user_defined",
+                  "description": "The automation will provide the list of top CPU processes on the web server",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"msg\" == \"Nagios CPU Alert - CPU Utilization Above all Baselines >90\")",
+                  "checksum": "f19c752cb3b496a3bfde4c816b3603853c05f10e12efae99a727809de2222516",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "108206256570418",
+                  "updated_by": "108206256570418",
+                  "created_time": 1675079624188.9219,
+                  "updated_time": 1675079624199.1438
+              },
+              {
+                  "id": "6cb531f5-6753-cfe2-4e3f-363466b158b1",
+                  "name": "IAP_1_Zabbix_Compute_Health_Check_CPU",
+                  "type": "user_defined",
+                  "description": "The automation will provide the list of top CPU processes on the web server",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"msg\" == \"Zabbix CPU Alert - CPU Utilization Above all Baselines >90\")",
+                  "checksum": "a707a7ceb6125d65e9a3f5a50d39467f20be866520f0caf896a19bdb476b80af",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "108206256570418",
+                  "updated_by": "108206256570418",
+                  "created_time": 1675079623888.957,
+                  "updated_time": 1675079623897.771
+              },
+              {
+                  "id": "6cb531f5-6753-cfe2-4e3f-363466b158d1",
+                  "name": "IAP_3_SolarWinds_Compute_Health_Check_CPU",
+                  "type": "user_defined",
+                  "description": "The automation will provide the list of top CPU processes on the web server",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"msg\" == \"SolarWinds CPU Alert - CPU Utilization Above all Baselines >90\")",
+                  "checksum": "b9ad98ffdf3cc8374a6c58d2ce0058f453adff0ba295ac9a752036003cefd3e8",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "108206256570418",
+                  "updated_by": "108206256570418",
+                  "created_time": 1675079623582.621,
+                  "updated_time": 1675079623591.347
+              },
+              {
+                  "id": "6cb531f5-6753-cfe2-4e3f-363466b158d2",
+                  "name": "IAP_4_Nagios_Kill_CPU_Process",
+                  "type": "user_defined",
+                  "description": "The automation will kill the top running CPU process on the web server",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"msg\" == \"Nagios CPU Alert - CPU Utilization Above all Baselines >90\")",
+                  "checksum": "960ea08cdd02ba29e260c0cdde26cbf0e261b71d5871014512acf1b1eac182ae",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "108206256570418",
+                  "updated_by": "108206256570418",
+                  "created_time": 1675079623269.6108,
+                  "updated_time": 1675079623279.783
+              },
+              {
+                  "id": "6cb531f5-6753-cfe2-4e3f-363466b158d3",
+                  "name": "IAP_5_Zabbix_Kill_CPU_Process",
+                  "type": "user_defined",
+                  "description": "The automation will kill the top running CPU process on the web server",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"msg\" == \"Zabbix CPU Alert - CPU Utilization Above all Baselines >90\")",
+                  "checksum": "c7015858993ec9eb5b6a1bcfc91c110a0ab28ce0070b30b60799a9ffe317660f",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "108206256570418",
+                  "updated_by": "108206256570418",
+                  "created_time": 1675079622941.689,
+                  "updated_time": 1675079622951.292
+              },
+              {
+                  "id": "6cb531f5-6753-cfe2-4e3f-363466b158d4",
+                  "name": "IAP_6_SolarWinds_Kill_CPU_Process",
+                  "type": "user_defined",
+                  "description": "The automation will kill the top running CPU process on the web server",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"msg\" == \"SolarWinds CPU Alert - CPU Utilization Above all Baselines >90\")",
+                  "checksum": "42a9df6f65333eb670b39be1b5f29f53482c36062fcb234dac99b94273137b34",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "108206256570418",
+                  "updated_by": "108206256570418",
+                  "created_time": 1675079622606.952,
+                  "updated_time": 1675079622616.084
+              },
+              {
+                  "id": "6cb531f5-6753-cfe2-4e3f-363466b158b3",
+                  "name": "IAP_7_Nagios_Compute_Health_Check_Memory",
+                  "type": "user_defined",
+                  "description": "The automation will provide the list of top memory consuming processes on the web server",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"msg\" == \"Nagios Memory Alert - Memory Utilization Above all Baselines >90\")",
+                  "checksum": "a575cee76427354f6993a548d9dbbde03873cf34348a19f5d2510b727f288181",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "108206256570418",
+                  "updated_by": "108206256570418",
+                  "created_time": 1675079622308.692,
+                  "updated_time": 1675079622316.7888
+              },
+              {
+                  "id": "6cb531f5-6753-cfe2-4e3f-363466b158b4",
+                  "name": "IAP_8_Zabbix_Compute_Health_Check_Memory",
+                  "type": "user_defined",
+                  "description": "The automation will provide the list of top memory consuming processes on the web server",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"msg\" == \"Zabbix Memory Alert - Memory Utilization Above all Baselines >90\")",
+                  "checksum": "2e26f015accd094d292623c944c969565d735a0592e5157e53fa45f35b0b0bc6",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "108206256570418",
+                  "updated_by": "108206256570418",
+                  "created_time": 1675079621989.6409,
+                  "updated_time": 1675079621998.452
+              },
+              {
+                  "id": "6cb531f5-6753-cfe2-4e3f-363466b158b5",
+                  "name": "IAP_9_SolarWinds_Compute_Health_Check_Memory",
+                  "type": "user_defined",
+                  "description": "The automation will provide the list of top memory consuming processes on the web server",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"msg\" == \"SolarWinds Memory Alert - Memory Utilization Above all Baselines >90\")",
+                  "checksum": "0cbbbac3ef957bd59d4337d801f86a87ba5f54e94d8f1aa65b1361d64aacd2a8",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "108206256570418",
+                  "updated_by": "108206256570418",
+                  "created_time": 1675079621686.2039,
+                  "updated_time": 1675079621696.165
+              },
+              {
+                  "id": "6cb531f5-6753-cfe2-4e3f-363466b158b6",
+                  "name": "IAP_10_Diagnostic_Check_System_Availability",
+                  "type": "user_defined",
+                  "description": "The automation will check the reachability of the web server by tracing network packages",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"msg\" == \"Tomcat Error HTTP Status 404 Not Found. Unable to perform request for Media Service.\")",
+                  "checksum": "059efd18c1a6a5f929064ac0a4f2804d293fcd78dd6bbe18f4bf24456eede4b9",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "108206256570418",
+                  "updated_by": "108206256570418",
+                  "created_time": 1675079621378.9102,
+                  "updated_time": 1675079621388.56
+              },
+              {
+                  "id": "6cb531f5-6753-cfe2-4e3f-363466b158b7",
+                  "name": "IAP_11_Rollback_Change",
+                  "type": "user_defined",
+                  "description": "The automation will rollback the Changes implemented in the CRQ",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"msg\" == \"Tomcat Error HTTP Status 404 Not Found. Unable to perform request for Media Service.\")",
+                  "checksum": "d333737a831535c79df7036f1ef6d32db5f2f26a1d7c6393e2d1fbdfa3aed1d9",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "108206256570418",
+                  "updated_by": "108206256570418",
+                  "created_time": 1675079621061.1729,
+                  "updated_time": 1675079621069.9229
+              },
+              {
+                  "id": "6cb531f5-6753-cfe2-4e3f-363466b158b8",
+                  "name": "IAP_12_Service_Health_Check",
+                  "type": "user_defined",
+                  "description": "The automation will restart the associated web service",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"msg\" == \"ERROR 408 - Request Timed Out. Unable to get response from WEB-FE-01\")",
+                  "checksum": "f231f555f5ecf3f999ee4f4b7e89bd1d8d77988504b3c1f3d3300ae347f03996",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "108206256570418",
+                  "updated_by": "108206256570418",
+                  "created_time": 1675079620763.953,
+                  "updated_time": 1675079620771.807
+              },
+              {
+                  "id": "6cb531f5-6753-cfe2-4e3f-363466b158b9",
+                  "name": "IAP_13_Server_Health_Check",
+                  "type": "user_defined",
+                  "description": "The automation will check the overall server health and restart top deadlock processes",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"msg\" == \"ERROR 408 - Request Timed Out. Unable to get response from WEB-FE-02\")",
+                  "checksum": "4a9cf2ab0db64c2adf72f68904b9e789455f0e29a56cb766c80c6f06ba5ed215",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "108206256570418",
+                  "updated_by": "108206256570418",
+                  "created_time": 1675079620461.989,
+                  "updated_time": 1675079620472.018
+              },
+              {
+                  "id": "6cb531f5-6753-cfe2-4e3f-363466b158c6",
+                  "name": "IAP_15_LoadBalancer_System_Availability_Check",
+                  "type": "user_defined",
+                  "description": "The automation will check the reachability of the Load Balancer by tracing network packages",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"msg\" == \"Media Service Application impacted. Error 503 in LB pool detected.\")",
+                  "checksum": "b1d243e94913e758f07a50ea5eef74d8bf7e67f7fbe0d58a1757dacc29084a7a",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "108206256570418",
+                  "updated_by": "108206256570418",
+                  "created_time": 1675079620153.857,
+                  "updated_time": 1675079620162.967
+              },
+              {
+                  "id": "eb75ea9d-986a-0c35-27b9-91b557657f68",
+                  "name": "IAP_16_Dynatrace_Response_Check",
+                  "type": "user_defined",
+                  "description": "The automation will check the reachability of the Dynatrace server by tracing network packages",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"msg\" == \"Dynatrace - Avg Response Time for Media Service Content Breached all Baselines > 10 ms.\")",
+                  "checksum": "5f7e6738a4df65634857250feb915f968f6aab66dab10565b21c9404b07da2d6",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "108206256570418",
+                  "updated_by": "108206256570418",
+                  "created_time": 1675079619854.95,
+                  "updated_time": 1675079619864.1619
+              },
+              {
+                  "id": "eb75ea9d-986a-0c35-27b9-91b557657f58",
+                  "name": "IAP_17_AppDynamics_Response_Check",
+                  "type": "user_defined",
+                  "description": "The automation will check the reachability of the AppDynamics server by tracing network packages",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"msg\" == \"AppDynamics - Avg Response Time for Media Service Content Breached all Baselines > 10 ms.\")",
+                  "checksum": "38008a5a18adc3108c194747228ebd3f4432b83fa834d470e50fb2702b4dcb90",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "108206256570418",
+                  "updated_by": "108206256570418",
+                  "created_time": 1675079619557.727,
+                  "updated_time": 1675079619566.375
+              },
+              {
+                  "id": "eb75ea9d-986a-0c35-27b9-91b557657f59",
+                  "name": "IAP_18_New_Relic_Response_Check",
+                  "type": "user_defined",
+                  "description": "The automation will check the reachability of the New-Relic server by tracing network packages",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"msg\" == \"New-Relic - Avg Response Time for Media Service Content Breached all Baselines > 10 ms.\")",
+                  "checksum": "a04f1328d75612b99edaac71f60ebdcebf42daba76daaff742a97c7ec802a389",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "108206256570418",
+                  "updated_by": "108206256570418",
+                  "created_time": 1675079619250.5059,
+                  "updated_time": 1675079619260.3818
+              },
+              {
+                  "id": "eb75ea9d-986a-0c35-27b9-91b557657f71",
+                  "name": "IAP_14_LogAnalytics_Health_Check_RunBook_1",
+                  "type": "user_defined",
+                  "description": "The automation will run diagnostics on the server",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"msg\" == \"Log Analytics - HTTP:Failed to make connection to backend: MediaService-DB\")",
+                  "checksum": "804270a1eb4b665ec8afecaad9ae11dcfc0a0ec59f92d4d90befe4634e53fe16",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "108206256570418",
+                  "updated_by": "108206256570418",
+                  "created_time": 1675079618938.825,
+                  "updated_time": 1675079618948.549
+              },
+              {
+                  "id": "eb75ea9d-986a-0c35-27b9-91b557657f72",
+                  "name": "IAP_19_LogAnalytics_Health_Check_RunBook",
+                  "type": "user_defined",
+                  "description": "The automation will run diagnostics on the server",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"msg\" == \"Log Analytics - Failure. A valid request was made by the client but the server failed to complete the request\")",
+                  "checksum": "050853ef033b366149c2e5ca3a7c3f07f8cf020ad0ecd0a437eac9da937b2a02",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "108206256570418",
+                  "updated_by": "108206256570418",
+                  "created_time": 1675079618620.472,
+                  "updated_time": 1675079618631.182
+              },
+              {
+                  "id": "c588ac8d-1d39-5aa6-abd6-0cc1a465b883",
+                  "name": "Create or Update Incident Ticket",
+                  "type": "user_defined",
+                  "description": "Creates or updates a incident ticket in BMC Helix for ITSM.",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"createIncident\" == \"true\")",
+                  "checksum": "b10b98f79ef45606a2708e149475a9eb3dd71b4596047c16431401bd2648db51",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": true,
+                  "tag_specs": {},
+                  "created_by": "291957777413103",
+                  "updated_by": "291957777413103",
+                  "created_time": 1674927715918.3792,
+                  "updated_time": 1674927774447.185
+              },
+              {
+                  "id": "702a8ae5-d4a7-4432-62e1-bbb51338c724",
+                  "name": "Create an Information Event",
+                  "type": "user_defined",
+                  "description": "Creates an information event in BMC Helix Operations Management for the incident ticket created in BMC Helix for ITSM",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"createInformationEvent\" == \"true\")",
+                  "checksum": "449407a3c435f70faf371667e315622a77c02833417567d80e1978c7e0ff0cb3",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": true,
+                  "tag_specs": {},
+                  "created_by": "792711863341337",
+                  "updated_by": "291957777413103",
+                  "created_time": 1674840750188.3708,
+                  "updated_time": 1674927774443.582
+              },
+              {
+                  "id": "9b0c3dae-b63e-0322-f9e9-d28e9cec4cfe",
+                  "name": "Create or Update Blackout Policy",
+                  "type": "user_defined",
+                  "description": "Creates an blackout policy in BMC Helix Operations Management for the change ticket created in BMC Helix for ITSM",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"createOrUpdateBlackout\" == \"true\")",
+                  "checksum": "302c057098a9cd4868c24ad366579ef0a3a586b7b702c3be4ace5b4658528cf6",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": true,
+                  "tag_specs": {},
+                  "created_by": "792711863341337",
+                  "updated_by": "792711863341337",
+                  "created_time": 1674840653506.894,
+                  "updated_time": 1674840657968.72
+              },
+              {
+                  "id": "c7c38b72-0af2-0ceb-c3db-9bdd6eb3b7cb",
+                  "name": "Delete Blackout Policy",
+                  "type": "user_defined",
+                  "description": "Delete an blackout policy in BMC Helix Operations Management for the change ticket created in BMC Helix for ITSM",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"deleteBlackout\" == \"true\")",
+                  "checksum": "a4dc17e5f3b251f2cd36220c90fec04f28b4d05419159ab181def4475afd0f85",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": true,
+                  "tag_specs": {},
+                  "created_by": "792711863341337",
+                  "updated_by": "792711863341337",
+                  "created_time": 1674840632559.48,
+                  "updated_time": 1674840657966.492
+              }
+          ],
+          "metadata": {
+              "total": "24",
+              "pageNumber": 0,
+              "pageSize": 25,
+              "startOffset": 0,
+              "endOffset": 24
+          }
+      }
+order: 1000

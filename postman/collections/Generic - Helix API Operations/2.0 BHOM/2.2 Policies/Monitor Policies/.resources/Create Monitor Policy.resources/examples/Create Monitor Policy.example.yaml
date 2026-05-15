@@ -1,0 +1,88 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/tsws/monitoring/api/v1.0/unifiedadmin/MonitoringPolicy/create"
+  method: POST
+  body:
+    type: json
+    content: "{\r
+
+      \    \"monitoringPolicy\": {\r
+
+      \        \"agentSelectionCriteria\": \"agentTag EQUALS \\\"A\\\"\",\r
+
+      \        \"tenant\": {\r
+
+      \            \"name\": \"613873398\"\r
+
+      \        },\r
+
+      \        \"owner\": \"Liam\",\r
+
+      \        \"type\": \"monitoring\",\r
+
+      \        \"precedence\": 907,\r
+
+      \        \"enabled\": false,\r
+
+      \        \"shared\": false,\r
+
+      \        \"associatedUserGroup\": \"731951610575781\",\r
+
+      \        \"name\": \"My Monitor Policy\",\r
+
+      \        \"monitorConfiguration\": {\r
+
+      \            \"configurations\": [\r
+
+      \                {\r
+
+      \                    \"solutionName\": \"nuk\",\r
+
+      \                    \"solutionVersion\": \"22.4.12\",\r
+
+      \                    \"monitoringProfile\": \"NUK_Basic\",\r
+
+      \                    \"defaultMonitoring\": true\r
+
+      \                }\r
+
+      \            ]\r
+
+      \        }\r
+
+      \    }\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Tue, 08 Oct 2024 18:09:56 GMT
+    Content-Type: application/json
+    Content-Length: "198"
+    Connection: keep-alive
+    Content-Security-Policy: frame-ancestors 'self'
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    X-Frame-Options: SAMEORIGIN
+    X-Content-Type-Options: nosniff
+    Cache-Control: no-store
+    Referrer-Policy: same-origin
+    Permissions-Policy: idle-detection=self
+    TraceId: c664034f-40b2-4e0c-839d-57424e27e671 613873398
+  body:
+    type: json
+    content: |-
+      {
+          "responseTimeStamp": 0,
+          "statusCode": "200",
+          "statusMsg": "200",
+          "response": [
+              {
+                  "resourceId": "64e82ce6-4285-4d39-bdb8-b5d587445dcf",
+                  "resourceName": "My Monitor Policy",
+                  "statusCode": "200",
+                  "statusMsg": "OK"
+              }
+          ]
+      }
+order: 1000

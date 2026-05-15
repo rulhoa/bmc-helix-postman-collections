@@ -1,0 +1,46 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/metrics-query-service/api/v1.0/label/unit/values"
+  method: GET
+  headers:
+    - key: Content-Type
+      value: application/json
+    - key: Authorization
+      value: apiKey {{bhom_apiKey}}
+    - key: ""
+      value: ""
+      disabled: true
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Tue, 11 Jul 2023 16:54:52 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    Access-Control-Allow-Origin: "*"
+    Permissions-Policy: idle-detection=self
+    Pragma: no-cache
+    Referrer-Policy: same-origin
+    X-Server-Hostname: victoria-metrics-victoria-metrics-cluster-vmselect-5c89554qzj2d
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    Content-Encoding: gzip
+    TraceId: 7b59e2fa-83c0-41cb-9a93-bb6d7f4da3fc null
+    Vary: Accept-Encoding
+    Cache-control: no-store
+  body:
+    type: json
+    content: |-
+      {
+          "status": "success",
+          "isPartial": false,
+          "data": [
+              "#",
+              "%",
+              "KB",
+              "count",
+              "kbps",
+              "ms"
+          ]
+      }
+order: 9000

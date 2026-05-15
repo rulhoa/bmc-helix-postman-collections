@@ -1,0 +1,3 @@
+$kind: collection
+description: API Calls configured according to documentation @ [BHOM 23.1 API Blackout Policy Endpoints](https://docs.bmc.com/docs/helixoperationsmanagement/231/blackout-policy-configuration-endpoints-in-the-rest-api-1160751492.html)
+order: 3000

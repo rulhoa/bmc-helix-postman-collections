@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{disco_base_url}}/api/v1.8/data/partitions"
+method: GET
+examples: ./.resources/9.1 Get Partitions.resources/examples
+order: 4000

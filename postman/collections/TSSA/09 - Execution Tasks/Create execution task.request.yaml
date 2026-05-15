@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{v1}}/execution-tasks"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "name": "My Task",
+      "command": "echo hello"
+    }
+order: 2000

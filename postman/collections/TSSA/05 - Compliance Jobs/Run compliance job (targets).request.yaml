@@ -1,0 +1,19 @@
+$kind: http-request
+url: "{{v1}}/compliance-jobs/{{id}}"
+method: PATCH
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "targets": {
+        "servers": [
+          1
+        ],
+        "server_groups": [
+          3
+        ]
+      }
+    }
+order: 6000

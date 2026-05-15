@@ -1,0 +1,42 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/events-service/api/v1.0/events/classes/:event_class_id?idType=id"
+  method: PATCH
+  queryParams:
+    idType: id
+  pathVariables:
+    event_class_id: ef4bf2d8-e31e-11ee-95e0-aba365ab8f8e
+  body:
+    type: json
+    content: "{\r
+
+      \    \"attributesToRemove\": [ \"ctmJobTpe\"    ]\r
+
+      }"
+response:
+  statusCode: 409
+  statusText: Conflict
+  headers:
+    Date: Mon, 07 Oct 2024 12:14:09 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    Referrer-Policy: same-origin
+    X-Frame-Options: SAMEORIGIN
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    X-Content-Type-Options: nosniff
+    Permissions-Policy: idle-detection=self
+    Content-Encoding: gzip
+    TraceId: a479d224-bc48-4c2d-9cd8-35fb345856c7 613873398
+    Pragma: no-cache
+    X-XSS-Protection: 1; mode=block
+    Cache-control: no-store
+  body:
+    type: json
+    content: |-
+      {
+          "responseTimeStamp": 1728303249056,
+          "statusCode": "409",
+          "statusMsg": "[Failed to delete slot(s) as events needs to be in closed state for given class.Currently there are 2 open events available.]"
+      }
+order: 1000

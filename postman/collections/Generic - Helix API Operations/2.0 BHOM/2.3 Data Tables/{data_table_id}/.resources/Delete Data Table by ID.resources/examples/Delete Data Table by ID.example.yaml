@@ -1,0 +1,45 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/events-service/api/v1.0/data_tables/5a428a51-7aba-11ee-a1fe-91c352942b81"
+  method: DELETE
+  headers:
+    - key: Content-Type
+      value: application/json
+      disabled: true
+    - key: Authorization
+      value: apiKey {{bhom_apiKey}}
+      disabled: true
+    - key: ""
+      value: ""
+      disabled: true
+  body:
+    type: json
+    content: ""
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Server: nginx
+    Date: Sat, 04 Nov 2023 02:32:20 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    Referrer-Policy: same-origin
+    X-Frame-Options: SAMEORIGIN
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    X-Content-Type-Options: nosniff
+    Permissions-Policy: idle-detection=self
+    Content-Encoding: gzip
+    TraceId: 24cac459-166a-41d5-9c92-32a3bf8ef961 1089643507
+    X-XSS-Protection: 1; mode=block
+    X-Request-ID: 2dd6115d634dbacf7b91a1266e66c1f7
+  body:
+    type: json
+    content: |-
+      {
+          "message": "[Successfully deleted data table.]",
+          "object": {
+              "id": "[5a428a51-7aba-11ee-a1fe-91c352942b81]"
+          }
+      }
+order: 1000

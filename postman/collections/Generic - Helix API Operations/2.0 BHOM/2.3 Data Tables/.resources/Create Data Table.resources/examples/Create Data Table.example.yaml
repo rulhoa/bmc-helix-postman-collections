@@ -1,0 +1,51 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/events-service/api/v1.0/data_tables"
+  method: POST
+  headers:
+    - key: Content-Type
+      value: application/json
+      disabled: true
+    - key: Authorization
+      value: apiKey {{bhom_apiKey}}
+      disabled: true
+    - key: ""
+      value: ""
+      disabled: true
+  body:
+    type: json
+    content: "{\r
+
+      \"tag\":\"Import label\",\r
+
+      \"content\":\"OPEN,CRITICAL,printer1,PRINTER_1_STATUS_REQUIRES_ACTION,HIGH\\nASSIGNED,MAJOR,printer1,PRINTER_4_STATUS_REQUIRES_ACTION,LOWEST\\nOPEN,MINOR,printer2,PRINTER_3_STATUS_REQUIRES_ACTION,LOW\"\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Server: nginx
+    Date: Sat, 04 Nov 2023 02:32:09 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    Referrer-Policy: same-origin
+    X-Frame-Options: SAMEORIGIN
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    X-Content-Type-Options: nosniff
+    Permissions-Policy: idle-detection=self
+    Content-Encoding: gzip
+    TraceId: da8c3d4b-af7a-4a0d-94c3-09c558bf7981 1089643507
+    X-XSS-Protection: 1; mode=block
+    X-Request-ID: 4c5161276abf7740ff9c0381192e471d
+  body:
+    type: json
+    content: |-
+      {
+          "message": "[Successfully created data table.]",
+          "object": {
+              "id": "[5a428a51-7aba-11ee-a1fe-91c352942b81]"
+          }
+      }
+order: 1000

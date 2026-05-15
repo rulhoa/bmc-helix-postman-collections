@@ -1,0 +1,72 @@
+$kind: http-request
+url: "{{is_base_url}}/api/com.bmc.dsom.hgm/tool/"
+method: POST
+headers:
+  X-Requested-By: XMLHttpRequest
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\": \"Evaluate_Change_Request_For_Automation 2\",\r
+
+    \  \"description\": \"This tool is responsible for Checking if a Change can have automation ran against it. If it can be automation can be run, it will be. The change id, requires downtime and run immediately are a required input. The Answer to downtime and run immediately **must** be true or false. Be objective, consistent, and concise. You **must** obtain from the user all of the required inputs before invoking a tool. The out contains the output of the determination of if the change can be automated.\",\r
+
+    \  \"type\": \"IS_PROCESS\",\r
+
+    \  \"primitiveType\": \"Tool\",\r
+
+    \  \"seedData\": false,\r
+
+    \  \"enabled\": true,\r
+
+    \  \"connectionId\": null,\r
+
+    \  \"configuration\": {\r
+
+    \    \"process_name\": \"helix.se.utilities:Evaluate_CRQ_For_Automation\",\r
+
+    \    \"input_parameters\": [\r
+
+    \      {\r
+
+    \        \"name\": \"Change_ID\",\r
+
+    \        \"description\": \"The change id and is a required field.\",\r
+
+    \        \"type\": \"str\"\r
+
+    \      },\r
+
+    \      {\r
+
+    \        \"name\": \"Require_Downtime\",\r
+
+    \        \"description\": \"If the change requires downtime to complete and is a required field.\",\r
+
+    \        \"type\": \"str\"\r
+
+    \      },\r
+
+    \      {\r
+
+    \        \"name\": \"Run_immediately\",\r
+
+    \        \"description\": \"If the change should be run now or when it is scheduled  and is a required field.\",\r
+
+    \        \"type\": \"str\"\r
+
+    \      }\r
+
+    \    ],\r
+
+    \    \"output\": [\r
+
+    \      \"Result\"\r
+
+    \    ]\r
+
+    \  }\r
+
+    }"
+examples: ./.resources/Create WEB API.resources/examples
+order: 2000

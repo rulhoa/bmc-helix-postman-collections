@@ -1,0 +1,74 @@
+$kind: http-request
+url: "{{bhom_base_url}}/events-service/api/v1.0/blackout_policies"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\": \"Change Blackout - by Carnevale\",\r
+
+    \  \"description\": \"Blackout_Via_API\",\r
+
+    \  \"executionOrder\": 777,\r
+
+    \  \"eventSelectorCriteria\": \"source_hostname contains 'web-fe-01' OR _service_name equals 'Media Service'\",\r
+
+    \  \"enabled\": true,\r
+
+    \  \"configurations\":\r
+
+    \    { \r
+
+    \        \"definition\": {\r
+
+    \        \"timeframeDetails\": {\r
+
+    \          \"startDate\": \"01022023\",\r
+
+    \          \"startTime\": \"12:10\",\r
+
+    \          \"endTime\": \"12:10\",\r
+
+    \          \"endsOn\": {\r
+
+    \            \"endDate\": \"02022023\"\r
+
+    \          },\r
+
+    \          \"recurrencePattern\": {\r
+
+    \            \"recurrence\": \"oneTime\"\r
+
+    \          },\r
+
+    \          \"timeZone\": {\r
+
+    \            \"id\": \"America/Sao_Paulo\",\r
+
+    \            \"offset\": \" -03:00\"\r
+
+    \          }\r
+
+    \        },\r
+
+    \        \"processing_action\": {\r
+
+    \          \"blackoutExistingEvents\": \"true\",\r
+
+    \          \"resetStatusOnBlackoutEnd\": \"true\"\r
+
+    \        }\r
+
+    \      }\r
+
+    \    }\r
+
+    }\r
+
+    \r
+
+    \r\n"
+examples: ./.resources/Create Blackout Policy - Simple Example.resources/examples
+order: 2000

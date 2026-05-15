@@ -1,0 +1,24 @@
+$kind: http-request
+url: "{{bhom_base_url}}/prediction-api-service/api/v1.0/predictions/kpi_metrics"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"start_time\": 1706895603.238,\r
+
+    \    \"end_time\": 1706939020,\r
+
+    \    \"hist_duration_minutes\": \"1440\",\r
+
+    \    \"forecast_interval_minutes\": \"60\",\r
+
+    \    \"service_key\": \"y3dEW6rfyLGrEPu5LRQRxZ7ZxTA0mo51\",\r
+
+    \    \"kpi_metric_entity_id\": \"688baebf-4054-436f-86e7-225ca4bad3e3:K8S_POD_MEMORY:KubernetesLabCluster@ticketing@ts-assurance-mongo-75d58c4f95-7jnh7@memory\",\r
+
+    \    \"kpi_metric_name\": \"Utilization\"\r
+
+    }"
+examples: ./.resources/Get Prediction Metrics.resources/examples
+order: 2000

@@ -1,0 +1,2237 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/events-service/api/v1.0/event_policies/search"
+  method: POST
+  body:
+    type: json
+    content: "{\r
+
+      \  \"query\": \"name like '%'\",\r
+
+      \  \"recordsPerPage\": 25,\r
+
+      \  \"pageIndex\": 1,\r
+
+      \  \"sortCriteria\": \"modificationTime desc\"\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Wed, 04 Jan 2023 14:19:45 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    Content-Encoding: gzip
+    TraceId: 306e904d-2382-4d2d-8154-effcaf5a95aa 346862526
+    Pragma: no-cache
+    Cache-control: no-store
+  body:
+    type: json
+    content: |-
+      {
+          "totalRecords": 15,
+          "policies": [
+              {
+                  "tenantId": "346862526",
+                  "id": "5aeed592-88ab-11ed-919d-1173cbca5282",
+                  "name": "Correlation of AppDynamics Events based on Monitored Application",
+                  "types": [
+                      "CORRELATION"
+                  ],
+                  "description": "APPD1.1.x - Correlation of AppDynamics Events based on Monitored Application",
+                  "executionOrder": 1000,
+                  "selector": "5aebc851-88ab-11ed-919d-cbdfdc7d5462",
+                  "selectorCriteria": "class equals 'AppDynamicsHRVEvent' AND appDySubCategory not_equals 'Caida_Agente_Maquina'",
+                  "owner": "activationuser",
+                  "enabled": true,
+                  "readOnly": false,
+                  "creationTime": 1672450506477,
+                  "modificationTime": 1672839952027,
+                  "configurations": [
+                      {
+                          "tenantId": "346862526",
+                          "policyId": "5aeed592-88ab-11ed-919d-1173cbca5282",
+                          "id": "1a902499-8c36-11ed-b012-13516e8af114",
+                          "type": "CORRELATION",
+                          "configOrder": 1,
+                          "creationTime": 0,
+                          "modificationTime": 0,
+                          "definition": {
+                              "children": [
+                                  {
+                                      "newEvent": {
+                                          "severity": "MAJOR",
+                                          "msg": "%msg%",
+                                          "location": "",
+                                          "priority": "PRIORITY_5",
+                                          "newEventClass": "Situation",
+                                          "status": "OPEN"
+                                      },
+                                      "children": [],
+                                      "within": 15,
+                                      "minCount": 3,
+                                      "label": "",
+                                      "id": null,
+                                      "type": "aggregate",
+                                      "conditions": [
+                                          {
+                                              "slotName": "$NEW.appDySubCategory",
+                                              "slotOperator": "equals",
+                                              "conditionOperator": "",
+                                              "conditionBracket": "",
+                                              "conditionOrder": 0,
+                                              "endBracket": "",
+                                              "slotValue": "$OLD.appDySubCategory"
+                                          }
+                                      ]
+                                  }
+                              ],
+                              "id": null,
+                              "label": "",
+                              "type": "root"
+                          },
+                          "timeframeStatus": "",
+                          "subType": ""
+                      }
+                  ],
+                  "timeframes": [
+                      "-1"
+                  ],
+                  "timeframe_state": []
+              },
+              {
+                  "tenantId": "346862526",
+                  "id": "f8d396fa-8aa0-11ed-8539-f74a18c6ec7f",
+                  "name": "Deduplicate AppDynamics Events",
+                  "types": [
+                      "ADVANCED_ENRICHMENT"
+                  ],
+                  "description": "APPD1.1.x - Policy to drop the new event if an old event is present with the same details as the new one. ",
+                  "executionOrder": 110,
+                  "selector": "f8d19b29-8aa0-11ed-8539-832942c2992b",
+                  "selectorCriteria": "class equals 'AppDynamicsHRVEvent'",
+                  "owner": "Seth",
+                  "enabled": true,
+                  "readOnly": false,
+                  "creationTime": 1672665949239,
+                  "modificationTime": 1672834464392,
+                  "configurations": [
+                      {
+                          "tenantId": "346862526",
+                          "policyId": "f8d396fa-8aa0-11ed-8539-f74a18c6ec7f",
+                          "id": "53adcc83-8c29-11ed-b012-61ecfacebd3b",
+                          "type": "ADVANCED_ENRICHMENT",
+                          "configOrder": 1,
+                          "creationTime": 0,
+                          "modificationTime": 0,
+                          "definition": {
+                              "children": [
+                                  {
+                                      "all": true,
+                                      "children": [
+                                          {
+                                              "children": [
+                                                  {
+                                                      "children": [],
+                                                      "label": "$OLD.Status",
+                                                      "id": null,
+                                                      "type": "enrich",
+                                                      "value": "$NEW.status",
+                                                      "key": "$OLD.status"
+                                                  },
+                                                  {
+                                                      "children": [],
+                                                      "label": "$OLD.Severity",
+                                                      "id": null,
+                                                      "type": "enrich",
+                                                      "value": "$NEW.severity",
+                                                      "key": "$OLD.severity"
+                                                  },
+                                                  {
+                                                      "children": [
+                                                          {
+                                                              "showDescription": false,
+                                                              "children": [],
+                                                              "valueType": null,
+                                                              "placeholderText": null,
+                                                              "label": null,
+                                                              "id": null,
+                                                              "type": "data",
+                                                              "value": "$NEW.msg"
+                                                          }
+                                                      ],
+                                                      "label": "Enrich Message",
+                                                      "id": null,
+                                                      "type": "enrich",
+                                                      "value": null,
+                                                      "key": "$OLD.msg"
+                                                  },
+                                                  {
+                                                      "children": [
+                                                          {
+                                                              "children": [
+                                                                  {
+                                                                      "showDescription": false,
+                                                                      "children": [],
+                                                                      "valueType": null,
+                                                                      "placeholderText": null,
+                                                                      "label": null,
+                                                                      "id": null,
+                                                                      "type": "data",
+                                                                      "value": "+"
+                                                                  },
+                                                                  {
+                                                                      "showDescription": false,
+                                                                      "children": [],
+                                                                      "valueType": null,
+                                                                      "placeholderText": null,
+                                                                      "label": null,
+                                                                      "id": null,
+                                                                      "type": "data",
+                                                                      "value": "$OLD._repeat_count"
+                                                                  },
+                                                                  {
+                                                                      "showDescription": false,
+                                                                      "children": [],
+                                                                      "valueType": null,
+                                                                      "placeholderText": null,
+                                                                      "label": null,
+                                                                      "id": null,
+                                                                      "type": "data",
+                                                                      "value": "1"
+                                                                  }
+                                                              ],
+                                                              "name": "Math",
+                                                              "label": null,
+                                                              "id": null,
+                                                              "type": "function"
+                                                          }
+                                                      ],
+                                                      "label": "$OLD.Repeated",
+                                                      "id": null,
+                                                      "type": "enrich",
+                                                      "value": null,
+                                                      "key": "$OLD._repeat_count"
+                                                  },
+                                                  {
+                                                      "children": [
+                                                          {
+                                                              "children": null,
+                                                              "label": null,
+                                                              "id": null,
+                                                              "type": "objectData",
+                                                              "value": {
+                                                                  "note": "AppDynamics Deduplication: Source Event Id %source_unique_event_id% Dropped.",
+                                                                  "on": "OLD"
+                                                              }
+                                                          }
+                                                      ],
+                                                      "name": "AddNote",
+                                                      "label": "Add Notes for Dropped source event id",
+                                                      "id": null,
+                                                      "type": "function"
+                                                  }
+                                              ],
+                                              "label": "",
+                                              "id": null,
+                                              "type": "updateOld"
+                                          },
+                                          {
+                                              "children": [
+                                                  {
+                                                      "children": [],
+                                                      "name": "DropNewEvent",
+                                                      "label": "Drop Duplicate Event",
+                                                      "id": null,
+                                                      "type": "function"
+                                                  }
+                                              ],
+                                              "label": "",
+                                              "id": null,
+                                              "type": "updateNew"
+                                          }
+                                      ],
+                                      "withinInSeconds": 0,
+                                      "label": "Detect Duplicate Event",
+                                      "id": null,
+                                      "duplicate": false,
+                                      "type": "lookup",
+                                      "conditions": [
+                                          {
+                                              "slotName": "$OLD.source_unique_event_id",
+                                              "slotOperator": "equals",
+                                              "conditionOperator": "",
+                                              "conditionBracket": "",
+                                              "conditionOrder": 0,
+                                              "endBracket": "",
+                                              "slotValue": "$NEW.source_unique_event_id"
+                                          },
+                                          {
+                                              "slotName": "$OLD.source_identifier",
+                                              "slotOperator": "equals",
+                                              "conditionOperator": "AND",
+                                              "conditionBracket": "",
+                                              "conditionOrder": 1,
+                                              "endBracket": "",
+                                              "slotValue": "$NEW.source_identifier"
+                                          },
+                                          {
+                                              "slotName": "$OLD._identifier",
+                                              "slotOperator": "not_equals",
+                                              "conditionOperator": "AND",
+                                              "conditionBracket": "",
+                                              "conditionOrder": 2,
+                                              "endBracket": "",
+                                              "slotValue": "$NEW._identifier"
+                                          }
+                                      ],
+                                      "fetchEventForClass": "AppDynamicsHRVEvent"
+                                  }
+                              ],
+                              "id": null,
+                              "label": "Detect the duplicate event and drop the duplicate event",
+                              "type": "root"
+                          },
+                          "timeframeStatus": "",
+                          "subType": ""
+                      }
+                  ],
+                  "timeframes": [
+                      "-1"
+                  ],
+                  "timeframe_state": []
+              },
+              {
+                  "tenantId": "346862526",
+                  "id": "973a9bcc-7ca2-11ed-8056-d978329eeea0",
+                  "name": "Drop Duplicate Events - BMC Helix Intelligent Integrations",
+                  "types": [
+                      "ADVANCED_ENRICHMENT"
+                  ],
+                  "description": "OOB - BMC Helix Intelligent Integrations - Policy to drop the new event if an old event is present with the same details as the new one.",
+                  "executionOrder": 100,
+                  "selector": "9738c70b-7ca2-11ed-8056-c1aeb6a3dbb7",
+                  "selectorCriteria": "( class equals 'IIMonitorEvent' )",
+                  "owner": "LNO3IKROEUWOB5HGQGSGF87BXQ4ZUS",
+                  "enabled": false,
+                  "readOnly": false,
+                  "creationTime": 1671127328212,
+                  "modificationTime": 1672834381437,
+                  "configurations": [
+                      {
+                          "tenantId": "346862526",
+                          "policyId": "973a9bcc-7ca2-11ed-8056-d978329eeea0",
+                          "id": "223bded1-8c29-11ed-b012-a1bf8133d1f4",
+                          "type": "ADVANCED_ENRICHMENT",
+                          "configOrder": 1,
+                          "creationTime": 0,
+                          "modificationTime": 0,
+                          "definition": {
+                              "children": [
+                                  {
+                                      "all": true,
+                                      "children": [
+                                          {
+                                              "children": [
+                                                  {
+                                                      "children": [
+                                                          {
+                                                              "children": null,
+                                                              "label": null,
+                                                              "id": "PMiwG",
+                                                              "type": "objectData",
+                                                              "value": {
+                                                                  "note": "Source Event Id %source_unique_event_id% Dropped.",
+                                                                  "on": "OLD"
+                                                              }
+                                                          }
+                                                      ],
+                                                      "name": "AddNote",
+                                                      "label": "Add Notes for Dropped source event id",
+                                                      "id": "fpDxI",
+                                                      "type": "function"
+                                                  }
+                                              ],
+                                              "label": "",
+                                              "id": "ijVJQ",
+                                              "type": "updateOld"
+                                          },
+                                          {
+                                              "children": [
+                                                  {
+                                                      "children": [],
+                                                      "name": "DropNewEvent",
+                                                      "label": "Drop Duplicate Event",
+                                                      "id": "jJgYs",
+                                                      "type": "function"
+                                                  }
+                                              ],
+                                              "label": "",
+                                              "id": "qmPgI",
+                                              "type": "updateNew"
+                                          }
+                                      ],
+                                      "withinInSeconds": 0,
+                                      "label": "Detect Duplicate Event",
+                                      "id": "DnwNP",
+                                      "duplicate": false,
+                                      "type": "lookup",
+                                      "conditions": [
+                                          {
+                                              "slotName": "$OLD.source_identifier",
+                                              "slotOperator": "equals",
+                                              "conditionOperator": "",
+                                              "conditionBracket": "(",
+                                              "conditionOrder": 0,
+                                              "endBracket": ")",
+                                              "slotValue": "$NEW.source_identifier"
+                                          },
+                                          {
+                                              "slotName": "$OLD.source_unique_event_id",
+                                              "slotOperator": "equals",
+                                              "conditionOperator": "AND",
+                                              "conditionBracket": "(",
+                                              "conditionOrder": 1,
+                                              "endBracket": ")",
+                                              "slotValue": "$NEW.source_unique_event_id"
+                                          },
+                                          {
+                                              "slotName": "$OLD.creation_time",
+                                              "slotOperator": "equals",
+                                              "conditionOperator": "AND",
+                                              "conditionBracket": "(",
+                                              "conditionOrder": 2,
+                                              "endBracket": ")",
+                                              "slotValue": "$NEW.creation_time"
+                                          },
+                                          {
+                                              "slotName": "$OLD.status",
+                                              "slotOperator": "not_equals",
+                                              "conditionOperator": "AND",
+                                              "conditionBracket": "",
+                                              "conditionOrder": 3,
+                                              "endBracket": "",
+                                              "slotValue": "CLOSED"
+                                          }
+                                      ],
+                                      "fetchEventForClass": "IIMonitorEvent"
+                                  }
+                              ],
+                              "id": "CErjC",
+                              "label": "Detect the duplicate event and drop the duplicate event",
+                              "type": "root"
+                          },
+                          "timeframeStatus": "",
+                          "subType": ""
+                      }
+                  ],
+                  "timeframes": [
+                      "-1"
+                  ],
+                  "timeframe_state": []
+              },
+              {
+                  "tenantId": "346862526",
+                  "id": "219018d1-8094-11ed-a462-3332347b5d72",
+                  "name": "Appd-Lower Severity for Caida_Agente_App",
+                  "types": [
+                      "BASIC_ENRICHMENT"
+                  ],
+                  "description": "APPD1.1.x - Lower severity to INFO, for all alerts Caida_Agente_App from AppDynamic",
+                  "executionOrder": 1000,
+                  "selector": "218dcee0-8094-11ed-a462-25f79987fe6d",
+                  "selectorCriteria": "class equals 'AppDynamicsHRVEvent' AND appDySubCategory equals 'Caida_Agente_App'",
+                  "owner": "jorge_xifra@bmc.com",
+                  "enabled": true,
+                  "readOnly": false,
+                  "creationTime": 1671560922498,
+                  "modificationTime": 1672777716511,
+                  "configurations": [
+                      {
+                          "tenantId": "346862526",
+                          "policyId": "219018d1-8094-11ed-a462-3332347b5d72",
+                          "id": "334e08ac-8ba5-11ed-b012-0565423e5acb",
+                          "type": "BASIC_ENRICHMENT",
+                          "configOrder": 1,
+                          "creationTime": 0,
+                          "modificationTime": 0,
+                          "definition": {
+                              "processing_action": {
+                                  "severity": "INFO"
+                              },
+                              "id": null
+                          },
+                          "timeframeStatus": "",
+                          "subType": ""
+                      }
+                  ],
+                  "timeframes": [
+                      "-1"
+                  ],
+                  "timeframe_state": []
+              },
+              {
+                  "tenantId": "346862526",
+                  "id": "e0bd16c9-8ba0-11ed-b012-71892113c17e",
+                  "name": "Remedy-Test",
+                  "types": [
+                      "NOTIFICATION"
+                  ],
+                  "description": "",
+                  "executionOrder": 9999,
+                  "selector": "e0baa5c8-8ba0-11ed-b012-4b29ef6887db",
+                  "selectorCriteria": "class equals 'MonitorEvent' AND msg equals 'CREAR_INCIDENTE'",
+                  "owner": "activationuser",
+                  "enabled": true,
+                  "readOnly": false,
+                  "creationTime": 1672775859993,
+                  "modificationTime": 1672775859993,
+                  "configurations": [
+                      {
+                          "tenantId": "346862526",
+                          "policyId": "e0bd16c9-8ba0-11ed-b012-71892113c17e",
+                          "id": "e0bd16ca-8ba0-11ed-b012-39f0e244fe91",
+                          "type": "NOTIFICATION",
+                          "configOrder": 1,
+                          "creationTime": 0,
+                          "modificationTime": 0,
+                          "definition": {
+                              "update_events_filter_criteria": {
+                                  "filterCriteria": [],
+                                  "eventClass": "MonitorEvent"
+                              },
+                              "processing_action": {
+                                  "autoAck": "false",
+                                  "notificationService": "incident"
+                              }
+                          },
+                          "timeframeStatus": "",
+                          "subType": ""
+                      }
+                  ],
+                  "timeframes": [
+                      "-1"
+                  ],
+                  "timeframe_state": []
+              },
+              {
+                  "tenantId": "346862526",
+                  "id": "c1ddfd22-8b87-11ed-9887-358ace7db695",
+                  "name": "Deduplicate Nagios Events - NagiosEvent Class",
+                  "types": [
+                      "ADVANCED_ENRICHMENT"
+                  ],
+                  "description": "NAGIOS1.3.2 - Deduplicates Nagios Events when they are NagiosEvent",
+                  "executionOrder": 9000,
+                  "selector": "c1db16f1-8b87-11ed-9887-e9aa9620210e",
+                  "selectorCriteria": "class equals 'NagiosEvent'",
+                  "owner": "activationuser",
+                  "enabled": true,
+                  "readOnly": false,
+                  "creationTime": 1672765070779,
+                  "modificationTime": 1672770131837,
+                  "configurations": [
+                      {
+                          "tenantId": "346862526",
+                          "policyId": "c1ddfd22-8b87-11ed-9887-358ace7db695",
+                          "id": "8a7d8aa6-8b93-11ed-8dca-539452feca07",
+                          "type": "ADVANCED_ENRICHMENT",
+                          "configOrder": 1,
+                          "creationTime": 0,
+                          "modificationTime": 0,
+                          "definition": {
+                              "children": [
+                                  {
+                                      "all": true,
+                                      "children": [
+                                          {
+                                              "children": [
+                                                  {
+                                                      "children": [
+                                                          {
+                                                              "children": [
+                                                                  {
+                                                                      "showDescription": false,
+                                                                      "children": [],
+                                                                      "valueType": null,
+                                                                      "placeholderText": null,
+                                                                      "label": null,
+                                                                      "id": null,
+                                                                      "type": "data",
+                                                                      "value": "+"
+                                                                  },
+                                                                  {
+                                                                      "showDescription": false,
+                                                                      "children": [],
+                                                                      "valueType": null,
+                                                                      "placeholderText": null,
+                                                                      "label": null,
+                                                                      "id": null,
+                                                                      "type": "data",
+                                                                      "value": "$OLD._repeat_count"
+                                                                  },
+                                                                  {
+                                                                      "showDescription": false,
+                                                                      "children": [],
+                                                                      "valueType": null,
+                                                                      "placeholderText": null,
+                                                                      "label": null,
+                                                                      "id": null,
+                                                                      "type": "data",
+                                                                      "value": "1"
+                                                                  }
+                                                              ],
+                                                              "name": "Math",
+                                                              "label": null,
+                                                              "id": null,
+                                                              "type": "function"
+                                                          }
+                                                      ],
+                                                      "label": "Increment Repeated",
+                                                      "id": null,
+                                                      "type": "enrich",
+                                                      "value": null,
+                                                      "key": "$OLD._repeat_count"
+                                                  },
+                                                  {
+                                                      "children": [],
+                                                      "label": "Enrich Status",
+                                                      "id": null,
+                                                      "type": "enrich",
+                                                      "value": "$NEW.status",
+                                                      "key": "$OLD.status"
+                                                  },
+                                                  {
+                                                      "children": [],
+                                                      "label": "Enrich Severity",
+                                                      "id": null,
+                                                      "type": "enrich",
+                                                      "value": "$NEW.severity",
+                                                      "key": "$OLD.severity"
+                                                  },
+                                                  {
+                                                      "children": [
+                                                          {
+                                                              "showDescription": false,
+                                                              "children": [],
+                                                              "valueType": null,
+                                                              "placeholderText": null,
+                                                              "label": null,
+                                                              "id": null,
+                                                              "type": "data",
+                                                              "value": "$NEW.msg"
+                                                          }
+                                                      ],
+                                                      "label": "Enrich Message",
+                                                      "id": null,
+                                                      "type": "enrich",
+                                                      "value": null,
+                                                      "key": "$OLD.msg"
+                                                  },
+                                                  {
+                                                      "children": [
+                                                          {
+                                                              "children": null,
+                                                              "label": null,
+                                                              "id": null,
+                                                              "type": "objectData",
+                                                              "value": {
+                                                                  "note": "Event deduplicated and updated",
+                                                                  "on": "OLD"
+                                                              }
+                                                          }
+                                                      ],
+                                                      "name": "AddNote",
+                                                      "label": "Add Notes for Dropped source event id",
+                                                      "id": null,
+                                                      "type": "function"
+                                                  }
+                                              ],
+                                              "label": "",
+                                              "id": null,
+                                              "type": "updateOld"
+                                          },
+                                          {
+                                              "children": [
+                                                  {
+                                                      "children": [],
+                                                      "name": "DropNewEvent",
+                                                      "label": "Drop Duplicate Event",
+                                                      "id": null,
+                                                      "type": "function"
+                                                  }
+                                              ],
+                                              "label": "",
+                                              "id": null,
+                                              "type": "updateNew"
+                                          }
+                                      ],
+                                      "withinInSeconds": 0,
+                                      "label": "Detect Duplicate Event",
+                                      "id": null,
+                                      "duplicate": false,
+                                      "type": "lookup",
+                                      "conditions": [
+                                          {
+                                              "slotName": "$OLD.status",
+                                              "slotOperator": "not_equals",
+                                              "conditionOperator": "",
+                                              "conditionBracket": "",
+                                              "conditionOrder": 0,
+                                              "endBracket": "",
+                                              "slotValue": "CLOSED"
+                                          },
+                                          {
+                                              "slotName": "$OLD.source_identifier",
+                                              "slotOperator": "equals",
+                                              "conditionOperator": "AND",
+                                              "conditionBracket": "",
+                                              "conditionOrder": 1,
+                                              "endBracket": "",
+                                              "slotValue": "$NEW.source_identifier"
+                                          }
+                                      ],
+                                      "fetchEventForClass": "NagiosEvent"
+                                  }
+                              ],
+                              "id": null,
+                              "label": "Detect the duplicate event and drop the duplicate event",
+                              "type": "root"
+                          },
+                          "timeframeStatus": "",
+                          "subType": ""
+                      }
+                  ],
+                  "timeframes": [
+                      "-1"
+                  ],
+                  "timeframe_state": []
+              },
+              {
+                  "tenantId": "346862526",
+                  "id": "67e16370-879e-11ed-8b31-0b1a6a1225f1",
+                  "name": "Deduplicate Change Events",
+                  "types": [
+                      "ADVANCED_ENRICHMENT"
+                  ],
+                  "description": "CHANGE2.1 - Deduplicates Change Events if they have the same CRQ ID and CI Name",
+                  "executionOrder": 9000,
+                  "selector": "67df408f-879e-11ed-8b31-6f654972cbde",
+                  "selectorCriteria": "class equals 'CHANGE_EV'",
+                  "owner": "activationuser",
+                  "enabled": true,
+                  "readOnly": false,
+                  "creationTime": 1672334993578,
+                  "modificationTime": 1672765318868,
+                  "configurations": [
+                      {
+                          "tenantId": "346862526",
+                          "policyId": "67e16370-879e-11ed-8b31-0b1a6a1225f1",
+                          "id": "55bcc114-8b88-11ed-8dca-731b47bb3c57",
+                          "type": "ADVANCED_ENRICHMENT",
+                          "configOrder": 1,
+                          "creationTime": 0,
+                          "modificationTime": 0,
+                          "definition": {
+                              "children": [
+                                  {
+                                      "all": true,
+                                      "children": [
+                                          {
+                                              "children": [
+                                                  {
+                                                      "children": [
+                                                          {
+                                                              "children": [
+                                                                  {
+                                                                      "showDescription": false,
+                                                                      "children": [],
+                                                                      "valueType": null,
+                                                                      "placeholderText": "Operator",
+                                                                      "label": null,
+                                                                      "id": null,
+                                                                      "type": "data",
+                                                                      "value": "+"
+                                                                  },
+                                                                  {
+                                                                      "showDescription": false,
+                                                                      "children": [],
+                                                                      "valueType": null,
+                                                                      "placeholderText": "Operand1",
+                                                                      "label": null,
+                                                                      "id": null,
+                                                                      "type": "data",
+                                                                      "value": "$OLD._repeat_count"
+                                                                  },
+                                                                  {
+                                                                      "showDescription": false,
+                                                                      "children": [],
+                                                                      "valueType": null,
+                                                                      "placeholderText": "Operand2",
+                                                                      "label": null,
+                                                                      "id": null,
+                                                                      "type": "data",
+                                                                      "value": "1"
+                                                                  }
+                                                              ],
+                                                              "name": "Math",
+                                                              "label": null,
+                                                              "id": null,
+                                                              "type": "function"
+                                                          }
+                                                      ],
+                                                      "label": "Increment repeat counter",
+                                                      "id": null,
+                                                      "type": "enrich",
+                                                      "value": null,
+                                                      "key": "$OLD._repeat_count"
+                                                  },
+                                                  {
+                                                      "children": [
+                                                          {
+                                                              "showDescription": false,
+                                                              "children": [],
+                                                              "valueType": null,
+                                                              "placeholderText": null,
+                                                              "label": null,
+                                                              "id": null,
+                                                              "type": "data",
+                                                              "value": "$OLD.ch_ChangeStatus"
+                                                          }
+                                                      ],
+                                                      "label": "Enrich Change Status",
+                                                      "id": null,
+                                                      "type": "enrich",
+                                                      "value": null,
+                                                      "key": "$OLD.ch_ChangeStatus"
+                                                  },
+                                                  {
+                                                      "children": [],
+                                                      "label": "Enrich Status",
+                                                      "id": null,
+                                                      "type": "enrich",
+                                                      "value": "$NEW.status",
+                                                      "key": "$OLD.status"
+                                                  },
+                                                  {
+                                                      "children": [
+                                                          {
+                                                              "showDescription": false,
+                                                              "children": [],
+                                                              "valueType": null,
+                                                              "placeholderText": null,
+                                                              "label": null,
+                                                              "id": null,
+                                                              "type": "data",
+                                                              "value": "$NEW.ch_changeModifiedDateEpoch"
+                                                          }
+                                                      ],
+                                                      "label": "Enrich ch_changeModifiedDateEpoch",
+                                                      "id": null,
+                                                      "type": "enrich",
+                                                      "value": null,
+                                                      "key": "$OLD.ch_changeModifiedDateEpoch"
+                                                  },
+                                                  {
+                                                      "children": [
+                                                          {
+                                                              "showDescription": false,
+                                                              "children": [],
+                                                              "valueType": null,
+                                                              "placeholderText": null,
+                                                              "label": null,
+                                                              "id": null,
+                                                              "type": "data",
+                                                              "value": "$NEW.ch_actualStartDateEpoch"
+                                                          }
+                                                      ],
+                                                      "label": "Enrich ch_actualStartDateEpoch",
+                                                      "id": null,
+                                                      "type": "enrich",
+                                                      "value": null,
+                                                      "key": "$OLD.ch_actualStartDateEpoch"
+                                                  },
+                                                  {
+                                                      "children": [
+                                                          {
+                                                              "showDescription": false,
+                                                              "children": [],
+                                                              "valueType": null,
+                                                              "placeholderText": null,
+                                                              "label": null,
+                                                              "id": null,
+                                                              "type": "data",
+                                                              "value": "$NEW.ch_actualEndDateEpoch"
+                                                          }
+                                                      ],
+                                                      "label": "Enrich ch_actualEndDateEpoch",
+                                                      "id": null,
+                                                      "type": "enrich",
+                                                      "value": null,
+                                                      "key": "$OLD.ch_actualEndDateEpoch"
+                                                  },
+                                                  {
+                                                      "children": [
+                                                          {
+                                                              "children": null,
+                                                              "label": null,
+                                                              "id": null,
+                                                              "type": "objectData",
+                                                              "value": {
+                                                                  "note": "Change deduplicated and updated",
+                                                                  "on": "OLD"
+                                                              }
+                                                          }
+                                                      ],
+                                                      "name": "AddNote",
+                                                      "label": "Add Notes for Dropped source event id",
+                                                      "id": null,
+                                                      "type": "function"
+                                                  }
+                                              ],
+                                              "label": "",
+                                              "id": null,
+                                              "type": "updateOld"
+                                          },
+                                          {
+                                              "children": [
+                                                  {
+                                                      "children": [],
+                                                      "name": "DropNewEvent",
+                                                      "label": "Drop Duplicate Event",
+                                                      "id": null,
+                                                      "type": "function"
+                                                  }
+                                              ],
+                                              "label": "",
+                                              "id": null,
+                                              "type": "updateNew"
+                                          }
+                                      ],
+                                      "withinInSeconds": 0,
+                                      "label": "Detect Duplicate Event",
+                                      "id": null,
+                                      "duplicate": false,
+                                      "type": "lookup",
+                                      "conditions": [
+                                          {
+                                              "slotName": "$OLD.ch_changeID",
+                                              "slotOperator": "equals",
+                                              "conditionOperator": "",
+                                              "conditionBracket": "",
+                                              "conditionOrder": 0,
+                                              "endBracket": "",
+                                              "slotValue": "$NEW.ch_changeID"
+                                          },
+                                          {
+                                              "slotName": "$OLD.ch_ciName",
+                                              "slotOperator": "equals",
+                                              "conditionOperator": "AND",
+                                              "conditionBracket": "",
+                                              "conditionOrder": 1,
+                                              "endBracket": "",
+                                              "slotValue": "$NEW.ch_ciName"
+                                          },
+                                          {
+                                              "slotName": "$OLD.status",
+                                              "slotOperator": "not_equals",
+                                              "conditionOperator": "AND",
+                                              "conditionBracket": "",
+                                              "conditionOrder": 2,
+                                              "endBracket": "",
+                                              "slotValue": "CLOSED"
+                                          }
+                                      ],
+                                      "fetchEventForClass": "CHANGE_EV"
+                                  }
+                              ],
+                              "id": null,
+                              "label": "Detect the duplicate event and drop the duplicate event",
+                              "type": "root"
+                          },
+                          "timeframeStatus": "",
+                          "subType": ""
+                      }
+                  ],
+                  "timeframes": [
+                      "-1"
+                  ],
+                  "timeframe_state": []
+              },
+              {
+                  "tenantId": "346862526",
+                  "id": "1983e28c-8b88-11ed-b012-df0bfa0eb64f",
+                  "name": "Deduplicate OEM Events",
+                  "types": [
+                      "ADVANCED_ENRICHMENT"
+                  ],
+                  "description": "OEM1.4 - Deduplicates OEM Events",
+                  "executionOrder": 9000,
+                  "selector": "1981236b-8b88-11ed-b012-83034aa421ee",
+                  "selectorCriteria": "class equals 'OEMEvent'",
+                  "owner": "activationuser",
+                  "enabled": false,
+                  "readOnly": false,
+                  "creationTime": 1672765217827,
+                  "modificationTime": 1672765217827,
+                  "configurations": [
+                      {
+                          "tenantId": "346862526",
+                          "policyId": "1983e28c-8b88-11ed-b012-df0bfa0eb64f",
+                          "id": "1983e28d-8b88-11ed-b012-0b032102f94e",
+                          "type": "ADVANCED_ENRICHMENT",
+                          "configOrder": 1,
+                          "creationTime": 0,
+                          "modificationTime": 0,
+                          "definition": {
+                              "children": [
+                                  {
+                                      "all": true,
+                                      "children": [
+                                          {
+                                              "children": [
+                                                  {
+                                                      "children": [
+                                                          {
+                                                              "children": [
+                                                                  {
+                                                                      "showDescription": false,
+                                                                      "children": [],
+                                                                      "valueType": null,
+                                                                      "placeholderText": "Operator",
+                                                                      "label": null,
+                                                                      "id": null,
+                                                                      "type": "data",
+                                                                      "value": "+"
+                                                                  },
+                                                                  {
+                                                                      "showDescription": false,
+                                                                      "children": [],
+                                                                      "valueType": null,
+                                                                      "placeholderText": "Operand1",
+                                                                      "label": null,
+                                                                      "id": null,
+                                                                      "type": "data",
+                                                                      "value": "$OLD._repeat_count"
+                                                                  },
+                                                                  {
+                                                                      "showDescription": false,
+                                                                      "children": [],
+                                                                      "valueType": null,
+                                                                      "placeholderText": "Operand2",
+                                                                      "label": null,
+                                                                      "id": null,
+                                                                      "type": "data",
+                                                                      "value": "1"
+                                                                  }
+                                                              ],
+                                                              "name": "Math",
+                                                              "label": null,
+                                                              "id": null,
+                                                              "type": "function"
+                                                          }
+                                                      ],
+                                                      "label": "Increment Repeated",
+                                                      "id": null,
+                                                      "type": "enrich",
+                                                      "value": null,
+                                                      "key": "$OLD._repeat_count"
+                                                  },
+                                                  {
+                                                      "children": [],
+                                                      "label": "Enrich Status",
+                                                      "id": null,
+                                                      "type": "enrich",
+                                                      "value": "$NEW.status",
+                                                      "key": "$OLD.status"
+                                                  },
+                                                  {
+                                                      "children": [],
+                                                      "label": "Enrich Severity",
+                                                      "id": null,
+                                                      "type": "enrich",
+                                                      "value": "$NEW.severity",
+                                                      "key": "$OLD.severity"
+                                                  },
+                                                  {
+                                                      "children": [
+                                                          {
+                                                              "showDescription": false,
+                                                              "children": [],
+                                                              "valueType": null,
+                                                              "placeholderText": null,
+                                                              "label": null,
+                                                              "id": null,
+                                                              "type": "data",
+                                                              "value": "$NEW.msg"
+                                                          }
+                                                      ],
+                                                      "label": "Enrich Message",
+                                                      "id": null,
+                                                      "type": "enrich",
+                                                      "value": null,
+                                                      "key": "$OLD.msg"
+                                                  },
+                                                  {
+                                                      "children": [
+                                                          {
+                                                              "children": null,
+                                                              "label": null,
+                                                              "id": null,
+                                                              "type": "objectData",
+                                                              "value": {
+                                                                  "note": "Event deduplicated and updated",
+                                                                  "on": "OLD"
+                                                              }
+                                                          }
+                                                      ],
+                                                      "name": "AddNote",
+                                                      "label": "Add Notes for Dropped source event id",
+                                                      "id": null,
+                                                      "type": "function"
+                                                  }
+                                              ],
+                                              "label": "",
+                                              "id": null,
+                                              "type": "updateOld"
+                                          },
+                                          {
+                                              "children": [
+                                                  {
+                                                      "children": [],
+                                                      "name": "DropNewEvent",
+                                                      "label": "Drop Duplicate Event",
+                                                      "id": null,
+                                                      "type": "function"
+                                                  }
+                                              ],
+                                              "label": "",
+                                              "id": null,
+                                              "type": "updateNew"
+                                          }
+                                      ],
+                                      "withinInSeconds": 0,
+                                      "label": "Detect Duplicate Event",
+                                      "id": null,
+                                      "duplicate": false,
+                                      "type": "lookup",
+                                      "conditions": [
+                                          {
+                                              "slotName": "$OLD.status",
+                                              "slotOperator": "not_equals",
+                                              "conditionOperator": "",
+                                              "conditionBracket": "",
+                                              "conditionOrder": 0,
+                                              "endBracket": "",
+                                              "slotValue": "CLOSED"
+                                          },
+                                          {
+                                              "slotName": "$OLD.source_identifier",
+                                              "slotOperator": "equals",
+                                              "conditionOperator": "AND",
+                                              "conditionBracket": "",
+                                              "conditionOrder": 1,
+                                              "endBracket": "",
+                                              "slotValue": "$NEW.source_identifier"
+                                          }
+                                      ],
+                                      "fetchEventForClass": "OEMEvent"
+                                  }
+                              ],
+                              "id": null,
+                              "label": "Detect the duplicate event and drop the duplicate event",
+                              "type": "root"
+                          },
+                          "timeframeStatus": "",
+                          "subType": ""
+                      }
+                  ],
+                  "timeframes": [
+                      "-1"
+                  ],
+                  "timeframe_state": []
+              },
+              {
+                  "tenantId": "346862526",
+                  "id": "1ab687dd-8859-11ed-919d-5b6a97855cc4",
+                  "name": "Deduplicate Nagios Events",
+                  "types": [
+                      "ADVANCED_ENRICHMENT"
+                  ],
+                  "description": "NAGIOS1.3.1 - Deduplicates Nagios Events when they are MonitorEvents",
+                  "executionOrder": 9000,
+                  "selector": "1ab3c8bc-8859-11ed-919d-573c1eda18da",
+                  "selectorCriteria": "class equals 'MonitorEvent' AND source_identifier contains 'NAGIOS'",
+                  "owner": "activationuser",
+                  "enabled": true,
+                  "readOnly": false,
+                  "creationTime": 1672415180002,
+                  "modificationTime": 1672765078428,
+                  "configurations": [
+                      {
+                          "tenantId": "346862526",
+                          "policyId": "1ab687dd-8859-11ed-919d-5b6a97855cc4",
+                          "id": "c66c8592-8b87-11ed-8dca-3b1f551e95d8",
+                          "type": "ADVANCED_ENRICHMENT",
+                          "configOrder": 1,
+                          "creationTime": 0,
+                          "modificationTime": 0,
+                          "definition": {
+                              "children": [
+                                  {
+                                      "all": true,
+                                      "children": [
+                                          {
+                                              "children": [
+                                                  {
+                                                      "children": [
+                                                          {
+                                                              "children": [
+                                                                  {
+                                                                      "showDescription": false,
+                                                                      "children": [],
+                                                                      "valueType": null,
+                                                                      "placeholderText": null,
+                                                                      "label": null,
+                                                                      "id": null,
+                                                                      "type": "data",
+                                                                      "value": "+"
+                                                                  },
+                                                                  {
+                                                                      "showDescription": false,
+                                                                      "children": [],
+                                                                      "valueType": null,
+                                                                      "placeholderText": null,
+                                                                      "label": null,
+                                                                      "id": null,
+                                                                      "type": "data",
+                                                                      "value": "$OLD._repeat_count"
+                                                                  },
+                                                                  {
+                                                                      "showDescription": false,
+                                                                      "children": [],
+                                                                      "valueType": null,
+                                                                      "placeholderText": null,
+                                                                      "label": null,
+                                                                      "id": null,
+                                                                      "type": "data",
+                                                                      "value": "1"
+                                                                  }
+                                                              ],
+                                                              "name": "Math",
+                                                              "label": null,
+                                                              "id": null,
+                                                              "type": "function"
+                                                          }
+                                                      ],
+                                                      "label": "Increment Repeated",
+                                                      "id": null,
+                                                      "type": "enrich",
+                                                      "value": null,
+                                                      "key": "$OLD._repeat_count"
+                                                  },
+                                                  {
+                                                      "children": [],
+                                                      "label": "Enrich Status",
+                                                      "id": null,
+                                                      "type": "enrich",
+                                                      "value": "$NEW.status",
+                                                      "key": "$OLD.status"
+                                                  },
+                                                  {
+                                                      "children": [],
+                                                      "label": "Enrich Severity",
+                                                      "id": null,
+                                                      "type": "enrich",
+                                                      "value": "$NEW.severity",
+                                                      "key": "$OLD.severity"
+                                                  },
+                                                  {
+                                                      "children": [
+                                                          {
+                                                              "showDescription": false,
+                                                              "children": [],
+                                                              "valueType": null,
+                                                              "placeholderText": null,
+                                                              "label": null,
+                                                              "id": null,
+                                                              "type": "data",
+                                                              "value": "$NEW.msg"
+                                                          }
+                                                      ],
+                                                      "label": "Enrich Message",
+                                                      "id": null,
+                                                      "type": "enrich",
+                                                      "value": null,
+                                                      "key": "$OLD.msg"
+                                                  },
+                                                  {
+                                                      "children": [
+                                                          {
+                                                              "children": null,
+                                                              "label": null,
+                                                              "id": null,
+                                                              "type": "objectData",
+                                                              "value": {
+                                                                  "note": "Event deduplicated and updated",
+                                                                  "on": "OLD"
+                                                              }
+                                                          }
+                                                      ],
+                                                      "name": "AddNote",
+                                                      "label": "Add Notes for Dropped source event id",
+                                                      "id": null,
+                                                      "type": "function"
+                                                  }
+                                              ],
+                                              "label": "",
+                                              "id": null,
+                                              "type": "updateOld"
+                                          },
+                                          {
+                                              "children": [
+                                                  {
+                                                      "children": [],
+                                                      "name": "DropNewEvent",
+                                                      "label": "Drop Duplicate Event",
+                                                      "id": null,
+                                                      "type": "function"
+                                                  }
+                                              ],
+                                              "label": "",
+                                              "id": null,
+                                              "type": "updateNew"
+                                          }
+                                      ],
+                                      "withinInSeconds": 0,
+                                      "label": "Detect Duplicate Event",
+                                      "id": null,
+                                      "duplicate": false,
+                                      "type": "lookup",
+                                      "conditions": [
+                                          {
+                                              "slotName": "$OLD.status",
+                                              "slotOperator": "not_equals",
+                                              "conditionOperator": "",
+                                              "conditionBracket": "",
+                                              "conditionOrder": 0,
+                                              "endBracket": "",
+                                              "slotValue": "CLOSED"
+                                          },
+                                          {
+                                              "slotName": "$OLD.source_identifier",
+                                              "slotOperator": "equals",
+                                              "conditionOperator": "AND",
+                                              "conditionBracket": "",
+                                              "conditionOrder": 1,
+                                              "endBracket": "",
+                                              "slotValue": "$NEW.source_identifier"
+                                          }
+                                      ],
+                                      "fetchEventForClass": "MonitorEvent"
+                                  }
+                              ],
+                              "id": null,
+                              "label": "Detect the duplicate event and drop the duplicate event",
+                              "type": "root"
+                          },
+                          "timeframeStatus": "",
+                          "subType": ""
+                      }
+                  ],
+                  "timeframes": [
+                      "-1"
+                  ],
+                  "timeframe_state": []
+              },
+              {
+                  "tenantId": "346862526",
+                  "id": "b5bb9dc8-88a0-11ed-8b31-0fc19ec73bf2",
+                  "name": "Recreate AppDynamics Events to remap Host to be equal AffectedEntityName",
+                  "types": [
+                      "ADVANCED_ENRICHMENT"
+                  ],
+                  "description": "APPD1.1.x - Recreate AppDynamics Events to remap source_hostname and external_id to be equal to affectedEntityName",
+                  "executionOrder": 101,
+                  "selector": "b5b97ae7-88a0-11ed-8b31-91b5882c7144",
+                  "selectorCriteria": "class equals 'AppDynamicsHRVEvent' AND status equals 'OPEN' AND affectedEntityName not_equals '$NEW.external_id'",
+                  "owner": "activationuser",
+                  "enabled": false,
+                  "readOnly": false,
+                  "creationTime": 1672445934350,
+                  "modificationTime": 1672692374341,
+                  "configurations": [
+                      {
+                          "tenantId": "346862526",
+                          "policyId": "b5bb9dc8-88a0-11ed-8b31-0fc19ec73bf2",
+                          "id": "7f68f170-8ade-11ed-8539-2d2c74baadfd",
+                          "type": "ADVANCED_ENRICHMENT",
+                          "configOrder": 1,
+                          "creationTime": 0,
+                          "modificationTime": 0,
+                          "definition": {
+                              "children": [
+                                  {
+                                      "children": [
+                                          {
+                                              "children": null,
+                                              "label": null,
+                                              "id": null,
+                                              "type": "objectData",
+                                              "value": {
+                                                  "msg": "%msg%",
+                                                  "tierType": "%tierType%",
+                                                  "agent_name": "%agent_name%",
+                                                  "modelname": "%modelname%",
+                                                  "ii_version": "%ii_version%",
+                                                  "machineName": "%machineName%",
+                                                  "markedAsResolved": "%markedAsResolved%",
+                                                  "source_identifier": "%source_identifier%",
+                                                  "incident_id": "%incident_id%",
+                                                  "incident_company": "%incident_company%",
+                                                  "appDyCategory": "%appDyCategory%",
+                                                  "details": "%details%",
+                                                  "eventId": "%eventId%",
+                                                  "affectedEntityId": "%affectedEntityId%",
+                                                  "agent_address": "%agent_address%",
+                                                  "priority": "$NEW.priority",
+                                                  "nodeType": "%nodeType%",
+                                                  "object_id": "%object_id%",
+                                                  "tags": "%tags%",
+                                                  "applicationDescription": "%applicationDescription%",
+                                                  "user_assigned": "%user_assigned%",
+                                                  "componentalias": "%componentalias%",
+                                                  "tierName": "%tierName%",
+                                                  "affectedEntityName": "%affectedEntityName%",
+                                                  "applicationId": "%applicationId%",
+                                                  "triggeredEntity": "%triggeredEntity%",
+                                                  "nodeId": "%nodeId%",
+                                                  "appDySubCategory": "%appDySubCategory%",
+                                                  "object": "%object%",
+                                                  "status": "$NEW.status",
+                                                  "nodeName": "%nodeName%",
+                                                  "metric_unit": "%metric_unit%",
+                                                  "incident_sysid": "%incident_sysid%",
+                                                  "external_id": "%affectedEntityName%",
+                                                  "businessTransactionId": "%businessTransactionId%",
+                                                  "targetIP": "%targetIP%",
+                                                  "archived": "%archived%",
+                                                  "metric_name": "%metric_name%",
+                                                  "class": "AppDynamicsHRVEvent",
+                                                  "object_class": "%object_class%",
+                                                  "applicationName": "%applicationName%",
+                                                  "severity": "$NEW.severity",
+                                                  "cdmclass": "%cdmclass%",
+                                                  "metric_value": "%metric_value%",
+                                                  "source_unique_event_id": "%source_unique_event_id%",
+                                                  "affectedEntityType": "%affectedEntityType%",
+                                                  "markedAsRead": "%markedAsRead%",
+                                                  "tierId": "%tierId%",
+                                                  "businessTransaction": "%businessTransaction%",
+                                                  "location": "%location%",
+                                                  "category": "$NEW.category",
+                                                  "source_hostname": "%affectedEntityName%"
+                                              }
+                                          }
+                                      ],
+                                      "name": "GenerateNewEvent",
+                                      "label": "Create new event",
+                                      "id": null,
+                                      "type": "function"
+                                  },
+                                  {
+                                      "children": [],
+                                      "name": "DropNewEvent",
+                                      "label": "Drop previous event",
+                                      "id": null,
+                                      "type": "function"
+                                  }
+                              ],
+                              "id": null,
+                              "label": "Recreate AppDynamics Events to remap source_hostname and external_id to be equal to affectedEntityName",
+                              "type": "root"
+                          },
+                          "timeframeStatus": "",
+                          "subType": ""
+                      }
+                  ],
+                  "timeframes": [
+                      "-1"
+                  ],
+                  "timeframe_state": []
+              },
+              {
+                  "tenantId": "346862526",
+                  "id": "9783b30e-7ca2-11ed-9f8e-e1f3357f4bb5",
+                  "name": "Update Old Events - BMC Helix Intelligent Integrations",
+                  "types": [
+                      "ADVANCED_ENRICHMENT"
+                  ],
+                  "description": "BMC Helix Intelligent Integrations - Policy to update the old event severity with the new event severity if the old event is of the same type. Create a new event if the old event is CLOSED.",
+                  "executionOrder": 9005,
+                  "selector": "9780a5cd-7ca2-11ed-9f8e-77e3e2d103f1",
+                  "selectorCriteria": "( class equals 'IIMonitorEvent' )",
+                  "owner": "LNO3IKROEUWOB5HGQGSGF87BXQ4ZUS",
+                  "enabled": false,
+                  "readOnly": false,
+                  "creationTime": 1671127328692,
+                  "modificationTime": 1671127328692,
+                  "configurations": [
+                      {
+                          "tenantId": "346862526",
+                          "policyId": "9783b30e-7ca2-11ed-9f8e-e1f3357f4bb5",
+                          "id": "9783b30f-7ca2-11ed-9f8e-a15bb5784b44",
+                          "type": "ADVANCED_ENRICHMENT",
+                          "configOrder": 1,
+                          "creationTime": 0,
+                          "modificationTime": 0,
+                          "definition": {
+                              "children": [
+                                  {
+                                      "all": true,
+                                      "children": [
+                                          {
+                                              "children": [
+                                                  {
+                                                      "children": [
+                                                          {
+                                                              "children": [
+                                                                  {
+                                                                      "showDescription": false,
+                                                                      "children": [],
+                                                                      "valueType": null,
+                                                                      "placeholderText": "Operator",
+                                                                      "label": null,
+                                                                      "id": null,
+                                                                      "type": "data",
+                                                                      "value": "+"
+                                                                  },
+                                                                  {
+                                                                      "showDescription": false,
+                                                                      "children": [],
+                                                                      "valueType": null,
+                                                                      "placeholderText": "Operand1",
+                                                                      "label": null,
+                                                                      "id": null,
+                                                                      "type": "data",
+                                                                      "value": "$OLD._repeat_count"
+                                                                  },
+                                                                  {
+                                                                      "showDescription": false,
+                                                                      "children": [],
+                                                                      "valueType": null,
+                                                                      "placeholderText": "Operand2",
+                                                                      "label": null,
+                                                                      "id": null,
+                                                                      "type": "data",
+                                                                      "value": "1"
+                                                                  }
+                                                              ],
+                                                              "name": "Math",
+                                                              "label": null,
+                                                              "id": null,
+                                                              "type": "function"
+                                                          }
+                                                      ],
+                                                      "label": "Increase Repeat Count",
+                                                      "id": null,
+                                                      "type": "enrich",
+                                                      "value": null,
+                                                      "key": "$OLD._repeat_count"
+                                                  },
+                                                  {
+                                                      "children": [],
+                                                      "label": "Update Old Event Severity with New Event Severity",
+                                                      "id": null,
+                                                      "type": "enrich",
+                                                      "value": "$NEW.severity",
+                                                      "key": "$OLD.severity"
+                                                  },
+                                                  {
+                                                      "children": [
+                                                          {
+                                                              "children": null,
+                                                              "label": null,
+                                                              "id": null,
+                                                              "type": "objectData",
+                                                              "value": {
+                                                                  "note": "Source Event Id %source_unique_event_id% Dropped.",
+                                                                  "on": "OLD"
+                                                              }
+                                                          }
+                                                      ],
+                                                      "name": "AddNote",
+                                                      "label": "Add Notes for Dropped Source event id",
+                                                      "id": null,
+                                                      "type": "function"
+                                                  }
+                                              ],
+                                              "label": "",
+                                              "id": null,
+                                              "type": "updateOld"
+                                          },
+                                          {
+                                              "children": [
+                                                  {
+                                                      "children": [],
+                                                      "name": "DropNewEvent",
+                                                      "label": "Drop Duplicate Event",
+                                                      "id": null,
+                                                      "type": "function"
+                                                  }
+                                              ],
+                                              "label": "",
+                                              "id": null,
+                                              "type": "updateNew"
+                                          }
+                                      ],
+                                      "withinInSeconds": 0,
+                                      "label": "Detect Duplicate Event",
+                                      "id": null,
+                                      "duplicate": false,
+                                      "type": "lookup",
+                                      "conditions": [
+                                          {
+                                              "slotName": "$OLD.status",
+                                              "slotOperator": "not_equals",
+                                              "conditionOperator": "",
+                                              "conditionBracket": "(",
+                                              "conditionOrder": 0,
+                                              "endBracket": ")",
+                                              "slotValue": "CLOSED"
+                                          },
+                                          {
+                                              "slotName": "$OLD.class",
+                                              "slotOperator": "equals",
+                                              "conditionOperator": "AND",
+                                              "conditionBracket": "(",
+                                              "conditionOrder": 1,
+                                              "endBracket": ")",
+                                              "slotValue": "$NEW.class"
+                                          },
+                                          {
+                                              "slotName": "$OLD.source_identifier",
+                                              "slotOperator": "equals",
+                                              "conditionOperator": "AND",
+                                              "conditionBracket": "(",
+                                              "conditionOrder": 2,
+                                              "endBracket": ")",
+                                              "slotValue": "$NEW.source_identifier"
+                                          },
+                                          {
+                                              "slotName": "$OLD.msg",
+                                              "slotOperator": "equals",
+                                              "conditionOperator": "AND",
+                                              "conditionBracket": "(",
+                                              "conditionOrder": 3,
+                                              "endBracket": ")",
+                                              "slotValue": "$NEW.msg"
+                                          },
+                                          {
+                                              "slotName": "$OLD._identifier",
+                                              "slotOperator": "not_equals",
+                                              "conditionOperator": "AND",
+                                              "conditionBracket": "(",
+                                              "conditionOrder": 4,
+                                              "endBracket": ")",
+                                              "slotValue": "$NEW._identifier"
+                                          }
+                                      ],
+                                      "fetchEventForClass": "IIMonitorEvent"
+                                  }
+                              ],
+                              "id": null,
+                              "label": "Detect the duplicate event, update the old event, increase the repeat count, and drop the duplicate event",
+                              "type": "root"
+                          },
+                          "timeframeStatus": "",
+                          "subType": ""
+                      }
+                  ],
+                  "timeframes": [
+                      "-1"
+                  ],
+                  "timeframe_state": []
+              },
+              {
+                  "tenantId": "346862526",
+                  "id": "af85041f-2233-11ed-9ca8-cf0415dc5f60",
+                  "name": "Template for Event Suppression",
+                  "types": [
+                      "SUPPRESSION"
+                  ],
+                  "description": "Policy to suppress events based on selection criteria",
+                  "executionOrder": 9999,
+                  "selector": "af85041e-2233-11ed-9ca8-afd9fe68bdf8",
+                  "selectorCriteria": "( class equals 'PATROL_EV' ) AND ( msg equals 'patrolevent' ) AND ( source_hostname equals 'server2' )",
+                  "owner": "admin",
+                  "enabled": false,
+                  "readOnly": false,
+                  "creationTime": 1661184090690,
+                  "modificationTime": 1661184090690,
+                  "configurations": [
+                      {
+                          "tenantId": "346862526",
+                          "policyId": "af85041f-2233-11ed-9ca8-cf0415dc5f60",
+                          "id": "caa64aeb-4c6e-4044-92ea-6fe278386290",
+                          "type": "SUPPRESSION",
+                          "configOrder": 1,
+                          "creationTime": 0,
+                          "modificationTime": 0,
+                          "definition": {
+                              "processing_post_action": {
+                                  "old_event_post_action": "",
+                                  "new_event_post_action": "drop"
+                              },
+                              "processing_action": {}
+                          },
+                          "timeframeStatus": "",
+                          "subType": ""
+                      }
+                  ],
+                  "timeframes": [
+                      "-1"
+                  ],
+                  "timeframe_state": []
+              },
+              {
+                  "tenantId": "346862526",
+                  "id": "af85041d-2233-11ed-9ca8-993618dd5f67",
+                  "name": "Template for Basic and Advanced Event Enrichment",
+                  "types": [
+                      "BASIC_ENRICHMENT",
+                      "ADVANCED_ENRICHMENT"
+                  ],
+                  "description": "Policy to set basic and advanced event enrichment actions",
+                  "executionOrder": 9999,
+                  "selector": "af85041c-2233-11ed-9ca8-9375426278e1",
+                  "selectorCriteria": "( class equals 'PATROL_EV' ) AND ( source_hostname equals 'server1' )",
+                  "owner": "admin",
+                  "enabled": false,
+                  "readOnly": false,
+                  "creationTime": 1661184090690,
+                  "modificationTime": 1661184090690,
+                  "configurations": [
+                      {
+                          "tenantId": "346862526",
+                          "policyId": "af85041d-2233-11ed-9ca8-993618dd5f67",
+                          "id": "a6d340dc-960a-4160-8e76-4cfd72d9f551",
+                          "type": "BASIC_ENRICHMENT",
+                          "configOrder": 1,
+                          "creationTime": 0,
+                          "modificationTime": 0,
+                          "definition": {
+                              "processing_action": {
+                                  "category": "PROBLEM_MANAGEMENT",
+                                  "priority": "PRIORITY_1"
+                              }
+                          },
+                          "timeframeStatus": "",
+                          "subType": ""
+                      },
+                      {
+                          "tenantId": "346862526",
+                          "policyId": "af85041d-2233-11ed-9ca8-993618dd5f67",
+                          "id": "6abe3a78-202d-46ce-8845-52c3d35bfcc6",
+                          "type": "ADVANCED_ENRICHMENT",
+                          "configOrder": 2,
+                          "creationTime": 0,
+                          "modificationTime": 0,
+                          "definition": {
+                              "children": [
+                                  {
+                                      "children": [
+                                          {
+                                              "children": [
+                                                  {
+                                                      "children": [],
+                                                      "type": "data",
+                                                      "value": "$NEW.source_hostname"
+                                                  },
+                                                  {
+                                                      "children": [],
+                                                      "type": "data",
+                                                      "value": "."
+                                                  }
+                                              ],
+                                              "name": "GetPosition",
+                                              "type": "function"
+                                          }
+                                      ],
+                                      "id": "hPvGX",
+                                      "label": "Location of dot",
+                                      "type": "assignVar",
+                                      "key": "$dotposition"
+                                  },
+                                  {
+                                      "children": [
+                                          {
+                                              "children": [
+                                                  {
+                                                      "children": [],
+                                                      "type": "data",
+                                                      "value": "-"
+                                                  },
+                                                  {
+                                                      "children": [],
+                                                      "type": "data",
+                                                      "value": "$dotlocation"
+                                                  },
+                                                  {
+                                                      "children": [],
+                                                      "type": "data",
+                                                      "value": "1"
+                                                  }
+                                              ],
+                                              "name": "Math",
+                                              "type": "function"
+                                          }
+                                      ],
+                                      "id": "JFJzD",
+                                      "label": "end position",
+                                      "type": "assignVar",
+                                      "key": "$endpostion"
+                                  },
+                                  {
+                                      "children": [
+                                          {
+                                              "children": [
+                                                  {
+                                                      "children": [],
+                                                      "type": "data",
+                                                      "value": "$NEW.source_hostname"
+                                                  },
+                                                  {
+                                                      "children": [],
+                                                      "type": "data",
+                                                      "value": "1"
+                                                  },
+                                                  {
+                                                      "children": [],
+                                                      "type": "data",
+                                                      "value": "$endposition"
+                                                  }
+                                              ],
+                                              "name": "SubstringOnPositions",
+                                              "type": "function"
+                                          }
+                                      ],
+                                      "id": "rlWWO",
+                                      "label": "get short host name",
+                                      "type": "assignVar",
+                                      "key": "$shorthostname"
+                                  },
+                                  {
+                                      "children": [
+                                          {
+                                              "children": [],
+                                              "type": "data",
+                                              "value": "$shorthostname"
+                                          }
+                                      ],
+                                      "id": "osjjB",
+                                      "label": "Fix Host name",
+                                      "type": "enrich",
+                                      "key": "$NEW.instancename"
+                                  }
+                              ],
+                              "id": "OYOQw",
+                              "label": "Parsing slot and enrich",
+                              "type": "root"
+                          },
+                          "timeframeStatus": "",
+                          "subType": ""
+                      },
+                      {
+                          "tenantId": "346862526",
+                          "policyId": "af85041d-2233-11ed-9ca8-993618dd5f67",
+                          "id": "ad3dcc47-45f5-4108-be66-4a7b94b5439e",
+                          "type": "ADVANCED_ENRICHMENT",
+                          "configOrder": 3,
+                          "creationTime": 0,
+                          "modificationTime": 0,
+                          "definition": {
+                              "children": [
+                                  {
+                                      "children": [
+                                          {
+                                              "children": [],
+                                              "id": "OGCGD",
+                                              "label": "Assign to Mike",
+                                              "type": "enrich",
+                                              "value": "Mike",
+                                              "key": "$NEW.user_assigned"
+                                          },
+                                          {
+                                              "children": [],
+                                              "id": "tGgjq",
+                                              "label": "Change status to Assigned",
+                                              "type": "enrich",
+                                              "value": "ASSIGNED",
+                                              "key": "$NEW.status"
+                                          },
+                                          {
+                                              "children": [],
+                                              "id": "xFXCM",
+                                              "label": "Severity to Major",
+                                              "type": "enrich",
+                                              "value": "MAJOR",
+                                              "key": "$NEW.severity"
+                                          }
+                                      ],
+                                      "id": "nUHiA",
+                                      "label": "check if Location is New York",
+                                      "type": "if",
+                                      "conditions": [
+                                          {
+                                              "slotName": "$NEW.location",
+                                              "slotOperator": "equals",
+                                              "conditionOrder": 0,
+                                              "conditionOperator": "",
+                                              "conditionBracket": "(",
+                                              "endBracket": ")",
+                                              "slotValue": "New York"
+                                          }
+                                      ]
+                                  },
+                                  {
+                                      "children": [
+                                          {
+                                              "children": [
+                                                  {
+                                                      "children": [],
+                                                      "id": "YuSbA",
+                                                      "label": "Assign to Shiela",
+                                                      "type": "enrich",
+                                                      "value": "Shiela",
+                                                      "key": "$NEW.user_assigned"
+                                                  },
+                                                  {
+                                                      "children": [],
+                                                      "id": "zwZeH",
+                                                      "label": "Change status to Assigned",
+                                                      "type": "enrich",
+                                                      "value": "ASSIGNED",
+                                                      "key": "$NEW.status"
+                                                  },
+                                                  {
+                                                      "children": [],
+                                                      "id": "yfBtI",
+                                                      "label": "Severity to Critical",
+                                                      "type": "enrich",
+                                                      "value": "CRITICAL",
+                                                      "key": "$NEW.severity"
+                                                  }
+                                              ],
+                                              "id": "uxWGA",
+                                              "label": "check if location is Chicago",
+                                              "type": "if",
+                                              "conditions": [
+                                                  {
+                                                      "slotName": "$NEW.location",
+                                                      "slotOperator": "equals",
+                                                      "conditionOrder": 0,
+                                                      "conditionOperator": "",
+                                                      "conditionBracket": "(",
+                                                      "endBracket": ")",
+                                                      "slotValue": "Chicago"
+                                                  }
+                                              ]
+                                          },
+                                          {
+                                              "children": [],
+                                              "id": "sxcDH",
+                                              "label": "",
+                                              "type": "else"
+                                          }
+                                      ],
+                                      "id": "FKrOl",
+                                      "label": "",
+                                      "type": "else"
+                                  }
+                              ],
+                              "id": "IzckB",
+                              "label": "Assign open events to particular people and change their severity and status",
+                              "type": "root"
+                          },
+                          "timeframeStatus": "",
+                          "subType": ""
+                      }
+                  ],
+                  "timeframes": [
+                      "-1"
+                  ],
+                  "timeframe_state": []
+              },
+              {
+                  "tenantId": "346862526",
+                  "id": "af850423-2233-11ed-9ca8-bdb6b8e6ba3b",
+                  "name": "Template for Closing Events and Dropping Duplicate Events",
+                  "types": [
+                      "ADVANCED_ENRICHMENT"
+                  ],
+                  "description": "Policy to close events when the event priority changes and drop duplicate events",
+                  "executionOrder": 9999,
+                  "selector": "af850422-2233-11ed-9ca8-b1a9c4c329a9",
+                  "selectorCriteria": "( msg contains 'ServerA' ) AND ( instancename equals 'instance1' )",
+                  "owner": "admin",
+                  "enabled": false,
+                  "readOnly": false,
+                  "creationTime": 1661184090690,
+                  "modificationTime": 1661184090690,
+                  "configurations": [
+                      {
+                          "tenantId": "346862526",
+                          "policyId": "af850423-2233-11ed-9ca8-bdb6b8e6ba3b",
+                          "id": "6b13e237-4743-4c6c-83d4-e7f811e66b0c",
+                          "type": "ADVANCED_ENRICHMENT",
+                          "configOrder": 1,
+                          "creationTime": 0,
+                          "modificationTime": 0,
+                          "definition": {
+                              "children": [
+                                  {
+                                      "fromTrigger": {
+                                          "slotName": "$NEW.priority",
+                                          "slotOperator": "greater_than",
+                                          "slotValue": "PRIORITY_3"
+                                      },
+                                      "children": [
+                                          {
+                                              "children": [],
+                                              "id": "oXquJ",
+                                              "label": "Close event",
+                                              "type": "enrich",
+                                              "value": "CLOSED",
+                                              "key": "$NEW.status"
+                                          }
+                                      ],
+                                      "id": "UsWsU",
+                                      "label": "Trigger only when priority changes",
+                                      "type": "trigger",
+                                      "toTrigger": {
+                                          "slotName": "$NEW.priority",
+                                          "slotOperator": "smaller_or_equals",
+                                          "slotValue": "PRIORITY_4"
+                                      }
+                                  }
+                              ],
+                              "id": "sVnlA",
+                              "label": "Close particular events when the event priority changes from one value to another value",
+                              "type": "root"
+                          },
+                          "timeframeStatus": "",
+                          "subType": ""
+                      },
+                      {
+                          "tenantId": "346862526",
+                          "policyId": "af850423-2233-11ed-9ca8-bdb6b8e6ba3b",
+                          "id": "8a8efc9b-3558-4401-bfdd-07177fee7546",
+                          "type": "ADVANCED_ENRICHMENT",
+                          "configOrder": 2,
+                          "creationTime": 0,
+                          "modificationTime": 0,
+                          "definition": {
+                              "children": [
+                                  {
+                                      "all": true,
+                                      "children": [
+                                          {
+                                              "children": [
+                                                  {
+                                                      "children": [],
+                                                      "name": "DropNewEvent",
+                                                      "id": "yuTBr",
+                                                      "label": "Drop new events",
+                                                      "type": "function"
+                                                  }
+                                              ],
+                                              "id": "UEBpC",
+                                              "label": "",
+                                              "type": "updateOld"
+                                          }
+                                      ],
+                                      "withinInSeconds": 60,
+                                      "id": "xmbzd",
+                                      "label": "Lookup for old events",
+                                      "duplicate": true,
+                                      "type": "lookup",
+                                      "conditions": [
+                                          {
+                                              "slotName": "$OLD.status",
+                                              "slotOperator": "not_equals",
+                                              "conditionOrder": 0,
+                                              "conditionOperator": "",
+                                              "conditionBracket": "",
+                                              "endBracket": "",
+                                              "slotValue": "BLACKOUT"
+                                          },
+                                          {
+                                              "slotName": "$OLD.status",
+                                              "slotOperator": "not_equals",
+                                              "conditionOrder": 1,
+                                              "conditionOperator": "AND",
+                                              "conditionBracket": "",
+                                              "endBracket": "",
+                                              "slotValue": "CLOSED"
+                                          }
+                                      ],
+                                      "fetchEventForClass": "EVENT"
+                                  }
+                              ],
+                              "id": "qMOrW",
+                              "label": "Drop duplicate events",
+                              "type": "root"
+                          },
+                          "timeframeStatus": "",
+                          "subType": ""
+                      }
+                  ],
+                  "timeframes": [
+                      "-1"
+                  ],
+                  "timeframe_state": []
+              },
+              {
+                  "tenantId": "346862526",
+                  "id": "af850421-2233-11ed-9ca8-cd47d3673040",
+                  "name": "Template for Timeout and Notification",
+                  "types": [
+                      "TIME_BASED",
+                      "NOTIFICATION"
+                  ],
+                  "description": "Policy to run time-based enrichment actions and send notifications",
+                  "executionOrder": 9999,
+                  "selector": "af850420-2233-11ed-9ca8-a74addb5fc3a",
+                  "selectorCriteria": "( class equals 'EVENT' ) AND ( source_hostname equals 'Server3' )",
+                  "owner": "admin",
+                  "enabled": false,
+                  "readOnly": false,
+                  "creationTime": 1661184090690,
+                  "modificationTime": 1661184090690,
+                  "configurations": [
+                      {
+                          "tenantId": "346862526",
+                          "policyId": "af850421-2233-11ed-9ca8-cd47d3673040",
+                          "id": "26044261-e4b3-44e2-87bd-20c07d3802af",
+                          "type": "TIME_BASED",
+                          "configOrder": 1,
+                          "creationTime": 0,
+                          "modificationTime": 0,
+                          "definition": {
+                              "children": [
+                                  {
+                                      "duration": 6,
+                                      "unit": "Hours",
+                                      "children": [
+                                          {
+                                              "children": [
+                                                  {
+                                                      "children": [],
+                                                      "id": "Djcpu",
+                                                      "label": "Enrich Severity",
+                                                      "type": "enrich",
+                                                      "value": "CRITICAL",
+                                                      "key": "$NEW.severity"
+                                                  },
+                                                  {
+                                                      "children": [],
+                                                      "id": "MBfrJ",
+                                                      "label": "Enrich owner",
+                                                      "type": "enrich",
+                                                      "value": "Admin",
+                                                      "key": "$NEW.user_assigned"
+                                                  }
+                                              ],
+                                              "id": "obxpx",
+                                              "label": "check status and severity",
+                                              "type": "if",
+                                              "conditions": [
+                                                  {
+                                                      "slotName": "$NEW.severity",
+                                                      "slotOperator": "equals",
+                                                      "conditionOrder": 0,
+                                                      "conditionOperator": "",
+                                                      "conditionBracket": "(",
+                                                      "endBracket": ")",
+                                                      "slotValue": "MAJOR"
+                                                  },
+                                                  {
+                                                      "slotName": "$NEW.status",
+                                                      "slotOperator": "not_equals",
+                                                      "conditionOrder": 1,
+                                                      "conditionOperator": "AND",
+                                                      "conditionBracket": "(",
+                                                      "endBracket": ")",
+                                                      "slotValue": "ASSIGNED"
+                                                  }
+                                              ]
+                                          },
+                                          {
+                                              "children": [],
+                                              "id": "JXaLK",
+                                              "label": "",
+                                              "type": "else"
+                                          }
+                                      ],
+                                      "id": "CUCbU",
+                                      "label": "Duration",
+                                      "type": "timeout",
+                                      "value": "",
+                                      "key": ""
+                                  }
+                              ],
+                              "id": "LGyto",
+                              "label": "Set a timer to run enrichment actions ",
+                              "type": "root"
+                          },
+                          "timeframeStatus": "",
+                          "subType": ""
+                      },
+                      {
+                          "tenantId": "346862526",
+                          "policyId": "af850421-2233-11ed-9ca8-cd47d3673040",
+                          "id": "22412ea7-84c1-40a6-ac2d-a1b0b91bb18f",
+                          "type": "NOTIFICATION",
+                          "configOrder": 2,
+                          "creationTime": 0,
+                          "modificationTime": 0,
+                          "definition": {
+                              "update_events_filter_criteria": {
+                                  "filterCriteria": [
+                                      {
+                                          "criteria": [
+                                              {
+                                                  "slot_operator": "equals",
+                                                  "slot_value": "CRITICAL",
+                                                  "slot_name": "severity"
+                                              }
+                                          ],
+                                          "key": "when"
+                                      }
+                                  ],
+                                  "eventClass": "EVENT"
+                              },
+                              "processing_action": {
+                                  "emailBody": "Severity of the event has been changed to %severity% and assigned to %user_assigned%",
+                                  "notificationService": "email",
+                                  "emailFrom": "",
+                                  "emailTo": "abc@xyz.com",
+                                  "emailSubject": "%msg% has been generated with severity %severity%"
+                              }
+                          },
+                          "timeframeStatus": "",
+                          "subType": ""
+                      }
+                  ],
+                  "timeframes": [
+                      "-1"
+                  ],
+                  "timeframe_state": []
+              }
+          ]
+      }
+order: 1000

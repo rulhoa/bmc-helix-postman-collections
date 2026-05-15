@@ -1,0 +1,197 @@
+$kind: http-example
+name: Get Algorithm Templates
+request:
+  url: "{{bhom_base_url}}/aif/api/v1.0/algorithm_template?type=Anomaly&sortBy=modifiedTime&order=DESC&minimalInfo=true"
+  method: GET
+  queryParams:
+    type: Anomaly
+    sortBy: modifiedTime
+    order: DESC
+    minimalInfo: "true"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Wed, 12 Jul 2023 12:33:26 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    Referrer-Policy: same-origin
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    Content-Security-Policy: script-src 'self';
+    Permissions-Policy: idle-detection=self
+    Content-Encoding: gzip
+    TraceId: 8c75ba6f-0679-4df5-a397-5a29520e5367 660181721
+  body:
+    type: json
+    content: |-
+      {
+          "statusCode": "200",
+          "statusMessage": "Success",
+          "response": [
+              {
+                  "id": "b558d267-c958-4c4d-8734-b40b0961fdd8",
+                  "name": "PredefinedAlgorithmTemplateForAnomaly",
+                  "type": "Anomaly",
+                  "executionMode": "Streaming",
+                  "jobScript": "",
+                  "description": "This is predefined algorithm template for the anomaly type algorithms",
+                  "algorithmSchema": {
+                      "$schema": "http://json-schema.org/draft-06/schema#",
+                      "$ref": "#/template/algorithmSchema",
+                      "template": {
+                          "algorithmSchema": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                  "algorithmAnalysisMode": {
+                                      "type": "string"
+                                  },
+                                  "name": {
+                                      "type": "string",
+                                      "minLength": 1
+                                  },
+                                  "algorithmConfig": {
+                                      "$ref": "#/template/algorithmConfig"
+                                  },
+                                  "dataConfig": {
+                                      "type": "array",
+                                      "items": {
+                                          "$ref": "#/template/dataConfig"
+                                      }
+                                  }
+                              },
+                              "required": [
+                                  "algorithmAnalysisMode",
+                                  "dataConfig",
+                                  "algorithmConfig",
+                                  "name"
+                              ],
+                              "title": "Algorithm Schema"
+                          },
+                          "algorithmConfig": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                  "name": {
+                                      "type": "string",
+                                      "const": "RCF"
+                                  },
+                                  "params": {
+                                      "$ref": "#/template/params"
+                                  }
+                              },
+                              "required": [
+                                  "params"
+                              ],
+                              "title": "Algorithm Config"
+                          },
+                          "params": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                  "numTrees": {
+                                      "type": "integer",
+                                      "readOnly": true,
+                                      "default": 100
+                                  },
+                                  "numSamplesPerTree": {
+                                      "type": "integer",
+                                      "readOnly": true,
+                                      "default": 256
+                                  },
+                                  "evalMetrics": {
+                                      "type": "string",
+                                      "readOnly": true,
+                                      "default": "accuracy"
+                                  },
+                                  "shingleSize": {
+                                      "type": "integer",
+                                      "readOnly": true,
+                                      "default": 1
+                                  }
+                              },
+                              "required": [],
+                              "title": "Params"
+                          },
+                          "dataConfig": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                  "identifier": {
+                                      "type": "array",
+                                      "minItems": 1,
+                                      "items": {
+                                          "type": "string"
+                                      }
+                                  },
+                                  "nViolation": {
+                                      "type": "integer",
+                                      "readOnly": true
+                                  },
+                                  "duration": {
+                                      "type": "integer",
+                                      "enum": [
+                                          0,
+                                          5,
+                                          10,
+                                          15
+                                      ]
+                                  },
+                                  "message": {
+                                      "type": "string"
+                                  },
+                                  "autoClose": {
+                                      "type": "boolean",
+                                      "default": true
+                                  },
+                                  "sensitivity": {
+                                      "$ref": "#/template/sensitivity"
+                                  },
+                                  "additionalParams": {
+                                      "$ref": "#/template/additionalParams"
+                                  }
+                              },
+                              "required": [
+                                  "duration",
+                                  "identifier",
+                                  "sensitivity"
+                              ],
+                              "title": "Data Config"
+                          },
+                          "additionalParams": {
+                              "type": "object",
+                              "additionalProperties": true,
+                              "title": "Additional Params"
+                          },
+                          "sensitivity": {
+                              "type": "object",
+                              "additionalProperties": false,
+                              "properties": {
+                                  "minor": {
+                                      "type": "number",
+                                      "readOnly": true,
+                                      "default": "1"
+                                  },
+                                  "major": {
+                                      "type": "number",
+                                      "readOnly": true,
+                                      "default": "2"
+                                  },
+                                  "critical": {
+                                      "type": "number",
+                                      "readOnly": true,
+                                      "default": "3.5"
+                                  }
+                              },
+                              "required": [],
+                              "title": "Sensitivity"
+                          }
+                      }
+                  },
+                  "productType": "HM"
+              }
+          ],
+          "responseTimeStamp": "1689165206645"
+      }
+order: 2000

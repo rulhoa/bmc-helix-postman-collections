@@ -1,0 +1,330 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/prediction-api-service/api/v1.0/predictions"
+  method: POST
+  body:
+    type: json
+    content: "{\r
+
+      \    \"start_time\": 1706895990,\r
+
+      \    \"end_time\": 1706939190,\r
+
+      \    \"name\": \"\",\r
+
+      \    \"tags\": [],\r
+
+      \    \"severity\": [],\r
+
+      \    \"page_number\": 0,\r
+
+      \    \"page_size\": 10,\r
+
+      \    \"sort_by\": \"impacted_in\",\r
+
+      \    \"sort_order\": \"asc\"\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    - key: Date
+      value: Fri, 02 Feb 2024 17:47:34 GMT
+    - key: Content-Type
+      value: application/json
+    - key: Transfer-Encoding
+      value: chunked
+    - key: Connection
+      value: keep-alive
+    - key: Vary
+      value: Origin
+    - key: Vary
+      value: Access-Control-Request-Method
+    - key: Vary
+      value: Access-Control-Request-Headers
+    - key: X-Content-Type-Options
+      value: nosniff
+    - key: X-XSS-Protection
+      value: "0"
+    - key: Cache-Control
+      value: no-cache, no-store, max-age=0, must-revalidate
+    - key: Pragma
+      value: no-cache
+    - key: Expires
+      value: "0"
+    - key: Strict-Transport-Security
+      value: max-age=31536000; includeSubDomains
+    - key: X-Frame-Options
+      value: DENY
+    - key: Referrer-Policy
+      value: same-origin
+    - key: Permissions-Policy
+      value: idle-detection=self
+  body:
+    type: json
+    content: |-
+      {
+          "page_number": 0,
+          "page_size": 10,
+          "total_record_count": 2,
+          "records": [
+              {
+                  "id": "99d33cfd-7387-4905-b7ec-ab3e398be7ec",
+                  "service_id": "ac40ae650100bea95949c5ec6e427573696e65737353657276696365",
+                  "service_name": "Prediction Service",
+                  "incident_id": "",
+                  "priority": "PRIORITY_1",
+                  "severity": "INFO",
+                  "msg": "Prediction Event for Prediction Service",
+                  "status": "OPEN",
+                  "parent_service": null,
+                  "predicted_metric": [
+                      "Utilization"
+                  ],
+                  "kpi_metric_name": "Utilization",
+                  "kpi_metric_display_name": "Memory Utilization",
+                  "kpi_metric_unit_name": "%",
+                  "kpi_metric_entity_id": "688baebf-4054-436f-86e7-225ca4bad3e3:K8S_POD_MEMORY:KubernetesLabCluster@ticketing@ts-assurance-mongo-75d58c4f95-7jnh7@memory",
+                  "kpi_metric_entity_display_name": "Memory",
+                  "kpi_metric_entity_type": "K8S_POD_MEMORY",
+                  "impacted_in": 1706896444000,
+                  "predicted_score": 0,
+                  "predicted_severity": "MINOR",
+                  "actions": "test",
+                  "attribution": [],
+                  "predicted_at": 1706895603238,
+                  "predicted_event_map": {
+                      "_tenant_id": "613873398",
+                      "msg": "Prediction Event for Prediction Service",
+                      "creation_time": 1706895603238,
+                      "_entropy": "",
+                      "sourceEntityType": "",
+                      "pr_timestamp": 1706896444000,
+                      "severity_ordinal": 30,
+                      "agent_name": "",
+                      "notificationService": "incident",
+                      "modelname": "",
+                      "_signature": "1720206068",
+                      "source_identifier": "99d33cfd-7387-4905-b7ec-ab3e398be7ec",
+                      "incident_id": "",
+                      "_service_id": [
+                          "ac40ae650100bea95949c5ec6e427573696e65737353657276696365"
+                      ],
+                      "_operations": "[0x18d6ae7f626,admin,,Prediction created based on ML Based algorithm,'',0x18d6ae7f771,,Predefined Enrichment Policy for Incident,BASIC_ENRICHMENT Configuration 0,'']",
+                      "incident_company": "",
+                      "_service_key": [
+                          "y3dEW6rfyLGrEPu5LRQRxZ7ZxTA0mo51"
+                      ],
+                      "_modified_time": 1706895603238,
+                      "details": "",
+                      "_notes": "[]",
+                      "priority_ordinal": 50,
+                      "pr_number_of_violations": 1,
+                      "_service_name": [
+                          "Prediction Service"
+                      ],
+                      "pr_service_name": "Prediction Service",
+                      "pr_attribution_scores": "[]",
+                      "agent_address": "",
+                      "priority": "PRIORITY_1",
+                      "_node_service_mapping": [
+                          "ac40ae650100bea95949c5ec6e427573696e65737353657276696365:ac40ae650100bea95949c5ec6e427573696e65737353657276696365",
+                          "ac40ae650100bea95949c3626e4d6f64656c446566696e6974696f6e"
+                      ],
+                      "object_id": "688baebf-4054-436f-86e7-225ca4bad3e3:K8S_POD_MEMORY:KubernetesLabCluster@ticketing@ts-assurance-mongo-75d58c4f95-7jnh7@memory",
+                      "_node_id": [
+                          "ac40ae650100bea95949c5ec6e427573696e65737353657276696365",
+                          "ac40ae650100bea95949c3626e4d6f64656c446566696e6974696f6e"
+                      ],
+                      "_identifier": "99d33cfd-7387-4905-b7ec-ab3e398be7ec",
+                      "tags": "[]",
+                      "sub_category_ordinal": 10,
+                      "instancename": "Prediction Service",
+                      "_repeat_count": "0",
+                      "user_assigned": "",
+                      "componentalias": "BMC_ComputerSystem:Prediction Service",
+                      "event_internal_tags": "[]",
+                      "change_id": "",
+                      "category_ordinal": 190,
+                      "pr_score": "",
+                      "status": "OPEN",
+                      "object": "",
+                      "metric_unit": "",
+                      "_relationships": {
+                          "rstat": "norelation"
+                      },
+                      "sub_category": "OTHER",
+                      "incident_sysid": "",
+                      "pr_analysis_type": "BUSINESS_KPI",
+                      "_tenant_name": "",
+                      "_errors": "[]",
+                      "pr_algorithm_name": "ML",
+                      "metric_name": "Utilization",
+                      "_ci_id": "",
+                      "source_port": "0",
+                      "source_address": "",
+                      "alias": [
+                          "BMC_ComputerSystem:Prediction Service"
+                      ],
+                      "_node_key": [
+                          "y3dEW6rfyLGrEPu5LRQRxZ7ZxTA0mo51"
+                      ],
+                      "class": "Prediction",
+                      "_lifecycle_time": "0",
+                      "pr_parameter_threshold": "",
+                      "object_class": "K8S_POD_MEMORY",
+                      "pr_severity": "MINOR",
+                      "severity": "INFO",
+                      "_arrival_time": 1706895603523,
+                      "cdmclass": "BMC_ComputerSystem",
+                      "pr_attribution_metrics": "[]",
+                      "pr_forecast_data_duration": 24,
+                      "metric_value": "",
+                      "pr_prediction_id": "99d33cfd-7387-4905-b7ec-ab3e398be7ec",
+                      "_unmapped_data": {},
+                      "significance": "0",
+                      "pr_severity_ordinal": 50,
+                      "agent_port": 0,
+                      "status_ordinal": 0,
+                      "_model": "Prediction",
+                      "location": "",
+                      "_node_service_key_mapping": [
+                          "y3dEW6rfyLGrEPu5LRQRxZ7ZxTA0mo51::y3dEW6rfyLGrEPu5LRQRxZ7ZxTA0mo51",
+                          "y3dEW6rfyLGrEPu5LRQRxZ7ZxTA0mo51"
+                      ],
+                      "category": "OPERATIONS_MANAGEMENT",
+                      "source_hostname": "Prediction Service"
+                  }
+              },
+              {
+                  "id": "e2c885a2-28f9-4d4a-9d39-fca5b47cdeac",
+                  "service_id": "ac40ae650100bea95949c5ec6e427573696e65737353657276696365",
+                  "service_name": "Prediction Service",
+                  "incident_id": "",
+                  "priority": "PRIORITY_1",
+                  "severity": "INFO",
+                  "msg": "Prediction Event for Prediction Service",
+                  "status": "OPEN",
+                  "parent_service": null,
+                  "predicted_metric": [
+                      "Utilization"
+                  ],
+                  "kpi_metric_name": "Utilization",
+                  "kpi_metric_display_name": "CPU Utilization",
+                  "kpi_metric_unit_name": "%",
+                  "kpi_metric_entity_id": "688baebf-4054-436f-86e7-225ca4bad3e3:K8S_POD_CPU:KubernetesLabCluster@ticketing@ts-assurance-mongo-75d58c4f95-7jnh7@cpu",
+                  "kpi_metric_entity_display_name": "CPU",
+                  "kpi_metric_entity_type": "K8S_POD_CPU",
+                  "impacted_in": 1706898124000,
+                  "predicted_score": 0,
+                  "predicted_severity": "MINOR",
+                  "actions": "test",
+                  "attribution": [],
+                  "predicted_at": 1706895603871,
+                  "predicted_event_map": {
+                      "_tenant_id": "613873398",
+                      "msg": "Prediction Event for Prediction Service",
+                      "creation_time": 1706895603871,
+                      "_entropy": "",
+                      "sourceEntityType": "",
+                      "pr_timestamp": 1706898124000,
+                      "severity_ordinal": 30,
+                      "agent_name": "",
+                      "notificationService": "incident",
+                      "modelname": "",
+                      "_signature": "1720206068",
+                      "source_identifier": "e2c885a2-28f9-4d4a-9d39-fca5b47cdeac",
+                      "incident_id": "",
+                      "_service_id": [
+                          "ac40ae650100bea95949c5ec6e427573696e65737353657276696365"
+                      ],
+                      "_operations": "[0x18d6ae7f89f,admin,,Prediction created based on ML Based algorithm,'',0x18d6ae7fdaf,,Predefined Enrichment Policy for Incident,BASIC_ENRICHMENT Configuration 0,'']",
+                      "incident_company": "",
+                      "_service_key": [
+                          "y3dEW6rfyLGrEPu5LRQRxZ7ZxTA0mo51"
+                      ],
+                      "_modified_time": 1706895603871,
+                      "details": "",
+                      "_notes": "[]",
+                      "priority_ordinal": 50,
+                      "pr_number_of_violations": 1,
+                      "_service_name": [
+                          "Prediction Service"
+                      ],
+                      "pr_service_name": "Prediction Service",
+                      "pr_attribution_scores": "[]",
+                      "agent_address": "",
+                      "priority": "PRIORITY_1",
+                      "_node_service_mapping": [
+                          "ac40ae650100bea95949c5ec6e427573696e65737353657276696365:ac40ae650100bea95949c5ec6e427573696e65737353657276696365",
+                          "ac40ae650100bea95949c3626e4d6f64656c446566696e6974696f6e"
+                      ],
+                      "object_id": "688baebf-4054-436f-86e7-225ca4bad3e3:K8S_POD_CPU:KubernetesLabCluster@ticketing@ts-assurance-mongo-75d58c4f95-7jnh7@cpu",
+                      "_node_id": [
+                          "ac40ae650100bea95949c5ec6e427573696e65737353657276696365",
+                          "ac40ae650100bea95949c3626e4d6f64656c446566696e6974696f6e"
+                      ],
+                      "_identifier": "e2c885a2-28f9-4d4a-9d39-fca5b47cdeac",
+                      "tags": "[]",
+                      "sub_category_ordinal": 10,
+                      "instancename": "Prediction Service",
+                      "_repeat_count": "0",
+                      "user_assigned": "",
+                      "componentalias": "BMC_ComputerSystem:Prediction Service",
+                      "event_internal_tags": "[]",
+                      "change_id": "",
+                      "category_ordinal": 190,
+                      "pr_score": "",
+                      "status": "OPEN",
+                      "object": "",
+                      "metric_unit": "",
+                      "_relationships": {
+                          "rstat": "norelation"
+                      },
+                      "sub_category": "OTHER",
+                      "incident_sysid": "",
+                      "pr_analysis_type": "BUSINESS_KPI",
+                      "_tenant_name": "",
+                      "_errors": "[]",
+                      "pr_algorithm_name": "ML",
+                      "metric_name": "Utilization",
+                      "_ci_id": "",
+                      "source_port": "0",
+                      "source_address": "",
+                      "alias": [
+                          "BMC_ComputerSystem:Prediction Service"
+                      ],
+                      "_node_key": [
+                          "y3dEW6rfyLGrEPu5LRQRxZ7ZxTA0mo51"
+                      ],
+                      "class": "Prediction",
+                      "_lifecycle_time": "0",
+                      "pr_parameter_threshold": "",
+                      "object_class": "K8S_POD_CPU",
+                      "pr_severity": "MINOR",
+                      "severity": "INFO",
+                      "_arrival_time": 1706895605164,
+                      "cdmclass": "BMC_ComputerSystem",
+                      "pr_attribution_metrics": "[]",
+                      "pr_forecast_data_duration": 24,
+                      "metric_value": "",
+                      "pr_prediction_id": "e2c885a2-28f9-4d4a-9d39-fca5b47cdeac",
+                      "_unmapped_data": {},
+                      "significance": "0",
+                      "pr_severity_ordinal": 50,
+                      "agent_port": 0,
+                      "status_ordinal": 0,
+                      "_model": "Prediction",
+                      "location": "",
+                      "_node_service_key_mapping": [
+                          "y3dEW6rfyLGrEPu5LRQRxZ7ZxTA0mo51::y3dEW6rfyLGrEPu5LRQRxZ7ZxTA0mo51",
+                          "y3dEW6rfyLGrEPu5LRQRxZ7ZxTA0mo51"
+                      ],
+                      "category": "OPERATIONS_MANAGEMENT",
+                      "source_hostname": "Prediction Service"
+                  }
+              }
+          ]
+      }
+order: 1000

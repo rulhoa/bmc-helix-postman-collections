@@ -1,0 +1,20 @@
+name: TSSA – Example Env
+values:
+  - key: tssa_protocol
+    value: https
+  - key: tssa_host
+    value: tssa.example.com
+  - key: tssa_port
+    value: '9843'
+  - key: tssa_username
+    value: BLAdmin
+  - key: tssa_password
+    value: ''
+  - key: tssa_role
+    value: BLAdmins
+  - key: tssa_auth_type
+    value: SRP
+  - key: session_id
+    value: ''
+  - key: tssa_client_cert
+    value: ''

@@ -1,0 +1,46 @@
+$kind: http-request
+url: "{{bhom_base_url}}/service-management/api/v1.0/service/metric/names"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"metricIds\": [\r
+
+    \        {\r
+
+    \            \"entityTypeId\": \"Dynatrace_App_Health\",\r
+
+    \            \"metric\": \"Dynatrace_avg_response_time\"\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"entityTypeId\": \"Dynatrace_App_Health\",\r
+
+    \            \"metric\": \"Dynatrace_page_load_time\"\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"entityTypeId\": \"Nagios_Infra_metrics\",\r
+
+    \            \"metric\": \"Nagios_free_disk\"\r
+
+    \        }\r
+
+    \    ],\r
+
+    \    \"entityIds\": [\r
+
+    \        \"Dynatrace:660181721@web-fe-01:Dynatrace_App_Health:Dynatrace-app-health\",\r
+
+    \        \"Nagios:660181721@web-fe-01:Nagios_Infra_metrics:Nagios-device-health\"\r
+
+    \    ]\r
+
+    }"
+examples: ./.resources/Get Service Metric Names.resources/examples
+order: 4000

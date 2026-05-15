@@ -1,0 +1,226 @@
+$kind: http-example
+name: Search Automation Policies
+request:
+  url: "{{bhom_base_url}}/intelligent-automation/api/v1/workflows/search"
+  method: POST
+  headers:
+    - key: helix_jwt_token
+      value: "{{bhom_json_web_token}}"
+      disabled: true
+    - key: Origin
+      value: https://helixtrialsjc497-or1-dev.onbmc.com
+      disabled: true
+    - key: Referer
+      value: https://helixtrialsjc497-or1-dev.onbmc.com/intelligent-automation/
+      disabled: true
+    - key: Authorization
+      value: Bearer {{bhom_token}}
+      disabled: true
+  body:
+    type: json
+    content: "{\r
+
+      \    \"pageSize\":25,\r
+
+      \    \"pageNumber\":0,\r
+
+      \    \"filter\":\"type = 'user_defined'\",\r
+
+      \    \"sortedOn\":\"updated_time DESC\"\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Fri, 10 Feb 2023 20:21:17 GMT
+    Content-Type: application/json; charset=utf-8
+    Content-Length: "5557"
+    Connection: keep-alive
+    X-Powered-By: Express
+    ETag: W/"15b5-Yc+9/8NPEuvAIi8Ek1ZU8OXWTt0"
+  body:
+    type: json
+    content: |-
+      {
+          "data": [
+              {
+                  "id": "c5293b57-6c7c-ce72-908c-9c7cda3b4495",
+                  "name": "Remediacao via Control-M",
+                  "type": "user_defined",
+                  "description": "",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"class\" == \"EVENT\" && $.\"event\".\"source_hostname\" == \"web-fe-02\")",
+                  "checksum": "0bc5335ad00661a9b3bf4beaf6c3f2b718d7e6d5986d4c463989362ab68315bc",
+                  "is_active": false,
+                  "status": "DRAFT",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "553694080029185",
+                  "updated_by": "553694080029185",
+                  "created_time": 1662050669279.5242,
+                  "updated_time": 1669818037445.2158
+              },
+              {
+                  "id": "19d0c987-0152-870c-e063-b1cbbaf2cf2a",
+                  "name": "Innovation Studio Control-M Job Automation Process",
+                  "type": "user_defined",
+                  "description": "",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"class\" == \"EVENT\")",
+                  "checksum": "f8be5311d327f13fa3a2c6781abd273335186c92768efbf218b0b22a4a4fc8fe",
+                  "is_active": false,
+                  "status": "DRAFT",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "553694080029185",
+                  "updated_by": "553694080029185",
+                  "created_time": 1662642541354.004,
+                  "updated_time": 1669817830021.802
+              },
+              {
+                  "id": "2d16675f-9bd2-ab3d-a6b4-00b21a5eb59b",
+                  "name": "Restart Service",
+                  "type": "user_defined",
+                  "description": "",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"class\" == \"EVENT\" && $.\"event\".\"msg\" == \"[Dynatrace] Abnormal traffic pattern detected on tower220\")",
+                  "checksum": "339c74c576fb60ca2f1d32744f8139763b024cda0c5d6aea3e6e9a34869b2473",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "553694080029185",
+                  "updated_by": "553694080029185",
+                  "created_time": 1667477975244.907,
+                  "updated_time": 1667477975261.6292
+              },
+              {
+                  "id": "4a6613d8-02f2-3463-a24c-4b21075cf9b5",
+                  "name": "Nagios Automation",
+                  "type": "user_defined",
+                  "description": "",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"class\" == \"EVENT\")",
+                  "checksum": "45b338c5bcc784f2b6d5190af49c2677d10ff544ed5ae93dd848f621f0aa7886",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "553694080029185",
+                  "updated_by": "553694080029185",
+                  "created_time": 1667267795693.63,
+                  "updated_time": 1667267795717.72
+              },
+              {
+                  "id": "25b63ff2-5f10-8777-3985-0bffd5d97acb",
+                  "name": "AWS Automation - Reset EC2 instance - COPY",
+                  "type": "user_defined",
+                  "description": "",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"class\" == \"EVENT\" && $.\"event\".\"source_hostname\" == \"web-fe-01\")",
+                  "checksum": "d077657bd0a570a402a267e6cf7ccc7a77a74c54c935a6909a25f08149bcb2b5",
+                  "is_active": false,
+                  "status": "DRAFT",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "492666397131482",
+                  "updated_by": "492666397131482",
+                  "created_time": 1665694746668.125,
+                  "updated_time": 1665694746683.727
+              },
+              {
+                  "id": "a9100b17-7649-8b8c-3592-02c08b5be208",
+                  "name": "AWS Remediacao via Control-M",
+                  "type": "user_defined",
+                  "description": "",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"class\" == \"EVENT\")",
+                  "checksum": "32257655cbe0f3451b16505cad52021047b531cd0d33f9507ed813bd39233ea2",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "553694080029185",
+                  "updated_by": "553694080029185",
+                  "created_time": 1662051612917.29,
+                  "updated_time": 1662051612933.5662
+              },
+              {
+                  "id": "bb02ec69-1799-0440-dcc1-f70f52104108",
+                  "name": "Remediacao via Control-M - Performance Anomaly",
+                  "type": "user_defined",
+                  "description": "",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?(($.\"event\".\"class\" == \"ANOMALY\" && $.\"event\".\"an_analysis_type\" == \"MULTIVARIATE\") && $.\"event\".\"source_hostname\" == \"ts-user-service-cc577b45c-j9rrg\")",
+                  "checksum": "a20f2536f7c96c446bf86a330dd4a0613bb21252c78ccdedfc3baa11a9d48d7a",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "553694080029185",
+                  "updated_by": "553694080029185",
+                  "created_time": 1662050838054.973,
+                  "updated_time": 1662050848097.873
+              },
+              {
+                  "id": "30799dc1-3039-3fe2-d895-d3a0daa70269",
+                  "name": "Linux Disk Cleanup",
+                  "type": "user_defined",
+                  "description": "Delete temporary files to free diskspace",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"class\" == \"EVENT\")",
+                  "checksum": "2bd8db4dcec26d4abd59e33cbf986e8a5e930e2378128c0aa5ffc1c13d8ed8b3",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "553694080029185",
+                  "updated_by": "553694080029185",
+                  "created_time": 1661371304943.353,
+                  "updated_time": 1661525950747.336
+              },
+              {
+                  "id": "38fd69d7-d930-aeb9-86f8-4eac0e17e524",
+                  "name": "Linux Disk Cleanup - Change Request",
+                  "type": "user_defined",
+                  "description": "Delete temporary files to free diskspace, but opens a change request to ask for approval first",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"class\" == \"EVENT\")",
+                  "checksum": "078e65506c83cbbcd115a693e059dbfd75547452f9f675150f14d3af8b31eeb3",
+                  "is_active": false,
+                  "status": "DRAFT",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "553694080029185",
+                  "updated_by": "553694080029185",
+                  "created_time": 1661371409931.1262,
+                  "updated_time": 1661525945727.692
+              },
+              {
+                  "id": "385dcf40-1b50-11ed-8296-0613ed995521",
+                  "name": "AWS Automation - Reset EC2 instance",
+                  "type": "user_defined",
+                  "description": "",
+                  "parameters": null,
+                  "trigger_condition_expression": "$?($.\"event\".\"class\" == \"EVENT\" && $.\"event\".\"source_hostname\" == \"web-fe-01\")",
+                  "checksum": "5968dd3d7ccf6e461f71436a657d69d1eb84d09a7292968642685850fe275675",
+                  "is_active": true,
+                  "status": "PUBLISHED",
+                  "auto_enabled": false,
+                  "tag_specs": {},
+                  "created_by": "553694080029185",
+                  "updated_by": "553694080029185",
+                  "created_time": 1660426693219.49,
+                  "updated_time": 1660426693239.074
+              }
+          ],
+          "metadata": {
+              "total": "10",
+              "pageNumber": 0,
+              "pageSize": 25,
+              "startOffset": 0,
+              "endOffset": 10
+          }
+      }
+order: 2000

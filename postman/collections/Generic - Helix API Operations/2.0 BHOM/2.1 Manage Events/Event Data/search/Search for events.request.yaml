@@ -1,0 +1,95 @@
+$kind: http-request
+url: "{{bhom_base_url}}/tsws/monitoring/api/v1.0/events/search"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"directFilterStatusCriteria\": {\r
+
+    \        \"value\": \"OPEN,ACK,ASSIGNED,BLACKOUT\",\r
+
+    \        \"identifier\": \"status\",\r
+
+    \        \"operator\": \"WITHIN\"\r
+
+    \    },\r
+
+    \    \"directFilterSeverityCriteria\": {\r
+
+    \        \"value\": \"CRITICAL,MAJOR,MINOR,WARNING,INFO\",\r
+
+    \        \"identifier\": \"severity\",\r
+
+    \        \"operator\": \"WITHIN\"\r
+
+    \    },\r
+
+    \    \"relationshipFilterCriteria\": {\r
+
+    \        \"value\": \"norelation,primary\",\r
+
+    \        \"identifier\": \"_relationships.rstat\",\r
+
+    \        \"operator\": \"WITHIN\"\r
+
+    \    },\r
+
+    \    \"eventGroupID\": 0,\r
+
+    \    \"slotNameValuePairList\": null,\r
+
+    \    \"startIndex\": 1,\r
+
+    \    \"totalResultCount\": 200,\r
+
+    \    \"sortCriteria\": [\r
+
+    \        {\r
+
+    \            \"attributeName\": \"creation_time\",\r
+
+    \            \"sortOrder\": 2\r
+
+    \        }\r
+
+    \    ],\r
+
+    \    \"slotList\": [\r
+
+    \        \"_identifier\",\r
+
+    \        \"_handle\",\r
+
+    \        \"_notes\",\r
+
+    \        \"mc_action_count\",\r
+
+    \        \"_ci_id\",\r
+
+    \        \"source_hostname\",\r
+
+    \        \"source_identifier\",\r
+
+    \        \"user_assigned\",\r
+
+    \        \"apm_application_id\",\r
+
+    \        \"apm_nodeID\",\r
+
+    \        \"apm_application\",\r
+
+    \        \"al_parameter_id\",\r
+
+    \        \"object_class\",\r
+
+    \        \"TSIMServerID\",\r
+
+    \        \"incident_id\"\r
+
+    \    ],\r
+
+    \    \"view\": \"events\"\r
+
+    }"
+order: 2000

@@ -1,0 +1,36 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/intelligent-automation/api/v1/connectors/b5757460-29f6-11ed-9641-0613ed995521/actions"
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Mon, 13 Feb 2023 18:58:00 GMT
+    Content-Type: application/json; charset=utf-8
+    Content-Length: "290"
+    Connection: keep-alive
+    X-Powered-By: Express
+    ETag: W/"122-66gojyZ/A8ScEaWQeqQl7rgeziM"
+  body:
+    type: json
+    content: |-
+      {
+          "connectorExists": true,
+          "data": [
+              {
+                  "id": "generic_rest/generic_rest/x-bmc-ia-any",
+                  "display_name": "Generic REST Action",
+                  "summary": "Generic REST Action",
+                  "description": "Invoke actions using standard REST api."
+              }
+          ],
+          "metadata": {
+              "total": "1",
+              "pageNumber": 0,
+              "pageSize": 20,
+              "startOffset": 0,
+              "endOffset": 1
+          }
+      }
+order: 1000

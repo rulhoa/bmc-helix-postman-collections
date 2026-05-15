@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{v1}}/catalogs"
+method: GET
+order: 1000

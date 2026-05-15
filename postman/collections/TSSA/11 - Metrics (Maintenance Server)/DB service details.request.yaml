@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{v1}}/metrics/listDBServiceDetails"
+method: GET
+order: 10000

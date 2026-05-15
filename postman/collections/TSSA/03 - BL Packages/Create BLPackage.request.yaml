@@ -1,0 +1,18 @@
+$kind: http-request
+url: "{{v1}}/blpackages"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "type": "DEPOT_FILE",
+      "name": "ExamplePackage",
+      "group_id": 0,
+      "payload": {
+        "source_server_id": 0,
+        "source_path": "/tmp/file.txt"
+      }
+    }
+order: 2000

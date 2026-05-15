@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{v1}}/compliance-jobs/remediate-async/{{cacheKey}}"
+method: GET
+order: 15000

@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{bhom_base_url}}/aiops-config/api/v1.0/features/"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"features\": {\r
+
+    \        \"ml-situation-show-locations\":true\r
+
+    \    }\r
+
+    }"
+examples: ./.resources/Update Feature.resources/examples
+order: 4000

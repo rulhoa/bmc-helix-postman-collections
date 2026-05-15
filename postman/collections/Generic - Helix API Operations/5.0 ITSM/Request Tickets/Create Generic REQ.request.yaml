@@ -1,0 +1,100 @@
+$kind: http-request
+description: |-
+  ## Cria requisições a partir do template ID de um Fluxo.
+
+  ____________________________________________________________________________________________________________________
+
+  ##### Descrição:
+
+  Cria um registro no formulário SRM:RequestInterface_Create com campos básicos necessários para a criação de uma Requisição no formulário SRM:Request bem como seus filhos "Work Orders e/ou Incidents".
+
+  ____________________________________________________________________________________________________________________
+
+  ##### Pontos de Atenção:
+  * Não é possível abrir uma REQ cujo processo do template possui árvore de decisão, se isto for necessário será obrigatória a criação de um fluxo para cada condicional.
+  * Não é possível preencher campos de Perguntas e Respostas de fluxos via API na versão 9.1.
+
+  ____________________________________________________________________________________________________________________
+
+  ##### BODY:
+
+  * Z1D Action: Indica a ação à ser Realizada, geralmente "MODIFY" ou "CREATE".
+
+  * Source Keyword: Indica a origem da solicitação, auxiliando na identificação da origem, insira "Integração + Nome do Seu Sistema".
+
+  * TitleInstanceID: É o Instance ID do fluxo à ser utilizado, para entendimento da ferramenta de qual processo seguir.
+
+  * Status: É o status desejado da requisição, por default o valor é "Submitted" pois é o status que dará início à transação.
+
+  * Company: Indica a empresa que está solicitando a requisição, por default é "B3".
+
+  ____________________________________________________________________________________________________________________
+
+  ##### HEADERS:
+
+  * Authorization: É o token para acessar a ferramenta, obtido atravéz da chamada POST Request Token, sempre necessário o prefixo AR-JWT(espaço)+TOKEN.
+
+  * Content-Type: Deve indicar o modelo de dados que está sendo enviado, por ser REST e em geral linha de código, o valor default é "application/json".
+url: "{{applicationserver}}/api/arsys/v1/entry/SRM:RequestInterface_Create"
+method: POST
+headers:
+  Authorization: "{{tokensignature}}{{token}}"
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {       
+        "values": {
+            "Source Keyword": {{username}},
+            "TitleInstanceID": "",
+            "Login ID": {{username}},
+            "Customer Login":{{username}},
+            "Status": "",
+            "z1D Action": "CREATE",
+            "Company": "",
+            "SR Type Field 1":"Resposta 1, Caracteres | Espaço Ilimitado",
+            "SR Type Field 2":"PARTICIPANTE",
+            "SR Type Field 3":"Resposta 3, 240 Caracteres",
+            "SR Type Field 4":"Resposta 3, 254 Caracteres",
+            "SR Type Field 5":"Resposta 5, 254 Caracteres",
+            "SR Type Field 6":"Resposta 6, TIMESTAMP",
+            "SR Type Field 7":"Resposta 7, TIMESTAMP",
+            "SR Type Field 8":"Resposta 8, Inteiro (Valor Limite: 2147483647)",
+            "SR Type Field 9":"Resposta 9, Inteiro (Valor Limite: 2147483647)",
+            "SR Type Field 10":"Resposta 10,  Caracteres, Espaço Ilimitado",
+            "SR Type Field 11":"Resposta 11, 240 Caracteres",
+            "SR Type Field 12":"Resposta 12, 240 Caracteres",
+            "SR Type Field 13":"Resposta 13, 240 Caracteres",
+            "SR Type Field 14":"Resposta 14, 240 Caracteres",
+            "SR Type Field 15":"Resposta 15, Caracteres | Espaço Ilimitado",
+            "SR Type Field 16":"Resposta 16, Caracteres | Espaço Ilimitado",
+            "SR Type Field 17":"Resposta 17, 240 Caracteres",
+            "SR Type Field 18":"Resposta 18, 240 Caracteres",
+            "SR Type Field 19":"Resposta 19, 240 Caracteres",
+            "SR Type Field 20":"Resposta 20, 240 Caracteres",
+            "SR Type Field 21":"Resposta 21, 240 Caracteres",
+            "SR Type Field 22":"Resposta 22, 240 Caracteres",
+            "SR Type Field 23":"Resposta 23, 240 Caracteres",
+            "SR Type Field 24":"Resposta 24, Inteiro (Valor Limite: 2147483647)",
+            "SR Type Field 25":"Resposta 25, Inteiro (Valor Limite: 2147483647)",
+            "SR Type Field 26":"Resposta 26, Inteiro (Valor Limite: 2147483647)",
+            "SR Type Field 27":"Resposta 27, Inteiro (Valor Limite: 2147483647)",
+            "SR Type Field 28":"Resposta 28, 240 Caracteres",
+            "SR Type Field 29":"Resposta 29, 240 Caracteres",
+            "SR Type Field 30":"Resposta 30, 240 Caracteres",
+            "SR Type Field 31":"Resposta 31, 240 Caracteres",
+            "SR Type Field 32":"Resposta 32, 240 Caracteres",
+            "SR Type Field 33":"Resposta 33, 80 Caracteres",
+            "SR Type Field 34":"Resposta 34, 80 Caracteres",
+            "SR Type Field 35":"Resposta 35, 80 Caracteres",
+            "SR Type Field 36":"Resposta 36, 80 Caracteres",
+            "SR Type Field 37":"Resposta 37, 80 Caracteres",
+            "SR Type Field 38":"Resposta 38, 80 Caracteres",
+            "SR Type Field 39":"Resposta 39, 80 Caracteres",
+            "SR Type Field 40":"Resposta 40, 80 Caracteres",
+            "SR Type Field 41":"Resposta 41, 80 Caracteres",
+            "SR Type Field 42":"Resposta 42, 80 Caracteres",
+            "SR Type Field 43":"Resposta 43, 80 Caracteres"
+        }
+    }
+order: 5000

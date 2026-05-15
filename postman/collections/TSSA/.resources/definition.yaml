@@ -1,0 +1,34 @@
+$kind: collection
+description: TrueSight Server Automation 25.2 REST collection. Use '01 - Sessions' first.
+variables:
+  tssa_protocol: https
+  tssa_host: your-appserver-or-maint.example.com
+  tssa_port: "9843"
+  base: "{{tssa_protocol}}://{{tssa_host}}:{{tssa_port}}/rest"
+  v1: "{{base}}/api/v1"
+  v2: "{{base}}/api/v2"
+  session_id: ""
+  tssa_role: BLAdmins
+  tssa_username: BLAdmin
+  tssa_password: ""
+  tssa_auth_type: SRP
+  tssa_client_cert: ""
+scripts:
+  - type: http:beforeRequest
+    code: |-
+      const url = pm.request.url.toString();
+      const isSessionCall = url.includes('/api/v1/sessions');
+      if (!isSessionCall) {
+        if (!pm.request.headers.has('Accept')) {
+          pm.request.headers.add({ key: 'Accept', value: 'application/json' });
+        }
+        const sid = pm.environment.get('session_id');
+        if (sid && !pm.request.headers.has('session-id')) {
+          pm.request.headers.add({ key: 'session-id', value: sid });
+        }
+        const role = pm.environment.get('tssa_role');
+        if (role && !pm.request.headers.has('role')) {
+          pm.request.headers.add({ key: 'role', value: role });
+        }
+      }
+    language: text/javascript

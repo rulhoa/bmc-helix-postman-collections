@@ -1,0 +1,100 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/alarm-service/api/v1.0/alarm_policies/:alarm_policy_id"
+  method: PUT
+  pathVariables:
+    alarm_policy_id: 3805aee0-c0c9-4f3b-bed0-6b485550cfcc
+  body:
+    type: json
+    content: "{\r
+
+      \    \"policyName\": \"CPU Anomaly\",\r
+
+      \    \"description\": \"\",\r
+
+      \    \"enabled\": false,\r
+
+      \    \"executionOrder\": 9999,\r
+
+      \    \"entityThresholds\": [\r
+
+      \        {\r
+
+      \            \"metricDetails\": {\r
+
+      \                \"entityTypeId\": \"NT_CPU\",\r
+
+      \                \"metricId\": \"CPUprcrProcessorTimePercent\",\r
+
+      \                \"unit\": \"%\",\r
+
+      \                \"label\": \"Processor time\",\r
+
+      \                \"path\": \"psx_epd/20.05.11/NT_CPU/CPUprcrProcessorTimePercent\"\r
+
+      \            },\r
+
+      \            \"type\": \"ALL\",\r
+
+      \            \"evaluationCriteria\": \"\",\r
+
+      \            \"alarmConfigurations\": [\r
+
+      \                {\r
+
+      \                    \"condition\": {\r
+
+      \                        \"duration\": 5,\r
+
+      \                        \"occurrence\": 0,\r
+
+      \                        \"baseline\": true\r
+
+      \                    },\r
+
+      \                    \"action\": {\r
+
+      \                        \"severity\": \"INFO\",\r
+
+      \                        \"autoClose\": true,\r
+
+      \                        \"closeDuration\": 0\r
+
+      \                    },\r
+
+      \                    \"configOrder\": 0\r
+
+      \                }\r
+
+      \            ],\r
+
+      \            \"order\": 0\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Wed, 20 Mar 2024 14:06:20 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    Referrer-Policy: same-origin
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    Permissions-Policy: idle-detection=self
+    Content-Encoding: gzip
+    TraceId: 189db9e5-d5f2-4d22-b03b-ee9f1fa0055b 158670711
+  body:
+    type: json
+    content: |-
+      {
+          "statusCode": "200",
+          "resourceId": [
+              "3805aee0-c0c9-4f3b-bed0-6b485550cfcc"
+          ]
+      }
+order: 1000

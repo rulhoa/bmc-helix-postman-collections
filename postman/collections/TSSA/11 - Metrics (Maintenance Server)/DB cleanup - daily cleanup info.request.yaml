@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{v1}}/metrics/dbcleanup/dailycleanupinfo"
+method: GET
+order: 15000

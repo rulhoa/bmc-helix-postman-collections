@@ -1,0 +1,22 @@
+$kind: http-request
+url: '{{bhom_base_url}}/metrics-query-service/api/v1.0/query?query="{entityName="NUK_Memory"}"&time=1595226431'
+method: GET
+headers:
+  - key: Content-Type
+    value: application/json
+  - key: Authorization
+    value: apiKey {{bhom_apiKey}}
+  - key: ""
+    value: ""
+    disabled: true
+queryParams:
+  query: '"{entityName="NUK_Memory"}"'
+  time: "1595226431"
+body:
+  type: text
+  content: ""
+auth:
+  type: bearer
+  credentials:
+    token: "{{bhom_json_web_token}}"
+order: 5000

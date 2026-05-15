@@ -1,0 +1,83 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/events-service/api/v1.0/events/classes/"
+  method: POST
+  body:
+    type: json
+    content: "{\r
+
+      \   \"name\": \"ControlMAlert\",\r
+
+      \   \"parentClassName\": \"MonitorEvent\",\r
+
+      \   \"attributes\": [\r
+
+      \      { \"name\": \"eventType\",        \"dataType\": \"STRING\"  },\r
+
+      \      { \"name\": \"alertId\",          \"dataType\": \"INTEGER\" },\r
+
+      \      { \"name\": \"ctmServer\",        \"dataType\": \"STRING\"  },\r
+
+      \      { \"name\": \"fileName\",         \"dataType\": \"STRING\"  },\r
+
+      \      { \"name\": \"runId\",            \"dataType\": \"STRING\"  },\r
+
+      \      { \"name\": \"alertStatus\",      \"dataType\": \"STRING\"  },\r
+
+      \      { \"name\": \"ctmUser\",          \"dataType\": \"STRING\"  },\r
+
+      \      { \"name\": \"updateTime\",       \"dataType\": \"DATE\"    },\r
+
+      \      { \"name\": \"runAs\",            \"dataType\": \"STRING\"  },\r
+
+      \      { \"name\": \"subApplication\",   \"dataType\": \"STRING\"  },\r
+
+      \      { \"name\": \"application\",      \"dataType\": \"STRING\"  },\r
+
+      \      { \"name\": \"jobName\",          \"dataType\": \"STRING\"  },\r
+
+      \      { \"name\": \"alertType\",        \"dataType\": \"STRING\"  },\r
+
+      \      { \"name\": \"closedByControlM\", \"dataType\": \"STRING\"  },\r
+
+      \      { \"name\": \"ticketNumber\",     \"dataType\": \"STRING\"  },\r
+
+      \      { \"name\": \"runNo\",            \"dataType\": \"INTEGER\" },\r
+
+      \      { \"name\": \"alertNotes\",       \"dataType\": \"STRING\"  },\r
+
+      \      { \"name\": \"jobLink\",          \"dataType\": \"STRING\"  }\r
+
+      \   ]\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Thu, 30 Nov 2023 00:27:41 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    Referrer-Policy: same-origin
+    X-Frame-Options: SAMEORIGIN
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    X-Content-Type-Options: nosniff
+    Permissions-Policy: idle-detection=self
+    Content-Encoding: gzip
+    TraceId: 2678d047-028e-4a19-ac55-63aadd005ae8 613873398
+    Pragma: no-cache
+    X-XSS-Protection: 1; mode=block
+    Cache-control: no-store
+  body:
+    type: json
+    content: |-
+      {
+          "responseTimeStamp": 1701304061745,
+          "statusCode": "200",
+          "statusMsg": "[Successfully created event class.]",
+          "resourceId": [
+              "45ffb6e2-8f17-11ee-ac7f-2fbde96913e8"
+          ]
+      }
+order: 1000

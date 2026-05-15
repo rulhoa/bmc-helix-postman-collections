@@ -1,0 +1,27 @@
+$kind: http-request
+url: "{{is_base_url}}/api/rx/application/datapage"
+method: POST
+headers:
+  X-Requested-By: XMLHttpRequest
+body:
+  type: json
+  content: "{\r
+
+    \    \"values\": {\r
+
+    \        \"dataPageType\": \"com.bmc.arsys.rx.application.record.datapage.RecordInstanceDataPageQuery\",\r
+
+    \        \"pageSize\": \"50\",\r
+
+    \        \"startIndex\": \"0\",\r
+
+    \        \"recorddefinition\": \"WebAPI Connection\",\r
+
+    \        \"shouldIncludeTotalSize\": \"false\",\r
+
+    \        \"propertySelection\": \"8,70030,70031,70034,379\"\r
+
+    \    }\r
+
+    }"
+order: 2000

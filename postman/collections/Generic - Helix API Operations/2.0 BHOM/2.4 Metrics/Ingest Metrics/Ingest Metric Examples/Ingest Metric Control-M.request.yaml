@@ -1,0 +1,127 @@
+$kind: http-request
+url: "{{bhom_base_url}}/metrics-gateway-service/api/v1.0/insert"
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+  - key: Authorization
+    value: apiKey {{bhom_apiKey}}
+  - key: ""
+    value: ""
+    disabled: true
+body:
+  type: text
+  content: "[\r
+
+    \    {\r
+
+    \        \"labels\": {\r
+
+    \            \"source\": \"CTM\",\r
+
+    \            \"instanceName\": \"ControlM_Server_Instance\",\r
+
+    \            \"hostname\": \"IN01\",\r
+
+    \            \"hostType\": \"server\",\r
+
+    \            \"entityTypeId\": \"SoftwareComponent\",\r
+
+    \            \"entityName\": \"SVIBIM024\",\r
+
+    \            \"metricName\": \"JobRunState\",\r
+
+    \            \"isKpi\": \"True\",\r
+
+    \            \"unit\": \"Status\",\r
+
+    \            \"entityId\": \"ControlM:ctmClearingP:ControlM_Job:SVIBIM024\"\r
+
+    \            source : entityTypeId : entityname\r
+
+    \        },\r
+
+    \        \"samples\": [\r
+
+    \            {  \"value\": 0, \"timestamp\":1689080400000},\r
+
+    \            {  \"value\": 0, \"timestamp\":1689080460000},\r
+
+    \            {  \"value\": 0, \"timestamp\":1689080520000},\r
+
+    \            {  \"value\": 1, \"timestamp\":1689080580000},\r
+
+    \            {  \"value\": 1, \"timestamp\":1689080640000},\r
+
+    \            {  \"value\": 1, \"timestamp\":1689080700000},\r
+
+    \            {  \"value\": 1, \"timestamp\":1689080760000},\r
+
+    \            {  \"value\": 1, \"timestamp\":1689080820000},\r
+
+    \            {  \"value\": 0, \"timestamp\":1689080880000},\r
+
+    \            {  \"value\": 0, \"timestamp\":1689080940000},\r
+
+    \            {  \"value\": 0, \"timestamp\":1689081000000}\r
+
+    \        ]\r
+
+    \    }\r
+
+    \    ,{\r
+
+    \        \"labels\": {\r
+
+    \            \"source\": \"CTM\",\r
+
+    \            \"instanceName\": \"ControlM_Server_Instance\",\r
+
+    \            \"hostname\": \"IN01\",\r
+
+    \            \"hostType\": \"server\",\r
+
+    \            \"entityTypeId\": \"ControlM_Job\",\r
+
+    \            \"entityName\": \"SVIBIM116\",\r
+
+    \            \"metricName\": \"JobRunState\",\r
+
+    \            \"isKpi\": \"True\",\r
+
+    \            \"unit\": \"Running_State\",\r
+
+    \            \"entityId\": \"ControlM:ctmClearingP:ControlM_Job:SVIBIM024\"\r
+
+    \        },\r
+
+    \        \"samples\": [\r
+
+    \            {  \"value\": 0, \"timestamp\":1689080400000},\r
+
+    \            {  \"value\": 0, \"timestamp\":1689080460000},\r
+
+    \            {  \"value\": 0, \"timestamp\":1689080520000},\r
+
+    \            {  \"value\": 0, \"timestamp\":1689080580000},\r
+
+    \            {  \"value\": 0, \"timestamp\":1689080640000},\r
+
+    \            {  \"value\": 0, \"timestamp\":1689080700000},\r
+
+    \            {  \"value\": 0, \"timestamp\":1689080760000},\r
+
+    \            {  \"value\": 1, \"timestamp\":1689080820000},\r
+
+    \            {  \"value\": 1, \"timestamp\":1689080880000},\r
+
+    \            {  \"value\": 1, \"timestamp\":1689080940000},\r
+
+    \            {  \"value\": 0, \"timestamp\":1689081000000}\r
+
+    \        ]\r
+
+    \    }\r
+
+    ]"
+order: 2000

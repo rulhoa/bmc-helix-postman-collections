@@ -1,0 +1,93 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/events-service/api/v1.0/blackout_policies/search"
+  method: POST
+  headers:
+    Content-Type: application/json
+  body:
+    type: json
+    content: "{\r
+
+      \    \"searchString\": \"\",\r
+
+      \    \"pageIndex\": 1,\r
+
+      \    \"recordsPerPage\": 25,\r
+
+      \    \"sortCriteria\": {\r
+
+      \        \"attribute\": \"modificationTime\",\r
+
+      \        \"order\": \"ASC\"\r
+
+      \    }\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Tue, 24 Jan 2023 15:16:44 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    Content-Encoding: gzip
+    TraceId: 7f2c607a-c147-4e9b-bd25-00eec663c2aa 1738801444
+    Pragma: no-cache
+    Cache-control: no-store
+  body:
+    type: json
+    content: |-
+      {
+          "responseTimeStamp": 1674573404885,
+          "statusCode": "200",
+          "statusMsg": "OK",
+          "totalRecords": 1,
+          "policies": [
+              {
+                  "name": "Change Blackout Policy",
+                  "description": "Change Blackout Policy",
+                  "executionOrder": 9999,
+                  "selector": "3988c4fb-9bf9-11ed-af5c-ef55d70754a7",
+                  "eventSelectorCriteria": "source_hostname equals 'myhostname' OR _service_name equals 'myservicename' AND ( source_hostname has_prefix 'test' )",
+                  "timeframes": [],
+                  "owner": "Liam",
+                  "enabled": true,
+                  "readOnly": false,
+                  "creationTime": 1674573023306,
+                  "modificationTime": 1674573400698,
+                  "configurations": {
+                      "tenantId": "1738801444",
+                      "policyId": "398a99bc-9bf9-11ed-af5c-23bd7c456497",
+                      "id": "1a7d6cc8-9bfa-11ed-931f-11025527a852",
+                      "configOrder": 1,
+                      "creationTime": 0,
+                      "modificationTime": 0,
+                      "definition": {
+                          "timeframeDetails": {
+                              "endsOn": {
+                                  "endDate": "02022023"
+                              },
+                              "recurrencePattern": {
+                                  "recurrence": "oneTime"
+                              },
+                              "timeZone": {
+                                  "offset": "-03:00",
+                                  "id": "America/Buenos_Aires"
+                              },
+                              "startTime": "12:10",
+                              "endTime": "12:10",
+                              "startDate": "01022023"
+                          },
+                          "processing_action": {
+                              "resetStatusOnBlackoutEnd": "true",
+                              "blackoutExistingEvents": "true"
+                          }
+                      },
+                      "timeframeStatus": "INACTIVE,LastRun:,NextRun:1675264200000"
+                  }
+              }
+          ]
+      }
+order: 1000

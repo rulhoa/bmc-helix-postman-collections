@@ -1,0 +1,31 @@
+$kind: http-request
+url: "{{bhom_base_url}}/tsws/monitoring/api/v1.0/monitor/list"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"sourceId\": \"1afacd11-ff4b-4438-8f22-713f44045cbf\",\r
+
+    \    \"dataProviderId\": \"678311683\",\r
+
+    \    \"sourceType\": \"Device\",\r
+
+    \    \"currentView\": \"hierarchyView\",\r
+
+    \    \"monitorsStartIndex\": 0,\r
+
+    \    \"monitorsEndIndex\": 1000,\r
+
+    \    \"expandedMonitorId\": \"AppDynamics%3A678311683%40bqi%3AAppDynamics_Overall_Application_Performance%3AOverall_Application_Performance\",\r
+
+    \    \"sortBy\": \"name\",\r
+
+    \    \"sortDirection\": \"ascending\",\r
+
+    \    \"requestFromIconParent\": false,\r
+
+    \    \"monitorTypeId\": -1\r
+
+    }"
+order: 7000

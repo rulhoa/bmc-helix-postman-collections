@@ -1,0 +1,18 @@
+$kind: http-request
+url: "{{v1}}/patching-jobs"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "name": "My Patch Job",
+      "catalog_id": 0,
+      "targets": {
+        "servers": [
+          1
+        ]
+      }
+    }
+order: 2000

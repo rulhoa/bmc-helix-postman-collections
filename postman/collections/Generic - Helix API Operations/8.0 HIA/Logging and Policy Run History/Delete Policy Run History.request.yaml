@@ -1,0 +1,41 @@
+$kind: http-request
+description: |-
+  It deletes 2500 in a single batch with 5 minutes sleep in between the runs.  
+  This will mark the ‘Running’ in failed first and then delete them.
+
+  To define the timestamp values, you can use a site such as [https://epochtimestamp.com/](https://epochtimestamp.com/)
+url: "{{bhom_base_url}}/intelligent-automation/api/v1/workflow_instances"
+method: DELETE
+body:
+  type: json
+  content: "{\r
+
+    \    \"filter\": {\r
+
+    \        \"NOP\": [\r
+
+    \            {\r
+
+    \                \"BETWEEN\": {\r
+
+    \                    \"key\": \"start_time\",\r
+
+    \                    \"value\": [\r
+
+    \                        \" 1643684400\",\r
+
+    \                        \" 1738082876\"\r
+
+    \                    ]\r
+
+    \                }\r
+
+    \            }\r
+
+    \        ]\r
+
+    \    }\r
+
+    }"
+examples: ./.resources/Delete Policy Run History.resources/examples
+order: 2000

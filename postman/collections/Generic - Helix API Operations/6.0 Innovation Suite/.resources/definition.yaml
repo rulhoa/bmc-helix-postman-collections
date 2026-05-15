@@ -1,0 +1,9 @@
+$kind: collection
+auth:
+  - id: c6743dbb-2fff-4363-a48c-34620bb5bf66
+    type: apikey
+    name: apikey auth
+    credentials:
+      key: Authorization
+      value: AR-JWT {{is_token}}
+order: 6000

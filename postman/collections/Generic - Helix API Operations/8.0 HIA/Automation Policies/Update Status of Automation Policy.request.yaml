@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{bhom_base_url}}/api/v1/workflows/update_status"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"id\": \"64d5471f-4114-f38e-af61-153f0fc95543\",\r
+
+    \    \"checksum\": \"0879f2666eb2a6d06114f99a566c59f2869b47df35522544acb7255113759115\",\r
+
+    \    \"status\": \"DRAFT\"\r
+
+    }"
+order: 7000

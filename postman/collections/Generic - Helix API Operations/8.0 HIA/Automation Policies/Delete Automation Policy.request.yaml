@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{bhom_base_url}}/intelligent-automation/api/v1/workflows/3183e76d-cf5f-c84f-c5a5-0eb7612858af"
+method: DELETE
+examples: ./.resources/Delete Automation Policy.resources/examples
+order: 6000

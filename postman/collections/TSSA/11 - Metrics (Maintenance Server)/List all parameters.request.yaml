@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{v1}}/metrics/listAllParameters"
+method: GET
+order: 9000

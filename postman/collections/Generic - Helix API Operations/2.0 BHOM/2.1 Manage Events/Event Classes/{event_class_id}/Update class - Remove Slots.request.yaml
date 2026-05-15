@@ -1,0 +1,20 @@
+$kind: http-request
+url: "{{bhom_base_url}}/events-service/api/v1.0/events/classes/:event_class_id?idType=id"
+method: PATCH
+queryParams:
+  idType: id
+pathVariables:
+  event_class_id: ef4bf2d8-e31e-11ee-95e0-aba365ab8f8e
+body:
+  type: json
+  content: "{\r
+
+    \    \"attributesToRemove\": [\r
+
+    \        \"ctmJobTpe\"\r
+
+    \    ]\r
+
+    }"
+examples: ./.resources/Update class - Remove Slots.resources/examples
+order: 4000

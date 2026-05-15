@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{applicationserver}}/api/arsys/v1/entry/CTM:People?q='Remedy Login ID'=\"berod\""
+method: GET
+headers:
+  Authorization: "{{tokensignature}}{{token}}"
+  Content-Type: application/json
+queryParams:
+  q: "'Remedy Login ID'=\"berod\""
+order: 1000

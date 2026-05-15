@@ -1,0 +1,57 @@
+$kind: http-request
+url: "{{bhom_base_url}}/metrics-gateway-service/api/v1.0/insert"
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+  - key: Authorization
+    value: apiKey {{bhom_apiKey}}
+  - key: ""
+    value: ""
+    disabled: true
+body:
+  type: text
+  content: "[\r
+
+    \    {\r
+
+    \        \"labels\": {\r
+
+    \            \"metricName\": \"Load\",\r
+
+    \            \"osName\": \"Linux\",\r
+
+    \            \"hostname\": \"02IBM.Frame.Hard_Partition\",\r
+
+    \            \"entityId\": \"02IBM.Frame.Hard_Partition:CPU:CPU\",\r
+
+    \            \"entityTypeId\": \"CPU\",\r
+
+    \            \"entityName\": \"CPU\",\r
+
+    \            \"hostType\": \"IBM.Frame.Hard_Partition\",\r
+
+    \            \"isKpi\": false,\r
+
+    \            \"unit\": \"#\",\r
+
+    \            \"source\": \"API\"\r
+
+    \        },\r
+
+    \        \"samples\": [\r
+
+    \            {\r
+
+    \                \"value\": 2,\r
+
+    \                \"timestamp\": {{$timestamp}}\r
+
+    \            }\r
+
+    \        ]\r
+
+    \    }\r
+
+    ]"
+order: 2000

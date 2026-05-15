@@ -1,0 +1,21 @@
+$kind: http-request
+url: "{{bhom_base_url}}/tsws/monitoring/api/v1.0/unifiedadmin/Policy/list?withCount=true"
+method: POST
+queryParams:
+  withCount: "true"
+body:
+  type: json
+  content: "{\r
+
+    \    \"filterCriteria\": {\r
+
+    \        \"tenantName\": \"\"\r
+
+    \    },\r
+
+    \    \"type\": \"monitoringpolicy\",\r
+
+    \    \"stringToSearch\": \"\"\r
+
+    }"
+order: 2000

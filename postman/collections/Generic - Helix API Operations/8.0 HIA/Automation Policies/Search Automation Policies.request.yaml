@@ -1,0 +1,18 @@
+$kind: http-request
+url: "{{bhom_base_url}}/intelligent-automation/api/v1/workflows/search"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"pageSize\":100,\r
+
+    \    \"pageNumber\":0,\r
+
+    \    \"filter\":\"type = 'user_defined'\",\r
+
+    \    \"sortedOn\":\"updated_time DESC\"\r
+
+    }"
+examples: ./.resources/Search Automation Policies.resources/examples
+order: 1000

@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{bhom_base_url}}/ims/api/v1/custom_ui_applications"
+method: GET
+order: 3000

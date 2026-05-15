@@ -1,0 +1,35 @@
+$kind: http-request
+url: "{{bhom_base_url}}/events-service/api/v1.0/events"
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+  - key: Authorization
+    value: apiKey {{bhom_apiKey}}
+  - key: ""
+    value: ""
+    disabled: true
+body:
+  type: text
+  content: "[\r
+
+    \    \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"CRITICAL\",\r
+
+    \t\t\"msg\": \"High load\",\r
+
+    \        \"metric_name\": \"Load\",\r
+
+    \        \"source_identifier\": \"clm-ais-007437\",\r
+
+    \t\t\"source_hostname\": \"clm-ais-007437\",\r
+
+    \        \"componentalias\" : \"BMC_ComputerSystem:clm-ais-007437\"\r
+
+    \t}\r
+
+    ]"
+order: 8000

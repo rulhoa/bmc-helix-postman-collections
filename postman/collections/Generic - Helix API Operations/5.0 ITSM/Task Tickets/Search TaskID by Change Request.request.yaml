@@ -1,0 +1,22 @@
+$kind: http-request
+url: "{{applicationserver}}/api/arsys/v1/entry/TMS:Task/?q='RootRequestID'=\"\"AND'TemplateID'=\"\""
+method: GET
+headers:
+  Authorization: "{{tokensignature}}{{token}}"
+  Content-Type: application/json
+queryParams:
+  q: "'RootRequestID'=\"\"AND'TemplateID'=\"\""
+body:
+  type: text
+  content: |
+    {
+    	"values": {
+    		"Assignee Group ID":"",
+    		"Assignee Group":"",
+    		"Support Company":"",
+    		"Assignee Organization":"",
+    		"z1D Char01":"",
+    		"Location Company":""
+    	}
+    }
+order: 1000

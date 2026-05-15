@@ -1,0 +1,8 @@
+$kind: http-request
+description: Additional information available @ [https://bmcsites.force.com/casemgmt/sc_KnowledgeArticle?sfdcid=kA33n0000004UFR&Type=null](https://bmcsites.force.com/casemgmt/sc_KnowledgeArticle?sfdcid=kA33n0000004UFR&Type=null)
+url: "{{bhom_base_url}}/opt/api/v1/dsm/force-align"
+method: POST
+body:
+  type: json
+  content: ""
+order: 1000

@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{v1}}/patching-jobs/{{id}}"
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "name": "Updated Patch Job"
+    }
+order: 4000

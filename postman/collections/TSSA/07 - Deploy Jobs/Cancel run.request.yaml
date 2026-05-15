@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{v1}}/deploy-jobs/{{id}}/jobruns/{{run_id}}/cancel"
+method: PATCH
+order: 13000

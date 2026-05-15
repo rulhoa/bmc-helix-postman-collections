@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{bhom_base_url}}/ims/api/v1/userinfo"
+method: GET
+examples: ./.resources/Get Logged In User Information.resources/examples
+order: 1000

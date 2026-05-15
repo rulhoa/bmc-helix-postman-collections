@@ -1,0 +1,81 @@
+$kind: http-request
+url: "{{bhom_base_url}}/events-service/api/v1.0/events/msearch"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"size\": 5000,\r
+
+    \    \"query\": {\r
+
+    \        \"bool\": {\r
+
+    \            \"filter\": [\r
+
+    \                {\r
+
+    \                    \"range\": {\r
+
+    \                        \"creation_time\": {\r
+
+    \                            \"gte\": 1726917320015,\r
+
+    \                            \"lte\": 1729509320015,\r
+
+    \                            \"format\": \"epoch_millis\"\r
+
+    \                        }\r
+
+    \                    }\r
+
+    \                },\r
+
+    \                {\r
+
+    \                    \"query_string\": {\r
+
+    \                        \"analyze_wildcard\": true,\r
+
+    \                        \"query\": \"class:ALARM AND !object_class:[a TO z]\"\r
+
+    \                    }\r
+
+    \                }\r
+
+    \            ]\r
+
+    \        }\r
+
+    \    },\r
+
+    \    \"sort\": [\r
+
+    \        {\r
+
+    \            \"creation_time\": {\r
+
+    \                \"order\": \"desc\",\r
+
+    \                \"unmapped_type\": \"boolean\"\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"_doc\": {\r
+
+    \                \"order\": \"desc\"\r
+
+    \            }\r
+
+    \        }\r
+
+    \    ],\r
+
+    \    \"script_fields\": {}\r
+
+    }"
+order: 3000

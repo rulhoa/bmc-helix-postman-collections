@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{v1}}/batch-jobs"
+method: GET
+order: 1000

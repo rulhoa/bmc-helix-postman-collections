@@ -1,0 +1,8 @@
+$kind: http-request
+url: "{{v1}}/sessions"
+method: DELETE
+scripts:
+  - type: afterResponse
+    code: pm.environment.unset('session_id');
+    language: text/javascript
+order: 4000

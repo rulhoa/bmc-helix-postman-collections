@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{bhom_base_url}}/intelligent-automation/api/v1/connectors"
+method: GET
+examples: ./.resources/Get Connectors.resources/examples
+order: 3000

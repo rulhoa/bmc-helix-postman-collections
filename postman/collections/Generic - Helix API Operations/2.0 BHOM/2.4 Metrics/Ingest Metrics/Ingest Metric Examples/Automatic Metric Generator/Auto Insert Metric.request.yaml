@@ -1,0 +1,95 @@
+$kind: http-request
+url: "{{bhom_base_url}}/metrics-gateway-service/api/v1.0/insert"
+method: POST
+body:
+  type: json
+  content: "[{\r
+
+    \    \"labels\": {\r
+
+    \      \"metricName\": \"End_User_Response_Time__ms_\",\r
+
+    \      \"hostname\": \"Retail_Outlet\",\r
+
+    \      \"deviceId\": \"Retail_Outlet\",\r
+
+    \      \"entityName\": \"United_States_Texas\",\r
+
+    \      \"entityTypeId\": \"End_User_Experience\",\r
+
+    \      \"entityId\": \"AppDynamics:Retail_Outlet:End_User_Experience:United_States_Texas\",\r
+
+    \      \"hostType\": \"Server\",\r
+
+    \      \"isKpi\": \"true\",\r
+
+    \      \"unit\": \"Count\",\r
+
+    \      \"source\": \"AppDynamics\",\r
+
+    \      \"external_id\": \"APPDYNAMICS_APPLICATION-12293\",\r
+
+    \      \"instanceName\": \"United_States_Texas\"\r
+
+    \    },\r
+
+    \      \"samples\": [\r
+
+    \      {\r
+
+    \          \"value\": \"{{mymetricvalue}}\",\r
+
+    \          \"timestamp\": \"{{EpochTime}}\"\r
+
+    \      }\r
+
+    \    ]\r
+
+    }]\r\n"
+auth:
+  type: apikey
+  credentials:
+    value: apiKey {{tenant_id}}::{{bhom_access_key}}::{{bhom_secret_key}}
+    key: Authorization
+scripts:
+  - type: beforeRequest
+    code: "var moment = require(\"moment\")\r
+
+      pm.variables.set(\"EpochTime\", moment().valueOf());\r
+
+      \r
+
+      if (pm.info.iteration === 0) {\r
+
+      \  pm.collectionVariables.set(\"mymetricvalue\", 20);\r
+
+      \  // pm.collectionVariables.set(\"myTime\", moment().valueOf());\r
+
+      }\r\n"
+    language: text/javascript
+  - type: afterResponse
+    code: "randomnumber = _.random(0, 20);\r
+
+      \r
+
+      pm.test(\r
+
+      \    \"Creation of metric with value \" + ( pm.collectionVariables.get(\"mymetricvalue\") + randomnumber) + \" at \" + pm.variables.get(\"EpochTime\"), function ()\r
+
+      \    {\r
+
+      \        pm.response.to.have.status(202);\r
+
+      \    }\r
+
+      );\r
+
+      pm.collectionVariables.set(\"mymetricvalue\", pm.collectionVariables.get(\"mymetricvalue\") + randomnumber );\r
+
+      // pm.collectionVariables.set(\"myTime\", pm.collectionVariables.get(\"myTime\") + 60000 );\r
+
+      setTimeout(() => {}, 60000);\r
+
+      \r\n"
+    language: text/javascript
+order: 1000

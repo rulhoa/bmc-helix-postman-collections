@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{bhom_base_url}}/opt/api/catalog/openapi.yaml"
+method: GET
+order: 1000

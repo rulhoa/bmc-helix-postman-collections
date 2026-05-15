@@ -1,0 +1,24 @@
+$kind: http-request
+url: "{{bhom_base_url}}/metrics-query-service/api/v1.0/query_range"
+method: POST
+body:
+  type: formdata
+  content:
+    - type: text
+      key: query
+      value: '{ __name__ =~ "Utilization", hostname =~ "dsom-k8s-node1" }'
+    - type: text
+      key: start
+      value: "1689087635"
+    - type: text
+      key: end
+      value: "1689098435"
+    - type: text
+      key: step
+      value: "5"
+auth:
+  type: bearer
+  credentials:
+    token: "{{bhom_json_web_token}}"
+examples: ./.resources/Get Query Range.resources/examples
+order: 6000

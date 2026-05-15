@@ -1,0 +1,934 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/intelligent-automation/api/v1/automation_requests/search"
+  method: POST
+  body:
+    type: json
+    content: "{\r
+
+      \    \"sortedOn\":\"created_time DESC\",\r
+
+      \    \"pageNumber\":0,\r
+
+      \    \"pageSize\":25\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Fri, 10 Feb 2023 20:48:07 GMT
+    Content-Type: application/json; charset=utf-8
+    Content-Length: "23982"
+    Connection: keep-alive
+    X-Powered-By: Express
+    ETag: W/"5dae-VogTa+0O4fjisRowz/bI3FKwLws"
+  body:
+    type: json
+    content: |-
+      {
+          "total": "7",
+          "data": [
+              {
+                  "id": "f965672f-9210-4e66-b278-f7c3f29ca70e",
+                  "type": "EVENT",
+                  "external_id": "eps.1738801444.4470919341471201.9d37b15a-3045-4cac-b027-af94f83ae529",
+                  "summary": "[Dynatrace] Abnormal traffic pattern detected on tower220",
+                  "details": null,
+                  "metadata": {
+                      "eta": 30,
+                      "event": {
+                          "msg": "[Dynatrace] Abnormal traffic pattern detected on tower220",
+                          "tags": "[]",
+                          "alias": [
+                              "BMC_ComputerSystem:web-fe-02"
+                          ],
+                          "class": "EVENT",
+                          "_ci_id": "",
+                          "_model": "",
+                          "_notes": "[]",
+                          "status": "OPEN",
+                          "_errors": "[]",
+                          "details": "",
+                          "_entropy": "",
+                          "_node_id": [
+                              "c956c862bd2e716c4ace65636e486f7374",
+                              "c956c862bd2e716c4ace65606e5669727475616c4d616368696e65"
+                          ],
+                          "category": "OPERATIONS_MANAGEMENT",
+                          "cdmclass": "",
+                          "location": "",
+                          "priority": "PRIORITY_1",
+                          "severity": "CRITICAL",
+                          "modelname": "",
+                          "_signature": "1428297848",
+                          "_tenant_id": "1738801444",
+                          "score_info": "",
+                          "_identifier": "eps.1738801444.4470919341471201.9d37b15a-3045-4cac-b027-af94f83ae529",
+                          "_operations": "[0x1852faede90,,Predefined Policy for Incident,NOTIFICATION,'']",
+                          "_service_id": [
+                              "f36f5d63835a86fb749a448f6e427573696e65737353657276696365"
+                          ],
+                          "automations": [
+                              {
+                                  "id": "30799dc1-3039-3fe2-d895-d3a0daa70269",
+                                  "name": "Linux Disk Cleanup",
+                                  "type": "user_defined",
+                                  "checksum": "2bd8db4dcec26d4abd59e33cbf986e8a5e930e2378128c0aa5ffc1c13d8ed8b3",
+                                  "description": "Delete temporary files to free diskspace",
+                                  "auto_enabled": false
+                              },
+                              {
+                                  "id": "4a6613d8-02f2-3463-a24c-4b21075cf9b5",
+                                  "name": "Nagios Automation",
+                                  "type": "user_defined",
+                                  "checksum": "45b338c5bcc784f2b6d5190af49c2677d10ff544ed5ae93dd848f621f0aa7886",
+                                  "description": "",
+                                  "auto_enabled": false
+                              },
+                              {
+                                  "id": "2d16675f-9bd2-ab3d-a6b4-00b21a5eb59b",
+                                  "name": "Restart Service",
+                                  "type": "user_defined",
+                                  "checksum": "339c74c576fb60ca2f1d32744f8139763b024cda0c5d6aea3e6e9a34869b2473",
+                                  "description": "",
+                                  "auto_enabled": false
+                              },
+                              {
+                                  "id": "a9100b17-7649-8b8c-3592-02c08b5be208",
+                                  "name": "AWS Remediacao via Control-M",
+                                  "type": "user_defined",
+                                  "checksum": "32257655cbe0f3451b16505cad52021047b531cd0d33f9507ed813bd39233ea2",
+                                  "description": "",
+                                  "auto_enabled": false
+                              }
+                          ],
+                          "event_score": 12,
+                          "incident_id": "INC000000023854",
+                          "showRcaIcon": true,
+                          "situationID": "f36f5d63835a86fb749a448f6e427573696e65737353657276696365_e324666d04d74c149ea60775f1ee3603",
+                          "source_port": 3181,
+                          "_tenant_name": "",
+                          "instancename": "",
+                          "significance": "0",
+                          "sub_category": "OTHER",
+                          "_arrival_time": 1671542267360,
+                          "_repeat_count": "0",
+                          "_service_name": [
+                              "Media Service"
+                          ],
+                          "creation_time": 1671542267360,
+                          "situationName": "Media Service - [Dynatrace] Abnormal traffic pattern detected on tower220",
+                          "user_assigned": "",
+                          "_modified_time": 1671542270504,
+                          "_relationships": {
+                              "rstat": "secondary",
+                              "mlsituation": [
+                                  "f36f5d63835a86fb749a448f6e427573696e65737353657276696365_e324666d04d74c149ea60775f1ee3603"
+                              ]
+                          },
+                          "_unmapped_data": {
+                              "delay": "yes",
+                              "object": "App"
+                          },
+                          "componentalias": "",
+                          "incident_sysid": "",
+                          "source_address": "",
+                          "status_ordinal": 0,
+                          "_lifecycle_time": "0",
+                          "source_hostname": "web-fe-02",
+                          "category_ordinal": 190,
+                          "incident_company": "",
+                          "priority_ordinal": 50,
+                          "severity_ordinal": 70,
+                          "situationEventId": "fc32de65-3bef-4c6e-aa9d-90df70fd52ef",
+                          "event_score_value": 12.063896256779124,
+                          "source_identifier": "web-fe-02",
+                          "sub_category_ordinal": 10,
+                          "_node_service_mapping": [
+                              "c956c862bd2e716c4ace65636e486f7374:f36f5d63835a86fb749a448f6e427573696e65737353657276696365",
+                              "c956c862bd2e716c4ace65606e5669727475616c4d616368696e65:f36f5d63835a86fb749a448f6e427573696e65737353657276696365"
+                          ],
+                          "_node_service_key_mapping": [
+                              "nbVbha9RVH7gLtpBlv1Ttg==::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e",
+                              "aws/us-east-2/ec2/i-0d961a0e78261469f::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e"
+                          ]
+                      },
+                      "effort": 120,
+                      "source": "AIOPS"
+                  },
+                  "status": "OPEN",
+                  "created_by": "971495220839423",
+                  "updated_by": null,
+                  "created_time": 1671562085028.508,
+                  "updated_time": null
+              },
+              {
+                  "id": "1fdf2946-72e8-41dd-8880-9cbd39a47055",
+                  "type": "EVENT",
+                  "external_id": "eps.1738801444.348261744536079.b494c280-6a5b-4248-83e7-878dcc85683b",
+                  "summary": "[Dynatrace] Abnormal traffic pattern detected on tower220",
+                  "details": null,
+                  "metadata": {
+                      "eta": 30,
+                      "event": {
+                          "msg": "[Dynatrace] Abnormal traffic pattern detected on tower220",
+                          "tags": "[]",
+                          "alias": [
+                              "BMC_ComputerSystem:web-fe-02"
+                          ],
+                          "class": "EVENT",
+                          "_ci_id": "",
+                          "_model": "",
+                          "_notes": "[]",
+                          "status": "OPEN",
+                          "_errors": "[]",
+                          "details": "",
+                          "_entropy": "",
+                          "_node_id": [
+                              "c956c862bd2e716c4ace65636e486f7374",
+                              "c956c862bd2e716c4ace65606e5669727475616c4d616368696e65"
+                          ],
+                          "category": "OPERATIONS_MANAGEMENT",
+                          "cdmclass": "",
+                          "location": "",
+                          "priority": "PRIORITY_1",
+                          "severity": "CRITICAL",
+                          "modelname": "",
+                          "_signature": "1428297848",
+                          "_tenant_id": "1738801444",
+                          "score_info": "",
+                          "start_time": null,
+                          "_identifier": "eps.1738801444.348261744536079.b494c280-6a5b-4248-83e7-878dcc85683b",
+                          "_operations": "[0x18439f3e3f6,,Predefined Policy for Incident,NOTIFICATION,'']",
+                          "_service_id": [
+                              "f36f5d63835a86fb749a448f6e427573696e65737353657276696365"
+                          ],
+                          "automations": [
+                              {
+                                  "id": "30799dc1-3039-3fe2-d895-d3a0daa70269",
+                                  "name": "Linux Disk Cleanup",
+                                  "type": "user_defined",
+                                  "checksum": "2bd8db4dcec26d4abd59e33cbf986e8a5e930e2378128c0aa5ffc1c13d8ed8b3",
+                                  "description": "Delete temporary files to free diskspace",
+                                  "auto_enabled": false
+                              },
+                              {
+                                  "id": "19d0c987-0152-870c-e063-b1cbbaf2cf2a",
+                                  "name": "Innovation Studio Control-M Job Automation Process",
+                                  "type": "user_defined",
+                                  "checksum": "f8be5311d327f13fa3a2c6781abd273335186c92768efbf218b0b22a4a4fc8fe",
+                                  "description": "",
+                                  "auto_enabled": false
+                              },
+                              {
+                                  "id": "4a6613d8-02f2-3463-a24c-4b21075cf9b5",
+                                  "name": "Nagios Automation",
+                                  "type": "user_defined",
+                                  "checksum": "45b338c5bcc784f2b6d5190af49c2677d10ff544ed5ae93dd848f621f0aa7886",
+                                  "description": "",
+                                  "auto_enabled": false
+                              },
+                              {
+                                  "id": "2d16675f-9bd2-ab3d-a6b4-00b21a5eb59b",
+                                  "name": "Restart Service",
+                                  "type": "user_defined",
+                                  "checksum": "339c74c576fb60ca2f1d32744f8139763b024cda0c5d6aea3e6e9a34869b2473",
+                                  "description": "",
+                                  "auto_enabled": false
+                              },
+                              {
+                                  "id": "a9100b17-7649-8b8c-3592-02c08b5be208",
+                                  "name": "AWS Remediacao via Control-M",
+                                  "type": "user_defined",
+                                  "checksum": "32257655cbe0f3451b16505cad52021047b531cd0d33f9507ed813bd39233ea2",
+                                  "description": "",
+                                  "auto_enabled": false
+                              },
+                              {
+                                  "id": "c5293b57-6c7c-ce72-908c-9c7cda3b4495",
+                                  "name": "Remediacao via Control-M",
+                                  "type": "user_defined",
+                                  "checksum": "0bc5335ad00661a9b3bf4beaf6c3f2b718d7e6d5986d4c463989362ab68315bc",
+                                  "description": "",
+                                  "auto_enabled": false
+                              }
+                          ],
+                          "event_score": 15,
+                          "incident_id": "INC000000023035",
+                          "showRcaIcon": true,
+                          "situationID": "f36f5d63835a86fb749a448f6e427573696e65737353657276696365_45a4503e4f4149e8bc0069fd7d114b21",
+                          "source_port": 3181,
+                          "_tenant_name": "",
+                          "instancename": "",
+                          "significance": "0",
+                          "sub_category": "OTHER",
+                          "_arrival_time": 1667419595700,
+                          "_repeat_count": "0",
+                          "_service_name": [
+                              "Media Service"
+                          ],
+                          "creation_time": 1667419595700,
+                          "situationName": "Media Service - [Dynatrace] Abnormal traffic pattern detected on tower220",
+                          "user_assigned": "",
+                          "_modified_time": 1667419646894,
+                          "_relationships": {
+                              "rstat": "secondary",
+                              "mlsituation": [
+                                  "f36f5d63835a86fb749a448f6e427573696e65737353657276696365_45a4503e4f4149e8bc0069fd7d114b21"
+                              ]
+                          },
+                          "_unmapped_data": {
+                              "delay": "yes",
+                              "object": "App"
+                          },
+                          "componentalias": "",
+                          "source_address": "",
+                          "status_ordinal": 0,
+                          "_lifecycle_time": "0",
+                          "source_hostname": "web-fe-02",
+                          "category_ordinal": 190,
+                          "incident_company": "",
+                          "priority_ordinal": 50,
+                          "severity_ordinal": 70,
+                          "situationEventId": "7e86abd3-1540-4b85-be03-30563bb20c6b",
+                          "event_score_value": 14.716577055350566,
+                          "source_identifier": "web-fe-02",
+                          "lastAutomationStatus": {
+                              "name": "Restart Service",
+                              "status": "failed"
+                          },
+                          "sub_category_ordinal": 10,
+                          "_node_service_mapping": [
+                              "c956c862bd2e716c4ace65636e486f7374:f36f5d63835a86fb749a448f6e427573696e65737353657276696365",
+                              "c956c862bd2e716c4ace65606e5669727475616c4d616368696e65:f36f5d63835a86fb749a448f6e427573696e65737353657276696365"
+                          ],
+                          "_node_service_key_mapping": [
+                              "nbVbha9RVH7gLtpBlv1Ttg==::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e",
+                              "aws/us-east-2/ec2/i-0d961a0e78261469f::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e"
+                          ]
+                      },
+                      "effort": 15,
+                      "source": "AIOPS"
+                  },
+                  "status": "OPEN",
+                  "created_by": "492666397131482",
+                  "updated_by": null,
+                  "created_time": 1668012762721.65,
+                  "updated_time": null
+              },
+              {
+                  "id": "6d339e95-a211-478d-a7e8-782759d5c566",
+                  "type": "EVENT",
+                  "external_id": "eps.1738801444.348261744536079.b494c280-6a5b-4248-83e7-878dcc85683b",
+                  "summary": "[Dynatrace] Abnormal traffic pattern detected on tower220",
+                  "details": null,
+                  "metadata": {
+                      "eta": 0,
+                      "event": {
+                          "msg": "[Dynatrace] Abnormal traffic pattern detected on tower220",
+                          "tags": "[]",
+                          "alias": [
+                              "BMC_ComputerSystem:web-fe-02"
+                          ],
+                          "class": "EVENT",
+                          "_ci_id": "",
+                          "_model": "",
+                          "_notes": "[]",
+                          "status": "OPEN",
+                          "_errors": "[]",
+                          "details": "",
+                          "_entropy": "",
+                          "_node_id": [
+                              "c956c862bd2e716c4ace65636e486f7374",
+                              "c956c862bd2e716c4ace65606e5669727475616c4d616368696e65"
+                          ],
+                          "category": "OPERATIONS_MANAGEMENT",
+                          "cdmclass": "",
+                          "location": "",
+                          "priority": "PRIORITY_1",
+                          "severity": "CRITICAL",
+                          "modelname": "",
+                          "_signature": "1428297848",
+                          "_tenant_id": "1738801444",
+                          "score_info": "",
+                          "start_time": null,
+                          "_identifier": "eps.1738801444.348261744536079.b494c280-6a5b-4248-83e7-878dcc85683b",
+                          "_operations": "[0x18439f3e3f6,,Predefined Policy for Incident,NOTIFICATION,'']",
+                          "_service_id": [
+                              "f36f5d63835a86fb749a448f6e427573696e65737353657276696365"
+                          ],
+                          "automations": [
+                              {
+                                  "id": "30799dc1-3039-3fe2-d895-d3a0daa70269",
+                                  "name": "Linux Disk Cleanup",
+                                  "type": "user_defined",
+                                  "checksum": "2bd8db4dcec26d4abd59e33cbf986e8a5e930e2378128c0aa5ffc1c13d8ed8b3",
+                                  "description": "Delete temporary files to free diskspace",
+                                  "auto_enabled": false
+                              },
+                              {
+                                  "id": "19d0c987-0152-870c-e063-b1cbbaf2cf2a",
+                                  "name": "Innovation Studio Control-M Job Automation Process",
+                                  "type": "user_defined",
+                                  "checksum": "f8be5311d327f13fa3a2c6781abd273335186c92768efbf218b0b22a4a4fc8fe",
+                                  "description": "",
+                                  "auto_enabled": false
+                              },
+                              {
+                                  "id": "4a6613d8-02f2-3463-a24c-4b21075cf9b5",
+                                  "name": "Nagios Automation",
+                                  "type": "user_defined",
+                                  "checksum": "45b338c5bcc784f2b6d5190af49c2677d10ff544ed5ae93dd848f621f0aa7886",
+                                  "description": "",
+                                  "auto_enabled": false
+                              },
+                              {
+                                  "id": "a9100b17-7649-8b8c-3592-02c08b5be208",
+                                  "name": "AWS Remediacao via Control-M",
+                                  "type": "user_defined",
+                                  "checksum": "32257655cbe0f3451b16505cad52021047b531cd0d33f9507ed813bd39233ea2",
+                                  "description": "",
+                                  "auto_enabled": false
+                              },
+                              {
+                                  "id": "c5293b57-6c7c-ce72-908c-9c7cda3b4495",
+                                  "name": "Remediacao via Control-M",
+                                  "type": "user_defined",
+                                  "checksum": "0bc5335ad00661a9b3bf4beaf6c3f2b718d7e6d5986d4c463989362ab68315bc",
+                                  "description": "",
+                                  "auto_enabled": false
+                              }
+                          ],
+                          "event_score": 15,
+                          "incident_id": "INC000000023035",
+                          "showRcaIcon": true,
+                          "situationID": "f36f5d63835a86fb749a448f6e427573696e65737353657276696365_45a4503e4f4149e8bc0069fd7d114b21",
+                          "source_port": 3181,
+                          "_tenant_name": "",
+                          "instancename": "",
+                          "significance": "0",
+                          "sub_category": "OTHER",
+                          "_arrival_time": 1667419595700,
+                          "_repeat_count": "0",
+                          "_service_name": [
+                              "Media Service"
+                          ],
+                          "creation_time": 1667419595700,
+                          "situationName": "Media Service - [Dynatrace] Abnormal traffic pattern detected on tower220",
+                          "user_assigned": "",
+                          "_modified_time": 1667419646894,
+                          "_relationships": {
+                              "rstat": "secondary",
+                              "mlsituation": [
+                                  "f36f5d63835a86fb749a448f6e427573696e65737353657276696365_45a4503e4f4149e8bc0069fd7d114b21"
+                              ]
+                          },
+                          "_unmapped_data": {
+                              "delay": "yes",
+                              "object": "App"
+                          },
+                          "componentalias": "",
+                          "source_address": "",
+                          "status_ordinal": 0,
+                          "_lifecycle_time": "0",
+                          "source_hostname": "web-fe-02",
+                          "category_ordinal": 190,
+                          "incident_company": "",
+                          "priority_ordinal": 50,
+                          "severity_ordinal": 70,
+                          "situationEventId": "7e86abd3-1540-4b85-be03-30563bb20c6b",
+                          "source_identifier": "web-fe-02",
+                          "sub_category_ordinal": 10,
+                          "_node_service_mapping": [
+                              "c956c862bd2e716c4ace65636e486f7374:f36f5d63835a86fb749a448f6e427573696e65737353657276696365",
+                              "c956c862bd2e716c4ace65606e5669727475616c4d616368696e65:f36f5d63835a86fb749a448f6e427573696e65737353657276696365"
+                          ],
+                          "_node_service_key_mapping": [
+                              "nbVbha9RVH7gLtpBlv1Ttg==::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e",
+                              "aws/us-east-2/ec2/i-0d961a0e78261469f::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e"
+                          ]
+                      },
+                      "effort": 60,
+                      "source": "AIOPS"
+                  },
+                  "status": "OPEN",
+                  "created_by": "553694080029185",
+                  "updated_by": null,
+                  "created_time": 1667477847636.11,
+                  "updated_time": null
+              },
+              {
+                  "id": "0e68f8e6-e20d-4d06-bba8-5f9b5c7ac223",
+                  "type": "EVENT",
+                  "external_id": "eps.1738801444.174850376041259.a7b28079-f8eb-4c85-9d14-28ba6f42fed7",
+                  "summary": "[Nagios] Memory utilization above 85% for last 15 minutes",
+                  "details": null,
+                  "metadata": {
+                      "eta": 1,
+                      "event": {
+                          "msg": "[Nagios] Memory utilization above 85% for last 15 minutes",
+                          "tags": "[]",
+                          "alias": [
+                              "BMC_ComputerSystem:web-fe-03"
+                          ],
+                          "class": "EVENT",
+                          "_ci_id": "",
+                          "_model": "",
+                          "_notes": "[]",
+                          "status": "OPEN",
+                          "_errors": "[]",
+                          "details": "",
+                          "_entropy": "",
+                          "_node_id": [
+                              "c956c862bd2e716c4ace65596e486f7374",
+                              "c956c862bd2e716c4ace655e6e5669727475616c4d616368696e65"
+                          ],
+                          "category": "OPERATIONS_MANAGEMENT",
+                          "cdmclass": "",
+                          "location": "",
+                          "priority": "PRIORITY_1",
+                          "severity": "CRITICAL",
+                          "modelname": "",
+                          "_signature": "-1517530525",
+                          "_tenant_id": "1738801444",
+                          "score_info": [
+                              "\nEvent Severity : 20.0",
+                              "\nKPI Metric : 0.0",
+                              "\nMultiple Services : 0.0",
+                              "\nNode Depth : 15.0",
+                              "\nNode Kind : 8.0",
+                              "\nTime Proximity : 20.0"
+                          ],
+                          "start_time": null,
+                          "_identifier": "eps.1738801444.174850376041259.a7b28079-f8eb-4c85-9d14-28ba6f42fed7",
+                          "_operations": "[0x1842f9dd7cf,,Predefined Policy for Incident,NOTIFICATION,'']",
+                          "_service_id": [
+                              "f36f5d63835a86fb749a448f6e427573696e65737353657276696365"
+                          ],
+                          "automations": [
+                              {
+                                  "id": "30799dc1-3039-3fe2-d895-d3a0daa70269",
+                                  "name": "Linux Disk Cleanup",
+                                  "type": "user_defined",
+                                  "checksum": "2bd8db4dcec26d4abd59e33cbf986e8a5e930e2378128c0aa5ffc1c13d8ed8b3",
+                                  "description": "Delete temporary files to free diskspace",
+                                  "auto_enabled": false
+                              },
+                              {
+                                  "id": "19d0c987-0152-870c-e063-b1cbbaf2cf2a",
+                                  "name": "Innovation Studio Control-M Job Automation Process",
+                                  "type": "user_defined",
+                                  "checksum": "f8be5311d327f13fa3a2c6781abd273335186c92768efbf218b0b22a4a4fc8fe",
+                                  "description": "",
+                                  "auto_enabled": false
+                              },
+                              {
+                                  "id": "a9100b17-7649-8b8c-3592-02c08b5be208",
+                                  "name": "AWS Remediacao via Control-M",
+                                  "type": "user_defined",
+                                  "checksum": "32257655cbe0f3451b16505cad52021047b531cd0d33f9507ed813bd39233ea2",
+                                  "description": "",
+                                  "auto_enabled": false
+                              }
+                          ],
+                          "event_score": 63,
+                          "incident_id": "INC000000022766",
+                          "showRcaIcon": true,
+                          "source_port": 3181,
+                          "_tenant_name": "",
+                          "instancename": "",
+                          "significance": "0",
+                          "sub_category": "OTHER",
+                          "_arrival_time": 1667246184393,
+                          "_repeat_count": "0",
+                          "_service_name": [
+                              "Media Service"
+                          ],
+                          "creation_time": 1667246184393,
+                          "user_assigned": "",
+                          "_modified_time": 1667246188732,
+                          "_relationships": {
+                              "rstat": "secondary",
+                              "mlsituation": [
+                                  "f36f5d63835a86fb749a448f6e427573696e65737353657276696365_cd7bc1763b8d4240b17542cb24f2f9e7"
+                              ]
+                          },
+                          "_unmapped_data": {
+                              "delay": "yes",
+                              "object": "App"
+                          },
+                          "componentalias": "",
+                          "source_address": "",
+                          "status_ordinal": 0,
+                          "_lifecycle_time": "0",
+                          "source_hostname": "web-fe-03",
+                          "category_ordinal": 190,
+                          "incident_company": "",
+                          "priority_ordinal": 50,
+                          "severity_ordinal": 70,
+                          "source_identifier": "web-fe-03",
+                          "sub_category_ordinal": 10,
+                          "_node_service_mapping": [
+                              "c956c862bd2e716c4ace65596e486f7374:f36f5d63835a86fb749a448f6e427573696e65737353657276696365",
+                              "c956c862bd2e716c4ace655e6e5669727475616c4d616368696e65:f36f5d63835a86fb749a448f6e427573696e65737353657276696365"
+                          ],
+                          "_node_service_key_mapping": [
+                              "CFRmgLx1zJs+GPum67rVuA==::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e",
+                              "aws/us-east-2/ec2/i-0282bfd01619bba18::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e"
+                          ]
+                      },
+                      "effort": 30,
+                      "source": "AIOPS"
+                  },
+                  "status": "OPEN",
+                  "created_by": "553694080029185",
+                  "updated_by": null,
+                  "created_time": 1667266942619.905,
+                  "updated_time": null
+              },
+              {
+                  "id": "a9494477-ba3c-4de5-8626-a91cb38fc103",
+                  "type": "EVENT",
+                  "external_id": "eps.1738801444.3818702292462257.6ad0841a-58f7-45f3-be9c-fa262cce7382",
+                  "summary": "[Dynatrace] Abnormal traffic pattern detected on tower220",
+                  "details": null,
+                  "metadata": {
+                      "eta": 0,
+                      "event": {
+                          "msg": "[Dynatrace] Abnormal traffic pattern detected on tower220",
+                          "tags": "[]",
+                          "alias": [
+                              "BMC_ComputerSystem:web-fe-02"
+                          ],
+                          "class": "EVENT",
+                          "_ci_id": "",
+                          "_model": "",
+                          "_notes": "[]",
+                          "status": "OPEN",
+                          "_errors": "[]",
+                          "details": "",
+                          "_entropy": "",
+                          "_node_id": [
+                              "c956c862bd2e716c4ace65636e486f7374",
+                              "c956c862bd2e716c4ace65606e5669727475616c4d616368696e65"
+                          ],
+                          "category": "OPERATIONS_MANAGEMENT",
+                          "cdmclass": "",
+                          "location": "",
+                          "priority": "PRIORITY_1",
+                          "severity": "CRITICAL",
+                          "modelname": "",
+                          "_signature": "1428297848",
+                          "_tenant_id": "1738801444",
+                          "score_info": "",
+                          "start_time": null,
+                          "_identifier": "eps.1738801444.3818702292462257.6ad0841a-58f7-45f3-be9c-fa262cce7382",
+                          "_operations": "[0x182f9843c8b,,Predefined Policy for Incident,NOTIFICATION,'']",
+                          "_service_id": [
+                              "b949da62b459fa4e0974bcd26e427573696e65737353657276696365",
+                              "c956c862bd2e716c4ace65696e427573696e65737353657276696365"
+                          ],
+                          "automations": [
+                              {
+                                  "id": "30799dc1-3039-3fe2-d895-d3a0daa70269",
+                                  "name": "Linux Disk Cleanup",
+                                  "type": "user_defined",
+                                  "checksum": "2bd8db4dcec26d4abd59e33cbf986e8a5e930e2378128c0aa5ffc1c13d8ed8b3",
+                                  "description": "Delete temporary files to free diskspace",
+                                  "auto_enabled": false
+                              }
+                          ],
+                          "event_score": 14,
+                          "incident_id": "INC000000020895",
+                          "showRcaIcon": true,
+                          "situationID": "c956c862bd2e716c4ace65696e427573696e65737353657276696365_d730cace18b040dab045c1b1a316a235",
+                          "source_port": 3181,
+                          "_tenant_name": "",
+                          "instancename": "",
+                          "significance": "0",
+                          "sub_category": "OTHER",
+                          "_arrival_time": 1662043569244,
+                          "_repeat_count": "0",
+                          "_service_name": [
+                              "Puma Trading System",
+                              "Media Service"
+                          ],
+                          "creation_time": 1662043569244,
+                          "situationName": "Media Service - [Dynatrace] Abnormal traffic pattern detected on tower220",
+                          "user_assigned": "",
+                          "_modified_time": 1662043571385,
+                          "_relationships": {
+                              "rstat": "secondary",
+                              "mlsituation": [
+                                  "c956c862bd2e716c4ace65696e427573696e65737353657276696365_d730cace18b040dab045c1b1a316a235",
+                                  "b949da62b459fa4e0974bcd26e427573696e65737353657276696365_f20ef3f750374db2a560a6085894a068"
+                              ]
+                          },
+                          "_unmapped_data": {
+                              "delay": "yes",
+                              "object": "App"
+                          },
+                          "componentalias": "",
+                          "source_address": "",
+                          "status_ordinal": 0,
+                          "_lifecycle_time": "0",
+                          "source_hostname": "web-fe-02",
+                          "category_ordinal": 190,
+                          "incident_company": "",
+                          "priority_ordinal": 50,
+                          "severity_ordinal": 70,
+                          "situationEventId": "e136cd27-8699-455b-9796-2466b4760ab9",
+                          "source_identifier": "web-fe-02",
+                          "sub_category_ordinal": 10,
+                          "_node_service_mapping": [
+                              "c956c862bd2e716c4ace65636e486f7374:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365",
+                              "c956c862bd2e716c4ace65606e5669727475616c4d616368696e65:b949da62b459fa4e0974bcd26e427573696e65737353657276696365,c956c862bd2e716c4ace65696e427573696e65737353657276696365"
+                          ],
+                          "_node_service_key_mapping": [
+                              "nbVbha9RVH7gLtpBlv1Ttg==::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e",
+                              "aws/us-east-2/ec2/i-0d961a0e78261469f::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e,b949da62b459fa4e0974bc596e4d6f64656c446566696e6974696f6e"
+                          ]
+                      },
+                      "effort": 120,
+                      "source": "AIOPS"
+                  },
+                  "status": "OPEN",
+                  "created_by": "553694080029185",
+                  "updated_by": null,
+                  "created_time": 1662050257818.796,
+                  "updated_time": null
+              },
+              {
+                  "id": "685e9d31-5a1f-4448-9485-99e2e8a260c9",
+                  "type": "EVENT",
+                  "external_id": "eps.1738801444.2344723057149292.4df34483-9a13-4393-9238-93e1c058f776",
+                  "summary": "[AWS] EC2 instance is not responding on HTTP 8080.",
+                  "details": null,
+                  "metadata": {
+                      "eta": 7,
+                      "event": {
+                          "msg": "[AWS] EC2 instance is not responding on HTTP 8080.",
+                          "tags": "[]",
+                          "alias": [
+                              "BMC_ComputerSystem:web-fe-01"
+                          ],
+                          "class": "EVENT",
+                          "_ci_id": "",
+                          "_model": "",
+                          "_notes": "[]",
+                          "status": "OPEN",
+                          "_errors": "[]",
+                          "details": "",
+                          "_entropy": "",
+                          "_node_id": [
+                              "c956c862bd2e716c4ace65646e486f7374",
+                              "c956c862bd2e716c4ace655f6e5669727475616c4d616368696e65"
+                          ],
+                          "category": "OPERATIONS_MANAGEMENT",
+                          "cdmclass": "",
+                          "location": "",
+                          "priority": "PRIORITY_1",
+                          "severity": "CRITICAL",
+                          "modelname": "",
+                          "_signature": "356138322",
+                          "_tenant_id": "1738801444",
+                          "score_info": [
+                              "\nEvent Severity : 20.0",
+                              "\nKPI Metric : 0.0",
+                              "\nMultiple Services : 0.0",
+                              "\nNode Depth : 20.0",
+                              "\nNode Kind : 6.0",
+                              "\nTime Proximity : 20.0"
+                          ],
+                          "start_time": null,
+                          "_identifier": "eps.1738801444.2344723057149292.4df34483-9a13-4393-9238-93e1c058f776",
+                          "_operations": "[0x182a172b769,,Predefined Policy for Incident,NOTIFICATION,'']",
+                          "_service_id": [
+                              "c956c862bd2e716c4ace65696e427573696e65737353657276696365",
+                              "c956c862bd2e716c4ace65696e427573696e65737353657276696365"
+                          ],
+                          "automations": [
+                              {
+                                  "id": "385dcf40-1b50-11ed-8296-0613ed995521",
+                                  "name": "AWS Automation - Reset EC2 instance",
+                                  "type": "user_defined",
+                                  "checksum": "5968dd3d7ccf6e461f71436a657d69d1eb84d09a7292968642685850fe275675",
+                                  "description": "",
+                                  "auto_enabled": false
+                              }
+                          ],
+                          "event_score": 66,
+                          "incident_id": "INC000000020272",
+                          "showRcaIcon": true,
+                          "source_port": 3181,
+                          "_tenant_name": "",
+                          "instancename": "",
+                          "significance": "0",
+                          "sub_category": "OTHER",
+                          "_arrival_time": 1660566026007,
+                          "_repeat_count": "0",
+                          "_service_name": [
+                              "Media Service",
+                              "Media Service"
+                          ],
+                          "creation_time": 1660566026007,
+                          "user_assigned": "",
+                          "_modified_time": 1660566166178,
+                          "_relationships": {
+                              "rstat": "secondary",
+                              "mlsituation": [
+                                  "c956c862bd2e716c4ace65696e427573696e65737353657276696365_a7663ce657d24f71a1d1202b97cfba66"
+                              ]
+                          },
+                          "_unmapped_data": {
+                              "delay": "yes",
+                              "object": "App"
+                          },
+                          "componentalias": "",
+                          "source_address": "",
+                          "status_ordinal": 0,
+                          "_lifecycle_time": "0",
+                          "source_hostname": "web-fe-01",
+                          "category_ordinal": 190,
+                          "incident_company": "",
+                          "priority_ordinal": 50,
+                          "severity_ordinal": 70,
+                          "source_identifier": "web-fe-01",
+                          "sub_category_ordinal": 10,
+                          "_node_service_mapping": [
+                              "c956c862bd2e716c4ace65646e486f7374:c956c862bd2e716c4ace65696e427573696e65737353657276696365",
+                              "c956c862bd2e716c4ace655f6e5669727475616c4d616368696e65:c956c862bd2e716c4ace65696e427573696e65737353657276696365"
+                          ],
+                          "_node_service_key_mapping": [
+                              "6RVryw4vWCisatvcSuAW+g==::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e",
+                              "aws/us-east-2/ec2/i-0daede9476e67b825::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e"
+                          ]
+                      },
+                      "effort": 60,
+                      "source": "AIOPS"
+                  },
+                  "status": "CLOSED",
+                  "created_by": "971495220839423",
+                  "updated_by": null,
+                  "created_time": 1660593623661.208,
+                  "updated_time": null
+              },
+              {
+                  "id": "c7bb46da-99d3-4bfb-a121-22bf79ffcefd",
+                  "type": "EVENT",
+                  "external_id": "eps.1738801444.255554806020930.e276ffa8-926f-4c5b-8d2e-f009b27dbf6a",
+                  "summary": "[Splunk] File size exceeding the threshold - /etc/dyna.log",
+                  "details": null,
+                  "metadata": {
+                      "eta": 7,
+                      "event": {
+                          "msg": "[Splunk] File size exceeding the threshold - /etc/dyna.log",
+                          "tags": "[]",
+                          "alias": [
+                              "BMC_ComputerSystem:web-fe-01"
+                          ],
+                          "class": "EVENT",
+                          "_ci_id": "",
+                          "_model": "",
+                          "_notes": "[]",
+                          "status": "OPEN",
+                          "_errors": "[]",
+                          "details": "",
+                          "_entropy": "",
+                          "_node_id": [
+                              "c956c862bd2e716c4ace65646e486f7374",
+                              "c956c862bd2e716c4ace655f6e5669727475616c4d616368696e65"
+                          ],
+                          "category": "OPERATIONS_MANAGEMENT",
+                          "cdmclass": "",
+                          "location": "",
+                          "priority": "PRIORITY_3",
+                          "severity": "MINOR",
+                          "modelname": "",
+                          "_signature": "999406996",
+                          "_tenant_id": "1738801444",
+                          "score_info": [
+                              "\nKPI Metric : 0.0",
+                              "\nNode Kind : 6.0",
+                              "\nEvent Severity : 8.0",
+                              "\nMultiple Services : 0.0",
+                              "\nTime Proximity : 20.0",
+                              "\nNode Depth : 20"
+                          ],
+                          "_identifier": "eps.1738801444.255554806020930.e276ffa8-926f-4c5b-8d2e-f009b27dbf6a",
+                          "_operations": "[]",
+                          "_service_id": [
+                              "c956c862bd2e716c4ace65696e427573696e65737353657276696365",
+                              "c956c862bd2e716c4ace65696e427573696e65737353657276696365"
+                          ],
+                          "automations": [
+                              {
+                                  "id": "385dcf40-1b50-11ed-8296-0613ed995521",
+                                  "name": "AWS Automation - Reset EC2 instance",
+                                  "type": "user_defined",
+                                  "checksum": "5968dd3d7ccf6e461f71436a657d69d1eb84d09a7292968642685850fe275675",
+                                  "description": "",
+                                  "auto_enabled": false
+                              }
+                          ],
+                          "event_score": 54,
+                          "incident_id": "",
+                          "showRcaIcon": true,
+                          "source_port": 3181,
+                          "_tenant_name": "",
+                          "instancename": "",
+                          "significance": "0",
+                          "sub_category": "OTHER",
+                          "_arrival_time": 1660566056806,
+                          "_repeat_count": "0",
+                          "_service_name": [
+                              "Media Service",
+                              "Media Service"
+                          ],
+                          "creation_time": 1660566056806,
+                          "user_assigned": "",
+                          "_modified_time": 1660566056806,
+                          "_relationships": {
+                              "rstat": "secondary",
+                              "mlsituation": [
+                                  "c956c862bd2e716c4ace65696e427573696e65737353657276696365_a7663ce657d24f71a1d1202b97cfba66"
+                              ]
+                          },
+                          "_unmapped_data": {
+                              "delay": "yes",
+                              "object": "App"
+                          },
+                          "componentalias": "",
+                          "source_address": "",
+                          "status_ordinal": 0,
+                          "_lifecycle_time": "0",
+                          "source_hostname": "web-fe-01",
+                          "category_ordinal": 190,
+                          "incident_company": "",
+                          "priority_ordinal": 30,
+                          "severity_ordinal": 50,
+                          "source_identifier": "web-fe-01",
+                          "sub_category_ordinal": 10,
+                          "_node_service_mapping": [
+                              "c956c862bd2e716c4ace65646e486f7374:c956c862bd2e716c4ace65696e427573696e65737353657276696365",
+                              "c956c862bd2e716c4ace655f6e5669727475616c4d616368696e65:c956c862bd2e716c4ace65696e427573696e65737353657276696365"
+                          ],
+                          "_node_service_key_mapping": [
+                              "6RVryw4vWCisatvcSuAW+g==::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e",
+                              "aws/us-east-2/ec2/i-0daede9476e67b825::62005a60e158c52675d390826e4d6f64656c446566696e6974696f6e"
+                          ]
+                      },
+                      "effort": 60,
+                      "source": "AIOPS"
+                  },
+                  "status": "OPEN",
+                  "created_by": "971495220839423",
+                  "updated_by": null,
+                  "created_time": 1660588788720.234,
+                  "updated_time": null
+              }
+          ],
+          "page": 0
+      }
+order: 1000

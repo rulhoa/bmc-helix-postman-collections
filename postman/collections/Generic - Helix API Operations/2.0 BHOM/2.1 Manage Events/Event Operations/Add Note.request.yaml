@@ -1,0 +1,21 @@
+$kind: http-request
+url: "{{bhom_base_url}}/events-service/api/v1.0/events/operations/addNote"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"slots\": {\r
+
+    \        \"notes\": \"test\"\r
+
+    \    },\r
+
+    \    \"eventIds\": [\r
+
+    \        \"eps.2085794782.13386326120252492.38daa74d-51a2-4bbe-be92-2083f0ded1dd\"\r
+
+    \    ]\r
+
+    }"
+order: 4000

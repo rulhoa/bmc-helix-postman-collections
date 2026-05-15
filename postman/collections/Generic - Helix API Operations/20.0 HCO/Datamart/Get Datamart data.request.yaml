@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{bhom_base_url}}/opt/api/v1/datamartservice/datamarts/200067/data"
+method: POST
+body:
+  type: json
+  content: "{\"filters\":[{\"name\":\"timefilterlastxdays\",\"condition\":\"EQUALS\",\"value\":\"D30\"},{\"name\":\"rootappid\",\"condition\":\"EQUALS\",\"value\":\"2\"},{\"name\":\"@{domain}\",\"condition\":\"EQUALS\",\"value\":\"2\"}]}\r
+
+    \r
+
+    \r
+
+    \r\n"
+settings:
+  disabledSystemHeaders: []
+order: 1000

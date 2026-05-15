@@ -1,0 +1,16 @@
+$kind: http-request
+url: "{{v2}}/deploy-jobs/{{id}}"
+method: PATCH
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "targets": {
+        "servers": [
+          1
+        ]
+      }
+    }
+order: 5000

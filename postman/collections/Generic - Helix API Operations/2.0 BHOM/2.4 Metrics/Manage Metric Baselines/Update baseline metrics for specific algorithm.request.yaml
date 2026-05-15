@@ -1,0 +1,23 @@
+$kind: http-request
+description: "[https://docs.bmc.com/docs/bhom/222/managing-baseline-metrics-in-alarm-policies-with-rest-apis-1077384665.html](https://docs.bmc.com/docs/bhom/222/managing-baseline-metrics-in-alarm-policies-with-rest-apis-1077384665.html)"
+url: "{{bhom_base_url}}/aiops-config/api/v2.0/algorithms/tdigest/metrics"
+method: PUT
+body:
+  type: json
+  content: "{\r
+
+    \    \"metrics\": [\r
+
+    \        {\r
+
+    \            \"entityTypeId\": \"Dynatrace_App_Health\",\r
+
+    \            \"attributes\": [\"Dynatrace_page_load_time\"]\r
+
+    \        }\r
+
+    \    ]\r
+
+    }"
+examples: ./.resources/Update baseline metrics for specific algorithm.resources/examples
+order: 3000

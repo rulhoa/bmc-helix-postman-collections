@@ -1,0 +1,78 @@
+$kind: http-request
+description: |-
+  ## Cria perguntas e respostas para requisições a partir de IDs de Templates e Requisições.
+
+  ____________________________________________________________________________________________________________________
+
+  ##### Descrição:
+
+  Cria um registro no formulário SRD:MultipleQuestionResponse.
+
+  ____________________________________________________________________________________________________________________
+
+  ##### Pontos de Atenção:
+
+  * É necessário o alinhamento com a equipe de Gestão de Remedy & SRM p/ o início da utilização de novas perguntas de fluxos via API, pois os campos QuestionDef_InstanceID e QuestionSRD_Instance ID devem possuir os valores adequados, caso contrário poderá causar erros na requisição.
+  * Cada pergunta de cada fluxo tem os seus valores dos campos QuestionDef_InstanceID e QuestionSRD_Instance ID exclusivos.
+
+  ____________________________________________________________________________________________________________________
+
+  ##### BODY:
+
+  * QuestionDef_InstanceID: ID identificador da questão que está em utilização.
+
+  * QuestionSRD_Instance ID: ID identificador do relacionamento da questão ao fluxo.
+
+  * Question Text: Texto da questão (questionamento).
+
+  * Answer In Char: Valor da resposta da questão.
+
+  * Answer Internal: Valor da resposta da questão.
+
+  * Menu Label: Valor da resposta da questão.
+
+  * SRInstanceID: Instance Id da requisição.
+
+  * Commit Status: Por default é "Yes", indica o objetivo de inserir a questão no banco de dados.
+
+  * AnswerFormat: Geralmente é "STATIC_MENU" ou "TEXT", indica o tipo da resposta inserida.
+
+  ____________________________________________________________________________________________________________________
+
+  ##### HEADERS:
+
+  * Authorization: É o token para acessar a ferramenta, obtido atravéz da chamada POST Request Token, sempre necessário o prefixo AR-JWT(espaço)+TOKEN.
+
+  * Content-Type: Deve indicar o modelo de dados que está sendo enviado, por ser REST e em geral linha de código, o valor default é "application/json".
+url: "{{itsm_base_url}}/api/arsys/v1/entry/SRD:MultipleQuestionResponse/"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: "{\r
+
+    \t\"values\":{\r
+
+    \t\t\"QuestionDef_InstanceID\":\"\",\r
+
+    \        \"QuestionSRD_Instance ID\":\"\",\r
+
+    \t\t\"Question Text\":\"\",\r
+
+    \t\t\"Answer In Char\":\"\",\r
+
+    \t\t\"Answer Internal\":\"\",\r
+
+    \t\t\"Menu Label\":\"\",\r
+
+    \t\t\"SRInstanceID\":\"\",\r
+
+    \t\t\"Commit Status\":\"\",\r
+
+    \t\t\"AnswerFormat\":\"\"\r
+
+    \t}\r
+
+    }"
+order: 3000

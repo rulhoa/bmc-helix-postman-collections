@@ -1,0 +1,34 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/events-service/api/v1.0/events/classes/1cf556e6-e30b-11ee-95e0-5308fa064801"
+  method: DELETE
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Fri, 15 Mar 2024 20:33:10 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    Referrer-Policy: same-origin
+    X-Frame-Options: SAMEORIGIN
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    X-Content-Type-Options: nosniff
+    Permissions-Policy: idle-detection=self
+    Content-Encoding: gzip
+    TraceId: f159f662-1244-469b-a736-f1e412a97495 613873398
+    Pragma: no-cache
+    X-XSS-Protection: 1; mode=block
+    Cache-control: no-store
+  body:
+    type: json
+    content: |-
+      {
+          "responseTimeStamp": 1710534790601,
+          "statusCode": "200",
+          "statusMsg": "[Event class deletion successful.]",
+          "resourceId": [
+              "1cf556e6-e30b-11ee-95e0-5308fa064801"
+          ]
+      }
+order: 1000

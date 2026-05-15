@@ -1,0 +1,74 @@
+$kind: http-request
+url: "{{bhom_base_url}}/events-service/api/v1.0/blackout_policies"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: "{\r
+
+    \  \"name\": \"Change Blackout - PDCRQ0000167212\",\r
+
+    \  \"description\": \"Blackout_Via_API\",\r
+
+    \  \"executionOrder\": 777,\r
+
+    \  \"eventSelectorCriteria\": \"( source_hostname contains '486a' OR source_hostname contains '487a' OR source_hostname contains '488a' OR source_hostname contains '489a' OR source_hostname contains '490a' OR source_hostname contains '491a' OR source_hostname contains '492a' OR source_hostname contains '493a' OR source_hostname contains '494a' OR source_hostname contains '495a' OR source_hostname contains '496a' OR source_hostname contains '497a' OR source_hostname contains '498a' OR source_hostname contains '499a' OR source_hostname contains '500a' ) OR _service_name equals 'myservicename'\",\r
+
+    \  \"enabled\": true,\r
+
+    \  \"configurations\":\r
+
+    \    { \r
+
+    \        \"definition\": {\r
+
+    \        \"timeframeDetails\": {\r
+
+    \          \"startDate\": \"01022023\",\r
+
+    \          \"startTime\": \"12:10\",\r
+
+    \          \"endTime\": \"12:10\",\r
+
+    \          \"endsOn\": {\r
+
+    \            \"endDate\": \"02022023\"\r
+
+    \          },\r
+
+    \          \"recurrencePattern\": {\r
+
+    \            \"recurrence\": \"oneTime\"\r
+
+    \          },\r
+
+    \          \"timeZone\": {\r
+
+    \            \"id\": \"America/Sao_Paulo\",\r
+
+    \            \"offset\": \" -03:00\"\r
+
+    \          }\r
+
+    \        },\r
+
+    \        \"processing_action\": {\r
+
+    \          \"blackoutExistingEvents\": \"true\",\r
+
+    \          \"resetStatusOnBlackoutEnd\": \"true\"\r
+
+    \        }\r
+
+    \      }\r
+
+    \    }\r
+
+    }\r
+
+    \r
+
+    \r\n"
+examples: ./.resources/Create Blackout Policy.resources/examples
+order: 1000

@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{bhom_base_url}}/DSPerformancealarm/api/alarm/v1/tmf/mapping"
+method: GET
+order: 2000

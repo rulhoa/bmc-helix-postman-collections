@@ -1,0 +1,88 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/log-service/api/v1.0/logs"
+  method: POST
+  body:
+    type: json
+    content: "[\r
+
+      \    {\r
+
+      \        \"input\": {\r
+
+      \            \"type\": \"log\"\r
+
+      \        },\r
+
+      \        \"timestamp\": \"1697051578\",\r
+
+      \        \"auth\": \"-\",\r
+
+      \        \"agent\": {\r
+
+      \            \"type\": \"API\",\r
+
+      \            \"id\": \"e2043b6b-03b4-45a8-8122-a5bf7da71b4e\",\r
+
+      \            \"hostname\": \"BHOMhostname\"\r
+
+      \        },\r
+
+      \        \"tags\": [\r
+
+      \            \"Install Log\"\r
+
+      \        ],\r
+
+      \        \"log\": {\r
+
+      \            \"offset\": 0\r
+
+      \        },\r
+
+      \        \"verb\": \"POST\",\r
+
+      \        \"host\": {\r
+
+      \            \"os\": {\r
+
+      \                \"family\": \"windows\",\r
+
+      \                \"version\": \"10.0\",\r
+
+      \                \"platform\": \"windows\",\r
+
+      \                \"build\": \"14393.3750\",\r
+
+      \                \"kernel\": \"10.0.14393.3750 (rs1_release.200601-1853)\",\r
+
+      \                \"name\": \"Windows Server 2016 Standard\"\r
+
+      \            }\r
+
+      \        },\r
+
+      \        \"message\": \"************************************************************\"\r
+
+      \    }\r
+
+      ]"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Wed, 11 Oct 2023 19:15:31 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    Content-Encoding: gzip
+    TraceId: 96cdfeed-09cc-4887-bc35-c9c6894f0cca 660181721
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+  body:
+    type: json
+    content: |-
+      {
+      	"StatusCode":200
+      	"StatusMessage":"QUEUED"
+      }
+order: 1000

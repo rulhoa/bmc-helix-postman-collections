@@ -1,0 +1,605 @@
+$kind: http-example
+name: Get Automation Policy Detailed
+request:
+  url: "{{bhom_base_url}}/intelligent-automation/api/v1/workflows/75fbb150-9e68-11ed-b446-db62f9da02e9/checksum/66f2a5eccd2b3fcaa545dc39255ac18c3abb08024d6f9d1731ccedc96acc25f6"
+  method: GET
+  headers:
+    helix_jwt_token: "{{bhom_json_web_token}}"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Fri, 10 Feb 2023 20:53:21 GMT
+    Content-Type: application/json; charset=utf-8
+    Content-Length: "8989"
+    Connection: keep-alive
+    X-Powered-By: Express
+    ETag: W/"231d-yQj46MRM+7w1azCziPxpKyk6P6o"
+  body:
+    type: json
+    content: |-
+      {
+          "id": "75fbb150-9e68-11ed-b446-db62f9da02e9",
+          "name": "Create or Update Incident Ticket Template",
+          "type": "system_defined",
+          "description": "Creates or updates a incident ticket in BMC Helix for ITSM.",
+          "metadata": {
+              "event": {
+                  "createIncident": "true"
+              },
+              "event_type": "User defined event",
+              "json_paths": {
+                  "$.createIncident": [
+                      "true"
+                  ]
+              },
+              "trigger_condition_expression_metadata": [
+                  {
+                      "slot_name": "$.event.createIncident",
+                      "slot_value": "true",
+                      "end_bracket": "",
+                      "slot_operator": "==",
+                      "condition_order": 0,
+                      "condition_bracket": "",
+                      "condition_operator": ""
+                  }
+              ]
+          },
+          "tag_specs": {},
+          "trigger_condition_expression": "$?($.\"event\".\"createIncident\" == \"true\")",
+          "checksum": "66f2a5eccd2b3fcaa545dc39255ac18c3abb08024d6f9d1731ccedc96acc25f6",
+          "status": "DRAFT",
+          "is_active": false,
+          "auto_enabled": true,
+          "actions": {
+              "Map and transform event to Incident": {
+                  "action_def_uri": "transformer_plugin/assign/x-bmc-ia-any",
+                  "plugin_type": "transformer_plugin",
+                  "credential": {
+                      "target_id": "http://transformer.com",
+                      "provider_id": "transformer_plugin"
+                  },
+                  "actionproperties": {
+                      "failOnTokenReplacement": false
+                  },
+                  "continue_on_failure": false,
+                  "action": {
+                      "/assign": {
+                          "x-bmc-ia-any": {
+                              "parameters": [],
+                              "requestBody": {
+                                  "content": {
+                                      "application/json": {
+                                          "mapping": {
+                                              "Impact": {
+                                                  "required": true,
+                                                  "conditions": [
+                                                      {
+                                                          "type": "bhom",
+                                                          "value": "$.transform",
+                                                          "transform": "enum_map($.event.severity|| [{\"CRITICAL\":\"1-Extensive/Widespread\"}, {\"MAJOR\":\"1-Extensive/Widespread\"}, {\"MINOR\":\"2-Significant/Large\"}, {\"WARNING\":\"3-Moderate/Limited\"}, {\"INFO\":\"4-Minor/Localized\"}, {\"OK\":\"4-Minor/Localized\"}, {\"UNKNOWN\":\"4-Minor/Localized\"}])"
+                                                      }
+                                                  ]
+                                              },
+                                              "Summary": {
+                                                  "required": true,
+                                                  "conditions": [
+                                                      {
+                                                          "type": "bhom",
+                                                          "value": "$.event.msg",
+                                                          "operand1": "$.event.msg",
+                                                          "operand2": "100",
+                                                          "operator": "lenLessThan"
+                                                      },
+                                                      {
+                                                          "type": "bhom",
+                                                          "value": "$.transform",
+                                                          "transform": "substr($.event.msg||99)"
+                                                      }
+                                                  ]
+                                              },
+                                              "Urgency": {
+                                                  "required": true,
+                                                  "conditions": [
+                                                      {
+                                                          "type": "bhom",
+                                                          "value": "$.transform",
+                                                          "transform": "enum_map($.event.priority|| [{\"PRIORITY_1\":\"1-Critical\"}, {\"PRIORITY_2\":\"2-High\"}, {\"PRIORITY_3\":\"3-Medium\"}, {\"PRIORITY_4\":\"4-Low\"}, {\"PRIORITY_5\":\"4-Low\"}])"
+                                                      }
+                                                  ]
+                                              },
+                                              "mc_ueid": {
+                                                  "required": true,
+                                                  "conditions": [
+                                                      {
+                                                          "type": "bhom",
+                                                          "value": "$.event._identifier"
+                                                      }
+                                                  ]
+                                              },
+                                              "CILookup": {
+                                                  "required": false,
+                                                  "conditions": [
+                                                      {
+                                                          "value": {
+                                                              "0": [
+                                                                  {
+                                                                      "BMC.CORE:BMC_ComputerSystem:HostName": [
+                                                                          {
+                                                                              "value": "$.event.source_hostname"
+                                                                          }
+                                                                      ]
+                                                                  },
+                                                                  {
+                                                                      "BMC.CORE:BMC_ProtocolEndpoint:Address": [
+                                                                          {
+                                                                              "value": "$.event.source_address"
+                                                                          }
+                                                                      ]
+                                                                  },
+                                                                  {
+                                                                      "BMC.CORE:BMC_DataBase:InstanceName": [
+                                                                          {
+                                                                              "value": "$.event.instancename"
+                                                                          }
+                                                                      ]
+                                                                  },
+                                                                  {
+                                                                      "BMC.CORE:BMC_DataBase:Model": [
+                                                                          {
+                                                                              "value": "$.event.modelname"
+                                                                          }
+                                                                      ]
+                                                                  },
+                                                                  {
+                                                                      "BMC.CORE:BMC_ComputerSystem:Domain": [
+                                                                          {
+                                                                              "value": "$.event.source_hostname"
+                                                                          }
+                                                                      ]
+                                                                  }
+                                                              ]
+                                                          },
+                                                          "operand1": "$.event.cdmclass",
+                                                          "operand2": "BMC_DataBase",
+                                                          "operator": "=="
+                                                      },
+                                                      {
+                                                          "value": {
+                                                              "0": [
+                                                                  {
+                                                                      "BMC.CORE:BMC_ComputerSystem:HostName": [
+                                                                          {
+                                                                              "value": "$.event.source_hostname"
+                                                                          }
+                                                                      ]
+                                                                  },
+                                                                  {
+                                                                      "BMC.CORE:BMC_ProtocolEndpoint:Address": [
+                                                                          {
+                                                                              "value": "$.event.source_address"
+                                                                          }
+                                                                      ]
+                                                                  },
+                                                                  {
+                                                                      "BMC.CORE:BMC_ComputerSystem:Domain": [
+                                                                          {
+                                                                              "value": "$.event.source_hostname"
+                                                                          }
+                                                                      ]
+                                                                  }
+                                                              ]
+                                                          },
+                                                          "operand1": "$.event.cdmclass",
+                                                          "operand2": "BMC_ComputerSystem",
+                                                          "operator": "=="
+                                                      },
+                                                      {
+                                                          "value": {
+                                                              "0": [
+                                                                  {
+                                                                      "BMC.CORE:BMC_ComputerSystem:HostName": [
+                                                                          {
+                                                                              "value": "$.event.source_hostname"
+                                                                          }
+                                                                      ]
+                                                                  },
+                                                                  {
+                                                                      "BMC.CORE:BMC_ProtocolEndpoint:Address": [
+                                                                          {
+                                                                              "value": "$.event.source_address"
+                                                                          }
+                                                                      ]
+                                                                  },
+                                                                  {
+                                                                      "BMC.CORE:BMC_DataBase:InstanceName": [
+                                                                          {
+                                                                              "value": "$.event.instancename"
+                                                                          }
+                                                                      ]
+                                                                  },
+                                                                  {
+                                                                      "BMC.CORE:BMC_DataBase:Model": [
+                                                                          {
+                                                                              "value": "$.event.modelname"
+                                                                          }
+                                                                      ]
+                                                                  },
+                                                                  {
+                                                                      "BMC.CORE:BMC_ComputerSystem:Domain": [
+                                                                          {
+                                                                              "value": "$.event.source_hostname"
+                                                                          }
+                                                                      ]
+                                                                  }
+                                                              ]
+                                                          },
+                                                          "operand1": "$.event.cdmclass",
+                                                          "operand2": "BMC_SoftwareServer",
+                                                          "operator": "=="
+                                                      },
+                                                      {
+                                                          "value": {
+                                                              "0": [
+                                                                  {
+                                                                      "BMC.CORE:BMC_ComputerSystem:HostName": [
+                                                                          {
+                                                                              "value": "$.event.source_hostname"
+                                                                          }
+                                                                      ]
+                                                                  }
+                                                              ]
+                                                          }
+                                                      }
+                                                  ],
+                                                  "display_name": "CILookupProperties"
+                                              },
+                                              "Category": {
+                                                  "required": false,
+                                                  "conditions": [
+                                                      {
+                                                          "type": "custom",
+                                                          "value": "TSOM"
+                                                      }
+                                                  ]
+                                              },
+                                              "use_case": {
+                                                  "required": false,
+                                                  "conditions": [
+                                                      {
+                                                          "type": "custom",
+                                                          "value": "PSR"
+                                                      }
+                                                  ]
+                                              },
+                                              "Namespace": {
+                                                  "required": false,
+                                                  "conditions": [
+                                                      {
+                                                          "type": "custom",
+                                                          "value": "BMC.CORE"
+                                                      }
+                                                  ]
+                                              },
+                                              "cell_name": {
+                                                  "required": false,
+                                                  "conditions": [
+                                                      {
+                                                          "type": "custom",
+                                                          "value": ""
+                                                      }
+                                                  ]
+                                              },
+                                              "Class Name": {
+                                                  "required": false,
+                                                  "conditions": [
+                                                      {
+                                                          "type": "bhom",
+                                                          "value": "$.event.cdmclass"
+                                                      }
+                                                  ],
+                                                  "display_name": "Class Name"
+                                              },
+                                              "Created_By": {
+                                                  "required": true,
+                                                  "conditions": [
+                                                      {
+                                                          "type": "custom",
+                                                          "value": "BiiARS"
+                                                      }
+                                                  ]
+                                              },
+                                              "z1D_Action": {
+                                                  "required": true,
+                                                  "conditions": [
+                                                      {
+                                                          "type": "custom",
+                                                          "value": "PROCESS_EVENT"
+                                                      }
+                                                  ],
+                                                  "display_name": "Action"
+                                              },
+                                              "Service_Type": {
+                                                  "required": true,
+                                                  "conditions": [
+                                                      {
+                                                          "type": "itsm",
+                                                          "value": "Infrastructure Event"
+                                                      }
+                                                  ],
+                                                  "display_name": "Incident Type"
+                                              },
+                                              "Status_Event": {
+                                                  "required": true,
+                                                  "conditions": [
+                                                      {
+                                                          "type": "bhom",
+                                                          "value": "$.event.status"
+                                                      }
+                                                  ]
+                                              },
+                                              "CMDBLookupKey": {
+                                                  "required": true,
+                                                  "conditions": [
+                                                      {
+                                                          "value": "ADDM_IntegrationID"
+                                                      }
+                                                  ]
+                                              },
+                                              "EventClearedAt": {
+                                                  "required": false,
+                                                  "conditions": [
+                                                      {
+                                                          "type": "bhom",
+                                                          "value": "$.event._modified_time",
+                                                          "operand1": "$.event.status",
+                                                          "operand2": "CLOSED",
+                                                          "operator": "equalTo"
+                                                      },
+                                                      {
+                                                          "type": "custom",
+                                                          "value": ""
+                                                      }
+                                                  ]
+                                              },
+                                              "z1D_Secure_Log": {
+                                                  "required": true,
+                                                  "conditions": [
+                                                      {
+                                                          "type": "custom",
+                                                          "value": "Yes"
+                                                      }
+                                                  ],
+                                                  "display_name": "Work_Info_SecureLog"
+                                              },
+                                              "Contact_Company": {
+                                                  "required": true,
+                                                  "conditions": [
+                                                      {
+                                                          "type": "bhom",
+                                                          "value": "$.event.incident_company",
+                                                          "operand1": "$.event.incident_company",
+                                                          "operator": "isNotEmpty"
+                                                      },
+                                                      {
+                                                          "type": "bhom",
+                                                          "value": "Calbro Services"
+                                                      }
+                                                  ]
+                                              },
+                                              "Incident Number": {
+                                                  "required": false,
+                                                  "conditions": [
+                                                      {
+                                                          "type": "bhom",
+                                                          "value": "$.event.incident_id"
+                                                      }
+                                                  ]
+                                              },
+                                              "Incident_Status": {
+                                                  "required": false,
+                                                  "conditions": [
+                                                      {
+                                                          "type": "itsm",
+                                                          "value": "Resolved",
+                                                          "operand1": "$.event.status",
+                                                          "operand2": "CLOSED",
+                                                          "operator": "equalTo"
+                                                      },
+                                                      {
+                                                          "type": "itsm",
+                                                          "value": ""
+                                                      }
+                                                  ]
+                                              },
+                                              "Reported Source": {
+                                                  "required": true,
+                                                  "conditions": [
+                                                      {
+                                                          "type": "custom",
+                                                          "value": "BMC Impact Manager Event"
+                                                      }
+                                                  ],
+                                                  "display_name": "Reported_Source"
+                                              },
+                                              "z1D_IncidentFor": {
+                                                  "required": true,
+                                                  "conditions": [
+                                                      {
+                                                          "value": "Causal Component-Optimized"
+                                                      }
+                                                  ]
+                                              },
+                                              "z1D_View_Access": {
+                                                  "required": true,
+                                                  "conditions": [
+                                                      {
+                                                          "type": "itsm",
+                                                          "value": "Internal"
+                                                      }
+                                                  ],
+                                                  "display_name": "Work_Info_ViewAccess"
+                                              },
+                                              "ComponentAliases": {
+                                                  "required": false,
+                                                  "conditions": [
+                                                      {
+                                                          "type": "bhom",
+                                                          "value": "$.event.componentalias"
+                                                      }
+                                                  ]
+                                              },
+                                              "Short Description": {
+                                                  "required": true,
+                                                  "conditions": [
+                                                      {
+                                                          "type": "bhom",
+                                                          "value": "$.event.msg",
+                                                          "operand1": "$.event.msg",
+                                                          "operand2": "254",
+                                                          "operator": "lenLessThan"
+                                                      },
+                                                      {
+                                                          "value": "$.transform",
+                                                          "transform": "substr($.event.msg||253)"
+                                                      }
+                                                  ]
+                                              },
+                                              "z1D_Activity_Type": {
+                                                  "required": false,
+                                                  "conditions": [
+                                                      {
+                                                          "type": "itsm",
+                                                          "value": "BMC Impact Manager Update"
+                                                      }
+                                                  ],
+                                                  "display_name": "Work_Info_Type"
+                                              },
+                                              "ADDM_IntegrationID": {
+                                                  "required": false,
+                                                  "conditions": [
+                                                      {
+                                                          "value": "",
+                                                          "operand1": "$.event.status",
+                                                          "operand2": "CLOSED",
+                                                          "operator": "=="
+                                                      },
+                                                      {
+                                                          "value": "$.event._node_service_key_mapping"
+                                                      }
+                                                  ],
+                                                  "display_name": "ADDMIntegrationId"
+                                              },
+                                              "OutboundIdentifier": {
+                                                  "required": true,
+                                                  "conditions": [
+                                                      {
+                                                          "type": "bhom",
+                                                          "value": "$.event._identifier"
+                                                      }
+                                                  ]
+                                              },
+                                              "z1D_WorklogDetails": {
+                                                  "required": true,
+                                                  "conditions": [
+                                                      {
+                                                          "type": "custom",
+                                                          "value": "$.transform",
+                                                          "operand1": "$.event.class",
+                                                          "operand2": "ALARM",
+                                                          "operator": "equalTo",
+                                                          "transform": "concat(Host=||$.event.source_hostname|| Host Address=||$.event.source_address|| Object=||$.event.object||  Object Class=||$.event.class|| Parameter=|| $.event.paramete|| Parameter Value=||$.event.parameter_value|| Location=||$.event.location|| Event With Severity=||$.event.severity|| Priority=||$.event.priority|| Status=||$.event.status)"
+                                                      },
+                                                      {
+                                                          "type": "custom",
+                                                          "value": "$.transform",
+                                                          "operand1": "$.event.class",
+                                                          "operand2": "PATROL_EV",
+                                                          "operator": "equalTo",
+                                                          "transform": "concat(Host=||$.event.source_hostname|| Host Class=||$.event.p_host_class|| Host Address=||$.event.source_address|| Object=||$.event.object|| Object Class=||$.event.class|| Parameter=||$.event.parameter_value|| Location=||$.event.location|| Event With Severity=||$.event.severity|| Priority=||$.event.priority|| Status=||$.event.status)"
+                                                      },
+                                                      {
+                                                          "type": "custom",
+                                                          "value": "$.transform",
+                                                          "transform": "concat(Host=||$.event.source_hostname|| Host Address=||$.event.source_address|| Object=||$.event.object|| Object Class=||$.event.class|| Location=||$.event.location|| Event With Severity=||$.event.severity|| Priority=||$.event.priority|| Status=||$.event.status)"
+                                                      }
+                                                  ],
+                                                  "display_name": "Work_Info_Details"
+                                              },
+                                              "Detailed_Decription": {
+                                                  "required": false,
+                                                  "conditions": [
+                                                      {
+                                                          "type": "custom",
+                                                          "value": "$.transform",
+                                                          "operand1": "$.event.msg",
+                                                          "operand2": "100",
+                                                          "operator": "length greater",
+                                                          "transform": "substr($.event.msg || 0 || 99)"
+                                                      },
+                                                      {
+                                                          "value": "$.transform",
+                                                          "transform": "concat(BMC Helix Intelligent Automation Initiated Incident || $.event.msg)"
+                                                      }
+                                                  ],
+                                                  "display_name": "Notes"
+                                              },
+                                              "z2TF_IncidentStatusReason": {
+                                                  "required": false,
+                                                  "conditions": [
+                                                      {
+                                                          "type": "custom",
+                                                          "value": "Automated Resolution Reported",
+                                                          "operand1": "$.event.status",
+                                                          "operand2": "CLOSED",
+                                                          "operator": "equalTo"
+                                                      },
+                                                      {
+                                                          "type": "custom",
+                                                          "value": ""
+                                                      }
+                                                  ],
+                                                  "display_name": "Incident_Status_Reason"
+                                              }
+                                          },
+                                          "eventpayload": "$"
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  }
+              },
+              "Create or update an Incident": {
+                  "action_def_uri": "HELIX_ITSM/api/arsys/v1/entry/HPD:ServiceInterface/post",
+                  "plugin_type": "restapi_plugin",
+                  "credential": {
+                      "target_id": "https://helixsjc839-demo-restapi.onbmc.com",
+                      "provider_id": "HELIX_ITSM"
+                  },
+                  "continue_on_failure": false,
+                  "action": {
+                      "server": "https://helixsjc839-demo-restapi.onbmc.com",
+                      "/api/arsys/v1/entry/HPD:ServiceInterface": {
+                          "post": {
+                              "parameters": [
+                                  {
+                                      "in": "headers",
+                                      "Authorization": "AR-JWT"
+                                  }
+                              ],
+                              "requestBody": {
+                                  "content": {
+                                      "application/json": "$.'Map and transform event to Incident'.output"
+                                  }
+                              }
+                          }
+                      }
+                  },
+                  "predecessor": [
+                      "Map and transform event to Incident"
+                  ]
+              }
+          }
+      }
+order: 2000

@@ -1,0 +1,11 @@
+$kind: http-request
+url: "{{bhom_base_url}}/ims/api/v1/auth/tokens"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"token\": \"{{bhom_token}}\"\r
+
+    }"
+order: 2000

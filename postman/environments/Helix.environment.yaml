@@ -1,0 +1,38 @@
+name: Helix
+values:
+  - key: helix_username
+    value: username
+  - key: helix_password
+    value: password
+  - key: bhom_base_url
+    value: 'https://xxxx-itom-demo.onbmc.com'
+  - key: bhom_access_key
+    value: accesskey
+  - key: bhom_secret_key
+    value: secretkey
+  - key: bhom_apiKey
+    value: 'tenantid::accesskey::secretkey'
+  - key: disco_token
+    value: discoverykey
+  - key: disco_base_url
+    value: 'https://xxxx-disc.onbmc.com'
+  - key: itsm_base_url
+    value: 'https://xxxx-demo-restapi.onbmc.com'
+  - key: is_base_url
+    value: 'https://xxxx-demo-is.onbmc.com'
+    description: Innovation Suite base URL
+  - key: bhom_json_web_token
+    value: ''
+    description: auto populated by collection script
+  - key: bhom_token
+    value: ''
+    description: auto populated by collection script
+  - key: helix_userid
+    value: ''
+    description: auto populated by collection script
+  - key: tenant_id
+    value: ''
+    description: auto populated by collection script
+  - key: is_token
+    value: ''
+    description: auto populated by collection script

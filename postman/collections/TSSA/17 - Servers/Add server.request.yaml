@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{v1}}/servers"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "name": "server1",
+      "ip_address": "10.0.0.1",
+      "description": "example"
+    }
+order: 3000

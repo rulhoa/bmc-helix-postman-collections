@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{bhom_base_url}}/tsws/monitoring/api/v1.0/events/:eventid/details"
+method: GET
+pathVariables:
+  eventid: eps.613873398.61087818120465492.91fbc992-aef7-4035-8a00-5a13d3ea3e86
+order: 1000

@@ -1,0 +1,290 @@
+$kind: http-example
+request:
+  url: "{{disco_base_url}}/api/v1.9/data/import"
+  method: POST
+  body:
+    type: json
+    content: "{\r
+
+      \  \"source\": \"VSE\",\r
+
+      \  \"items\": [\r
+
+      \    {\r
+
+      \      \"kind\": \"Entity\",\r
+
+      \      \"data\": {\r
+
+      \        \"entity_id\": \"FIN-1\",\r
+
+      \        \"key\": \"Control-M Job:Finance_jobs/FIN-1\",\r
+
+      \        \"Type\": \"Control-M Job\",\r
+
+      \        \"entity_type\": \"SoftwareComponent\",\r
+
+      \        \"ParentFolder\": \"ControlMFolder/Finance_jobs\",\r
+
+      \        \"Host\": \"linux-agents\",\r
+
+      \        \"SubApplication\": \"Data\",\r
+
+      \        \"Application\": \"FIN\"\r
+
+      \      }\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"kind\": \"Entity\",\r
+
+      \      \"data\": {\r
+
+      \        \"entity_id\": \"FIN-10\",\r
+
+      \        \"key\": \"Control-M Job:Finance_jobs/FIN-10\",\r
+
+      \        \"Type\": \"Control-M Job\",\r
+
+      \        \"entity_type\": \"SoftwareComponent\",\r
+
+      \        \"ParentFolder\": \"ControlMFolder/Finance_jobs\",\r
+
+      \        \"Host\": \"linux-agents\",\r
+
+      \        \"SubApplication\": \"Data\",\r
+
+      \        \"Application\": \"FIN\"\r
+
+      \      }\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"kind\": \"Entity\",\r
+
+      \      \"data\": {\r
+
+      \        \"entity_id\": \"FIN-2\",\r
+
+      \        \"key\": \"Control-M Job:Finance_jobs/FIN-2\",\r
+
+      \        \"Type\": \"Control-M Job\",\r
+
+      \        \"entity_type\": \"SoftwareComponent\",\r
+
+      \        \"ParentFolder\": \"ControlMFolder/Finance_jobs\",\r
+
+      \        \"Host\": \"linux-agents\",\r
+
+      \        \"SubApplication\": \"Data\",\r
+
+      \        \"Application\": \"FIN\"\r
+
+      \      }\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"kind\": \"Entity\",\r
+
+      \      \"data\": {\r
+
+      \        \"entity_id\": \"FIN-3\",\r
+
+      \        \"key\": \"Control-M Job:Finance_jobs/FIN-3\",\r
+
+      \        \"Type\": \"Control-M Job\",\r
+
+      \        \"entity_type\": \"SoftwareComponent\",\r
+
+      \        \"ParentFolder\": \"ControlMFolder/Finance_jobs\",\r
+
+      \        \"Host\": \"linux-agents\",\r
+
+      \        \"SubApplication\": \"Data\",\r
+
+      \        \"Application\": \"FIN\"\r
+
+      \      }\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"kind\": \"Entity\",\r
+
+      \      \"data\": {\r
+
+      \        \"entity_id\": \"FIN-4\",\r
+
+      \        \"key\": \"Control-M Job:Finance_jobs/FIN-4\",\r
+
+      \        \"Type\": \"Control-M Job\",\r
+
+      \        \"entity_type\": \"SoftwareComponent\",\r
+
+      \        \"ParentFolder\": \"ControlMFolder/Finance_jobs\",\r
+
+      \        \"Host\": \"linux-agents\",\r
+
+      \        \"SubApplication\": \"Data\",\r
+
+      \        \"Application\": \"FIN\"\r
+
+      \      }\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"kind\": \"Entity\",\r
+
+      \      \"data\": {\r
+
+      \        \"entity_id\": \"FIN-5\",\r
+
+      \        \"key\": \"Control-M Job:Finance_jobs/FIN-5\",\r
+
+      \        \"Type\": \"Control-M Job\",\r
+
+      \        \"entity_type\": \"SoftwareComponent\",\r
+
+      \        \"ParentFolder\": \"ControlMFolder/Finance_jobs\",\r
+
+      \        \"Host\": \"linux-agents\",\r
+
+      \        \"SubApplication\": \"Data\",\r
+
+      \        \"Application\": \"FIN\"\r
+
+      \      }\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"kind\": \"Entity\",\r
+
+      \      \"data\": {\r
+
+      \        \"entity_id\": \"FIN-6\",\r
+
+      \        \"key\": \"Control-M Job:Finance_jobs/FIN-6\",\r
+
+      \        \"Type\": \"Control-M Job\",\r
+
+      \        \"entity_type\": \"SoftwareComponent\",\r
+
+      \        \"ParentFolder\": \"ControlMFolder/Finance_jobs\",\r
+
+      \        \"Host\": \"linux-agents\",\r
+
+      \        \"SubApplication\": \"Data\",\r
+
+      \        \"Application\": \"FIN\"\r
+
+      \      }\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"kind\": \"Entity\",\r
+
+      \      \"data\": {\r
+
+      \        \"entity_id\": \"FIN-7\",\r
+
+      \        \"key\": \"Control-M Job:Finance_jobs/FIN-7\",\r
+
+      \        \"Type\": \"Control-M Job\",\r
+
+      \        \"entity_type\": \"SoftwareComponent\",\r
+
+      \        \"ParentFolder\": \"ControlMFolder/Finance_jobs\",\r
+
+      \        \"Host\": \"linux-agents\",\r
+
+      \        \"SubApplication\": \"Data\",\r
+
+      \        \"Application\": \"FIN\"\r
+
+      \      }\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"kind\": \"Entity\",\r
+
+      \      \"data\": {\r
+
+      \        \"entity_id\": \"FIN-8\",\r
+
+      \        \"key\": \"Control-M Job:Finance_jobs/FIN-8\",\r
+
+      \        \"Type\": \"Control-M Job\",\r
+
+      \        \"entity_type\": \"SoftwareComponent\",\r
+
+      \        \"ParentFolder\": \"ControlMFolder/Finance_jobs\",\r
+
+      \        \"Host\": \"linux-agents\",\r
+
+      \        \"SubApplication\": \"Data\",\r
+
+      \        \"Application\": \"FIN\"\r
+
+      \      }\r
+
+      \    },\r
+
+      \    {\r
+
+      \      \"kind\": \"Entity\",\r
+
+      \      \"data\": {\r
+
+      \        \"entity_id\": \"FIN-9\",\r
+
+      \        \"key\": \"Control-M Job:Finance_jobs/FIN-9\",\r
+
+      \        \"Type\": \"Control-M Job\",\r
+
+      \        \"entity_type\": \"SoftwareComponent\",\r
+
+      \        \"ParentFolder\": \"ControlMFolder/Finance_jobs\",\r
+
+      \        \"Host\": \"linux-agents\",\r
+
+      \        \"SubApplication\": \"Data\",\r
+
+      \        \"Application\": \"FIN\"\r
+
+      \      }\r
+
+      \    }\r
+
+      \  ],\r
+
+      \  \"type\": \"VSE_Entities\"\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Wed, 06 Sep 2023 17:46:36 GMT
+    Content-Type: application/json
+    Content-Length: "35"
+    Connection: keep-alive
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+  body:
+    type: json
+    content: '"a663ae3c2f0b3fd6821a0a684b650001"'
+order: 1000

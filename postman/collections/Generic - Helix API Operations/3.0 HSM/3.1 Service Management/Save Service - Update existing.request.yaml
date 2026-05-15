@@ -1,0 +1,182 @@
+$kind: http-request
+description: |-
+  To add 3rd party metrics to services as Health Indicators you'll need to add a "associatedElements" block (see saved examples) such as the one below:
+
+  `"associatedElements": [ { "type": "health_processing", "elements": [ { "selectors": [], "scoreMapping": {}, "statusMapping": {}, "propagation": "enabled", "element_type": "health_processing" } ] }, { "type": "metric_group", "label": "tempId#1", "elements": [ { "selectors": [ { "value": { "entityId": "AppDynamics:`[<code>346862526@login.aspx</code>](https://)`:AppDynamics_Business_Transaction_Performance:Business_Transactions", "entityTypeId": "AppDynamics_Business_Transaction_Performance", "node_kind": "Server", "source": "AppDynamics", "metric": "95th_Percentile_Response_Time__ms_" }, "selector_type": "metric_entity_ade" } ], "element_type": "metrics_kpi" }, { "selectors": [], "element_type": "metrics_supporting" } ], "configurations": [] } ],`
+
+  **To get the values to fill the associatedElements fields do the following:**
+
+  Look for the "device" with the desired metric through the BHOM UI
+
+  <img src="https://content.pstmn.io/f01b9106-5008-4c3b-bf78-c79deb25a067/aW1hZ2UucG5n" width="1009" height="522">
+
+  Make note of the "type" value as it will be used for node_kind
+
+  Next, Drill down to the desired metric. Stop just before clicking to load the graphic of JUST the desired metric
+
+  <img src="https://content.pstmn.io/ac9febfc-7fae-4b6b-90f5-c367f300f75d/aW1hZ2UucG5n" width="873" height="865">
+
+  Make note of the first part of the agent name as it will be the "source" (e.g. AppDynamics")
+
+  Open the browser developer tools e go to the network tab:
+
+  <img src="https://content.pstmn.io/ea9fc851-4f96-4486-b7f3-8f7ba0eaba5a/aW1hZ2UucG5n" width="494" height="468">
+
+  Then click "apply" to load the graph.
+
+  In the developer tools click on the "POST" request that was made and then open its request tab
+
+  <img src="https://content.pstmn.io/16a0ca54-699c-4aea-b5a9-e6e6f5826bcd/aW1hZ2UucG5n" width="1280" height="341">
+
+  Use attributeId for "metric"
+
+  Use moTypeId for "entityTypeId"
+
+  Use monitorId for "entityId"
+
+  Note that you may need to decode "%xx" codes that show up in the ids above to their corresponding ASCII. Common ones include "%40" that needs to be changed to "@" and "%3A" to ":"
+
+  Using these values, you can add the metric and save the updated service.
+
+  If all was done correctly, the new metric can be seen through the UI.
+
+  <img src="https://content.pstmn.io/8f972e79-f875-4bf1-83bb-f7e49c78e49c/aW1hZ2UucG5n" width="428" height="249">
+
+  Click action->edit to check if the "create alarm policy" is enabled. If not, HSM failed to find the metric and associated CI/Entity.
+
+  <img src="https://content.pstmn.io/8ccc7204-da7f-42d3-b717-9ccd0a4f5aba/aW1hZ2UucG5n" width="939" height="167">
+
+  An example of a successfully working 3rd party health metric:
+
+  <img src="https://content.pstmn.io/93e9f5f9-7420-42bf-bd4e-6762c3842999/aW1hZ2UucG5n" width="1274" height="275">
+
+  _**Note that HSM simply doesn't show any metrics that it doesn't locate successfully, meaning that it doesn't penalize miss-configurations**_
+url: "{{bhom_base_url}}/service-management/api/v1.0/service/save"
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+  - key: Authorization
+    value: apiKey {{bhom_apiKey}}
+  - key: Authorization
+    value: ""
+    disabled: true
+body:
+  type: text
+  content: "{\r
+
+    \    \"increments\": {\r
+
+    \        \"nodes\": [\r
+
+    \            {\r
+
+    \                \"compatibleOnly\": \"false\",\r
+
+    \                \"name\": \"Test\",\r
+
+    \                \"id\": \"d7cflLskBjeFt7StnT3VhxEd9ved91Gx\",\r
+
+    \                \"kind\": \"BusinessService\",\r
+
+    \                \"criticality\": 0,\r
+
+    \                \"labels\": {},\r
+
+    \                \"associatedElements\": [],\r
+
+    \                \"blueprintConfigurations\": [\r
+
+    \                    {\r
+
+    \                        \"blueprintId\": {\r
+
+    \                            \"id\": \"j55tUDBWhQDkeAPmU3icMK78I8hv-_yE\",\r
+
+    \                            \"version\": \"1.0.0\"\r
+
+    \                        },\r
+
+    \                        \"configurationItems\": [\r
+
+    \                            {\r
+
+    \                                \"dsmParameterName\": \"uiSelector0\",\r
+
+    \                                \"path\": \"\",\r
+
+    \                                \"values\": [\r
+
+    \                                    \"DC.apex.com.br\"\r
+
+    \                                ],\r
+
+    \                                \"regex\": false\r
+
+    \                            }\r
+
+    \                        ]\r
+
+    \                    }\r
+
+    \                ],\r
+
+    \                \"serviceModelSource\": \"aiops\"\r
+
+    \            },\r
+
+    \            {\r
+
+    \                \"compatibleOnly\": \"false\",\r
+
+    \                \"name\": \"Test 2\",\r
+
+    \                \"id\": \"eSSYpqwgg-OcjWT6KgOiifQs3cOV8wLV\",\r
+
+    \                \"kind\": \"BusinessService\",\r
+
+    \                \"criticality\": 0,\r
+
+    \                \"labels\": {},\r
+
+    \                \"associatedElements\": [],\r
+
+    \                \"blueprintConfigurations\": [],\r
+
+    \                \"staticNodeIds\": [\r
+
+    \                    \"04a38562c00502d70bbb2dcd6e486f7374\",\r
+
+    \                    \"04a38562c00502d70bbc0ac36e536f667477617265496e7374616e6365\",\r
+
+    \                    \"04a38562c00502d70bbb33a66e5669727475616c4d616368696e65\",\r
+
+    \                    \"04a38562c00502d70bb9a9566e41646d696e436f6c6c656374696f6e\"\r
+
+    \                ],\r
+
+    \                \"serviceModelSource\": \"aiops\"\r
+
+    \            }\r
+
+    \        ],\r
+
+    \        \"links\": [\r
+
+    \            {\r
+
+    \                \"parentId\": \"d7cflLskBjeFt7StnT3VhxEd9ved91Gx\",\r
+
+    \                \"childrenIds\": [\"eSSYpqwgg-OcjWT6KgOiifQs3cOV8wLV\"],\r
+
+    \                \"deleted\": false\r
+
+    \            }\r
+
+    \        ]\r
+
+    \    }\r
+
+    }"
+examples: ./.resources/Save Service - Update existing.resources/examples
+order: 3000

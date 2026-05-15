@@ -1,0 +1,10 @@
+$kind: collection
+description: |-
+  Existing documentation is internal and can be located in Confluence through the links below:
+
+  [https://confluence.bmc.com/pages/viewpage.action?spaceKey=BSMSOL&title=IA+Automation+Service+SDD#IAAutomationServiceSDD-3.4RESTAPIs](https://confluence.bmc.com/pages/viewpage.action?spaceKey=BSMSOL&title=IA+Automation+Service+SDD#IAAutomationServiceSDD-3.4RESTAPIs)
+
+  Remote connector management (how they talks back to HIA and register themselves)
+
+  [https://confluence.bmc.com/display/BSMSOL/Intelligent+Automation+Remote+Plugin+Management#IntelligentAutomationRemotePluginManagement-_Toc4757797283.3RESTAPIs](https://confluence.bmc.com/display/BSMSOL/Intelligent+Automation+Remote+Plugin+Management#IntelligentAutomationRemotePluginManagement-_Toc4757797283.3RESTAPIs)
+order: 2000

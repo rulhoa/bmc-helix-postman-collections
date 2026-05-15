@@ -1,0 +1,24 @@
+$kind: http-request
+description: |-
+  /data/nodes/{node_id}
+
+  nodeResults {
+    destroyed: boolean*
+    Whether the node is destroyed or not
+   
+    kind: string*
+    The kind of the node
+   
+    modified: datetime*
+    The last modified time of the node
+   
+    state: {
+      The full state of the node, containing all attribute names and values
+    }*
+  }
+url: "{{disco_base_url}}/api/v1.4/data/nodes/5a4da1635d0c25116508d40b6e486f7374"
+method: GET
+body:
+  type: json
+  content: ""
+order: 5000

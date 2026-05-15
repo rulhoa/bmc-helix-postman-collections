@@ -1,0 +1,31 @@
+$kind: http-request
+url: "{{bhom_base_url}}/events-service/api/v1.0/events"
+method: POST
+headers:
+  - key: Content-Type
+    value: application/json
+  - key: Authorization
+    value: apiKey {{bhom_apiKey}}
+  - key: ""
+    value: ""
+    disabled: true
+body:
+  type: text
+  content: "[\r
+
+    \    \t{\r
+
+    \t\t\"class\": \"MonitorEvent\",\r
+
+    \t\t\"severity\": \"OK\",\r
+
+    \t\t\"msg\": \"Automation is triggered for High load\",\r
+
+    \        \"source_identifier\": \"k8spatrolagent\",\r
+
+    \t\t\"source_hostname\": \"k8spatrolagent.bmc.com\",\r
+
+    \t}\r
+
+    ]"
+order: 9000

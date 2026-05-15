@@ -1,0 +1,26 @@
+$kind: http-request
+url: "{{bhom_base_url}}/events-service/api/v1.0/blackout_policies/search"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: "{\r
+
+    \    \"searchString\": \"\",\r
+
+    \    \"pageIndex\": 1,\r
+
+    \    \"recordsPerPage\": 25,\r
+
+    \    \"sortCriteria\": {\r
+
+    \        \"attribute\": \"modificationTime\",\r
+
+    \        \"order\": \"ASC\"\r
+
+    \    }\r
+
+    }"
+examples: ./.resources/Search Blackout Policy.resources/examples
+order: 3000

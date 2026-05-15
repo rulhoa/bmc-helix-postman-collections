@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{v1}}/metrics/last1krecs"
+method: GET
+order: 6000

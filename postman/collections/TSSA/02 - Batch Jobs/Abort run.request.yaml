@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{v1}}/batch-jobs/{{id}}/jobruns/{{run_id}}/abort"
+method: PATCH
+order: 11000

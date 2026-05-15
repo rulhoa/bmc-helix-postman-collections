@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{v1}}/metrics/listalldeployments"
+method: GET
+order: 7000

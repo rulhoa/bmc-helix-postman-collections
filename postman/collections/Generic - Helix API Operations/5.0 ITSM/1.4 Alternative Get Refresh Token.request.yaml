@@ -1,0 +1,18 @@
+$kind: http-request
+url: "{{itsm_base_url}}/api/jwt/login"
+method: POST
+headers:
+  Content-Type: application/x-www-form-urlencoded
+body:
+  type: urlencoded
+  content:
+    username: "{{helix_username}}"
+    password: "{{helix_password}}"
+    authString: authenticationstring
+scripts:
+  - type: afterResponse
+    code: "var jsonData = responseBody;\r
+
+      postman.setEnvironmentVariable(\"token\", responseBody);"
+    language: text/javascript
+order: 10000

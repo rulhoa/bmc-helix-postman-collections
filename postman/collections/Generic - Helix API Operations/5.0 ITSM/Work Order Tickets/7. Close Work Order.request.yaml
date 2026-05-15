@@ -1,0 +1,17 @@
+$kind: http-request
+url: "{{applicationserver}}/api/arsys/v1/entry/WOI:WorkOrderInterface/WO0000002741029|WO0000002741029"
+method: PUT
+headers:
+  Authorization: "{{tokensignature}}{{token}}"
+  Content-Type: application/json
+body:
+  type: text
+  content: |
+    {
+    	"values": {
+            "Status":"Completed",
+            "z1D_Action":"UPDATE",
+            "Resolution":"Texto da Resolução"
+    	}
+    }
+order: 5000

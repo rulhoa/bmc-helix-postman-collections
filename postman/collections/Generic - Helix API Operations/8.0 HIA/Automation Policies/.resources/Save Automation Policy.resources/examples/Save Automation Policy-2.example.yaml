@@ -1,0 +1,685 @@
+$kind: http-example
+name: Save Automation Policy
+request:
+  url: "{{bhom_base_url}}/intelligent-automation/api/v1/workflows/3183e76d-cf5f-c84f-c5a5-0eb7612858af"
+  method: PUT
+  body:
+    type: json
+    content: "{\r
+
+      \  \"name\": \"Test\",\r
+
+      \  \"description\": \"\",\r
+
+      \  \"trigger_condition_expression\": \"$ ? (( $.event.class == \\\"Situation\\\" ) && ( $.event.algorithm_name == \\\"ML\\\" ) && ( $.event.source_hostname == \\\"Media Service\\\" ))\",\r
+
+      \  \"is_active\": false,\r
+
+      \  \"auto_enabled\": false,\r
+
+      \  \"actions\": {\r
+
+      \    \"Generic REST Action\": {\r
+
+      \      \"continue_on_failure\": false,\r
+
+      \      \"plugin_type\": \"remote_plugin\",\r
+
+      \      \"action_def_uri\": \"generic_rest/generic_rest/x-bmc-ia-any\",\r
+
+      \      \"action\": {\r
+
+      \        \"server\": \"https://se-preprod-aapi.us1.controlm.com:443/automation-api\",\r
+
+      \        \"path/path\": {\r
+
+      \          \"get\": {\r
+
+      \            \"parameters\": [\r
+
+      \              {\r
+
+      \                \"in\": \"header\",\r
+
+      \                \"msg\": \"$.event.msg\"\r
+
+      \              }\r
+
+      \            ],\r
+
+      \            \"requestBody\": {\r
+
+      \              \"content\": {}\r
+
+      \            }\r
+
+      \          }\r
+
+      \        }\r
+
+      \      },\r
+
+      \      \"credential\": {\r
+
+      \        \"target_id\": \"https://se-preprod-aapi.us1.controlm.com:443/automation-api\",\r
+
+      \        \"provider_id\": \"generic_rest\"\r
+
+      \      }\r
+
+      \    }\r
+
+      \  },\r
+
+      \  \"metadata\": {\r
+
+      \    \"event\": {\r
+
+      \      \"msg\": \"Train Ticketing - network Total Bytes > 2 MB for 0 min.\",\r
+
+      \      \"alias\": [\r
+
+      \        \"BMC_ComputerSystem:Train Ticketing\"\r
+
+      \      ],\r
+
+      \      \"class\": \"Situation\",\r
+
+      \      \"status\": \"OPEN\",\r
+
+      \      \"priority\": \"PRIORITY_5\",\r
+
+      \      \"severity\": \"MINOR\",\r
+
+      \      \"_signature\": \"1378986266\",\r
+
+      \      \"_tenant_id\": \"1738801444\",\r
+
+      \      \"_identifier\": \"6724be9e-4e7f-4341-a4ff-fcbc076d3d6c\",\r
+
+      \      \"_operations\": \"[0x1860310cb8d, admin, , Situation created based on ML Based algorithm, '']\",\r
+
+      \      \"_service_id\": [\r
+
+      \        \"b949da62b459fa4e0974b4466e427573696e65737353657276696365\"\r
+
+      \      ],\r
+
+      \      \"_service_name\": [\r
+
+      \        \"Train Ticketing\"\r
+
+      \      ],\r
+
+      \      \"creation_time\": 1675088677773,\r
+
+      \      \"_modified_time\": 1675088677773,\r
+
+      \      \"_relationships\": {\r
+
+      \        \"rstat\": \"primary\",\r
+
+      \        \"evcount\": 3,\r
+
+      \        \"primary\": \"b949da62b459fa4e0974b4466e427573696e65737353657276696365_44d766241e064ff1a4fae2a79a3d2093\"\r
+
+      \      },\r
+
+      \      \"_unmapped_data\": {},\r
+
+      \      \"algorithm_name\": \"ML\",\r
+
+      \      \"source_hostname\": \"Train Ticketing\",\r
+
+      \      \"child_situations\": \"[]\",\r
+
+      \      \"parent_situation\": \"\",\r
+
+      \      \"source_identifier\": \"b949da62b459fa4e0974b4466e427573696e65737353657276696365_44d766241e064ff1a4fae2a79a3d2093\"\r
+
+      \    },\r
+
+      \    \"trigger_condition_expression_metadata\": [\r
+
+      \      {\r
+
+      \        \"condition_order\": 0,\r
+
+      \        \"condition_operator\": \"\",\r
+
+      \        \"slot_name\": \"$.event.class\",\r
+
+      \        \"slot_operator\": \"==\",\r
+
+      \        \"slot_value\": \"Situation\",\r
+
+      \        \"condition_bracket\": \"(\",\r
+
+      \        \"end_bracket\": \")\"\r
+
+      \      },\r
+
+      \      {\r
+
+      \        \"condition_order\": 1,\r
+
+      \        \"condition_operator\": \"&&\",\r
+
+      \        \"slot_name\": \"$.event.algorithm_name\",\r
+
+      \        \"slot_operator\": \"==\",\r
+
+      \        \"slot_value\": \"ML\",\r
+
+      \        \"condition_bracket\": \"(\",\r
+
+      \        \"end_bracket\": \")\"\r
+
+      \      },\r
+
+      \      {\r
+
+      \        \"condition_order\": 2,\r
+
+      \        \"condition_operator\": \"&&\",\r
+
+      \        \"slot_name\": \"$.event.source_hostname\",\r
+
+      \        \"slot_operator\": \"==\",\r
+
+      \        \"slot_value\": \"Media Service\",\r
+
+      \        \"condition_bracket\": \"(\",\r
+
+      \        \"end_bracket\": \")\"\r
+
+      \      }\r
+
+      \    ],\r
+
+      \    \"effort\": 90,\r
+
+      \    \"cost\": 120,\r
+
+      \    \"json_paths\": {\r
+
+      \      \"$.msg\": [\r
+
+      \        \"Insurance System - memory Memory Utilization > 75 % for 0 min.\",\r
+
+      \        \"Train Ticketing - memory Memory Utilization > 75 % for 0 min.\",\r
+
+      \        \"Train Ticketing - network Total Bytes > 2 MB for 0 min.\",\r
+
+      \        \"Insurance System - network Total Bytes > 2 MB for 0 min.\",\r
+
+      \        \"Media Service - [Dynatrace] Abnormal traffic pattern detected on tower220\",\r
+
+      \        \"Train Ticketing - cpu CPU Utilization > 80 % for 0 min.\",\r
+
+      \        \"Insurance System - cpu CPU Utilization > 80 % for 0 min.\",\r
+
+      \        \"Media Service - [AWS] EC2 instance is not responding on HTTP 8080.\",\r
+
+      \        \"Media Service - [Control-M] Job Control-M Arquivo XPTO parte 2 nao gerado\",\r
+
+      \        \"Media Service - [AWS] EC2 instancia nao esta respondendo em HTTP 8080.\"\r
+
+      \      ],\r
+
+      \      \"$.class\": [\r
+
+      \        \"Situation\"\r
+
+      \      ],\r
+
+      \      \"$._model\": [\r
+
+      \        \"Situation\"\r
+
+      \      ],\r
+
+      \      \"$.status\": [\r
+
+      \        \"OPEN\",\r
+
+      \        \"CLOSED\"\r
+
+      \      ],\r
+
+      \      \"$.alias[*]\": [\r
+
+      \        \"BMC_ComputerSystem:ts-user-service-cc577b45c-j9rrg\",\r
+
+      \        \"BMC_ComputerSystem:ts-user-mongo-566db96975-bvng9\",\r
+
+      \        \"BMC_ComputerSystem:ts-travel-plan-service-964db66f4-9ggmg\",\r
+
+      \        \"BMC_ComputerSystem:web-fe-02\",\r
+
+      \        \"BMC_ComputerSystem:web-fe-01\",\r
+
+      \        \"BMC_ComputerSystem:web-fe-03\",\r
+
+      \        \"BMC_ComputerSystem:lb-01\",\r
+
+      \        \"BMC_ComputerSystem:Media Service\",\r
+
+      \        \"BMC_ComputerSystem:Train Ticketing\",\r
+
+      \        \"BMC_ComputerSystem:Insurance System\"\r
+
+      \      ],\r
+
+      \      \"$.priority\": [\r
+
+      \        \"PRIORITY_5\",\r
+
+      \        \"PRIORITY_1\",\r
+
+      \        \"PRIORITY_3\"\r
+
+      \      ],\r
+
+      \      \"$.severity\": [\r
+
+      \        \"MINOR\",\r
+
+      \        \"CRITICAL\",\r
+
+      \        \"MAJOR\"\r
+
+      \      ],\r
+
+      \      \"$._signature\": [\r
+
+      \        \"1123349336\",\r
+
+      \        \"211876095\",\r
+
+      \        \"1378986266\",\r
+
+      \        \"1851464929\",\r
+
+      \        \"-379034385\",\r
+
+      \        \"31334376\",\r
+
+      \        \"1087819016\",\r
+
+      \        \"107351134\",\r
+
+      \        \"-1214341120\",\r
+
+      \        \"750128498\"\r
+
+      \      ],\r
+
+      \      \"$._tenant_id\": [\r
+
+      \        \"1738801444\"\r
+
+      \      ],\r
+
+      \      \"$.is_updated\": [\r
+
+      \        true,\r
+
+      \        false\r
+
+      \      ],\r
+
+      \      \"$._identifier\": [\r
+
+      \        \"95e091eb-8e10-48a9-be07-c6da9e9a02f7\",\r
+
+      \        \"5ac3cfaf-6727-42f8-8db2-09e778e57b17\",\r
+
+      \        \"c7ab217a-4f48-4e4a-8dae-8f032ae7e00a\",\r
+
+      \        \"6dbe9a5b-d9f5-4527-8bff-06eb27920c69\",\r
+
+      \        \"1e62398b-4415-4420-a060-409471538269\",\r
+
+      \        \"a8c5e0bd-49bb-4323-8c40-f0929264ace8\",\r
+
+      \        \"536a7082-88f0-4a6c-9dd8-f7cb63873ce3\",\r
+
+      \        \"27f5f6b5-08d8-4571-8151-ec738dc08239\",\r
+
+      \        \"9395ae91-ffc6-4c23-8110-a58a7dd455d0\",\r
+
+      \        \"6724be9e-4e7f-4341-a4ff-fcbc076d3d6c\"\r
+
+      \      ],\r
+
+      \      \"$._operations\": [\r
+
+      \        \"[0x1857d2bb567, admin, , Situation created based on ML Based algorithm, '']\",\r
+
+      \        \"[0x185e584b069,admin,,Situation created based on ML Based algorithm,'',0x185e584b131,,Predefined Policy for Incident,NOTIFICATION,'']\",\r
+
+      \        \"[0x186028776fb, admin, , Situation created based on ML Based algorithm, '']\",\r
+
+      \        \"[0x18602877710, admin, , Situation created based on ML Based algorithm, '']\",\r
+
+      \        \"[0x1860287772c, admin, , Situation created based on ML Based algorithm, '']\",\r
+
+      \        \"[0x18602b8e700, admin, , Situation created based on ML Based algorithm, '']\",\r
+
+      \        \"[0x18602b8e73b, admin, , Situation created based on ML Based algorithm, '']\",\r
+
+      \        \"[0x18602b8e77c, admin, , Situation created based on ML Based algorithm, '']\",\r
+
+      \        \"[0x1860310cb52, admin, , Situation created based on ML Based algorithm, '']\",\r
+
+      \        \"[0x1860310cb8d, admin, , Situation created based on ML Based algorithm, '']\"\r
+
+      \      ],\r
+
+      \      \"$.incident_id\": [\r
+
+      \        \"INC000000023494\",\r
+
+      \        \"INC000000023754\",\r
+
+      \        \"INC000000023759\",\r
+
+      \        \"INC000000023857\",\r
+
+      \        \"INC000000023856\",\r
+
+      \        \"INC000000024139\",\r
+
+      \        \"INC000000024435\",\r
+
+      \        \"INC000000024719\",\r
+
+      \        \"INC000000024720\",\r
+
+      \        \"INC000000024809\"\r
+
+      \      ],\r
+
+      \      \"$.creation_time\": [\r
+
+      \        1672842294631,\r
+
+      \        1674592956521,\r
+
+      \        1675079677691,\r
+
+      \        1675079677712,\r
+
+      \        1675079677740,\r
+
+      \        1675082917632,\r
+
+      \        1675082917691,\r
+
+      \        1675082917756,\r
+
+      \        1675088677714,\r
+
+      \        1675088677773\r
+
+      \      ],\r
+
+      \      \"$._modified_time\": [\r
+
+      \        1672842294631,\r
+
+      \        1674592970440,\r
+
+      \        1675079677691,\r
+
+      \        1675079677712,\r
+
+      \        1675079677740,\r
+
+      \        1675082917632,\r
+
+      \        1675082917691,\r
+
+      \        1675082917756,\r
+
+      \        1675088677714,\r
+
+      \        1675088677773\r
+
+      \      ],\r
+
+      \      \"$._service_id[*]\": [\r
+
+      \        \"b949da62b459fa4e0974b4466e427573696e65737353657276696365\",\r
+
+      \        \"c956c862bd2e716c4ace65696e427573696e65737353657276696365\",\r
+
+      \        \"b949da62b459fa4e0974b7d26e427573696e65737353657276696365\",\r
+
+      \        \"b949da62b459fa4e0974ba806e427573696e65737353657276696365\",\r
+
+      \        \"b949da62b459fa4e0974bcd26e427573696e65737353657276696365\",\r
+
+      \        \"b949da62b459fa4e0974c0626e427573696e65737353657276696365\",\r
+
+      \        \"f36f5d63835a86fb749a448f6e427573696e65737353657276696365\",\r
+
+      \        \"f36f5d63835a86fb749a469e6e427573696e65737353657276696365\"\r
+
+      \      ],\r
+
+      \      \"$.algorithm_name\": [\r
+
+      \        \"ML\"\r
+
+      \      ],\r
+
+      \      \"$.incident_sysid\": [\r
+
+      \        \"\"\r
+
+      \      ],\r
+
+      \      \"$.status_ordinal\": [\r
+
+      \        0,\r
+
+      \        30\r
+
+      \      ],\r
+
+      \      \"$._lifecycle_time\": [\r
+
+      \        7086870,\r
+
+      \        8885212,\r
+
+      \        20806000,\r
+
+      \        20806162,\r
+
+      \        18166349,\r
+
+      \        18245499,\r
+
+      \        20806370,\r
+
+      \        20806299,\r
+
+      \        8926272,\r
+
+      \        5646693\r
+
+      \      ],\r
+
+      \      \"$.source_hostname\": [\r
+
+      \        \"ts-user-service-cc577b45c-j9rrg\",\r
+
+      \        \"ts-user-mongo-566db96975-bvng9\",\r
+
+      \        \"ts-travel-plan-service-964db66f4-9ggmg\",\r
+
+      \        \"web-fe-02\",\r
+
+      \        \"web-fe-01\",\r
+
+      \        \"web-fe-03\",\r
+
+      \        \"lb-01\",\r
+
+      \        \"Media Service\",\r
+
+      \        \"Train Ticketing\",\r
+
+      \        \"Insurance System\"\r
+
+      \      ],\r
+
+      \      \"$._service_name[*]\": [\r
+
+      \        \"Media Service\",\r
+
+      \        \"Insurance System\",\r
+
+      \        \"Train Ticketing\"\r
+
+      \      ],\r
+
+      \      \"$.child_situations\": [\r
+
+      \        \"[]\"\r
+
+      \      ],\r
+
+      \      \"$.parent_situation\": [\r
+
+      \        \"\"\r
+
+      \      ],\r
+
+      \      \"$.priority_ordinal\": [\r
+
+      \        10,\r
+
+      \        50\r
+
+      \      ],\r
+
+      \      \"$.severity_ordinal\": [\r
+
+      \        50,\r
+
+      \        70\r
+
+      \      ],\r
+
+      \      \"$.source_identifier\": [\r
+
+      \        \"f36f5d63835a86fb749a469e6e427573696e65737353657276696365_f37ce42663fe4580b2c07f788c893841\",\r
+
+      \        \"f36f5d63835a86fb749a448f6e427573696e65737353657276696365_fe832d4346a64b51bb28d0e64da8ed56\",\r
+
+      \        \"f36f5d63835a86fb749a469e6e427573696e65737353657276696365_c8e20ebdcdd1487dbbe12aaaf65359d1\",\r
+
+      \        \"b949da62b459fa4e0974b4466e427573696e65737353657276696365_7b1ad89414124f3ab45e2c2dbac068a9\",\r
+
+      \        \"f36f5d63835a86fb749a469e6e427573696e65737353657276696365_6b95ce2d491a468bb0eb2ee025d53a5e\",\r
+
+      \        \"f36f5d63835a86fb749a469e6e427573696e65737353657276696365_c4eb013ca28445568bf64b13c2d0f86b\",\r
+
+      \        \"f36f5d63835a86fb749a469e6e427573696e65737353657276696365_a5e05a650b17433f84eb1aa33f9f6c44\",\r
+
+      \        \"f36f5d63835a86fb749a469e6e427573696e65737353657276696365_8dbad6e57f494cd29f9babe0da587f07\",\r
+
+      \        \"f36f5d63835a86fb749a469e6e427573696e65737353657276696365_4c6263b22d374eae9a85f21cca2c3d42\",\r
+
+      \        \"b949da62b459fa4e0974b4466e427573696e65737353657276696365_44d766241e064ff1a4fae2a79a3d2093\"\r
+
+      \      ],\r
+
+      \      \"$._relationships.rstat\": [\r
+
+      \        \"primary\"\r
+
+      \      ],\r
+
+      \      \"$._relationships.evcount\": [\r
+
+      \        4,\r
+
+      \        2,\r
+
+      \        3,\r
+
+      \        \"3\",\r
+
+      \        \"13\",\r
+
+      \        13,\r
+
+      \        \"17\",\r
+
+      \        \"26\",\r
+
+      \        12,\r
+
+      \        11\r
+
+      \      ],\r
+
+      \      \"$._relationships.primary\": [\r
+
+      \        \"f36f5d63835a86fb749a469e6e427573696e65737353657276696365_f37ce42663fe4580b2c07f788c893841\",\r
+
+      \        \"f36f5d63835a86fb749a448f6e427573696e65737353657276696365_fe832d4346a64b51bb28d0e64da8ed56\",\r
+
+      \        \"f36f5d63835a86fb749a469e6e427573696e65737353657276696365_c8e20ebdcdd1487dbbe12aaaf65359d1\",\r
+
+      \        \"b949da62b459fa4e0974b4466e427573696e65737353657276696365_7b1ad89414124f3ab45e2c2dbac068a9\",\r
+
+      \        \"f36f5d63835a86fb749a469e6e427573696e65737353657276696365_6b95ce2d491a468bb0eb2ee025d53a5e\",\r
+
+      \        \"f36f5d63835a86fb749a469e6e427573696e65737353657276696365_c4eb013ca28445568bf64b13c2d0f86b\",\r
+
+      \        \"f36f5d63835a86fb749a469e6e427573696e65737353657276696365_a5e05a650b17433f84eb1aa33f9f6c44\",\r
+
+      \        \"f36f5d63835a86fb749a469e6e427573696e65737353657276696365_8dbad6e57f494cd29f9babe0da587f07\",\r
+
+      \        \"f36f5d63835a86fb749a469e6e427573696e65737353657276696365_4c6263b22d374eae9a85f21cca2c3d42\",\r
+
+      \        \"b949da62b459fa4e0974b4466e427573696e65737353657276696365_44d766241e064ff1a4fae2a79a3d2093\"\r
+
+      \      ]\r
+
+      \    },\r
+
+      \    \"event_type\": \"Situation: ML\"\r
+
+      \  },\r
+
+      \  \"tag_specs\": {},\r
+
+      \  \"id\": \"3183e76d-cf5f-c84f-c5a5-0eb7612858af\"\r
+
+      }"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Fri, 10 Feb 2023 20:39:30 GMT
+    Content-Type: application/json; charset=utf-8
+    Content-Length: "137"
+    Connection: keep-alive
+    X-Powered-By: Express
+    ETag: W/"89-AEeR2c4WK/H/3dRduwXcDmCUqaw"
+  body:
+    type: json
+    content: |-
+      {
+          "id": "3183e76d-cf5f-c84f-c5a5-0eb7612858af",
+          "checksum": "f657fb4b0628b2a5df8a8c0f3d68d53615480985baa654e71c40bff7ce332204",
+          "warnings": []
+      }
+order: 3000

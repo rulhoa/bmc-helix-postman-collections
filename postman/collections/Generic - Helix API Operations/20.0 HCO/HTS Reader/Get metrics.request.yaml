@@ -1,0 +1,25 @@
+$kind: http-request
+url: "{{bhom_base_url}}/opt/api/v2/htsreader/timeseries/queries"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \  \"resids\": [\"274f7142-6863-4e0b-b0b8-a5bb8eae728c\"],\r
+
+    \  \"metrics\": [\"CPU_UTIL\", \"MEM_UTIL\"],\r
+
+    \  \"resolution\": \"DETAIL\",\r
+
+    \  \"stats\": [\"AVG\", \"MIN\", \"PCT95\"],\r
+
+    \  \"timezone\": \"UTC\",\r
+
+    \  \"from_ts\": \"2023-03-21T00:00:00Z\",\r
+
+    \  \"to_ts\": \"2023-04-06T00:00:00Z\",\r
+
+    \  \"namespace\": \"opt:meas\"\r
+
+    }"
+order: 2000

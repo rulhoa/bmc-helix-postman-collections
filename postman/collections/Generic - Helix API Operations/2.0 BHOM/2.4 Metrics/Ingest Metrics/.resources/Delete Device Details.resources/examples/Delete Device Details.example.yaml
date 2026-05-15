@@ -1,0 +1,51 @@
+$kind: http-example
+request:
+  url: "{{bhom_base_url}}/metrics-gateway-service/api/v1.0/delete"
+  method: POST
+  headers:
+    - key: Content-Type
+      value: application/json
+      disabled: true
+    - key: Authorization
+      value: apiKey {{bhom_apiKey}}
+      disabled: true
+  body:
+    type: json
+    content: "{\r
+
+      \    \"devices\": [\r
+
+      \        {\r
+
+      \            \"hostname\": \"ctmClearingP\",\r
+
+      \            \"source\": \"CTM\"\r
+
+      \        }\r
+
+      \    ]\r
+
+      }"
+response:
+  statusCode: 202
+  statusText: Accepted
+  headers:
+    Date: Tue, 11 Jul 2023 17:38:38 GMT
+    Content-Type: application/json
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    Referrer-Policy: same-origin
+    Strict-Transport-Security: max-age=31536000; includeSubDomains
+    Permissions-Policy: idle-detection=self
+    Content-Encoding: gzip
+    TraceId: 489a6c78-dd0d-4736-931f-2da8caa2d795 null
+  body:
+    type: json
+    content: |-
+      {
+          "responseTimeStamp": 1689097118913,
+          "status": "success",
+          "message": null,
+          "data": null
+      }
+order: 1000

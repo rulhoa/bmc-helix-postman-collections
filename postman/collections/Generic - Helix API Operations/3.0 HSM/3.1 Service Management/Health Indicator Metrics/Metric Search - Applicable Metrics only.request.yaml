@@ -1,0 +1,28 @@
+$kind: http-request
+url: "{{bhom_base_url}}/service-management/api/v1.0/metric/serviceContent"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"contentSelectors\": [],\r
+
+    \    \"staticNodeIds\": [\r
+
+    \        \"04a38562c00502d70bb9d18d6e4c6f616442616c616e636572506f6f6c\",\r
+
+    \        \"04a38562c00502d70bb9d19f6e4c6f616442616c616e6365724d656d626572\",\r
+
+    \        \"04a38562c00502d70b9f86176e486f7374\",\r
+
+    \        \"04a38562c00502d70b9f86126e5669727475616c4d616368696e65\",\r
+
+    \        \"04a38562c00502d70b9f861b6e4c6f616442616c616e63657253657276696365\"\r
+
+    \    ],\r
+
+    \    \"serviceIds\": {}\r
+
+    }"
+examples: ./.resources/Metric Search - Applicable Metrics only.resources/examples
+order: 2000

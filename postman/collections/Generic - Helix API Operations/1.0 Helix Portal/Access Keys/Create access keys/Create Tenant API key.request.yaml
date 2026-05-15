@@ -1,0 +1,23 @@
+$kind: http-request
+url: "{{bhom_base_url}}/ims/api/v1/access_keys"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"name\": \"HCO_API_KEY\",\r
+
+    \    \"type\": \"API\",\r
+
+    \    \"expiry_enum\": \"Never expires (not recommended)\",\r
+
+    \    \"non_deletable\": false,\r
+
+    \    \"rotation\": {\r
+
+    \        \"never_rotate\": true\r
+
+    \    }\r
+
+    }"
+order: 1000

@@ -1,0 +1,5 @@
+$kind: http-request
+url: "{{bhom_base_url}}/logs-service/api/v1.0/logs/mapping"
+method: GET
+examples: ./.resources/Get List of Fields.resources/examples
+order: 3000

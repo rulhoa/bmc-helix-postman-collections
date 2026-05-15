@@ -1,0 +1,29 @@
+$kind: http-example
+request:
+  url: "{{disco_base_url}}/api/v1.8/data/partitions"
+  method: GET
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Date: Wed, 04 Jan 2023 17:47:23 GMT
+    Content-Type: application/json
+    Content-Length: "495"
+    Connection: keep-alive
+  body:
+    type: json
+    content: |-
+      {
+          "Audit": "d4a80363b2129d361cfb6eb6",
+          "Conjecture": "d4a80363b2129d361cfb6eb0",
+          "DDD": "d4a80363b2129d361cfb6eb1",
+          "Default": "d4a80363b2129d361cfb6eaf",
+          "HelixMonitor": "e7a80363f812d5ce44d8d95e",
+          "Import": "6e438463a636934e4c79ba22",
+          "Logs": "d4a80363b2129d361cfb6eb4",
+          "Optimize": "e7a80363f812d5ce44d8d95f",
+          "Taxonomy": "d4a80363b2129d361cfb6eb5",
+          "_Sync_Sync_With_Helix_ITSM": "71438463b41e651c560fbc2a",
+          "_System": "d4a80363b2129d361cfb6eb2"
+      }
+order: 1000

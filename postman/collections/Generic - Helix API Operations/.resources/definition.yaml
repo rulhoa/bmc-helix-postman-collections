@@ -1,0 +1,183 @@
+$kind: collection
+name: Generic - Helix API Operations
+variables:
+  "** README: Postman Environment Variables are more flexible than using the variables below, but they can be used. Not that of any Environment variable collection is enabled, the values below will be ignored ": ""
+  bhom_base_url: https://helixsjc839-itom-demo.onbmc.com
+  bhom_access_key: ""
+  bhom_secret_key: ""
+  bhom_token: ""
+  bhom_json_web_token: ""
+  bhom_apiKey: ""
+  bhom_PATROL_EV_id: ""
+  bhom_ALARM_id: ""
+  bhom_MonitorEvent_id: ""
+  disco_token: ""
+  disco_base_url: https://helixash106-disc-itom-demo.onbmc.com
+  helix_userid: ""
+  tenant_id: ""
+  mymetricvalue: ""
+  is_token: ""
+scripts:
+  - type: http:beforeRequest
+    code: |
+      // Update BHOM JWT token
+      var access_key;
+      if( pm.environment.get("bhom_access_key") ){
+          access_key = pm.environment.get("bhom_access_key");
+      }
+      else{
+          access_key = pm.variables.get("bhom_access_key");
+      }
+
+      var secret_key;
+      if( pm.environment.get("bhom_secret_key") ){
+          secret_key = pm.environment.get("bhom_secret_key");
+      }
+      else{
+          secret_key = pm.variables.get("bhom_secret_key");
+      }
+
+      var bhom_url;
+      if( pm.environment.get("bhom_base_url") ){
+          bhom_url = pm.environment.get("bhom_base_url");
+      }
+      else{
+          bhom_url = pm.variables.get("bhom_base_url");
+      }
+
+      if( access_key && secret_key && bhom_url ){
+          pm.sendRequest({
+              url: bhom_url + "/ims/api/v1/access_keys/login",
+              method: 'POST',
+              header: {
+                  'Accept': '*/*',
+                  'Content-Type': 'application/json'
+              },
+              body: {
+                  mode: 'raw',
+                  raw: {
+                      "access_key": access_key,
+                      "access_secret_key": secret_key
+                  }
+              }
+          },
+              (err, res) => {
+                  // Set BEARERTOKEN
+                  var jsonData = res.json();
+
+                  //pm.globals.set("BEARERTOKEN", res.json().json_web_token)
+                  if(jsonData.json_web_token){
+                      console.info("Updating Collection bhom_json_web_token variable value");
+                      pm.collectionVariables.set("bhom_json_web_token", jsonData.json_web_token);
+                      pm.environment.set("bhom_json_web_token", jsonData.json_web_token);
+                  }
+
+                  if(jsonData.token){
+                      console.info("Updating Collection bhom_token variable value");
+                      pm.collectionVariables.set("bhom_token", jsonData.token);
+                      pm.environment.set("bhom_token", jsonData.token);
+                  }
+
+                  if(jsonData.user_id){
+                      console.info("Updating Collection helix_userid variable value");
+                      pm.collectionVariables.set("helix_userid", jsonData.user_id);
+                      pm.environment.set("helix_userid", jsonData.user_id);
+                  }
+
+                  if(jsonData.tenant_id){
+                      console.info("Updating Collection tenant_id variable value");
+                      pm.collectionVariables.set("tenant_id", jsonData.tenant_id);
+                      pm.environment.set("tenant_id", jsonData.tenant_id);
+                  }
+
+                  console.log("Pre-request authentication script executed for " + jsonData.principal_id +"@" +jsonData.tenant_name);
+          });
+      }
+
+
+
+      // Update ITSM/IS AR-JWT token
+      var userName;
+      if( pm.environment.get("helix_username") ){
+          userName = pm.environment.get("helix_username");
+      }
+      else{
+          userName = pm.variables.get("helix_username");
+      }
+
+      var password;
+      if( pm.environment.get("helix_password") ){
+          password = pm.environment.get("helix_password");
+      }
+      else{
+          password = pm.variables.get("helix_password");
+      }
+
+      var is_base_url;
+      if( pm.environment.get("is_base_url") ){
+          is_base_url = pm.environment.get("is_base_url");
+      }
+      else{
+          is_base_url = pm.variables.get("is_base_url");
+      }
+
+
+      if( userName && password && is_base_url){
+          pm.sendRequest({
+              url: is_base_url + "/api/rx/authentication/loginrequest",
+              method: 'POST',
+              header: {
+                  'Accept': '*/*',
+                  'Content-Type': 'application/json',
+                  'X-Requested-By': 'XMLHttpRequest'
+              },
+              body: {
+                  mode: 'raw',
+                  raw: {
+                      "userName": userName,
+                      "password": password
+                  }
+              }
+          },
+              (err, res) => {
+                  // Set token
+                  var response_body = res.text();           
+
+                  pm.collectionVariables.set("is_token", response_body);
+                  pm.environment.set("is_token", response_body);
+
+                  console.log("Pre-request authentication script executed for AR-JWT");
+          });
+      }
+    language: text/javascript
+  - type: http:afterResponse
+    code: |-
+      pm.test("Environment Variable Update", function(){
+          var jsonData = JSON.parse(responseBody);
+
+          if(jsonData.json_web_token){
+              console.info("Updating Collection bhom_json_web_token variable value");
+              pm.collectionVariables.set("bhom_json_web_token", jsonData.json_web_token);
+              pm.environment.set("bhom_json_web_token", jsonData.json_web_token);
+          }
+
+          if(jsonData.token){
+              console.info("Updating Collection bhom_token variable value");
+              pm.collectionVariables.set("bhom_token", jsonData.token);
+              pm.environment.set("bhom_token", jsonData.token);
+          }
+
+          if(jsonData._object && jsonData._object.apiKey){
+              console.info("Updating Collection bhom_apiKey variable value");
+              pm.collectionVariables.set("bhom_apiKey", jsonData._object.apiKey);
+              pm.environment.set("bhom_apiKey", jsonData._object.apiKey);
+          }
+      });
+    language: text/javascript
+auth:
+  - id: 2afe1d3b-bf28-4d13-b646-5ab4fdf6970d
+    type: apikey
+    name: apikey auth
+    credentials:
+      value: Bearer {{bhom_json_web_token}}
+      key: Authorization

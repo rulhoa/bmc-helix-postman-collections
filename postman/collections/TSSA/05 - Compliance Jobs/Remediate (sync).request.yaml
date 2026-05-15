@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{v1}}/compliance-jobs/remediate"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "job_id": "{{id}}",
+      "scope": "all_noncompliant"
+    }
+order: 13000
