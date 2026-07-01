@@ -1,0 +1,422 @@
+$kind: http-request
+name: Import ATM Data
+url: "{{disco_base_url}}/api/v1.18/data/import"
+method: POST
+body:
+  type: json
+  content: "{\r
+
+    \    \"source\": \"VSE\",\r
+
+    \    \"items\": [\r
+
+    \        {\r
+
+    \            \"kind\": \"Entity\",\r
+
+    \            \"data\": {\r
+
+    \                \"entity_type\": \"Host\",\r
+
+    \                \"domain\" : \"acme.com.br\",\r
+
+    \                \"key\": \"ATM001_N1\",\r
+
+    \                \"name\": \"ATM001_N1\",\r
+
+    \                \"short_name\": \"ATM001_N1\",\r
+
+    \                \"type\": \"Linux ATM\",\r
+
+    \                \"virtual\": false,\r
+
+    \                \"vendor\": \"DIEBOLD\",\r
+
+    \                \"model\": \"ATMXPTO1\",\r
+
+    \                \"machine_id\": \"8741722340876\",\r
+
+    \                \"management_ip_addr\": \"10.104.154.28\",\r
+
+    \                \"tag_set\": [ {\"Agencia\": \"0010\"}]\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"kind\": \"Entity\",\r
+
+    \            \"data\": {\r
+
+    \                \"entity_type\": \"Host\",\r
+
+    \                \"domain\" : \"acme.com.br\",\r
+
+    \                \"key\": \"ATM002_N1\",\r
+
+    \                \"name\": \"ATM002_N1\",\r
+
+    \                \"short_name\": \"ATM002_N1\",\r
+
+    \                \"type\": \"Linux ATM\",\r
+
+    \                \"virtual\": false,\r
+
+    \                \"vendor\": \"PERTO\",\r
+
+    \                \"model\": \"TMRXPTOB\",\r
+
+    \                \"machine_id\": \"8741721233161\",\r
+
+    \                \"management_ip_addr\": \"10.104.154.88\",\r
+
+    \                \"tag_set\": [ {\"Agencia\": \"0010\"}]\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"kind\": \"Entity\",\r
+
+    \            \"data\": {\r
+
+    \                \"entity_type\": \"Host\",\r
+
+    \                \"domain\" : \"acme.com.br\",\r
+
+    \                \"key\": \"ATM003_N1\",\r
+
+    \                \"name\": \"ATM003_N1\",\r
+
+    \                \"short_name\": \"ATM003_N1\",\r
+
+    \                \"type\": \"Linux ATM\",\r
+
+    \                \"virtual\": false,\r
+
+    \                \"vendor\": \"DIEBOLD\",\r
+
+    \                \"model\": \"ATMXPTO1\",\r
+
+    \                \"machine_id\": \"87417183020046\",\r
+
+    \                \"management_ip_addr\": \"10.123.185.208\",\r
+
+    \                \"tag_set\": [ {\"Agencia\": \"5781\"}]\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"kind\": \"Entity\",\r
+
+    \            \"data\": {\r
+
+    \                \"entity_type\": \"Host\",\r
+
+    \                \"domain\" : \"acme.com.br\",\r
+
+    \                \"key\": \"ATM005_N2\",\r
+
+    \                \"name\": \"ATM005_N2\",\r
+
+    \                \"short_name\": \"ATM005_N2\",                \r
+
+    \                \"type\": \"Linux ATM\",\r
+
+    \                \"virtual\": false,\r
+
+    \                \"vendor\": \"DIEBOLD\",\r
+
+    \                \"model\": \"ATMXPTO1\",\r
+
+    \                \"machine_id\": \"87417223481704\",\r
+
+    \                \"management_ip_addr\": \"10.140.121.8\",\r
+
+    \                \"tag_set\": [ {\"Agencia\": \"0021\"}]\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"kind\": \"Entity\",\r
+
+    \            \"data\": {\r
+
+    \                \"entity_type\": \"NetworkDevice\",\r
+
+    \                \"domain\" : \"acme.com.br\",\r
+
+    \                \"type\": \"Router\",\r
+
+    \                \"vendor\": \"Cisco Systems\",\r
+
+    \                \"device_type\": \"Network Infrastructure\",\r
+
+    \                \"model\": \"3640\",\r
+
+    \                \"key\": \"71010\",\r
+
+    \                \"name\": \"HBSW01_N1\",\r
+
+    \                \"sysname\": \"HBSW01_N1\",\r
+
+    \                \"os_type\": \"IOS\",\r
+
+    \                \"os_vendor\": \"Cisco Systems\",\r
+
+    \                \"capability_types\": [\"Router\"],\r
+
+    \                \"tag_set\": [ {\"Agencia\": \"0010\"}]\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"kind\": \"Entity\",\r
+
+    \            \"data\": {\r
+
+    \                \"entity_type\": \"NetworkDevice\",\r
+
+    \                \"domain\" : \"acme.com.br\",\r
+
+    \                \"type\": \"Router\",\r
+
+    \                \"vendor\": \"Cisco Systems\",\r
+
+    \                \"device_type\": \"Network Infrastructure\",\r
+
+    \                \"model\": \"3640\",\r
+
+    \                \"key\": \"71081\",\r
+
+    \                \"name\": \"HBSW02_N2\",\r
+
+    \                \"sysname\": \"HBSW02_N2\",\r
+
+    \                \"os_type\": \"IOS\",\r
+
+    \                \"os_vendor\": \"Cisco Systems\",\r
+
+    \                \"capability_types\": [\"Router\"],\r
+
+    \                \"tag_set\": [ {\"Agencia\": \"0010\"}]\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"kind\": \"Entity\",\r
+
+    \            \"data\": {\r
+
+    \                \"entity_type\": \"NetworkDevice\",\r
+
+    \                \"domain\" : \"acme.com.br\",\r
+
+    \                \"type\": \"Router\",\r
+
+    \                \"vendor\": \"Cisco Systems\",\r
+
+    \                \"device_type\": \"Network Infrastructure\",\r
+
+    \                \"model\": \"3640\",\r
+
+    \                \"key\": \"71021\",\r
+
+    \                \"name\": \"HBSW03_N3\",\r
+
+    \                \"sysname\": \"HBSW03_N3\",\r
+
+    \                \"os_type\": \"IOS\",\r
+
+    \                \"os_vendor\": \"Cisco Systems\",\r
+
+    \                \"capability_types\": [\"Router\"],\r
+
+    \                \"tag_set\": [ {\"Agencia\": \"0010\"}]\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"kind\": \"Entity\",\r
+
+    \            \"data\": {\r
+
+    \                \"entity_type\": \"NetworkDevice\",\r
+
+    \                \"domain\" : \"acme.com.br\",\r
+
+    \                \"type\": \"Router\",\r
+
+    \                \"vendor\": \"Cisco Systems\",\r
+
+    \                \"device_type\": \"Network Infrastructure\",\r
+
+    \                \"model\": \"3640\",\r
+
+    \                \"key\": \"dcacme\",\r
+
+    \                \"name\": \"datacenter\",\r
+
+    \                \"sysname\": \"datacenter\",\r
+
+    \                \"os_type\": \"IOS\",\r
+
+    \                \"os_vendor\": \"Cisco Systems\",\r
+
+    \                \"capability_types\": [\"Router\"]\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"kind\": \"Entity\",\r
+
+    \            \"data\": {\r
+
+    \                \"entity_type\": \"Manager2ManagedElement\",\r
+
+    \                \"name\": \"link between HBSW01_N1 and ATM001_N1\",\r
+
+    \                \"manager\": \"HBSW01_N1\",\r
+
+    \                \"managedelement\": \"ATM001_N1\"\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"kind\": \"Entity\",\r
+
+    \            \"data\": {\r
+
+    \                \"entity_type\": \"Manager2ManagedElement\",\r
+
+    \                \"name\": \"link between HBSW01_N1 and ATM002_N1\",\r
+
+    \                \"manager\": \"HBSW01_N1\",\r
+
+    \                \"managedelement\": \"ATM002_N1\"\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"kind\": \"Entity\",\r
+
+    \            \"data\": {\r
+
+    \                \"entity_type\": \"Manager2ManagedElement\",\r
+
+    \                \"name\": \"link between HBSW02_N2 and ATM003_N1\",\r
+
+    \                \"manager\": \"HBSW02_N2\",\r
+
+    \                \"managedelement\": \"ATM003_N1\"\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"kind\": \"Entity\",\r
+
+    \            \"data\": {\r
+
+    \                \"entity_type\": \"Manager2ManagedElement\",\r
+
+    \                \"name\": \"link between HBSW03_N3 and ATM005_N2\",\r
+
+    \                \"manager\": \"HBSW03_N3\",\r
+
+    \                \"managedelement\": \"ATM005_N2\"\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"kind\": \"Entity\",\r
+
+    \            \"data\": {\r
+
+    \                \"entity_type\": \"Manager2ManagedElement\",\r
+
+    \                \"name\": \"link between DC and HBSW01_N1\",\r
+
+    \                \"manager\": \"datacenter\",\r
+
+    \                \"managedelement\": \"HBSW01_N1\"\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"kind\": \"Entity\",\r
+
+    \            \"data\": {\r
+
+    \                \"entity_type\": \"Manager2ManagedElement\",\r
+
+    \                \"name\": \"link between DC and HBSW02_N2\",\r
+
+    \                \"manager\": \"datacenter\",\r
+
+    \                \"managedelement\": \"HBSW02_N2\"\r
+
+    \            }\r
+
+    \        },\r
+
+    \        {\r
+
+    \            \"kind\": \"Entity\",\r
+
+    \            \"data\": {\r
+
+    \                \"entity_type\": \"Manager2ManagedElement\",\r
+
+    \                \"name\": \"link between DC and HBSW03_N3\",\r
+
+    \                \"manager\": \"datacenter\",\r
+
+    \                \"managedelement\": \"HBSW03_N3\"\r
+
+    \            }\r
+
+    \        }        \r
+
+    \    ],\r
+
+    \    \"type\": \"VSE_ATMs\"\r
+
+    }"
+order: 1782863730508

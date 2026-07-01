@@ -9,6 +9,8 @@ localResources:
   environments:
     - ..\Helix.postman_environment.json
     - ..\TSSA_Env.postman_environment.json
+  docs:
+    - ..\README.md
 
 # Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
 
